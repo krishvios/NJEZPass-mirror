@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42DC225622E1C0C500A59D80 /* TransactionsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */; };
+		42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */; };
+		42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225322E1C0C500A59D80 /* UserFlow.storyboard */; };
+		42DC225922E1C0C500A59D80 /* TagsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225422E1C0C500A59D80 /* TagsFlow.storyboard */; };
+		42DC225A22E1C0C500A59D80 /* AccountFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225522E1C0C500A59D80 /* AccountFlow.storyboard */; };
+		42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC225B22E1C14200A59D80 /* AccountViewController.swift */; };
+		42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC225C22E1C14200A59D80 /* DashboardViewController.swift */; };
+		42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC225D22E1C14300A59D80 /* TagsViewController.swift */; };
+		42DC226322E1C14300A59D80 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC225E22E1C14300A59D80 /* TransactionsViewController.swift */; };
+		42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC225F22E1C14300A59D80 /* VehiclesViewController.swift */; };
 		5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3DFB622DEFCAC007EDCC7 /* AppDelegate.swift */; };
 		5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */; };
 		5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE3DFBA22DEFCAC007EDCC7 /* Main.storyboard */; };
@@ -128,6 +138,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TransactionsFlow.storyboard; sourceTree = "<group>"; };
+		42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
+		42DC225322E1C0C500A59D80 /* UserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFlow.storyboard; sourceTree = "<group>"; };
+		42DC225422E1C0C500A59D80 /* TagsFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagsFlow.storyboard; sourceTree = "<group>"; };
+		42DC225522E1C0C500A59D80 /* AccountFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountFlow.storyboard; sourceTree = "<group>"; };
+		42DC225B22E1C14200A59D80 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		42DC225C22E1C14200A59D80 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		42DC225D22E1C14300A59D80 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		42DC225E22E1C14300A59D80 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		42DC225F22E1C14300A59D80 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFB622DEFCAC007EDCC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +254,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42DC225022E1C08E00A59D80 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				42DC225522E1C0C500A59D80 /* AccountFlow.storyboard */,
+				42DC225422E1C0C500A59D80 /* TagsFlow.storyboard */,
+				42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */,
+				42DC225322E1C0C500A59D80 /* UserFlow.storyboard */,
+				42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5EE3DFAA22DEFCAC007EDCC7 = {
 			isa = PBXGroup;
 			children = (
@@ -269,8 +301,14 @@
 		5EE3DFB522DEFCAC007EDCC7 /* NJEZPass */ = {
 			isa = PBXGroup;
 			children = (
+				42DC225022E1C08E00A59D80 /* Storyboards */,
 				5EE3DFB622DEFCAC007EDCC7 /* AppDelegate.swift */,
 				5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */,
+				42DC225B22E1C14200A59D80 /* AccountViewController.swift */,
+				42DC225C22E1C14200A59D80 /* DashboardViewController.swift */,
+				42DC225D22E1C14300A59D80 /* TagsViewController.swift */,
+				42DC225E22E1C14300A59D80 /* TransactionsViewController.swift */,
+				42DC225F22E1C14300A59D80 /* VehiclesViewController.swift */,
 				5EE3DFBA22DEFCAC007EDCC7 /* Main.storyboard */,
 				5EE3DFBD22DEFCAD007EDCC7 /* Assets.xcassets */,
 				5EE3DFBF22DEFCAD007EDCC7 /* LaunchScreen.storyboard */,
@@ -626,7 +664,12 @@
 			files = (
 				5EE3DFC122DEFCAD007EDCC7 /* LaunchScreen.storyboard in Resources */,
 				5EE3DFBE22DEFCAD007EDCC7 /* Assets.xcassets in Resources */,
+				42DC225A22E1C0C500A59D80 /* AccountFlow.storyboard in Resources */,
+				42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */,
+				42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */,
 				5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */,
+				42DC225922E1C0C500A59D80 /* TagsFlow.storyboard in Resources */,
+				42DC225622E1C0C500A59D80 /* TransactionsFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,7 +737,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */,
+				42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
+				42DC226322E1C14300A59D80 /* TransactionsViewController.swift in Sources */,
+				42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */,
+				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
+				42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
