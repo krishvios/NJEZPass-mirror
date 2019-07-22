@@ -39,6 +39,12 @@
 		5EE3E04022DEFD1E007EDCC7 /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE3E03022DEFD1E007EDCC7 /* Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EE3E04322DEFD1E007EDCC7 /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; };
 		5EE3E04422DEFD1E007EDCC7 /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5EE3E05922E5959D007EDCC7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05322E5959D007EDCC7 /* LoginPresenter.swift */; };
+		5EE3E05A22E5959D007EDCC7 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05422E5959D007EDCC7 /* LoginWorker.swift */; };
+		5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05522E5959D007EDCC7 /* LoginRouter.swift */; };
+		5EE3E05C22E5959D007EDCC7 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05622E5959D007EDCC7 /* LoginModels.swift */; };
+		5EE3E05D22E5959D007EDCC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05722E5959D007EDCC7 /* LoginViewController.swift */; };
+		5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05822E5959D007EDCC7 /* LoginInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +185,12 @@
 		5EE3E03622DEFD1E007EDCC7 /* PlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3E03D22DEFD1E007EDCC7 /* PlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		5EE3E03F22DEFD1E007EDCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE3E05322E5959D007EDCC7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		5EE3E05422E5959D007EDCC7 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		5EE3E05522E5959D007EDCC7 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		5EE3E05622E5959D007EDCC7 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		5EE3E05722E5959D007EDCC7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5EE3E05822E5959D007EDCC7 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +313,7 @@
 		5EE3DFB522DEFCAC007EDCC7 /* NJEZPass */ = {
 			isa = PBXGroup;
 			children = (
+				5EE3E05122E58F08007EDCC7 /* Scenes */,
 				42DC225022E1C08E00A59D80 /* Storyboards */,
 				5EE3DFB622DEFCAC007EDCC7 /* AppDelegate.swift */,
 				5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */,
@@ -387,6 +400,27 @@
 				5EE3E03F22DEFD1E007EDCC7 /* Info.plist */,
 			);
 			path = PlatformTests;
+			sourceTree = "<group>";
+		};
+		5EE3E05122E58F08007EDCC7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5EE3E05222E58F1D007EDCC7 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5EE3E05222E58F1D007EDCC7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5EE3E05322E5959D007EDCC7 /* LoginPresenter.swift */,
+				5EE3E05422E5959D007EDCC7 /* LoginWorker.swift */,
+				5EE3E05522E5959D007EDCC7 /* LoginRouter.swift */,
+				5EE3E05622E5959D007EDCC7 /* LoginModels.swift */,
+				5EE3E05722E5959D007EDCC7 /* LoginViewController.swift */,
+				5EE3E05822E5959D007EDCC7 /* LoginInteractor.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -736,12 +770,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE3E05D22E5959D007EDCC7 /* LoginViewController.swift in Sources */,
+				5EE3E05922E5959D007EDCC7 /* LoginPresenter.swift in Sources */,
 				5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */,
 				42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
 				42DC226322E1C14300A59D80 /* TransactionsViewController.swift in Sources */,
+				5EE3E05A22E5959D007EDCC7 /* LoginWorker.swift in Sources */,
 				42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */,
+				5EE3E05C22E5959D007EDCC7 /* LoginModels.swift in Sources */,
 				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
+				5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */,
+				5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */,
 				42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
