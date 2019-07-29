@@ -14,7 +14,8 @@ import UIKit
 
 protocol LoginPresentationLogic
 {
-  func presentSomething(response: Login.Something.Response)
+    func presentBiometricBtn(response: Login.Biometric.CheckBiometricModes.Response)
+
 }
 
 class LoginPresenter: LoginPresentationLogic
@@ -23,9 +24,12 @@ class LoginPresenter: LoginPresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: Login.Something.Response)
-  {
-    let viewModel = Login.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+ 
+    
+    func presentBiometricBtn(response: Login.Biometric.CheckBiometricModes.Response)
+    {
+        let viewModel = Login.Biometric.CheckBiometricModes.ViewModel(avilableMode: response.avilableMode)
+        viewController?.displayBiometricButton(viewModel: viewModel)
+
+    }
 }

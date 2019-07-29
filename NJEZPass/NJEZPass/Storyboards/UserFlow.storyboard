@@ -29,7 +29,7 @@
         <!--Login-->
         <scene sceneID="RSC-j6-ZQZ">
             <objects>
-                <viewController title="Login" id="IQS-Dd-9bi" sceneMemberID="viewController">
+                <viewController title="Login" id="IQS-Dd-9bi" customClass="LoginViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZP-lX-F8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login using Fingerprint"/>
                                 <connections>
+                                    <action selector="biometricAuthBtnClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="eZR-O8-Zvd"/>
                                     <segue destination="URA-eY-qW8" kind="presentation" id="aS6-Go-YcQ"/>
                                 </connections>
                             </button>
@@ -52,11 +53,21 @@
                                 </constraints>
                                 <state key="normal" title="Forgot Password?"/>
                                 <connections>
+                                    <action selector="forgotPassClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="Qfn-oh-7EM"/>
                                     <segue destination="hGT-Jz-PzP" kind="show" id="3Ru-Ln-aRz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-el-waj">
-                                <rect key="frame" x="16" y="163" width="343" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6a-ZS-Dpx">
+                                <rect key="frame" x="127" y="310" width="120" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="u72-W1-phC"/>
+                                    <segue destination="URA-eY-qW8" kind="presentation" id="Ler-UT-1Z1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-el-waj">
+                                <rect key="frame" x="17" y="163" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7Hp-V0-25V"/>
                                 </constraints>
@@ -64,8 +75,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcK-mG-syW">
-                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HcK-mG-syW">
+                                <rect key="frame" x="17" y="218" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DcV-gw-cCY"/>
                                 </constraints>
@@ -73,14 +84,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6a-ZS-Dpx">
-                                <rect key="frame" x="127" y="310" width="120" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="URA-eY-qW8" kind="presentation" id="Ler-UT-1Z1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -105,6 +108,11 @@
                     <navigationItem key="navigationItem" id="H51-e0-OXi">
                         <barButtonItem key="backBarButtonItem" title="Back" id="3qv-fz-248"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="biometricAuthBtn" destination="2D7-Ar-7HQ" id="vL5-lm-4SK"/>
+                        <outlet property="passwordTF" destination="HcK-mG-syW" id="Jtt-VN-KCB"/>
+                        <outlet property="userNameTF" destination="dPT-el-waj" id="y5r-JD-3Nd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +233,7 @@
         <!--Dashboard-->
         <scene sceneID="ufw-Hk-Kic">
             <objects>
-                <viewController storyboardIdentifier="DashboardView" title="Dashboard" id="URA-eY-qW8" customClass="DashboardViewController" customModule="ezPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardView" title="Dashboard" id="URA-eY-qW8" customClass="DashboardViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Azn-Uw-iZj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
