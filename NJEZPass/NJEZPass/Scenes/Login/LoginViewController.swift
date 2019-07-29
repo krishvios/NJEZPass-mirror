@@ -14,17 +14,33 @@ import UIKit
 
 protocol LoginDisplayLogic: class
 {
-  func displaySomething(viewModel: Login.Something.ViewModel)
+  func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic
 {
-  var interactor: LoginBusinessLogic?
+  var interactor: LoginBiometricLogic?
   var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var biometricAuthBtn: UIButton!
+    
+  // MARK: IBActions
+    @IBAction func loginClicked(_ sender: Any) {
+    }
+    
+    @IBAction func forgotPassClicked(_ sender: Any) {
+    }
+    
+    
+    @IBAction func biometricAuthBtnClicked(_ sender: Any) {
+    }
+    
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
   {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
@@ -69,21 +85,36 @@ class LoginViewController: UIViewController, LoginDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    checkForDeviceBiometricCapabilities()
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
+  func checkForDeviceBiometricCapabilities()
   {
-    let request = Login.Something.Request()
-    interactor?.doSomething(request: request)
+    let request = Login.Biometric.CheckBiometricModes.Request()
+    interactor?.checkForDeviceBiometricCapabilities(request: request)
   }
   
-  func displaySomething(viewModel: Login.Something.ViewModel)
+    func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
   {
     //nameTextField.text = viewModel.name
+    switch viewModel.avilableMode {
+    case AvailableBiometricMode.none:
+        biometricAuthBtn.isHidden = true
+    case AvailableBiometricMode.touchId:
+        biometricAuthBtn.isHidden = false
+        biometricAuthBtn.setTitle("Touch ID", for: .normal)
+    case AvailableBiometricMode.faceId:
+        biometricAuthBtn.isHidden = false
+        biometricAuthBtn.setTitle("Face ID", for: .normal)
+
+
+    }
   }
 }

@@ -12,9 +12,11 @@
 
 import UIKit
 
-protocol LoginBusinessLogic
+protocol LoginBiometricLogic
 {
-  func doSomething(request: Login.Something.Request)
+  func checkForDeviceBiometricCapabilities(request: Login.Biometric.CheckBiometricModes.Request)
+    func performBiometricAuth(request: Login.Biometric.Authentication.Request)
+
 }
 
 protocol LoginDataStore
@@ -22,7 +24,7 @@ protocol LoginDataStore
   //var name: String { get set }
 }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore
+class LoginInteractor: LoginBiometricLogic, LoginDataStore
 {
   var presenter: LoginPresentationLogic?
   var worker: LoginWorker?
@@ -30,12 +32,20 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore
   
   // MARK: Do something
   
-  func doSomething(request: Login.Something.Request)
+  func checkForDeviceBiometricCapabilities(request: Login.Biometric.CheckBiometricModes.Request )
   {
     worker = LoginWorker()
     worker?.doSomeWork()
     
-    let response = Login.Something.Response()
-    presenter?.presentSomething(response: response)
+    let mode = BiometricAuthWorker.sharedInstance.checkAvailableBiometricMode()
+    let response = Login.Biometric.CheckBiometricModes.Response(avilableMode: mode)
+    presenter?.presentBiometricBtn(response: response)
   }
+    
+    func performBiometricAuth(request: Login.Biometric.Authentication.Request)
+    {
+        
+    }
+    
+
 }

@@ -12,6 +12,18 @@
 
 import UIKit
 
+enum ReqMode {
+    case checkCapability
+    case fingerAuth
+    case faceAuth
+}
+
+enum AvailableBiometricMode{
+    case none
+    case touchId
+    case faceId
+}
+
 enum Login
 {
   // MARK: Use cases
@@ -28,4 +40,42 @@ enum Login
     {
     }
   }
+    
+enum Biometric
+{
+    enum CheckBiometricModes
+    {
+        struct Request
+        {
+        }
+        
+        struct Response
+        {
+            var avilableMode :AvailableBiometricMode
+        }
+        
+        struct ViewModel
+        {
+            var avilableMode :AvailableBiometricMode
+
+        }
+    }
+    
+    enum Authentication
+    {
+        struct Request {
+            var authMode :AvailableBiometricMode
+        }
+        struct Response {
+            var success : Bool
+            var errorMsg : String
+        }
+        
+        struct ViewModel {
+            var success : Bool
+            var errorMsg : String
+        }
+    }
+   
+}
 }
