@@ -1,0 +1,60 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Domain' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Domain
+
+  target 'DomainTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Entities' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Entities
+
+  target 'EntitiesTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'NJEZPass' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NJEZPass
+
+    pod 'Alamofire', '~> 5.0.0-beta.5'
+  target 'NJEZPassTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NJEZPassUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Platform' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Platform
+
+  target 'PlatformTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
