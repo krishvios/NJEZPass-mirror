@@ -786,10 +786,10 @@ We’ve successfully processed your payment! Confirmation details of this transa
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-DX-lFh" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                        <rect key="frame" x="22" y="160" width="276" height="38"/>
+                                        <rect key="frame" x="22" y="160" width="276" height="44"/>
                                         <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="uRc-m1-9ZB"/>
+                                            <constraint firstAttribute="height" constant="44" id="uRc-m1-9ZB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                         <state key="normal" title="OK">
