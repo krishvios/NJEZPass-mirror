@@ -72,6 +72,12 @@
 		9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */; };
 		9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */; };
 		9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */; };
+		9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */; };
+		9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */; };
+		9BCA993322F44EED00C3BB7D /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA993222F44EED00C3BB7D /* ContactUs.storyboard */; };
+		9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */; };
+		9BCA993822F4614100C3BB7D /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA993722F4614100C3BB7D /* FAQ.storyboard */; };
+		9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993A22F466E600C3BB7D /* FAQViewController.swift */; };
 		9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844A22F184C400F94DE2 /* CMLabel.swift */; };
 		9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */; };
 		9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */; };
@@ -258,6 +264,12 @@
 		9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentMethodViewController.swift; sourceTree = "<group>"; };
 		9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolentsPaymentSummaryViewController.swift; sourceTree = "<group>"; };
 		9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentStatusViewController.swift; sourceTree = "<group>"; };
+		9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagViewController.swift; sourceTree = "<group>"; };
+		9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSubmissionStatusViewController.swift; sourceTree = "<group>"; };
+		9BCA993222F44EED00C3BB7D /* ContactUs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
+		9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		9BCA993722F4614100C3BB7D /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
+		9BCA993A22F466E600C3BB7D /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		9BD4844A22F184C400F94DE2 /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
 		9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountViewController.swift; sourceTree = "<group>"; };
 		9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
@@ -373,6 +385,8 @@
 				42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */,
 				9B67913822EEE5FC00522E63 /* PaymentMethods.storyboard */,
 				9B5C6D8922F1D26500DA6151 /* Violations.storyboard */,
+				9BCA993222F44EED00C3BB7D /* ContactUs.storyboard */,
+				9BCA993722F4614100C3BB7D /* FAQ.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -540,6 +554,8 @@
 		5EE3E05122E58F08007EDCC7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9BCA993922F4617700C3BB7D /* FAQs */,
+				9BCA993422F4509B00C3BB7D /* ContactsUs */,
 				9B008B3A22F320AD0098BCDC /* Tags */,
 				9B5C6D8D22F2BC0400DA6151 /* Violations */,
 				9BD4844922F184AD00F94DE2 /* CMComponents */,
@@ -701,6 +717,8 @@
 			isa = PBXGroup;
 			children = (
 				9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */,
+				9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */,
+				9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */,
 			);
 			path = Tags;
 			sourceTree = "<group>";
@@ -727,6 +745,22 @@
 				9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */,
 			);
 			path = "Payment Methods";
+			sourceTree = "<group>";
+		};
+		9BCA993422F4509B00C3BB7D /* ContactsUs */ = {
+			isa = PBXGroup;
+			children = (
+				9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */,
+			);
+			path = ContactsUs;
+			sourceTree = "<group>";
+		};
+		9BCA993922F4617700C3BB7D /* FAQs */ = {
+			isa = PBXGroup;
+			children = (
+				9BCA993A22F466E600C3BB7D /* FAQViewController.swift */,
+			);
+			path = FAQs;
 			sourceTree = "<group>";
 		};
 		9BD4844922F184AD00F94DE2 /* CMComponents */ = {
@@ -1079,6 +1113,8 @@
 				42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */,
 				9B5C6D8A22F1D26500DA6151 /* Violations.storyboard in Resources */,
 				5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */,
+				9BCA993322F44EED00C3BB7D /* ContactUs.storyboard in Resources */,
+				9BCA993822F4614100C3BB7D /* FAQ.storyboard in Resources */,
 				42DC225922E1C0C500A59D80 /* TagsFlow.storyboard in Resources */,
 				42DC225622E1C0C500A59D80 /* TransactionsFlow.storyboard in Resources */,
 				9B67913922EEE5FC00522E63 /* PaymentMethods.storyboard in Resources */,
@@ -1336,8 +1372,10 @@
 				5EE3E05D22E5959D007EDCC7 /* LoginViewController.swift in Sources */,
 				5EE3E05922E5959D007EDCC7 /* LoginPresenter.swift in Sources */,
 				5ED413A522EE140B00F5757B /* APIConfiguration.swift in Sources */,
+				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */,
+				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
@@ -1355,10 +1393,12 @@
 				5EE3E05C22E5959D007EDCC7 /* LoginModels.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
+				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */,
 				5E98944B22EE2A930098B194 /* LoginAuth.swift in Sources */,
+				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
 				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
