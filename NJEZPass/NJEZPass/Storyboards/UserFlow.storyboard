@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-1995"/>
+            <point key="canvasLocation" x="521" y="-939"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bNt-76-ZG8">
@@ -869,7 +869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQq-b5-rlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4729" y="-937"/>
+            <point key="canvasLocation" x="3174" y="-940"/>
         </scene>
         <!--Login-->
         <scene sceneID="HiD-M1-gl8">
@@ -1027,7 +1027,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wk-3b-wxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1297" y="-1995"/>
+            <point key="canvasLocation" x="-529" y="-938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gqi-cv-fZg">
@@ -1046,7 +1046,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcA-vY-SKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3910" y="-936"/>
+            <point key="canvasLocation" x="1986" y="-939"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="4p2-Wz-JH0">
@@ -1065,7 +1065,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQB-Cp-F7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="-156"/>
+            <point key="canvasLocation" x="3175" y="140"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="5Fe-8B-Flg">
@@ -1259,6 +1259,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Ijv-s6-8bf" kind="show" identifier="FAQ" id="1da-gt-i27"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="s3b-bo-frQ" rowHeight="70" style="IBUITableViewCellStyleDefault" id="3d5-j4-pnA" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="638" width="375" height="70"/>
@@ -1276,6 +1279,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="GiA-AX-9Pm" kind="show" id="tjt-fd-pNd"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KG6-GB-tEr" rowHeight="70" style="IBUITableViewCellStyleDefault" id="lrw-1f-bRY" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="708" width="375" height="70"/>
@@ -1306,7 +1312,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CB0-BR-gc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4549.6000000000004" y="-156.07196401799101"/>
+            <point key="canvasLocation" x="4143" y="140"/>
         </scene>
         <!--AccountFlow-->
         <scene sceneID="RVg-Mv-iie">
@@ -1348,6 +1354,22 @@
             </objects>
             <point key="canvasLocation" x="6290" y="-1330"/>
         </scene>
+        <!--ContactUs-->
+        <scene sceneID="OOk-3a-CZI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactUs" id="GiA-AX-9Pm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEz-mf-ZEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6671" y="-1330"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="8uU-XG-xzp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FAQ" storyboardName="FAQ" id="Ijv-s6-8bf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FU-zG-Rtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7311" y="-1188"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Accounts" width="135" height="139"/>
@@ -1361,6 +1383,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="J5y-Hh-TLd"/>
-        <segue reference="eSl-DK-iLh"/>
+        <segue reference="NRd-vl-WJ0"/>
     </inferredMetricsTieBreakers>
 </document>
