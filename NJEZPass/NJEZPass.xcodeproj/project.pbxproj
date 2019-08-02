@@ -59,6 +59,7 @@
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
+		F9CAC77522F418D700F15F10 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC77422F418D700F15F10 /* SideMenuTableViewController.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,7 @@
 		F7244879ECE35B1661ED22AA /* Pods-PlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		F73218C84906851A219D2046 /* Pods_Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
+		F9CAC77422F418D700F15F10 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -409,6 +411,7 @@
 				5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */,
 				42DC225B22E1C14200A59D80 /* AccountViewController.swift */,
 				42DC225C22E1C14200A59D80 /* DashboardViewController.swift */,
+				F9CAC77422F418D700F15F10 /* SideMenuTableViewController.swift */,
 				42DC225D22E1C14300A59D80 /* TagsViewController.swift */,
 				42DC225E22E1C14300A59D80 /* TransactionsViewController.swift */,
 				42DC225F22E1C14300A59D80 /* VehiclesViewController.swift */,
@@ -1248,6 +1251,7 @@
 				5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */,
 				42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */,
 				5ED413A722EE204300F5757B /* APIClient.swift in Sources */,
+				F9CAC77522F418D700F15F10 /* SideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
