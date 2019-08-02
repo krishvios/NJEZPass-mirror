@@ -37,10 +37,6 @@ target 'NJEZPass' do
     pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS'
     pod 'SideMenu'
     
-  
-                                           
-                                          
-    
   target 'NJEZPassTests' do
     inherit! :search_paths
     # Pods for testing

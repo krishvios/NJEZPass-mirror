@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,23 @@
 		5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3E05822E5959D007EDCC7 /* LoginInteractor.swift */; };
 		61C2F8C4FE280F097C7ABF4D /* Pods_NJEZPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0CB4424A13DB6BB912679 /* Pods_NJEZPass.framework */; };
 		7BDDA510FB4D829E192A0FF0 /* Pods_NJEZPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE51622DBC685C9AFF3432DE /* Pods_NJEZPassUITests.framework */; };
+		9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B03E0BF22F0218F00354AD6 /* CMButton.swift */; };
+		9B5C6D8A22F1D26500DA6151 /* Violations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8922F1D26500DA6151 /* Violations.storyboard */; };
+		9B5C6D8C22F1DB7800DA6151 /* CMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8B22F1DB7800DA6151 /* CMView.swift */; };
+		9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */; };
+		9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */; };
+		9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */; };
+		9B67913922EEE5FC00522E63 /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B67913822EEE5FC00522E63 /* PaymentMethods.storyboard */; };
+		9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */; };
+		9B67913F22F01C8700522E63 /* open-sans in Resources */ = {isa = PBXBuildFile; fileRef = 9B67913E22F01C8700522E63 /* open-sans */; };
+		9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */; };
+		9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */; };
+		9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */; };
+		9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */; };
+		9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */; };
+		9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844A22F184C400F94DE2 /* CMLabel.swift */; };
+		9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */; };
+		9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */; };
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
@@ -223,6 +240,23 @@
 		6B1B4FF9766E16A7A1382D9D /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJEZPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94716BDE53C161C5DB9FE59B /* Pods-EntitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EntitiesTests/Pods-EntitiesTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B03E0BF22F0218F00354AD6 /* CMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMButton.swift; sourceTree = "<group>"; };
+		9B5C6D8922F1D26500DA6151 /* Violations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Violations.storyboard; sourceTree = "<group>"; };
+		9B5C6D8B22F1DB7800DA6151 /* CMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMView.swift; sourceTree = "<group>"; };
+		9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsViewController.swift; sourceTree = "<group>"; };
+		9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsDetailsTableViewController.swift; sourceTree = "<group>"; };
+		9B67913822EEE5FC00522E63 /* PaymentMethods.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
+		9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationViewController.swift; sourceTree = "<group>"; };
+		9B67913E22F01C8700522E63 /* open-sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "open-sans"; sourceTree = "<group>"; };
+		9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLabelCell.swift; sourceTree = "<group>"; };
+		9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDisplayCell.swift; sourceTree = "<group>"; };
+		9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentMethodViewController.swift; sourceTree = "<group>"; };
+		9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolentsPaymentSummaryViewController.swift; sourceTree = "<group>"; };
+		9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentStatusViewController.swift; sourceTree = "<group>"; };
+		9BD4844A22F184C400F94DE2 /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
+		9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountViewController.swift; sourceTree = "<group>"; };
+		9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
 		9EEB18953A7D4ECB4ACB2570 /* Pods-Platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.release.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.release.xcconfig"; sourceTree = "<group>"; };
 		A7ECE26A6D59D5E598E42C99 /* Pods-PlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B205657880100376A070A2BA /* Pods_PlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +367,8 @@
 				42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */,
 				42DC225322E1C0C500A59D80 /* UserFlow.storyboard */,
 				42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */,
+				9B67913822EEE5FC00522E63 /* PaymentMethods.storyboard */,
+				9B5C6D8922F1D26500DA6151 /* Violations.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -419,6 +455,7 @@
 				5EE3DFBD22DEFCAD007EDCC7 /* Assets.xcassets */,
 				5EE3DFBF22DEFCAD007EDCC7 /* LaunchScreen.storyboard */,
 				5EE3DFC222DEFCAD007EDCC7 /* Info.plist */,
+				9B67913E22F01C8700522E63 /* open-sans */,
 			);
 			path = NJEZPass;
 			sourceTree = "<group>";
@@ -498,6 +535,9 @@
 		5EE3E05122E58F08007EDCC7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C6D8D22F2BC0400DA6151 /* Violations */,
+				9BD4844922F184AD00F94DE2 /* CMComponents */,
+				9B67913722EEE5E500522E63 /* Payment Methods */,
 				5EE3E06822E73095007EDCC7 /* EditProfile */,
 				5EE3E06722E73085007EDCC7 /* MyAccount */,
 				5EE3E06622E73077007EDCC7 /* Home */,
@@ -649,6 +689,49 @@
 			children = (
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		9B5C6D8D22F2BC0400DA6151 /* Violations */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */,
+				9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */,
+				9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */,
+				9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */,
+				9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */,
+				9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */,
+				9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */,
+				9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */,
+			);
+			path = Violations;
+			sourceTree = "<group>";
+		};
+		9B67913722EEE5E500522E63 /* Payment Methods */ = {
+			isa = PBXGroup;
+			children = (
+				9BD4844C22F1A49D00F94DE2 /* Add Account */,
+				9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */,
+			);
+			path = "Payment Methods";
+			sourceTree = "<group>";
+		};
+		9BD4844922F184AD00F94DE2 /* CMComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9B03E0BF22F0218F00354AD6 /* CMButton.swift */,
+				9BD4844A22F184C400F94DE2 /* CMLabel.swift */,
+				9B5C6D8B22F1DB7800DA6151 /* CMView.swift */,
+			);
+			path = CMComponents;
+			sourceTree = "<group>";
+		};
+		9BD4844C22F1A49D00F94DE2 /* Add Account */ = {
+			isa = PBXGroup;
+			children = (
+				9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */,
+				9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */,
+			);
+			path = "Add Account";
 			sourceTree = "<group>";
 		};
 		E7EF38A50A1E14A832D16B90 /* Pods */ = {
@@ -980,9 +1063,12 @@
 				42DC225A22E1C0C500A59D80 /* AccountFlow.storyboard in Resources */,
 				42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */,
 				42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */,
+				9B5C6D8A22F1D26500DA6151 /* Violations.storyboard in Resources */,
 				5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */,
 				42DC225922E1C0C500A59D80 /* TagsFlow.storyboard in Resources */,
 				42DC225622E1C0C500A59D80 /* TransactionsFlow.storyboard in Resources */,
+				9B67913922EEE5FC00522E63 /* PaymentMethods.storyboard in Resources */,
+				9B67913F22F01C8700522E63 /* open-sans in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,17 +1280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NJEZPass/Pods-NJEZPass-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NJEZPass/Pods-NJEZPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NJEZPass/Pods-NJEZPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NJEZPass/Pods-NJEZPass-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NJEZPass/Pods-NJEZPass-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB62AA344CF65A1474FE1CE7 /* [CP] Check Pods Manifest.lock */ = {
@@ -1232,21 +1317,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5C6D8C22F1DB7800DA6151 /* CMView.swift in Sources */,
 				5EE3E05D22E5959D007EDCC7 /* LoginViewController.swift in Sources */,
 				5EE3E05922E5959D007EDCC7 /* LoginPresenter.swift in Sources */,
 				5ED413A522EE140B00F5757B /* APIConfiguration.swift in Sources */,
+				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */,
 				42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */,
+				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
+				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
+				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				42DC226322E1C14300A59D80 /* TransactionsViewController.swift in Sources */,
 				5ED4139E22ECCD1700F5757B /* BiometricAuthWorker.swift in Sources */,
+				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				5ED413A322EE129A00F5757B /* Constants.swift in Sources */,
+				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
+				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				5EE3E05A22E5959D007EDCC7 /* LoginWorker.swift in Sources */,
 				42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */,
 				5EE3E05C22E5959D007EDCC7 /* LoginModels.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
+				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
+				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
+				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
+				9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */,
 				5E98944B22EE2A930098B194 /* LoginAuth.swift in Sources */,
 				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
+				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
+				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */,
 				5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */,
 				42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */,
@@ -1519,7 +1618,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1538,7 +1637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
