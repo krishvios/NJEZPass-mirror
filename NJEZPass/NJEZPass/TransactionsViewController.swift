@@ -16,14 +16,6 @@ class TransactionsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func homeButtonAction(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "UserFlow", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardView")
-        self.present(vc, animated: false, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 

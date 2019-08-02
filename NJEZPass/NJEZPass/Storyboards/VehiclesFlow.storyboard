@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pfA-Fn-7kd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,32 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="FsO-tF-1Pd">
-            <objects>
-                <navigationController storyboardIdentifier="VehiclesView" id="0E4-F9-9QD" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0hC-FH-eTB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pfA-Fn-7kd" kind="relationship" relationship="rootViewController" id="Dzr-AG-77T"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lr-c0-l1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-564" y="-123"/>
-        </scene>
         <!--Vechiles-->
         <scene sceneID="nXg-jT-6EW">
             <objects>
-                <viewController title="Vechiles" id="pfA-Fn-7kd" customClass="VehiclesViewController" customModule="ezPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Vechiles" id="pfA-Fn-7kd" customClass="VehiclesViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I1z-GF-Y5d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-ji-Wgj">
-                                <rect key="frame" x="72" y="190" width="231" height="45"/>
+                                <rect key="frame" x="72" y="146" width="231" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fa1-df-QoK"/>
                                 </constraints>
@@ -46,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe1-1S-H5b">
-                                <rect key="frame" x="72" y="260" width="231" height="45"/>
+                                <rect key="frame" x="72" y="216" width="231" height="89"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="REQUEST SUPPLIES"/>
                                 <connections>
@@ -66,13 +50,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6eL-cc-QJO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Vehicles" id="shg-Jh-QOA">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WxO-tk-pzX">
-                            <connections>
-                                <action selector="homeButtonAction:" destination="pfA-Fn-7kd" id="WBc-Qj-7qL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7m-LH-MKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
