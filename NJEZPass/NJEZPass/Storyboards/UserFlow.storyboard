@@ -1071,7 +1071,7 @@
         <scene sceneID="5Fe-8B-Flg">
             <objects>
                 <tableViewController id="R1Z-7q-Cbs" customClass="SideMenuTableViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="doU-Jq-1pl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="doU-Jq-1pl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1160,7 +1160,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="30J-oZ-Jfg" kind="show" id="JDd-Xh-BNy"/>
+                                            <segue destination="l2s-Am-FzJ" kind="show" id="8Ve-LA-c9L"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="U1y-wz-aO9" rowHeight="70" style="IBUITableViewCellStyleDefault" id="j2x-tS-olE" customClass="UITableViewVibrantCell" customModule="SideMenu">
@@ -1180,7 +1180,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="Jea-lt-EfV" kind="show" id="Ghe-Wy-GQW"/>
+                                            <segue destination="5Tr-PD-Qaf" kind="show" id="RKs-Vl-bVc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="pd6-SX-w3l" rowHeight="70" style="IBUITableViewCellStyleDefault" id="3ql-eW-qJZ" customClass="UITableViewVibrantCell" customModule="SideMenu">
@@ -1200,7 +1200,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="un7-eF-82F" kind="show" id="2eM-As-hed"/>
+                                            <segue destination="I3X-RC-i4y" kind="show" id="CcA-vb-CyG"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="f77-ey-0vc" rowHeight="70" style="IBUITableViewCellStyleDefault" id="cF0-W0-Gtr" customClass="UITableViewVibrantCell" customModule="SideMenu">
@@ -1281,11 +1281,11 @@
                                         <rect key="frame" x="0.0" y="708" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lrw-1f-bRY" id="qGf-al-tcZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KG6-GB-tEr">
-                                                    <rect key="frame" x="15" y="0.0" width="344" height="70"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="69.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="highlightedColor"/>
@@ -1308,59 +1308,29 @@
             </objects>
             <point key="canvasLocation" x="4549.6000000000004" y="-156.07196401799101"/>
         </scene>
-        <!--You Can Still Swipe!-->
-        <scene sceneID="nLV-Hf-fCr">
+        <!--AccountFlow-->
+        <scene sceneID="RVg-Mv-iie">
             <objects>
-                <viewController id="Jea-lt-EfV" customClass="PresentedViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jg4-i0-LBe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="xfI-3g-JoM"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="You Can Still Swipe!" id="12T-Qg-8OQ">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Vpp-jU-Fhl"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LKl-xF-Jp3" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AccountFlow" id="l2s-Am-FzJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T19-xV-miX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6754" y="-164"/>
+            <point key="canvasLocation" x="5359" y="-357"/>
         </scene>
-        <!--You Can Still Swipe!-->
-        <scene sceneID="LKs-xw-wHb">
+        <!--TransactionsFlow-->
+        <scene sceneID="ch8-Df-Mpb">
             <objects>
-                <viewController id="30J-oZ-Jfg" customClass="PresentedViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5JD-gi-dLz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="TWL-ab-YEi"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="You Can Still Swipe!" id="YOf-KA-QOA">
-                        <barButtonItem key="backBarButtonItem" title=" " id="guM-cF-B68"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="en1-vg-hLC" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TransactionsFlow" id="5Tr-PD-Qaf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvK-em-Duu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6065" y="-653"/>
+            <point key="canvasLocation" x="5358" y="-238"/>
         </scene>
-        <!--You Can Still Swipe!-->
-        <scene sceneID="3O1-y4-HYQ">
+        <!--VehiclesFlow-->
+        <scene sceneID="cMw-eF-j7l">
             <objects>
-                <viewController id="un7-eF-82F" customClass="PresentedViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uRn-oe-yAW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="4Rb-XS-aM2"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="You Can Still Swipe!" id="Yvz-T3-KUR">
-                        <barButtonItem key="backBarButtonItem" title=" " id="iQA-SA-aY8"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7me-z6-mGZ" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="VehiclesFlow" id="I3X-RC-i4y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4K-d5-Dwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6065" y="200"/>
+            <point key="canvasLocation" x="5314" y="-132"/>
         </scene>
         <!--TagsFlow-->
         <scene sceneID="PlE-r6-6l0">
