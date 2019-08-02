@@ -15,13 +15,21 @@
         </array>
     </customFonts>
     <scenes>
+        <!--FAQ-->
+        <scene sceneID="g8d-fe-2Vh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FAQ" storyboardName="FAQ" id="r9f-gb-iov" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJZ-NI-Hw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="-657"/>
+        </scene>
         <!--Violations-->
         <scene sceneID="fNs-ka-lzm">
             <objects>
                 <viewControllerPlaceholder storyboardName="Violations" id="XAm-Uv-K6q" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsv-65-tzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="-485"/>
+            <point key="canvasLocation" x="-130" y="-707"/>
         </scene>
         <!--TagsFlow-->
         <scene sceneID="T28-Af-bBI">
@@ -29,7 +37,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="TagsView" storyboardName="TagsFlow" id="o1v-CV-4Af" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukZ-OU-ZYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="-450"/>
+            <point key="canvasLocation" x="-422" y="-741"/>
         </scene>
         <!--Account-->
         <scene sceneID="88c-2x-wK5">
@@ -93,6 +101,7 @@
                         <segue destination="7oZ-gg-iBI" kind="show" identifier="PaymentMethods" id="w4M-ax-EAi"/>
                         <segue destination="XAm-Uv-K6q" kind="show" identifier="Violations" id="X3a-sX-aUq"/>
                         <segue destination="o1v-CV-4Af" kind="show" identifier="TagsFlow" id="09r-ma-Auo"/>
+                        <segue destination="r9f-gb-iov" kind="show" identifier="FAQ" id="tZ9-sK-wek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZh-Yj-p0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -559,7 +568,7 @@
                 <viewControllerPlaceholder storyboardName="PaymentMethods" id="7oZ-gg-iBI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sk-nu-dgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-496" y="-420"/>
+            <point key="canvasLocation" x="-723" y="-616"/>
         </scene>
     </scenes>
 </document>
