@@ -16,7 +16,15 @@
                 <viewControllerPlaceholder storyboardName="Violations" id="XAm-Uv-K6q" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsv-65-tzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-392" y="-377"/>
+            <point key="canvasLocation" x="180" y="-485"/>
+        </scene>
+        <!--TagsFlow-->
+        <scene sceneID="T28-Af-bBI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TagsView" storyboardName="TagsFlow" id="o1v-CV-4Af" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukZ-OU-ZYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="-450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nth-A4-MlD">
@@ -37,7 +45,7 @@
         <!--Account-->
         <scene sceneID="88c-2x-wK5">
             <objects>
-                <viewController title="Account" id="mYL-xr-iLb" customClass="AccountViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAccountView" title="Account" id="mYL-xr-iLb" customClass="AccountViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S3N-id-0Wp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +109,7 @@
                         <segue destination="Xxi-3c-gdX" kind="show" identifier="Settings" id="qgI-8F-Bh3"/>
                         <segue destination="7oZ-gg-iBI" kind="show" identifier="PaymentMethods" id="w4M-ax-EAi"/>
                         <segue destination="XAm-Uv-K6q" kind="show" identifier="Violations" id="X3a-sX-aUq"/>
+                        <segue destination="o1v-CV-4Af" kind="show" identifier="TagsFlow" id="09r-ma-Auo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZh-Yj-p0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,7 +362,7 @@
                 <viewControllerPlaceholder storyboardName="PaymentMethods" id="7oZ-gg-iBI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sk-nu-dgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="1462"/>
+            <point key="canvasLocation" x="-496" y="-420"/>
         </scene>
     </scenes>
 </document>
