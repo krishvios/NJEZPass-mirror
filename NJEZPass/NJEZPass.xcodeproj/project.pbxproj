@@ -90,6 +90,7 @@
 		F9CAC7C822F8285800F15F10 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */; };
 		F9CAC7CA22F82A3000F15F10 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7C922F82A3000F15F10 /* ForgotPasswordVC.swift */; };
 		F9CAC7CD22F82B3600F15F10 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7CC22F82B3600F15F10 /* VerificationCodeVC.swift */; };
+		F9CAC7D022F82EF200F15F10 /* ChooseVerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7CF22F82EF200F15F10 /* ChooseVerificationCodeVC.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -300,6 +301,7 @@
 		F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		F9CAC7C922F82A3000F15F10 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordVC.swift; path = NJEZPass/Extensions/ForgotPasswordVC.swift; sourceTree = SOURCE_ROOT; };
 		F9CAC7CC22F82B3600F15F10 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
+		F9CAC7CF22F82EF200F15F10 /* ChooseVerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVerificationCodeVC.swift; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -571,6 +573,7 @@
 				5EE3E06522E73061007EDCC7 /* TwoFactorAuth */,
 				5EE3E06322E73035007EDCC7 /* ForgotPassword */,
 				5EE3E05222E58F1D007EDCC7 /* Login */,
+				F9CAC7CE22F82EA200F15F10 /* ChooseVerificationCode */,
 				F9CAC7CB22F82B0C00F15F10 /* VerificationCode */,
 			);
 			path = Scenes;
@@ -853,6 +856,14 @@
 				F9CAC7CC22F82B3600F15F10 /* VerificationCodeVC.swift */,
 			);
 			path = VerificationCode;
+			sourceTree = "<group>";
+		};
+		F9CAC7CE22F82EA200F15F10 /* ChooseVerificationCode */ = {
+			isa = PBXGroup;
+			children = (
+				F9CAC7CF22F82EF200F15F10 /* ChooseVerificationCodeVC.swift */,
+			);
+			path = ChooseVerificationCode;
 			sourceTree = "<group>";
 		};
 		FB23E168640947AAE5A78165 /* Frameworks */ = {
@@ -1454,6 +1465,7 @@
 				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
 				F9CAC7C822F8285800F15F10 /* UINavigationItem+Extension.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
+				F9CAC7D022F82EF200F15F10 /* ChooseVerificationCodeVC.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */,
 				5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */,

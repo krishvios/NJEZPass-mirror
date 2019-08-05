@@ -477,7 +477,7 @@
         <!--Verification Code-->
         <scene sceneID="Rwx-R6-9I2">
             <objects>
-                <viewController title="Verification Code" id="a89-HO-39K" customClass="VerificationCodeVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Verification Code" id="a89-HO-39K" customClass="ChooseVerificationCodeVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2GS-tO-NZ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,10 +564,10 @@
             </objects>
             <point key="canvasLocation" x="407" y="140"/>
         </scene>
-        <!--View Controller-->
+        <!--Verification CodeVC-->
         <scene sceneID="fPK-TJ-Ky2">
             <objects>
-                <viewController id="x3F-X4-U0k" sceneMemberID="viewController">
+                <viewController id="x3F-X4-U0k" customClass="VerificationCodeVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vUK-g1-xfM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
