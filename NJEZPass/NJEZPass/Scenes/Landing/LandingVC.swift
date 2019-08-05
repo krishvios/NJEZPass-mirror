@@ -3,7 +3,7 @@
 //  NJEZPass
 //
 //  Created by N, Narasimhulu on 05/08/19.
-//  Copyright © 2019 Anshu Sharma. All rights reserved.
+//  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
