@@ -551,6 +551,7 @@
 		5EE3E05122E58F08007EDCC7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F9CAC7B922F8008800F15F10 /* Landing */,
 				9BCA993922F4617700C3BB7D /* FAQs */,
 				9BCA993422F4509B00C3BB7D /* ContactsUs */,
 				9B008B3A22F320AD0098BCDC /* Tags */,
@@ -570,6 +571,7 @@
 		5EE3E05222E58F1D007EDCC7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F9CAC7BE22F8022E00F15F10 /* LoginVC.swift */,
 				5EE3E05322E5959D007EDCC7 /* LoginPresenter.swift */,
 				5EE3E05422E5959D007EDCC7 /* LoginWorker.swift */,
 				5EE3E05522E5959D007EDCC7 /* LoginRouter.swift */,
@@ -807,8 +809,6 @@
 		F9CAC7B822F8005E00F15F10 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F9CAC7B922F8008800F15F10 /* Landing */,
-				F9CAC7BD22F8021600F15F10 /* Login */,
 				42D43E6022F3213A00181C46 /* EditProfileViewController.swift */,
 				5EE3DFB822DEFCAC007EDCC7 /* ViewController.swift */,
 				42DC225B22E1C14200A59D80 /* AccountViewController.swift */,
@@ -828,14 +828,6 @@
 				F9CAC7BA22F800B100F15F10 /* LandingVC.swift */,
 			);
 			path = Landing;
-			sourceTree = "<group>";
-		};
-		F9CAC7BD22F8021600F15F10 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				F9CAC7BE22F8022E00F15F10 /* LoginVC.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		FB23E168640947AAE5A78165 /* Frameworks */ = {
