@@ -1070,7 +1070,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Anshu Sharma";
+				ORGANIZATIONNAME = Conduent;
 				TargetAttributes = {
 					5EE3DFB222DEFCAC007EDCC7 = {
 						CreatedOnToolsVersion = 10.2.1;
