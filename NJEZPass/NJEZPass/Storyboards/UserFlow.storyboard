@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6az-Or-0VB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="3wV-qy-f2h" kind="relationship" relationship="rootViewController" id="gcN-fx-vAk"/>
@@ -203,9 +204,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YhS-A1-teR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H51-e0-OXi">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3qv-fz-248"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="H51-e0-OXi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,7 +345,7 @@
         <!--Forgot Password-->
         <scene sceneID="gxO-Xb-N3i">
             <objects>
-                <viewController title="Forgot Password" id="hGT-Jz-PzP" sceneMemberID="viewController">
+                <viewController title="Forgot Password" id="hGT-Jz-PzP" customClass="ForgotPasswordVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Si8-JN-3QC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,7 +477,7 @@
         <!--Verification Code-->
         <scene sceneID="Rwx-R6-9I2">
             <objects>
-                <viewController title="Verification Code" id="a89-HO-39K" sceneMemberID="viewController">
+                <viewController title="Verification Code" id="a89-HO-39K" customClass="VerificationCodeVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2GS-tO-NZ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -975,8 +974,12 @@
                                     <constraint firstAttribute="height" constant="157" id="8Pi-L6-Nme"/>
                                     <constraint firstItem="uN2-gc-NIe" firstAttribute="top" secondItem="6Mz-NU-MAR" secondAttribute="top" id="ABZ-RC-vWU"/>
                                     <constraint firstItem="dFw-qh-ouh" firstAttribute="top" secondItem="qa8-nM-zxl" secondAttribute="bottom" constant="8" id="C05-VF-cos"/>
+                                    <constraint firstItem="uN2-gc-NIe" firstAttribute="top" secondItem="6Mz-NU-MAR" secondAttribute="top" id="Fne-WC-KnY"/>
                                     <constraint firstItem="qa8-nM-zxl" firstAttribute="centerX" secondItem="6Mz-NU-MAR" secondAttribute="centerX" id="KQZ-6f-mfJ"/>
                                     <constraint firstItem="dFw-qh-ouh" firstAttribute="centerX" secondItem="6Mz-NU-MAR" secondAttribute="centerX" id="Uo9-4E-XPV"/>
+                                    <constraint firstAttribute="trailing" secondItem="uN2-gc-NIe" secondAttribute="trailing" id="W1Y-sK-dqq"/>
+                                    <constraint firstItem="uN2-gc-NIe" firstAttribute="leading" secondItem="6Mz-NU-MAR" secondAttribute="leading" id="Xtb-oG-RYV"/>
+                                    <constraint firstAttribute="bottom" secondItem="uN2-gc-NIe" secondAttribute="bottom" id="eyY-oG-u6j"/>
                                     <constraint firstAttribute="width" constant="148" id="gNY-qV-I6V"/>
                                     <constraint firstItem="uN2-gc-NIe" firstAttribute="leading" secondItem="6Mz-NU-MAR" secondAttribute="leading" id="r1T-jp-j0v"/>
                                     <constraint firstAttribute="trailing" secondItem="uN2-gc-NIe" secondAttribute="trailing" id="t9A-8t-SEl"/>
@@ -998,11 +1001,21 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jri-KL-PTH">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="157"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="3wV-qy-f2h" eventType="touchUpInside" id="8cf-iP-Zjr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="148" id="AWM-wi-iWy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jri-KL-PTH" secondAttribute="trailing" id="Ter-nx-Hbc"/>
                                     <constraint firstAttribute="height" constant="157" id="ltk-ie-b24"/>
+                                    <constraint firstItem="Jri-KL-PTH" firstAttribute="leading" secondItem="koY-fB-B2d" secondAttribute="leading" id="ppn-qO-NbJ"/>
+                                    <constraint firstItem="Jri-KL-PTH" firstAttribute="top" secondItem="koY-fB-B2d" secondAttribute="top" id="vp4-he-LoM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jri-KL-PTH" secondAttribute="bottom" id="yj7-3x-fbl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1021,9 +1034,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2rR-03-sTS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TDt-gc-IX0">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="h0o-D4-u5b"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="TDt-gc-IX0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wk-3b-wxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

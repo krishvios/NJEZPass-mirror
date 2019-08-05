@@ -10,7 +10,6 @@ import UIKit
 
 class LandingVC: UIViewController {
 
-    @IBOutlet weak var loginView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +26,15 @@ class LandingVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
+    @IBAction func signUpTapped(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return 
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
 }
