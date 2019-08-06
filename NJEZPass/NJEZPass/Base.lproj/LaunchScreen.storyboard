@@ -1,25 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="324-rh-0rT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="M0R-NK-PWX">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <viewController id="324-rh-0rT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TDi-zQ-dyh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="ZJj-5m-rmM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2019 Lorem Ipsum. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hht-is-XsN">
+                                <rect key="frame" x="0.0" y="609" width="375" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="tAn-00-iGA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.68627450980000004" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="ZJj-5m-rmM" firstAttribute="bottom" secondItem="TDi-zQ-dyh" secondAttribute="bottom" id="Irh-zf-aFh"/>
+                            <constraint firstItem="hht-is-XsN" firstAttribute="leading" secondItem="F5z-HO-jIO" secondAttribute="leading" id="Teh-PJ-tWn"/>
+                            <constraint firstItem="F5z-HO-jIO" firstAttribute="bottom" secondItem="hht-is-XsN" secondAttribute="bottom" constant="40" id="goT-r3-d6w"/>
+                            <constraint firstItem="ZJj-5m-rmM" firstAttribute="top" secondItem="TDi-zQ-dyh" secondAttribute="top" id="mMq-iO-idu"/>
+                            <constraint firstItem="ZJj-5m-rmM" firstAttribute="trailing" secondItem="F5z-HO-jIO" secondAttribute="trailing" id="oC7-kY-9E2"/>
+                            <constraint firstItem="hht-is-XsN" firstAttribute="trailing" secondItem="F5z-HO-jIO" secondAttribute="trailing" id="sZR-K4-jCd"/>
+                            <constraint firstItem="ZJj-5m-rmM" firstAttribute="leading" secondItem="F5z-HO-jIO" secondAttribute="leading" id="wBN-K2-NN3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F5z-HO-jIO"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cl3-LS-SgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-855.20000000000005" y="156.97151424287858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="375" height="812"/>
+    </resources>
 </document>
