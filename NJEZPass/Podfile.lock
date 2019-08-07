@@ -1,14 +1,17 @@
 PODS:
   - Alamofire (5.0.0-beta.6)
   - Apollo_iOS/ApolloTextInputField (1.0.0)
+  - SideMenu (6.0.9)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
   - "Apollo_iOS/ApolloTextInputField (from `https://anskvivek@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS`)"
+  - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SideMenu
 
 EXTERNAL SOURCES:
   Apollo_iOS:
@@ -21,8 +24,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
-  Apollo_iOS: a5718858eddc68294899ca47cfcd0a11b64439b1
+  Apollo_iOS: 59ba6cd376b0299aaa4a5b17d9d630600377c378
+  SideMenu: 12c42f4bb9405c602f0d75493206cd405911a153
 
-PODFILE CHECKSUM: 7d89cd09290ee6c5cdfccfd7a13a85cd8ea35575
+PODFILE CHECKSUM: 062dd7a0ed72c069b1a9e1f10ff8f5c8c63d704e
 
 COCOAPODS: 1.7.5
