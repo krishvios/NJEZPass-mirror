@@ -20,6 +20,11 @@
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
+		5E0D586A22F40C3D00A8C800 /* BiometricAuthSupervisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D586922F40C3D00A8C800 /* BiometricAuthSupervisor.swift */; };
+		5E81C29822F04ED700FDFDC3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81C29722F04ED700FDFDC3 /* String.swift */; };
+		5E81C29C22F051AA00FDFDC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E81C29E22F051AA00FDFDC3 /* Localizable.strings */; };
+		5E81C2A322F0558500FDFDC3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81C2A222F0558500FDFDC3 /* AppConstant.swift */; };
+		5E81C2A522F05AC400FDFDC3 /* Spanish.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E81C2A422F05AC400FDFDC3 /* Spanish.strings */; };
 		5E98944B22EE2A930098B194 /* LoginAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E98944A22EE2A930098B194 /* LoginAuth.swift */; };
 		5ED4139E22ECCD1700F5757B /* BiometricAuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4139D22ECCD1700F5757B /* BiometricAuthWorker.swift */; };
 		5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED4139F22EE0F0300F5757B /* APIRouter.swift */; };
@@ -176,6 +181,13 @@
 		42DC225E22E1C14300A59D80 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		42DC225F22E1C14300A59D80 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
+		5E0D586922F40C3D00A8C800 /* BiometricAuthSupervisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthSupervisor.swift; sourceTree = "<group>"; };
+		5E81C29722F04ED700FDFDC3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5E81C29D22F051AA00FDFDC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E81C29F22F051E000FDFDC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E81C2A022F051F900FDFDC3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5E81C2A222F0558500FDFDC3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		5E81C2A422F05AC400FDFDC3 /* Spanish.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Spanish.strings; sourceTree = "<group>"; };
 		5E98944A22EE2A930098B194 /* LoginAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuth.swift; sourceTree = "<group>"; };
 		5ED4139D22ECCD1700F5757B /* BiometricAuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthWorker.swift; sourceTree = "<group>"; };
 		5ED4139F22EE0F0300F5757B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -335,6 +347,24 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		5E81C29922F0515400FDFDC3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5E81C29E22F051AA00FDFDC3 /* Localizable.strings */,
+				5E81C2A422F05AC400FDFDC3 /* Spanish.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		5E81C2A122F0554900FDFDC3 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				5E81C29922F0515400FDFDC3 /* Localization */,
+				5E81C2A222F0558500FDFDC3 /* AppConstant.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		5E98944922EE2A790098B194 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				5ED4139D22ECCD1700F5757B /* BiometricAuthWorker.swift */,
+				5E81C29722F04ED700FDFDC3 /* String.swift */,
+				5E0D586922F40C3D00A8C800 /* BiometricAuthSupervisor.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -399,6 +431,7 @@
 		5EE3DFB522DEFCAC007EDCC7 /* NJEZPass */ = {
 			isa = PBXGroup;
 			children = (
+				5E81C2A122F0554900FDFDC3 /* Misc */,
 				5E98944C22EE33970098B194 /* Workers */,
 				5E98944922EE2A790098B194 /* Models */,
 				5ED413A122EE126700F5757B /* API */,
@@ -948,6 +981,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"es-419",
 			);
 			mainGroup = 5EE3DFAA22DEFCAC007EDCC7;
 			productRefGroup = 5EE3DFB422DEFCAC007EDCC7 /* Products */;
@@ -973,9 +1008,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE3DFC122DEFCAD007EDCC7 /* LaunchScreen.storyboard in Resources */,
+				5E81C2A522F05AC400FDFDC3 /* Spanish.strings in Resources */,
 				5EE3DFBE22DEFCAD007EDCC7 /* Assets.xcassets in Resources */,
 				42DC225A22E1C0C500A59D80 /* AccountFlow.storyboard in Resources */,
 				42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */,
+				5E81C29C22F051AA00FDFDC3 /* Localizable.strings in Resources */,
 				42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */,
 				5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */,
 				42DC225922E1C0C500A59D80 /* TagsFlow.storyboard in Resources */,
@@ -1231,12 +1268,15 @@
 			files = (
 				5EE3E05D22E5959D007EDCC7 /* LoginViewController.swift in Sources */,
 				5EE3E05922E5959D007EDCC7 /* LoginPresenter.swift in Sources */,
+				5E81C29822F04ED700FDFDC3 /* String.swift in Sources */,
 				5ED413A522EE140B00F5757B /* APIConfiguration.swift in Sources */,
 				5EE3DFB922DEFCAC007EDCC7 /* ViewController.swift in Sources */,
 				42DC226422E1C14300A59D80 /* VehiclesViewController.swift in Sources */,
+				5E0D586A22F40C3D00A8C800 /* BiometricAuthSupervisor.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
 				42DC226322E1C14300A59D80 /* TransactionsViewController.swift in Sources */,
 				5ED4139E22ECCD1700F5757B /* BiometricAuthWorker.swift in Sources */,
+				5E81C2A322F0558500FDFDC3 /* AppConstant.swift in Sources */,
 				5ED413A322EE129A00F5757B /* Constants.swift in Sources */,
 				5EE3E05A22E5959D007EDCC7 /* LoginWorker.swift in Sources */,
 				42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */,
@@ -1373,6 +1413,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E81C29E22F051AA00FDFDC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E81C29D22F051AA00FDFDC3 /* en */,
+				5E81C29F22F051E000FDFDC3 /* es */,
+				5E81C2A022F051F900FDFDC3 /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5EE3DFBA22DEFCAC007EDCC7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1396,6 +1446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1443,7 +1494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1457,6 +1508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1498,7 +1550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1513,7 +1565,8 @@
 			baseConfigurationReference = C1F23FA36392BEF68C89B6BA /* Pods-NJEZPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sharad Goyal (DLY4A5MAKG)";
+				CODE_SIGN_STYLE = Manual;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1521,6 +1574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Development Wildcard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1531,7 +1585,8 @@
 			baseConfigurationReference = D776B192960BD40540ADEC85 /* Pods-NJEZPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sharad Goyal (DLY4A5MAKG)";
+				CODE_SIGN_STYLE = Manual;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1539,6 +1594,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Development Wildcard";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
