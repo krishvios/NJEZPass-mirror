@@ -59,6 +59,8 @@
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
+		F9AFC23F22FAD1CB004B6A96 /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AFC23E22FAD1CB004B6A96 /* DeviceVerificationVC.swift */; };
+		F9AFC24122FAD206004B6A96 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AFC24022FAD206004B6A96 /* VerificationCodeVC.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +239,8 @@
 		F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntitiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7244879ECE35B1661ED22AA /* Pods-PlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		F73218C84906851A219D2046 /* Pods_Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9AFC23E22FAD1CB004B6A96 /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
+		F9AFC24022FAD206004B6A96 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -501,6 +505,7 @@
 				5EE3E06522E73061007EDCC7 /* TwoFactorAuth */,
 				5EE3E06322E73035007EDCC7 /* ForgotPassword */,
 				5EE3E05222E58F1D007EDCC7 /* Login */,
+				F9AFC23D22FAD199004B6A96 /* Verification */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -671,6 +676,15 @@
 				F7244879ECE35B1661ED22AA /* Pods-PlatformTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9AFC23D22FAD199004B6A96 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				F9AFC23E22FAD1CB004B6A96 /* DeviceVerificationVC.swift */,
+				F9AFC24022FAD206004B6A96 /* VerificationCodeVC.swift */,
+			);
+			path = Verification;
 			sourceTree = "<group>";
 		};
 		FB23E168640947AAE5A78165 /* Frameworks */ = {
@@ -905,7 +919,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Anshu Sharma";
+				ORGANIZATIONNAME = Conduent;
 				TargetAttributes = {
 					5EE3DFB222DEFCAC007EDCC7 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -1242,8 +1256,10 @@
 				42DC226222E1C14300A59D80 /* TagsViewController.swift in Sources */,
 				5EE3E05C22E5959D007EDCC7 /* LoginModels.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
+				F9AFC23F22FAD1CB004B6A96 /* DeviceVerificationVC.swift in Sources */,
 				5E98944B22EE2A930098B194 /* LoginAuth.swift in Sources */,
 				42DC226022E1C14300A59D80 /* AccountViewController.swift in Sources */,
+				F9AFC24122FAD206004B6A96 /* VerificationCodeVC.swift in Sources */,
 				5EE3E05E22E5959D007EDCC7 /* LoginInteractor.swift in Sources */,
 				5EE3E05B22E5959D007EDCC7 /* LoginRouter.swift in Sources */,
 				42DC226122E1C14300A59D80 /* DashboardViewController.swift in Sources */,
