@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login Image (iOS)" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-hj-Kdh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-hj-Kdh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="0AI-fS-zax"/>
@@ -234,7 +234,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Login Image (iOS)" width="375" height="246"/>
+        <image name="LoginBackground" width="375" height="246"/>
         <image name="NJLogo" width="215" height="28"/>
         <image name="dropDownIcon" width="12" height="6"/>
         <image name="white-back" width="58" height="58"/>
