@@ -1,5 +1,5 @@
 //
-//  VehiclesViewController.swift
+//  TransactionsViewController.swift
 //  ezPass
 //
 //  Created by Gudavarthi, Pardhu on 18/07/19.
@@ -8,20 +8,12 @@
 
 import UIKit
 
-class VehiclesViewController: UIViewController {
+class TransactionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-
-    @IBAction func homeButtonAction(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "UserFlow", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardView")
-        self.present(vc, animated: false, completion: nil)
     }
     
     /*

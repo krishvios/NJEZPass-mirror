@@ -1,14 +1,14 @@
 //
-//  TransactionsViewController.swift
-//  ezPass
+//  RequestTagViewController.swift
+//  NJEZPass
 //
-//  Created by Gudavarthi, Pardhu on 18/07/19.
+//  Created by Amirapu, Vivek (External) on 02/08/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
 
-class TransactionsViewController: UIViewController {
+class RequestTagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +17,6 @@ class TransactionsViewController: UIViewController {
     }
     
 
-    @IBAction func homeButtonAction(_ sender: Any) {
-        
-        let storyboard = UIStoryboard(name: "UserFlow", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DashboardView")
-        self.present(vc, animated: false, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 
