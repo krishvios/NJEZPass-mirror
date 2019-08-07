@@ -1,0 +1,6 @@
+framework module Pods_EntitiesTests {
+  umbrella header "Pods-EntitiesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

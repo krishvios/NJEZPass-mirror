@@ -27,23 +27,25 @@ protocol LoginDataStore
 class LoginInteractor: LoginBiometricLogic, LoginDataStore
 {
   var presenter: LoginPresentationLogic?
-  var worker: LoginWorker?
+  var biometricWorker = BiometricAuthSupervisor(worker: BiometricAuthWorker())
   //var name: String = ""
   
   // MARK: Do something
   
   func checkForDeviceBiometricCapabilities(request: Login.Biometric.CheckBiometricModes.Request )
   {
-    worker = LoginWorker()
-    worker?.doSomeWork()
     
-    let mode = BiometricAuthWorker.sharedInstance.checkAvailableBiometricMode()
+    let mode = biometricWorker.checkAvailableBiometricMode()
     let response = Login.Biometric.CheckBiometricModes.Response(avilableMode: mode)
     presenter?.presentBiometricBtn(response: response)
   }
     
     func performBiometricAuth(request: Login.Biometric.Authentication.Request)
     {
+        biometricWorker.performBiometricAuth{ (success:Bool, error: String) in
+            let response = Login.Biometric.Authentication.Response(success: success, errorMsg: error)
+            self.presenter?.presentBiometricAuth(response: response)
+        }
         
     }
     

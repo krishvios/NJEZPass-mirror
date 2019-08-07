@@ -15,11 +15,14 @@ import UIKit
 protocol LoginPresentationLogic
 {
     func presentBiometricBtn(response: Login.Biometric.CheckBiometricModes.Response)
+    func presentBiometricAuth(response: Login.Biometric.Authentication.Response)
 
 }
 
 class LoginPresenter: LoginPresentationLogic
 {
+   
+    
   weak var viewController: LoginDisplayLogic?
   
   // MARK: Do something
@@ -31,5 +34,9 @@ class LoginPresenter: LoginPresentationLogic
         let viewModel = Login.Biometric.CheckBiometricModes.ViewModel(avilableMode: response.avilableMode)
         viewController?.displayBiometricButton(viewModel: viewModel)
 
+    }
+    
+    func presentBiometricAuth(response: Login.Biometric.Authentication.Response) {
+        viewController?.handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel(success: response.success, errorMsg: response.errorMsg))
     }
 }

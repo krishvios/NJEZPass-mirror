@@ -15,6 +15,7 @@ import UIKit
 protocol LoginDisplayLogic: class
 {
   func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
+    func handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     
     
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
+        interactor?.performBiometricAuth(request: Login.Biometric.Authentication.Request(authMode: .touchId))
     }
     
     // MARK: Object lifecycle
@@ -85,6 +87,10 @@ class LoginViewController: UIViewController, LoginDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    let langCultureCode: String = "es"
+    let defaults = UserDefaults.standard
+    defaults.set([langCultureCode], forKey: "AppleLanguages")
+    defaults.synchronize()
     checkForDeviceBiometricCapabilities()
   }
     
@@ -105,16 +111,24 @@ class LoginViewController: UIViewController, LoginDisplayLogic
   {
     //nameTextField.text = viewModel.name
     switch viewModel.avilableMode {
-    case AvailableBiometricMode.none:
+    case .none:
         biometricAuthBtn.isHidden = true
-    case AvailableBiometricMode.touchId:
+    case .touchId:
         biometricAuthBtn.isHidden = false
-        biometricAuthBtn.setTitle("Touch ID", for: .normal)
-    case AvailableBiometricMode.faceId:
+        biometricAuthBtn.setTitle("Touch ID".localized, for: .normal)
+    case .faceId:
         biometricAuthBtn.isHidden = false
-        biometricAuthBtn.setTitle("Face ID", for: .normal)
+        biometricAuthBtn.setTitle("FaceID".localized, for: .normal)
 
 
     }
   }
+    
+    func handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel){
+        let alert = UIAlertController(title: (viewModel.success ?"Success" : "failed"), message: viewModel.errorMsg, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+    }
+
 }
