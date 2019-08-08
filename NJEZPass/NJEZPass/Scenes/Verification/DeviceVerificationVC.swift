@@ -24,11 +24,11 @@ class DeviceVerificationVC: UIViewController {
             if button.isSelected {
                 // set deselected
                // button.isSelected = false
-                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             } else {
                 // set selected
                // button.isSelected = true
-                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton") 
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
             }
         }
     }
