@@ -26,15 +26,5 @@ class LandingVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-    @IBAction func signUpTapped(_ sender: Any) {
-        guard let url = URL(string: "http://www.google.com") else {
-            return 
-        }
-        
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
-    }
+   
 }
