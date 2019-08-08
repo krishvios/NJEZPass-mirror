@@ -10,21 +10,31 @@ import UIKit
 
 class DeviceVerificationVC: UIViewController {
 
+    @IBOutlet weak var emailOption: UIImageView!
+    @IBOutlet weak var mobileOption: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationItem.addNavBarImage()
+       // self.navigationController?.navigationBar.addBackButton()
+    }
+    @IBAction func emailTapped(_ sender: Any) {
+        if let button = sender as? UIButton {
+            if button.isSelected {
+                // set deselected
+               // button.isSelected = false
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+            } else {
+                // set selected
+               // button.isSelected = true
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton") 
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func mobileTapped(_ sender: Any) {
+        
     }
-    */
-
+    
 }

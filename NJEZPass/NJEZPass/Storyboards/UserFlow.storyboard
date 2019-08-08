@@ -28,6 +28,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6az-Or-0VB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="IQS-Dd-9bi" kind="relationship" relationship="rootViewController" id="KSi-iI-vy5"/>
@@ -202,16 +204,15 @@
                                     <constraint firstAttribute="width" constant="56" id="may-gP-GmA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" backgroundImage="white-back"/>
+                                <state key="normal" backgroundImage="whiteArrow"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Pe-iG-ctU" firstAttribute="top" secondItem="BNR-rC-D3n" secondAttribute="bottom" constant="8" id="2rl-VI-7SC"/>
                             <constraint firstItem="BNR-rC-D3n" firstAttribute="centerX" secondItem="cN3-hj-Kdh" secondAttribute="centerX" id="4GM-Wd-bvf"/>
-                            <constraint firstItem="ysQ-M2-dId" firstAttribute="top" secondItem="nVb-sI-PYe" secondAttribute="bottom" constant="28" id="5cS-TY-ez5"/>
                             <constraint firstItem="JlM-iW-dOo" firstAttribute="top" secondItem="cN3-hj-Kdh" secondAttribute="bottom" constant="8" id="G17-JL-xdD"/>
-                            <constraint firstItem="ysQ-M2-dId" firstAttribute="top" secondItem="JlM-iW-dOo" secondAttribute="bottom" constant="28" id="Gcr-ZP-26W"/>
+                            <constraint firstItem="ysQ-M2-dId" firstAttribute="centerX" secondItem="YhS-A1-teR" secondAttribute="centerX" id="Hbq-4c-7s8"/>
                             <constraint firstItem="s2T-p2-k3b" firstAttribute="centerX" secondItem="cN3-hj-Kdh" secondAttribute="centerX" id="I3W-G2-TZl"/>
                             <constraint firstItem="ysQ-M2-dId" firstAttribute="leading" secondItem="cN3-hj-Kdh" secondAttribute="leading" id="Llf-2w-Oei"/>
                             <constraint firstItem="bKa-xY-0Tc" firstAttribute="centerY" secondItem="BNR-rC-D3n" secondAttribute="centerY" id="QpI-av-xpW"/>
@@ -220,6 +221,8 @@
                             <constraint firstItem="3Pe-iG-ctU" firstAttribute="centerX" secondItem="cN3-hj-Kdh" secondAttribute="centerX" id="XT4-jH-t0B"/>
                             <constraint firstItem="bKa-xY-0Tc" firstAttribute="leading" secondItem="BNR-rC-D3n" secondAttribute="trailing" constant="-14" id="Xxq-ou-SsK"/>
                             <constraint firstItem="YhS-A1-teR" firstAttribute="trailing" secondItem="JlM-iW-dOo" secondAttribute="trailing" constant="16" id="ZiY-9y-TNM"/>
+                            <constraint firstItem="YhS-A1-teR" firstAttribute="bottom" secondItem="ysQ-M2-dId" secondAttribute="bottom" constant="40" id="dNN-7m-497"/>
+                            <constraint firstItem="ysQ-M2-dId" firstAttribute="top" secondItem="JlM-iW-dOo" secondAttribute="bottom" constant="28" id="evi-jy-MzI"/>
                             <constraint firstItem="ysQ-M2-dId" firstAttribute="trailing" secondItem="cN3-hj-Kdh" secondAttribute="trailing" id="flx-3A-wKo"/>
                             <constraint firstItem="7Rk-wr-Uex" firstAttribute="top" secondItem="YhS-A1-teR" secondAttribute="top" constant="1" id="gh3-wC-6wH"/>
                             <constraint firstItem="cN3-hj-Kdh" firstAttribute="trailing" secondItem="YhS-A1-teR" secondAttribute="trailing" id="hLC-4a-AC5"/>
@@ -231,7 +234,7 @@
                         <viewLayoutGuide key="safeArea" id="YhS-A1-teR"/>
                     </view>
                     <navigationItem key="navigationItem" id="H51-e0-OXi">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3qv-fz-248"/>
+                        <barButtonItem key="backBarButtonItem" title="                    " id="iKv-Dw-zX8"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -310,22 +313,46 @@
                                     <segue destination="HwT-9N-yri" kind="show" id="pdd-45-e3d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fm-X7-LeI">
+                                <rect key="frame" x="24" y="187" width="327" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="2IG-4W-WiZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="emailTapped:" destination="FHk-Pp-hkM" eventType="touchUpInside" id="QBo-Na-RSy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXF-Mb-Hwq">
+                                <rect key="frame" x="24" y="243" width="327" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Kei-gR-hM1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="mobileTapped:" destination="FHk-Pp-hkM" eventType="touchUpInside" id="JgW-Ec-nJv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gXF-Mb-Hwq" firstAttribute="top" secondItem="mA7-ys-pjp" secondAttribute="bottom" constant="32" id="3DW-MR-aBp"/>
+                            <constraint firstItem="3Fm-X7-LeI" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="4xu-gW-DJg"/>
+                            <constraint firstItem="eBd-ce-ZH6" firstAttribute="trailing" secondItem="gXF-Mb-Hwq" secondAttribute="trailing" constant="24" id="6bu-UV-JGn"/>
                             <constraint firstItem="iSS-o1-01S" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="7YQ-03-kME"/>
                             <constraint firstItem="4QB-Lq-3yg" firstAttribute="centerX" secondItem="eBd-ce-ZH6" secondAttribute="centerX" id="Jab-fg-QT1"/>
                             <constraint firstItem="eBd-ce-ZH6" firstAttribute="trailing" secondItem="3zx-8N-LDn" secondAttribute="trailing" constant="24" id="K51-Wm-pRR"/>
+                            <constraint firstItem="gXF-Mb-Hwq" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="LSl-Ac-zVn"/>
                             <constraint firstItem="WWF-fi-wVC" firstAttribute="top" secondItem="eBd-ce-ZH6" secondAttribute="top" constant="20" id="NIE-OJ-VFk"/>
                             <constraint firstItem="eBd-ce-ZH6" firstAttribute="trailing" secondItem="mA7-ys-pjp" secondAttribute="trailing" constant="24" id="NeD-lr-eju"/>
                             <constraint firstItem="WWF-fi-wVC" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="WoI-8W-0Ch"/>
                             <constraint firstItem="eBd-ce-ZH6" firstAttribute="trailing" secondItem="4QB-Lq-3yg" secondAttribute="trailing" constant="24" id="XLG-RU-Ung"/>
                             <constraint firstItem="iSS-o1-01S" firstAttribute="top" secondItem="WWF-fi-wVC" secondAttribute="bottom" constant="8" id="Z7s-EQ-bhS"/>
                             <constraint firstItem="mA7-ys-pjp" firstAttribute="centerY" secondItem="Dwb-3i-NQa" secondAttribute="centerY" id="aqe-f6-fYD"/>
+                            <constraint firstItem="3Fm-X7-LeI" firstAttribute="top" secondItem="iSS-o1-01S" secondAttribute="bottom" constant="17" id="bmC-Vn-Ufh"/>
                             <constraint firstItem="Dwb-3i-NQa" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="c6m-wf-nin"/>
                             <constraint firstItem="3zx-8N-LDn" firstAttribute="centerY" secondItem="iKY-TW-NTh" secondAttribute="centerY" id="cML-K8-YlY"/>
                             <constraint firstItem="4QB-Lq-3yg" firstAttribute="top" secondItem="3zx-8N-LDn" secondAttribute="bottom" constant="61" id="jHz-2Y-NBE"/>
                             <constraint firstItem="iKY-TW-NTh" firstAttribute="top" secondItem="Dwb-3i-NQa" secondAttribute="bottom" constant="32" id="leB-Dp-7wf"/>
+                            <constraint firstItem="eBd-ce-ZH6" firstAttribute="trailing" secondItem="3Fm-X7-LeI" secondAttribute="trailing" constant="24" id="muS-0U-Y6x"/>
                             <constraint firstItem="mA7-ys-pjp" firstAttribute="leading" secondItem="Dwb-3i-NQa" secondAttribute="trailing" constant="16" id="nUN-vy-ArL"/>
                             <constraint firstItem="iKY-TW-NTh" firstAttribute="leading" secondItem="eBd-ce-ZH6" secondAttribute="leading" constant="24" id="pDo-E9-MPu"/>
                             <constraint firstItem="3zx-8N-LDn" firstAttribute="leading" secondItem="iKY-TW-NTh" secondAttribute="trailing" constant="16" id="paY-xN-JKF"/>
@@ -336,15 +363,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eBd-ce-ZH6"/>
                     </view>
+                    <connections>
+                        <outlet property="emailOption" destination="Dwb-3i-NQa" id="m02-m8-bRq"/>
+                        <outlet property="mobileOption" destination="iKY-TW-NTh" id="yfJ-Pl-InT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuB-pg-fFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="-592.35382308845578"/>
         </scene>
-        <!--View Controller-->
+        <!--Verification CodeVC-->
         <scene sceneID="MPi-Mz-SRW">
             <objects>
-                <viewController id="HwT-9N-yri" sceneMemberID="viewController">
+                <viewController id="HwT-9N-yri" customClass="VerificationCodeVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCZ-eR-TNk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,6 +447,6 @@
         <image name="NJLogo" width="215" height="28"/>
         <image name="dropDownIcon" width="12" height="6"/>
         <image name="unselectedRadioButton" width="24" height="24"/>
-        <image name="white-back" width="58" height="58"/>
+        <image name="whiteArrow" width="58" height="58"/>
     </resources>
 </document>
