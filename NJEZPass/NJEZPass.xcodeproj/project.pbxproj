@@ -85,6 +85,7 @@
 		F90455B222FC1A4D0070257E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455AC22FC1A4D0070257E /* LoginPresenter.swift */; };
 		F90455B322FC1A4D0070257E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455AD22FC1A4D0070257E /* LoginInteractor.swift */; };
 		F90455B522FC235A0070257E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B422FC235A0070257E /* LoginVC.swift */; };
+		F90455B722FC3C000070257E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B622FC3C000070257E /* UITextField+Extension.swift */; };
 		F9CAC7BB22F800B100F15F10 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7BA22F800B100F15F10 /* LandingVC.swift */; };
 		F9CAC7C822F8285800F15F10 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
@@ -291,6 +292,7 @@
 		F90455AC22FC1A4D0070257E /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		F90455AD22FC1A4D0070257E /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		F90455B422FC235A0070257E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F90455B622FC3C000070257E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		F9CAC7BA22F800B100F15F10 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
@@ -809,6 +811,7 @@
 			children = (
 				F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */,
 				F904559A22FC15DC0070257E /* UINavigationBar+Extensions.swift */,
+				F90455B622FC3C000070257E /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1398,6 +1401,7 @@
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				5ED413A322EE129A00F5757B /* Constants.swift in Sources */,
 				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
+				F90455B722FC3C000070257E /* UITextField+Extension.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
 				F90455B022FC1A4D0070257E /* LoginViewController.swift in Sources */,

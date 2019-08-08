@@ -24,17 +24,31 @@ class DeviceVerificationVC: UIViewController {
             if button.isSelected {
                 // set deselected
                // button.isSelected = false
-                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+                mobileOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
             } else {
                 // set selected
                // button.isSelected = true
-                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                mobileOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             }
         }
     }
     
     @IBAction func mobileTapped(_ sender: Any) {
-        
+        if let button = sender as? UIButton {
+            if button.isSelected {
+                // set deselected
+                // button.isSelected = false
+                mobileOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+            } else {
+                // set selected
+                // button.isSelected = true
+                mobileOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+            }
+        }
     }
     
 }
