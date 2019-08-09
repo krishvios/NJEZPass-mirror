@@ -49,6 +49,15 @@
 		9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373622FADC620093FABA /* UserNavigationCell.swift */; };
 		9B06373922FAF58E0093FABA /* CMPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373822FAF58E0093FABA /* CMPickerView.swift */; };
 		9B06373B22FB07E80093FABA /* CMToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373A22FB07E80093FABA /* CMToolbar.swift */; };
+		9B0FD88922FD906C004A596B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88122FD906B004A596B /* EditProfileViewController.swift */; };
+		9B0FD88A22FD906C004A596B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88222FD906B004A596B /* ViewController.swift */; };
+		9B0FD88B22FD906C004A596B /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88322FD906B004A596B /* VehiclesViewController.swift */; };
+		9B0FD88C22FD906C004A596B /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88422FD906B004A596B /* TransactionsViewController.swift */; };
+		9B0FD88D22FD906C004A596B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88522FD906C004A596B /* AccountViewController.swift */; };
+		9B0FD88E22FD906C004A596B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88622FD906C004A596B /* DashboardViewController.swift */; };
+		9B0FD88F22FD906C004A596B /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88722FD906C004A596B /* SideMenuTableViewController.swift */; };
+		9B0FD89022FD906C004A596B /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD88822FD906C004A596B /* TagsViewController.swift */; };
+		9B0FD89522FD9152004A596B /* CMStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD89422FD9152004A596B /* CMStackView.swift */; };
 		9B5C6D8A22F1D26500DA6151 /* Violations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8922F1D26500DA6151 /* Violations.storyboard */; };
 		9B5C6D8C22F1DB7800DA6151 /* CMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8B22F1DB7800DA6151 /* CMView.swift */; };
 		9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */; };
@@ -245,6 +254,15 @@
 		9B06373622FADC620093FABA /* UserNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigationCell.swift; sourceTree = "<group>"; };
 		9B06373822FAF58E0093FABA /* CMPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPickerView.swift; sourceTree = "<group>"; };
 		9B06373A22FB07E80093FABA /* CMToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolbar.swift; sourceTree = "<group>"; };
+		9B0FD88122FD906B004A596B /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9B0FD88222FD906B004A596B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B0FD88322FD906B004A596B /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		9B0FD88422FD906B004A596B /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		9B0FD88522FD906C004A596B /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9B0FD88622FD906C004A596B /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		9B0FD88722FD906C004A596B /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		9B0FD88822FD906C004A596B /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		9B0FD89422FD9152004A596B /* CMStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMStackView.swift; sourceTree = "<group>"; };
 		9B5C6D8922F1D26500DA6151 /* Violations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Violations.storyboard; sourceTree = "<group>"; };
 		9B5C6D8B22F1DB7800DA6151 /* CMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMView.swift; sourceTree = "<group>"; };
 		9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +481,7 @@
 		5EE3DFB522DEFCAC007EDCC7 /* NJEZPass */ = {
 			isa = PBXGroup;
 			children = (
+				9B0FD88022FD9051004A596B /* View */,
 				5E98944C22EE33970098B194 /* Workers */,
 				5E98944922EE2A790098B194 /* Models */,
 				5ED413A122EE126700F5757B /* API */,
@@ -703,6 +722,21 @@
 			path = Tags;
 			sourceTree = "<group>";
 		};
+		9B0FD88022FD9051004A596B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B0FD88522FD906C004A596B /* AccountViewController.swift */,
+				9B0FD88622FD906C004A596B /* DashboardViewController.swift */,
+				9B0FD88122FD906B004A596B /* EditProfileViewController.swift */,
+				9B0FD88722FD906C004A596B /* SideMenuTableViewController.swift */,
+				9B0FD88822FD906C004A596B /* TagsViewController.swift */,
+				9B0FD88422FD906B004A596B /* TransactionsViewController.swift */,
+				9B0FD88322FD906B004A596B /* VehiclesViewController.swift */,
+				9B0FD88222FD906B004A596B /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9B5C6D8D22F2BC0400DA6151 /* Violations */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +780,7 @@
 		9BD4844922F184AD00F94DE2 /* CMComponents */ = {
 			isa = PBXGroup;
 			children = (
+				9B0FD89422FD9152004A596B /* CMStackView.swift */,
 				9B03E0BF22F0218F00354AD6 /* CMButton.swift */,
 				9BD4844A22F184C400F94DE2 /* CMLabel.swift */,
 				9B5C6D8B22F1DB7800DA6151 /* CMView.swift */,
@@ -1383,10 +1418,12 @@
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
 				F90455B522FC235A0070257E /* LoginVC.swift in Sources */,
 				F90455B322FC1A4D0070257E /* LoginInteractor.swift in Sources */,
+				9B0FD88F22FD906C004A596B /* SideMenuTableViewController.swift in Sources */,
 				9B5C6D8C22F1DB7800DA6151 /* CMView.swift in Sources */,
 				5ED413A522EE140B00F5757B /* APIConfiguration.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
 				9B06373922FAF58E0093FABA /* CMPickerView.swift in Sources */,
+				9B0FD88922FD906C004A596B /* EditProfileViewController.swift in Sources */,
 				9B06373B22FB07E80093FABA /* CMToolbar.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -1395,6 +1432,7 @@
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
 				F904559B22FC15DC0070257E /* UINavigationBar+Extensions.swift in Sources */,
+				9B0FD88E22FD906C004A596B /* DashboardViewController.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				F90455B922FC53100070257E /* CMTextField.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
@@ -1408,18 +1446,24 @@
 				F90455B722FC3C000070257E /* UITextField+Extension.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
+				9B0FD88D22FD906C004A596B /* AccountViewController.swift in Sources */,
+				9B0FD88A22FD906C004A596B /* ViewController.swift in Sources */,
 				F90455B022FC1A4D0070257E /* LoginViewController.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
+				9B0FD89522FD9152004A596B /* CMStackView.swift in Sources */,
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */,
+				9B0FD88C22FD906C004A596B /* TransactionsViewController.swift in Sources */,
 				5E98944B22EE2A930098B194 /* LoginAuth.swift in Sources */,
 				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
 				F9CAC7C822F8285800F15F10 /* UINavigationItem+Extension.swift in Sources */,
+				9B0FD89022FD906C004A596B /* TagsViewController.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
+				9B0FD88B22FD906C004A596B /* VehiclesViewController.swift in Sources */,
 				F90455AE22FC1A4D0070257E /* LoginModels.swift in Sources */,
 				F90455B122FC1A4D0070257E /* LoginRouter.swift in Sources */,
 				5ED413A722EE204300F5757B /* APIClient.swift in Sources */,
