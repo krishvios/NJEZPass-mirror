@@ -8,18 +8,18 @@
 
 import UIKit
 
-class VerificationCodeVC: UIViewController, UITextFieldDelegate {
+class VerificationCodeVC: UIViewController, UITextFieldDelegate, CMTextFieldDelegate {
     
-    
-    @IBOutlet weak var firstTextField: UITextField!
-    @IBOutlet weak var secondTextField: UITextField!
-    @IBOutlet weak var thirdTextField: UITextField!
-    @IBOutlet weak var fourthTextField: UITextField!
-    @IBOutlet weak var fifthTextField: UITextField!
+    @IBOutlet weak var firstTextField: CMTextField!
+    @IBOutlet weak var secondTextField: CMTextField!
+    @IBOutlet weak var thirdTextField: CMTextField!
+    @IBOutlet weak var fourthTextField: CMTextField!
+    @IBOutlet weak var fifthTextField: CMTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.addNavBarImage()
+        
         textFieldCosmeticSetUp()
     }
     
@@ -30,7 +30,13 @@ class VerificationCodeVC: UIViewController, UITextFieldDelegate {
         thirdTextField.delegate = self
         fourthTextField.delegate = self
         fifthTextField.delegate = self
-        
+
+        firstTextField.cmtfDelegate = self
+        secondTextField.cmtfDelegate = self
+        thirdTextField.cmtfDelegate = self
+        fourthTextField.cmtfDelegate = self
+        fifthTextField.cmtfDelegate = self
+
         firstTextField.addBottomBorder()
         secondTextField.addBottomBorder()
         thirdTextField.addBottomBorder()
@@ -43,6 +49,8 @@ class VerificationCodeVC: UIViewController, UITextFieldDelegate {
         fourthTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         fifthTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
     }
+    
+    
     
     let TEXT_FIELD_LIMIT = 1
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -69,6 +77,7 @@ class VerificationCodeVC: UIViewController, UITextFieldDelegate {
                 break
             }
         } else {
+            
             // Move back to cursor position
             switch textField {
             case firstTextField:
@@ -84,6 +93,24 @@ class VerificationCodeVC: UIViewController, UITextFieldDelegate {
             default:
                 break
             }
+        }
+    }
+    
+    func textFieldDidDelete(textField: UITextField?) {
+        // Move back to cursor position
+        switch textField {
+        case firstTextField:
+            firstTextField.becomeFirstResponder()
+        case secondTextField:
+            firstTextField.becomeFirstResponder()
+        case thirdTextField:
+            secondTextField.becomeFirstResponder()
+        case fourthTextField:
+            thirdTextField.becomeFirstResponder()
+        case fifthTextField:
+            fourthTextField.becomeFirstResponder()
+        default:
+            break
         }
     }
 }
