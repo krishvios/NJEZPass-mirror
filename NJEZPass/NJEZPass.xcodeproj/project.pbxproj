@@ -86,6 +86,7 @@
 		F90455B322FC1A4D0070257E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455AD22FC1A4D0070257E /* LoginInteractor.swift */; };
 		F90455B522FC235A0070257E /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B422FC235A0070257E /* LoginVC.swift */; };
 		F90455B722FC3C000070257E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B622FC3C000070257E /* UITextField+Extension.swift */; };
+		F90455B922FC53100070257E /* CMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B822FC53100070257E /* CMTextField.swift */; };
 		F9CAC7BB22F800B100F15F10 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7BA22F800B100F15F10 /* LandingVC.swift */; };
 		F9CAC7C822F8285800F15F10 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
@@ -293,6 +294,7 @@
 		F90455AD22FC1A4D0070257E /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		F90455B422FC235A0070257E /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F90455B622FC3C000070257E /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		F90455B822FC53100070257E /* CMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTextField.swift; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		F9CAC7BA22F800B100F15F10 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		F9CAC7C722F8285800F15F10 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 				9B5C6D8B22F1DB7800DA6151 /* CMView.swift */,
 				9B06373822FAF58E0093FABA /* CMPickerView.swift */,
 				9B06373A22FB07E80093FABA /* CMToolbar.swift */,
+				F90455B822FC53100070257E /* CMTextField.swift */,
 			);
 			path = CMComponents;
 			sourceTree = "<group>";
@@ -1393,6 +1396,7 @@
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
 				F904559B22FC15DC0070257E /* UINavigationBar+Extensions.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
+				F90455B922FC53100070257E /* CMTextField.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				F9CAC7BB22F800B100F15F10 /* LandingVC.swift in Sources */,
