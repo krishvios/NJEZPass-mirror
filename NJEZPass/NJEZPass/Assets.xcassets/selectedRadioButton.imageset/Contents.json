@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Tags.png",
+      "filename" : "Graphics - Navbar & Toolbar Icons - Accent - Info.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Tags@2x.png",
+      "filename" : "Graphics - Navbar & Toolbar Icons - Accent - Info@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Tags@3x.png",
+      "filename" : "Graphics - Navbar & Toolbar Icons - Accent - Info@3x.png",
       "scale" : "3x"
     }
   ],
