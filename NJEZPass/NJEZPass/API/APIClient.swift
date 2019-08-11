@@ -11,7 +11,7 @@ import Alamofire
 
 
 class APIClient {
-    static func login(email: String, password: String, completion:@escaping (Result<LoginAuth, Error>)->Void) {
+    static func login(email: String, password: String, completion:@escaping (AFResult<LoginAuth>)->Void) {
         AF.request(APIRouter.login(email: email, password: password))
             .responseDecodable { (response: DataResponse<LoginAuth>) in
                 completion(response.result)

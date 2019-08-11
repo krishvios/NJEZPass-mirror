@@ -14,8 +14,11 @@ import UIKit
 
 protocol LoginDisplayLogic: class
 {
-  func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
-    func handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel)
+    func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
+    func handleBiometricAuth(viewModel: Login.ApiAuthentication.ViewModel)
+    func handleLoginResponse(viewModel: Login.ApiAuthentication.ViewModel)
+    func handleStoredCredential(_ viewModel: Login.KeyChain.ViewModel)
+
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic
@@ -26,11 +29,32 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     // MARK: IBOutlets
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var progressActivity: UIActivityIndicatorView!
+    @IBOutlet weak var rememberMeSwitch: UISwitch!
     
     @IBOutlet weak var biometricAuthBtn: UIButton!
     
   // MARK: IBActions
     @IBAction func loginClicked(_ sender: Any) {
+        self.view.endEditing(true)
+        self.resignFirstResponder()
+        doLogin()
+    }
+    
+    @IBAction func rememberMeValueChanged(_ sender: Any) {
+        UserDefaults.standard.set(rememberMeSwitch.isOn, forKey: ConstantKeys.rememberMe.rawValue)
+    }
+    
+    func doLogin() {
+        if let username = userNameTF.text, let password = passwordTF.text  {
+//            self.progressActivity.startAnimating()
+            let request = Login.ApiAuthentication.Request(username: username, password: password, isSaveCredential: rememberMeSwitch.isOn, isFirstTimeUser: false, loginMode: .plain)
+            interactor?.performApiAuth(request: request)
+            
+        } else {
+            
+            //TODO: Show Alert
+        }
     }
     
     @IBAction func forgotPassClicked(_ sender: Any) {
@@ -38,7 +62,28 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     
     
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
-        interactor?.performBiometricAuth(request: Login.Biometric.Authentication.Request(authMode: .touchId))
+        let isEnrolled = UserDefaults.standard.bool(forKey: ConstantKeys.biometricLoginEnabled.rawValue)
+        if isEnrolled {
+            interactor?.performBiometricAuth(request: Login.ApiAuthentication.Request(  username: "", password: "", isSaveCredential: true, isFirstTimeUser: false, loginMode: .biometric))
+            }else{
+                enrollBiometric()
+            }
+        
+    }
+    
+    func enrollBiometric(){
+        if let username = userNameTF.text, let password = passwordTF.text  {
+            if !validateCredential(username, password){
+                showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
+                return
+            }
+            let request = Login.ApiAuthentication.Request( username: username, password: password,isSaveCredential: true, isFirstTimeUser: true, loginMode: .biometric )
+            interactor?.performBiometricAuth(request: request)
+            
+        } else {
+            showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
+        }
+
     }
     
     // MARK: Object lifecycle
@@ -91,12 +136,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     let defaults = UserDefaults.standard
     defaults.set([langCultureCode], forKey: "AppleLanguages")
     defaults.synchronize()
+    self.hideKeyboardWhenTappedAround()
     checkForDeviceBiometricCapabilities()
+    checkForRememberMeOption()
   }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-  
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
@@ -106,29 +160,91 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     let request = Login.Biometric.CheckBiometricModes.Request()
     interactor?.checkForDeviceBiometricCapabilities(request: request)
   }
-  
+    
+    func checkForRememberMeOption()
+    {
+        if let rememberMe = UserDefaults.standard.value(forKey: ConstantKeys.rememberMe.rawValue)
+        {
+            rememberMeSwitch.isOn = rememberMe as! Bool
+            if(rememberMeSwitch.isOn)
+            {
+                getStoredCredential()
+            }
+        }
+       else
+       {
+        rememberMeSwitch.isOn = false
+        }
+        
+    }
+    
+    func getStoredCredential(){
+        interactor?.getStoredCredential(Login.KeyChain.Request())
+    }
+
     func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
   {
-    //nameTextField.text = viewModel.name
-    switch viewModel.avilableMode {
-    case .none:
+    if !viewModel.isBiometricVisible{
         biometricAuthBtn.isHidden = true
-    case .touchId:
+    }else{
         biometricAuthBtn.isHidden = false
-        biometricAuthBtn.setTitle("Touch ID".localized, for: .normal)
-    case .faceId:
-        biometricAuthBtn.isHidden = false
-        biometricAuthBtn.setTitle("FaceID".localized, for: .normal)
-
-
+        biometricAuthBtn.setTitle(viewModel.statusMsg.localized, for: .normal)
     }
+
   }
     
-    func handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel){
-        let alert = UIAlertController(title: (viewModel.success ?"Success" : "failed"), message: viewModel.errorMsg, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func handleBiometricAuth(viewModel: Login.ApiAuthentication.ViewModel){
+        showAlert(title: (viewModel.success ?"Success" : "failed"), message: viewModel.errorMsg)
 
     }
+    
+    func handleLoginResponse(viewModel: Login.ApiAuthentication.ViewModel)
+    {
+        if !viewModel.success {
+            showAlert(title: "Alert".localized, message: viewModel.errorMsg)
+        }
+        else{
+            router?.routeToDashboard(segue: nil)
+        }
+        
+    }
+    
+    func handleStoredCredential(_ viewModel: Login.KeyChain.ViewModel)
+    {
+        userNameTF.text = viewModel.username
+        passwordTF.text = viewModel.password
+    }
+    
+    // MARK: Error handling
+    
+    private func showAlert(title: String, message: String)
+    {
+        let alertController = UIAlertController(title: title.localized, message: message.localized, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        showDetailViewController(alertController, sender: nil)
+    }
+    
+    private func validateCredential(_ username: String, _ password: String) -> Bool{
+        if (username.count == 0 || password.count == 0){
+            return false
+        }
+        return true
+    }
 
+    
+
+}
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

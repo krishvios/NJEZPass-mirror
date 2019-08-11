@@ -30,7 +30,7 @@
         <!--Login-->
         <scene sceneID="RSC-j6-ZQZ">
             <objects>
-                <viewController title="Login" id="IQS-Dd-9bi" customClass="LoginVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="IQS-Dd-9bi" customClass="LoginViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZP-lX-F8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="bl2-Ot-XBb"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="rememberMeValueChanged:" destination="IQS-Dd-9bi" eventType="valueChanged" id="7TF-31-6sE"/>
+                                        </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-PD-EmK">
                                         <rect key="frame" x="8" y="238" width="328" height="45"/>
@@ -136,13 +139,16 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="a89-HO-39K" kind="show" id="J5y-Hh-TLd"/>
+                                            <action selector="loginClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="QGV-R5-da2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdY-ta-wfu">
                                         <rect key="frame" x="112" y="304" width="120" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Fingerprint Login"/>
+                                        <connections>
+                                            <action selector="biometricAuthBtnClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="6Wg-zV-BOh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-ib-otU">
                                         <rect key="frame" x="206" y="170" width="130" height="30"/>
@@ -153,6 +159,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
+                                            <action selector="forgotPassClicked:" destination="IQS-Dd-9bi" eventType="touchUpInside" id="fUU-ex-fXZ"/>
                                             <segue destination="hGT-Jz-PzP" kind="show" id="wQ2-qB-eQI"/>
                                         </connections>
                                     </button>
@@ -205,6 +212,12 @@
                         <viewLayoutGuide key="safeArea" id="YhS-A1-teR"/>
                     </view>
                     <navigationItem key="navigationItem" id="H51-e0-OXi"/>
+                    <connections>
+                        <outlet property="biometricAuthBtn" destination="gdY-ta-wfu" id="HVe-6g-S3o"/>
+                        <outlet property="passwordTF" destination="Kv6-5n-T80" id="A5B-C3-vMA"/>
+                        <outlet property="rememberMeSwitch" destination="s2G-BI-bYe" id="PQ7-dT-Wx0"/>
+                        <outlet property="userNameTF" destination="nqE-pa-nfP" id="EfI-ZG-6hZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -627,7 +640,7 @@
         <!--Dashboard-->
         <scene sceneID="ufw-Hk-Kic">
             <objects>
-                <viewController storyboardIdentifier="DashboardView" title="Dashboard" id="URA-eY-qW8" customClass="DashboardViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" id="URA-eY-qW8" customClass="DashboardViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Azn-Uw-iZj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1393,7 +1406,6 @@
         <image name="vehicles" width="140" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W1a-Tc-DtJ"/>
-        <segue reference="eSl-DK-iLh"/>
+        <segue reference="NRd-vl-WJ0"/>
     </inferredMetricsTieBreakers>
 </document>

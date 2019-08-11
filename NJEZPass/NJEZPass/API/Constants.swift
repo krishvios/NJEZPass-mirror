@@ -36,4 +36,17 @@ enum HTTPHeaderField: String {
 
 enum ContentType: String {
     case json = "application/json"
+    case urlEncoded = "application/x-www-form-urlencoded"
+}
+
+
+enum ConstantKeys: String{
+    case accessToken = "at"
+    case refreshToken = "rt"
+    case firstName = "firstName"
+    case lastName = "lastName"
+    case rememberMe = "rm"
+    case username = "username"
+    case password = "password"
+    case biometricLoginEnabled = "biometricEnabled"
 }
