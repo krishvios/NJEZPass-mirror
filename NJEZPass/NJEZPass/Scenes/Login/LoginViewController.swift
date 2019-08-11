@@ -21,7 +21,7 @@ protocol LoginDisplayLogic: class
 
 }
 
-class LoginViewController: UIViewController, LoginDisplayLogic
+class LoginViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,LoginDisplayLogic
 {
   var interactor: LoginBiometricLogic?
   var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
@@ -31,7 +31,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var progressActivity: UIActivityIndicatorView!
     @IBOutlet weak var rememberMeSwitch: UISwitch!
+    @IBOutlet var languagePicker: UIPickerView!
     
+    @IBOutlet weak var languagePickerTextField: UITextField!
     @IBOutlet weak var biometricAuthBtn: UIButton!
     
   // MARK: IBActions
@@ -43,18 +45,6 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     
     @IBAction func rememberMeValueChanged(_ sender: Any) {
         UserDefaults.standard.set(rememberMeSwitch.isOn, forKey: ConstantKeys.rememberMe.rawValue)
-    }
-    
-    func doLogin() {
-        if let username = userNameTF.text, let password = passwordTF.text  {
-//            self.progressActivity.startAnimating()
-            let request = Login.ApiAuthentication.Request(username: username, password: password, isSaveCredential: rememberMeSwitch.isOn, isFirstTimeUser: false, loginMode: .plain)
-            interactor?.performApiAuth(request: request)
-            
-        } else {
-            
-            //TODO: Show Alert
-        }
     }
     
     @IBAction func forgotPassClicked(_ sender: Any) {
@@ -71,20 +61,6 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         
     }
     
-    func enrollBiometric(){
-        if let username = userNameTF.text, let password = passwordTF.text  {
-            if !validateCredential(username, password){
-                showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
-                return
-            }
-            let request = Login.ApiAuthentication.Request( username: username, password: password,isSaveCredential: true, isFirstTimeUser: true, loginMode: .biometric )
-            interactor?.performBiometricAuth(request: request)
-            
-        } else {
-            showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
-        }
-
-    }
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -137,6 +113,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     defaults.set([langCultureCode], forKey: "AppleLanguages")
     defaults.synchronize()
     self.hideKeyboardWhenTappedAround()
+    languagePickerTextField.inputView = languagePicker
     checkForDeviceBiometricCapabilities()
     checkForRememberMeOption()
   }
@@ -151,17 +128,16 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-  // MARK: Do something
+  // MARK: Interactor interaction
   
-  //@IBOutlet weak var nameTextField: UITextField!
   
-  func checkForDeviceBiometricCapabilities()
+  private func checkForDeviceBiometricCapabilities()
   {
     let request = Login.Biometric.CheckBiometricModes.Request()
     interactor?.checkForDeviceBiometricCapabilities(request: request)
   }
     
-    func checkForRememberMeOption()
+   private func checkForRememberMeOption()
     {
         if let rememberMe = UserDefaults.standard.value(forKey: ConstantKeys.rememberMe.rawValue)
         {
@@ -178,26 +154,56 @@ class LoginViewController: UIViewController, LoginDisplayLogic
         
     }
     
-    func getStoredCredential(){
+   private func getStoredCredential()
+    {
         interactor?.getStoredCredential(Login.KeyChain.Request())
     }
 
-    func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
-  {
-    if !viewModel.isBiometricVisible{
-        biometricAuthBtn.isHidden = true
-    }else{
-        biometricAuthBtn.isHidden = false
-        biometricAuthBtn.setTitle(viewModel.statusMsg.localized, for: .normal)
+    
+    private func enrollBiometric(){
+        if let username = userNameTF.text, let password = passwordTF.text  {
+            if !validateCredential(username, password){
+                showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
+                return
+            }
+            let request = Login.ApiAuthentication.Request( username: username, password: password,isSaveCredential: true, isFirstTimeUser: true, loginMode: .biometric )
+            interactor?.performBiometricAuth(request: request)
+            
+        } else {
+            showAlert(title: "Alert".localized, message: "Please enter valid username and password to enroll for biometric authentication".localized)
+        }
+        
+    }
+    
+    private func doLogin() {
+        if let username = userNameTF.text, let password = passwordTF.text  {
+            //            self.progressActivity.startAnimating()
+            let request = Login.ApiAuthentication.Request(username: username, password: password, isSaveCredential: rememberMeSwitch.isOn, isFirstTimeUser: false, loginMode: .plain)
+            interactor?.performApiAuth(request: request)
+            
+        } else {
+            showAlert(title: "Alert".localized, message: "Please enter valid username and password".localized)
+        }
     }
 
-  }
+    // MARK: Conforming Presenter
+    
+    func displayBiometricButton(viewModel: Login.Biometric.CheckBiometricModes.ViewModel)
+    {
+        if !viewModel.isBiometricVisible{
+            biometricAuthBtn.isHidden = true
+        }else{
+            biometricAuthBtn.isHidden = false
+            biometricAuthBtn.setTitle(viewModel.statusMsg.localized, for: .normal)
+        }
+        
+    }
     
     func handleBiometricAuth(viewModel: Login.ApiAuthentication.ViewModel){
         showAlert(title: (viewModel.success ?"Success" : "failed"), message: viewModel.errorMsg)
-
+        
     }
-    
+
     func handleLoginResponse(viewModel: Login.ApiAuthentication.ViewModel)
     {
         if !viewModel.success {
@@ -233,6 +239,28 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     }
 
     
+    // MARK: Picker DataSource & Delegate
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+  
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return K.languageArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return K.languageArray[row][ConstantKeys.languageName.rawValue]
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        languagePickerTextField.text = K.languageArray[row][ConstantKeys.languageName.rawValue]
+    }
 
 }
 

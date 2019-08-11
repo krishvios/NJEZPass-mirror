@@ -25,6 +25,8 @@ struct K {
         static let value = "value"
 
     }
+    
+    static let languageArray = [[ "languageName" : "English", "languageCode" : "en"],["languageName" : "Spanish", "languageCode" : "es"]]
 }
 
 enum HTTPHeaderField: String {
@@ -49,4 +51,7 @@ enum ConstantKeys: String{
     case username = "username"
     case password = "password"
     case biometricLoginEnabled = "biometricEnabled"
+    case languageName = "languageName"
+    case languageCode = "languageCode"
 }
+
