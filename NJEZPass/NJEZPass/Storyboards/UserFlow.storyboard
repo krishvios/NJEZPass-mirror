@@ -30,7 +30,7 @@
         <!--Login-->
         <scene sceneID="RSC-j6-ZQZ">
             <objects>
-                <viewController title="Login" id="IQS-Dd-9bi" customClass="LoginViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="IQS-Dd-9bi" customClass="LoginViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZP-lX-F8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,12 +214,22 @@
                     <navigationItem key="navigationItem" id="H51-e0-OXi"/>
                     <connections>
                         <outlet property="biometricAuthBtn" destination="gdY-ta-wfu" id="HVe-6g-S3o"/>
+                        <outlet property="languagePicker" destination="Zle-xd-fnf" id="nbA-Yx-ti1"/>
+                        <outlet property="languagePickerTextField" destination="Z6p-pu-h1t" id="VkH-mE-oPv"/>
                         <outlet property="passwordTF" destination="Kv6-5n-T80" id="A5B-C3-vMA"/>
                         <outlet property="rememberMeSwitch" destination="s2G-BI-bYe" id="PQ7-dT-Wx0"/>
                         <outlet property="userNameTF" destination="nqE-pa-nfP" id="EfI-ZG-6hZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3W-Dc-N3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="Zle-xd-fnf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="IQS-Dd-9bi" id="7ll-I1-Tga"/>
+                        <outlet property="delegate" destination="IQS-Dd-9bi" id="lfm-8B-fxX"/>
+                    </connections>
+                </pickerView>
             </objects>
             <point key="canvasLocation" x="521" y="-939"/>
         </scene>
@@ -886,7 +896,7 @@
         <!--Login-->
         <scene sceneID="HiD-M1-gl8">
             <objects>
-                <viewController title="Login" id="3wV-qy-f2h" customClass="LandingVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" title="Login" id="3wV-qy-f2h" customClass="LandingViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l0t-YS-EKv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1048,8 +1058,20 @@
                         <viewLayoutGuide key="safeArea" id="2rR-03-sTS"/>
                     </view>
                     <navigationItem key="navigationItem" id="TDt-gc-IX0"/>
+                    <connections>
+                        <outlet property="languagePicker" destination="Wqo-N3-XWk" id="4Km-qv-mGy"/>
+                        <outlet property="languagePickerTextField" destination="cGy-Po-F6U" id="7hb-7F-xnf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wk-3b-wxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="Wqo-N3-XWk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="3wV-qy-f2h" id="ugI-5C-ceb"/>
+                        <outlet property="delegate" destination="3wV-qy-f2h" id="YrS-Lp-dKx"/>
+                    </connections>
+                </pickerView>
             </objects>
             <point key="canvasLocation" x="-529" y="-938"/>
         </scene>
