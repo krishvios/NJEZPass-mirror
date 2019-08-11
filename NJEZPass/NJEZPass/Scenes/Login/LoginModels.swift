@@ -24,20 +24,33 @@ enum AvailableBiometricMode{
     case faceId
 }
 
+enum LoginMode{
+    case plain
+    case biometric
+}
+
 enum Login
 {
   // MARK: Use cases
   
-  enum Something
+  enum ApiAuthentication
   {
     struct Request
     {
+        var username: String
+        var password: String
+        var isSaveCredential : Bool
+        var isFirstTimeUser : Bool
+        var loginMode : LoginMode
     }
-    struct Response
-    {
+    struct Response {
+        var success : Bool
+        var errorMsg : String
     }
-    struct ViewModel
-    {
+    
+    struct ViewModel {
+        var success : Bool
+        var errorMsg : String
     }
   }
     
@@ -52,30 +65,49 @@ enum Biometric
         struct Response
         {
             var avilableMode :AvailableBiometricMode
+            var isEnrolled: Bool
         }
         
         struct ViewModel
         {
-            var avilableMode :AvailableBiometricMode
+            var isBiometricVisible :Bool
+            var statusMsg : String
 
         }
     }
     
-    enum Authentication
-    {
-        struct Request {
-            var authMode :AvailableBiometricMode
-        }
-        struct Response {
-            var success : Bool
-            var errorMsg : String
-        }
-        
-        struct ViewModel {
-            var success : Bool
-            var errorMsg : String
-        }
-    }
+//    enum Authentication
+//    {
+//        struct Request {
+//            var authMode :AvailableBiometricMode
+//            var isFirstTimeUser : Bool
+//            var username: String
+//            var password: String
+//        }
+//        struct Response {
+//            var success : Bool
+//            var errorMsg : String
+//        }
+//        
+//        struct ViewModel {
+//            var success : Bool
+//            var errorMsg : String
+//        }
+//    }
    
 }
+    enum KeyChain{
+        struct Request {
+            
+        }
+        struct Response {
+            var username: String
+            var password : String
+
+        }
+        struct ViewModel {
+            var username: String
+            var password : String
+        }
+    }
 }

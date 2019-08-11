@@ -15,7 +15,10 @@ import UIKit
 protocol LoginPresentationLogic
 {
     func presentBiometricBtn(response: Login.Biometric.CheckBiometricModes.Response)
-    func presentBiometricAuth(response: Login.Biometric.Authentication.Response)
+    func presentBiometricAuth(response: Login.ApiAuthentication.Response)
+    func presentApiAuth(response: Login.ApiAuthentication.Response)
+    func presentSavedCredential(_ response: Login.KeyChain.Response)
+
 
 }
 
@@ -31,12 +34,37 @@ class LoginPresenter: LoginPresentationLogic
     
     func presentBiometricBtn(response: Login.Biometric.CheckBiometricModes.Response)
     {
-        let viewModel = Login.Biometric.CheckBiometricModes.ViewModel(avilableMode: response.avilableMode)
+        var isBiometricVisible = true
+        var statusMsg = ""
+        switch response.avilableMode {
+        case .none:
+             isBiometricVisible = false
+             statusMsg = ""
+        case .touchId:
+            statusMsg = "Touch Id"
+        case  .faceId:
+            statusMsg = "Face Id"
+        }
+        if !response.isEnrolled {statusMsg = "Enroll for " + statusMsg}
+        let viewModel = Login.Biometric.CheckBiometricModes.ViewModel(isBiometricVisible: isBiometricVisible, statusMsg: statusMsg)
         viewController?.displayBiometricButton(viewModel: viewModel)
 
     }
     
-    func presentBiometricAuth(response: Login.Biometric.Authentication.Response) {
-        viewController?.handleBiometricAuth(viewModel: Login.Biometric.Authentication.ViewModel(success: response.success, errorMsg: response.errorMsg))
+    func presentBiometricAuth(response: Login.ApiAuthentication.Response) {
+        viewController?.handleBiometricAuth(viewModel: Login.ApiAuthentication.ViewModel(success: response.success, errorMsg: response.errorMsg))
+    }
+    
+    func presentApiAuth(response: Login.ApiAuthentication.Response)
+    {
+        let viewModel = Login.ApiAuthentication.ViewModel(success: response.success, errorMsg: response.errorMsg)
+        viewController?.handleLoginResponse(viewModel: viewModel)
+    }
+    
+    func presentSavedCredential(_ response: Login.KeyChain.Response)
+    {
+        let viewModel = Login.KeyChain.ViewModel(username: response.username, password: response.password)
+        viewController?.handleStoredCredential(viewModel)
+
     }
 }

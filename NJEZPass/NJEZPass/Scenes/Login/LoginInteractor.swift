@@ -15,7 +15,9 @@ import UIKit
 protocol LoginBiometricLogic
 {
   func checkForDeviceBiometricCapabilities(request: Login.Biometric.CheckBiometricModes.Request)
-    func performBiometricAuth(request: Login.Biometric.Authentication.Request)
+    func performBiometricAuth(request: Login.ApiAuthentication.Request)
+    func performApiAuth(request: Login.ApiAuthentication.Request)
+    func getStoredCredential(_ request: Login.KeyChain.Request)
 
 }
 
@@ -36,17 +38,60 @@ class LoginInteractor: LoginBiometricLogic, LoginDataStore
   {
     
     let mode = biometricWorker.checkAvailableBiometricMode()
-    let response = Login.Biometric.CheckBiometricModes.Response(avilableMode: mode)
+    var enrollStatus: Bool = false
+    if let eStatus  = UserDefaults.standard.object(forKey: ConstantKeys.biometricLoginEnabled.rawValue){
+        enrollStatus = eStatus as! Bool
+    }
+    let response = Login.Biometric.CheckBiometricModes.Response(avilableMode: mode, isEnrolled: enrollStatus)
     presenter?.presentBiometricBtn(response: response)
   }
     
-    func performBiometricAuth(request: Login.Biometric.Authentication.Request)
+    func performBiometricAuth(request: Login.ApiAuthentication.Request)
     {
         biometricWorker.performBiometricAuth{ (success:Bool, error: String) in
-            let response = Login.Biometric.Authentication.Response(success: success, errorMsg: error)
+            let response = Login.ApiAuthentication.Response(success: success, errorMsg: error)
+            if !success{
             self.presenter?.presentBiometricAuth(response: response)
+            }else{
+                if request.isFirstTimeUser{
+                    self.performApiAuth(request: request)
+                }else{
+                    KeyChainHandler.fetchCredentialFromKeyChain(){req in
+                        self.performApiAuth(request: req)
+                    }
+                }
+            }
         }
         
+    }
+    
+    func performApiAuth(request: Login.ApiAuthentication.Request)
+    {
+//        KeyChainHandler.saveCredentialInKeyChainIfNeeded(request)
+        APIClient.login(email: request.username, password: request.password) { result  in
+            switch result {
+            case .success(let user):
+                KeyChainHandler.saveCredentialInKeyChainIfNeeded(request)
+                KeyChainHandler.saveSession(user)
+                if request.loginMode == .biometric{
+                    UserDefaults.standard.set(true, forKey: ConstantKeys.biometricLoginEnabled.rawValue)
+                }
+                let response = Login.ApiAuthentication.Response(success: true, errorMsg: "")
+                self.presenter?.presentApiAuth(response: response)
+            case .failure(let error):
+                let response = Login.ApiAuthentication.Response(success: false, errorMsg: error.localizedDescription)
+                self.presenter?.presentApiAuth(response: response)
+            }
+        }
+        
+    }
+    
+    func getStoredCredential(_ request: Login.KeyChain.Request)
+    {
+        KeyChainHandler.fetchCredentialFromKeyChain(){ req in
+            let response = Login.KeyChain.Response(username: req.username, password: req.password)
+            self.presenter?.presentSavedCredential(response)
+        }
     }
     
 

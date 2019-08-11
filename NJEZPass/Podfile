@@ -1,31 +1,7 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
-target 'Domain' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
 
-  # Pods for Domain
-
-  target 'DomainTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
-
-target 'Entities' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Entities
-
-  target 'EntitiesTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
 
 target 'NJEZPass' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -33,31 +9,16 @@ target 'NJEZPass' do
 
   # Pods for NJEZPass
 
-    pod 'Alamofire', '~> 5.0.0-beta.5'
-    pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS'
-    pod 'SideMenu'
-    
+ pod 'Alamofire', '~> 5.0.0-beta.5'
+    pod 'Apollo_iOS/ApolloTextInputField', :git => 'git@ssh.dev.azure.com:v3/ConduentDevOps/Innovation/Cti.Mobility.Apollo-iOS'
+    pod 'SideMenu', '~> 6.0'
+
   target 'NJEZPassTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'NJEZPassUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  
 
 end
 
-target 'Platform' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Platform
-
-  target 'PlatformTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
