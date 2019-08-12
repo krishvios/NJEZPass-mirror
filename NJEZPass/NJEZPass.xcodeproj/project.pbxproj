@@ -31,6 +31,14 @@
 		429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD312300907B0087DBAD /* UITextField+Extension.swift */; };
 		429BAD342300907B0087DBAD /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD322300907B0087DBAD /* UINavigationItem+Extension.swift */; };
 		429BAD362300910A0087DBAD /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD352300910A0087DBAD /* UINavigationBar+Extensions.swift */; };
+		429BAD4523016B950087DBAD /* IUserProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD3923016B950087DBAD /* IUserProfileUsecase.swift */; };
+		429BAD4623016B950087DBAD /* IUserProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD3A23016B950087DBAD /* IUserProfileUsecaseProvider.swift */; };
+		429BAD4723016B950087DBAD /* ILoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD3C23016B950087DBAD /* ILoginUsecase.swift */; };
+		429BAD4823016B950087DBAD /* ILoginUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD3D23016B950087DBAD /* ILoginUsecaseProvider.swift */; };
+		429BAD4923016B950087DBAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4023016B950087DBAD /* Constants.swift */; };
+		429BAD4A23016B950087DBAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4123016B950087DBAD /* Extensions.swift */; };
+		429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4323016B950087DBAD /* IAPIServicable.swift */; };
+		429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4423016B950087DBAD /* IResponseHandler.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -56,18 +64,10 @@
 		42BE359722FBF96B00AAF8E3 /* LoginUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE359122FBF96B00AAF8E3 /* LoginUsecaseRemote.swift */; };
 		42BE359822FBF96B00AAF8E3 /* LoginUsecaseLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE359222FBF96B00AAF8E3 /* LoginUsecaseLocal.swift */; };
 		42BE359922FBF96B00AAF8E3 /* LoginUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE359322FBF96B00AAF8E3 /* LoginUsecaseProvider.swift */; };
-		42BE35A522FBF9DE00AAF8E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE359C22FBF9DD00AAF8E3 /* Constants.swift */; };
-		42BE35A622FBF9DE00AAF8E3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE359D22FBF9DD00AAF8E3 /* Extensions.swift */; };
-		42BE35A822FBF9DE00AAF8E3 /* IResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35A022FBF9DD00AAF8E3 /* IResponseHandler.swift */; };
-		42BE35A922FBF9DE00AAF8E3 /* ILoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35A322FBF9DE00AAF8E3 /* ILoginUsecase.swift */; };
-		42BE35AA22FBF9DE00AAF8E3 /* ILoginUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35A422FBF9DE00AAF8E3 /* ILoginUsecaseProvider.swift */; };
-		42BE35AC22FD48C000AAF8E3 /* IAPIServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35AB22FD48C000AAF8E3 /* IAPIServicable.swift */; };
 		42BE35AF22FD7F3E00AAF8E3 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35AE22FD7F3E00AAF8E3 /* ProfileModel.swift */; };
 		42BE35B322FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B222FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift */; };
 		42BE35B522FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B422FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift */; };
 		42BE35B722FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B622FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift */; };
-		42BE35B922FDA11300AAF8E3 /* IUserProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B822FDA11300AAF8E3 /* IUserProfileUsecase.swift */; };
-		42BE35BB22FDA14900AAF8E3 /* IUserProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35BA22FDA14900AAF8E3 /* IUserProfileUsecaseProvider.swift */; };
 		42DC225622E1C0C500A59D80 /* TransactionsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */; };
 		42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */; };
 		42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DC225322E1C0C500A59D80 /* UserFlow.storyboard */; };
@@ -277,6 +277,14 @@
 		429BAD312300907B0087DBAD /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		429BAD322300907B0087DBAD /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 		429BAD352300910A0087DBAD /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		429BAD3923016B950087DBAD /* IUserProfileUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserProfileUsecase.swift; sourceTree = "<group>"; };
+		429BAD3A23016B950087DBAD /* IUserProfileUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserProfileUsecaseProvider.swift; sourceTree = "<group>"; };
+		429BAD3C23016B950087DBAD /* ILoginUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginUsecase.swift; sourceTree = "<group>"; };
+		429BAD3D23016B950087DBAD /* ILoginUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginUsecaseProvider.swift; sourceTree = "<group>"; };
+		429BAD4023016B950087DBAD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		429BAD4123016B950087DBAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		429BAD4323016B950087DBAD /* IAPIServicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPIServicable.swift; sourceTree = "<group>"; };
+		429BAD4423016B950087DBAD /* IResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IResponseHandler.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -302,18 +310,10 @@
 		42BE359122FBF96B00AAF8E3 /* LoginUsecaseRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE359222FBF96B00AAF8E3 /* LoginUsecaseLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUsecaseLocal.swift; sourceTree = "<group>"; };
 		42BE359322FBF96B00AAF8E3 /* LoginUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProvider.swift; sourceTree = "<group>"; };
-		42BE359C22FBF9DD00AAF8E3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		42BE359D22FBF9DD00AAF8E3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		42BE35A022FBF9DD00AAF8E3 /* IResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IResponseHandler.swift; sourceTree = "<group>"; };
-		42BE35A322FBF9DE00AAF8E3 /* ILoginUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginUsecase.swift; sourceTree = "<group>"; };
-		42BE35A422FBF9DE00AAF8E3 /* ILoginUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILoginUsecaseProvider.swift; sourceTree = "<group>"; };
-		42BE35AB22FD48C000AAF8E3 /* IAPIServicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPIServicable.swift; sourceTree = "<group>"; };
 		42BE35AE22FD7F3E00AAF8E3 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		42BE35B222FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE35B422FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseLocal.swift; sourceTree = "<group>"; };
 		42BE35B622FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseProvider.swift; sourceTree = "<group>"; };
-		42BE35B822FDA11300AAF8E3 /* IUserProfileUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserProfileUsecase.swift; sourceTree = "<group>"; };
-		42BE35BA22FDA14900AAF8E3 /* IUserProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserProfileUsecaseProvider.swift; sourceTree = "<group>"; };
 		42DC225122E1C0C500A59D80 /* TransactionsFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TransactionsFlow.storyboard; sourceTree = "<group>"; };
 		42DC225222E1C0C500A59D80 /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
 		42DC225322E1C0C500A59D80 /* UserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFlow.storyboard; sourceTree = "<group>"; };
@@ -642,6 +642,60 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		429BAD3723016B950087DBAD /* UsecaseInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD3823016B950087DBAD /* UserProfile */,
+				429BAD3B23016B950087DBAD /* Login */,
+			);
+			path = UsecaseInterfaces;
+			sourceTree = "<group>";
+		};
+		429BAD3823016B950087DBAD /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD3923016B950087DBAD /* IUserProfileUsecase.swift */,
+				429BAD3A23016B950087DBAD /* IUserProfileUsecaseProvider.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		429BAD3B23016B950087DBAD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD3C23016B950087DBAD /* ILoginUsecase.swift */,
+				429BAD3D23016B950087DBAD /* ILoginUsecaseProvider.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		429BAD3E23016B950087DBAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD3F23016B950087DBAD /* Utilities */,
+				429BAD4223016B950087DBAD /* API */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		429BAD3F23016B950087DBAD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD4023016B950087DBAD /* Constants.swift */,
+				429BAD4123016B950087DBAD /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		429BAD4223016B950087DBAD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD4323016B950087DBAD /* IAPIServicable.swift */,
+				429BAD4423016B950087DBAD /* IResponseHandler.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		42BE355C22FBF7DE00AAF8E3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -757,66 +811,10 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		42BE359A22FBF9DD00AAF8E3 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				42BE359B22FBF9DD00AAF8E3 /* Utilities */,
-				42BE359E22FBF9DD00AAF8E3 /* API */,
-			);
-			name = Common;
-			path = ../../../../../../Architecture/CMAA/CMAA_POC/SourceCode/CMAA/Domain/Common;
-			sourceTree = "<group>";
-		};
-		42BE359B22FBF9DD00AAF8E3 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				42BE359C22FBF9DD00AAF8E3 /* Constants.swift */,
-				42BE359D22FBF9DD00AAF8E3 /* Extensions.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		42BE359E22FBF9DD00AAF8E3 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				42BE35AB22FD48C000AAF8E3 /* IAPIServicable.swift */,
-				42BE35A022FBF9DD00AAF8E3 /* IResponseHandler.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		42BE35A122FBF9DE00AAF8E3 /* UsecaseInterfaces */ = {
-			isa = PBXGroup;
-			children = (
-				42BE35B022FDA01500AAF8E3 /* UserProfile */,
-				42BE35A222FBF9DE00AAF8E3 /* Login */,
-			);
-			name = UsecaseInterfaces;
-			path = ../../../../../../Architecture/CMAA/CMAA_POC/SourceCode/CMAA/Domain/UsecaseInterfaces;
-			sourceTree = "<group>";
-		};
-		42BE35A222FBF9DE00AAF8E3 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				42BE35A322FBF9DE00AAF8E3 /* ILoginUsecase.swift */,
-				42BE35A422FBF9DE00AAF8E3 /* ILoginUsecaseProvider.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		42BE35AD22FD7F0E00AAF8E3 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
 				42BE35AE22FD7F3E00AAF8E3 /* ProfileModel.swift */,
-			);
-			path = UserProfile;
-			sourceTree = "<group>";
-		};
-		42BE35B022FDA01500AAF8E3 /* UserProfile */ = {
-			isa = PBXGroup;
-			children = (
-				42BE35B822FDA11300AAF8E3 /* IUserProfileUsecase.swift */,
-				42BE35BA22FDA14900AAF8E3 /* IUserProfileUsecaseProvider.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -951,8 +949,8 @@
 		5EE3E00D22DEFCF9007EDCC7 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				42BE359A22FBF9DD00AAF8E3 /* Common */,
-				42BE35A122FBF9DE00AAF8E3 /* UsecaseInterfaces */,
+				429BAD3E23016B950087DBAD /* Common */,
+				429BAD3723016B950087DBAD /* UsecaseInterfaces */,
 				5EE3E00E22DEFCF9007EDCC7 /* Domain.h */,
 				5EE3E00F22DEFCF9007EDCC7 /* Info.plist */,
 			);
@@ -1868,14 +1866,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42BE35A522FBF9DE00AAF8E3 /* Constants.swift in Sources */,
-				42BE35A622FBF9DE00AAF8E3 /* Extensions.swift in Sources */,
-				42BE35B922FDA11300AAF8E3 /* IUserProfileUsecase.swift in Sources */,
-				42BE35BB22FDA14900AAF8E3 /* IUserProfileUsecaseProvider.swift in Sources */,
-				42BE35AC22FD48C000AAF8E3 /* IAPIServicable.swift in Sources */,
-				42BE35A922FBF9DE00AAF8E3 /* ILoginUsecase.swift in Sources */,
-				42BE35AA22FBF9DE00AAF8E3 /* ILoginUsecaseProvider.swift in Sources */,
-				42BE35A822FBF9DE00AAF8E3 /* IResponseHandler.swift in Sources */,
+				429BAD4923016B950087DBAD /* Constants.swift in Sources */,
+				429BAD4A23016B950087DBAD /* Extensions.swift in Sources */,
+				429BAD4823016B950087DBAD /* ILoginUsecaseProvider.swift in Sources */,
+				429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */,
+				429BAD4723016B950087DBAD /* ILoginUsecase.swift in Sources */,
+				429BAD4523016B950087DBAD /* IUserProfileUsecase.swift in Sources */,
+				429BAD4623016B950087DBAD /* IUserProfileUsecaseProvider.swift in Sources */,
+				429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
