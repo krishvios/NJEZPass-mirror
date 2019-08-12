@@ -37,11 +37,12 @@ class VerificationCodeVC: UIViewController, UITextFieldDelegate, CMTextFieldDele
         fourthTextField.cmtfDelegate = self
         fifthTextField.cmtfDelegate = self
 
-        firstTextField.addBottomBorder()
-        secondTextField.addBottomBorder()
-        thirdTextField.addBottomBorder()
-        fourthTextField.addBottomBorder()
-        fifthTextField.addBottomBorder()
+        let width = ((self.view.frame.width - 64) / 5) - 7
+        firstTextField.addBottomBorder(layerWidth: width)
+        secondTextField.addBottomBorder(layerWidth: width)
+        thirdTextField.addBottomBorder(layerWidth: width)
+        fourthTextField.addBottomBorder(layerWidth: width)
+        fifthTextField.addBottomBorder(layerWidth: width)
         
         firstTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         secondTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
