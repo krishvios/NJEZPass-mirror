@@ -891,7 +891,9 @@
                         <viewLayoutGuide key="safeArea" id="m8p-Ac-omN"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="Zet-Nm-ZIL" id="Zn1-wK-7DJ"/>
                         <outlet property="emailOption" destination="xZE-5e-2Fi" id="yX4-gx-7Ep"/>
+                        <outlet property="mobileLabel" destination="9yY-TW-IoK" id="Cku-qZ-211"/>
                         <outlet property="mobileOption" destination="lbz-Hr-xJ5" id="0Rh-rr-RvO"/>
                     </connections>
                 </viewController>
