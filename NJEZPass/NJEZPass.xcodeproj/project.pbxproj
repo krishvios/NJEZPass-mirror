@@ -144,6 +144,8 @@
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
+		F900F2B823029B290020132A /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900F2B723029B290020132A /* SideMenuCell.swift */; };
+		F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900F2B923029B980020132A /* SideMenuViewModel.swift */; };
 		F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559622FC15950070257E /* DeviceVerificationVC.swift */; };
 		F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559722FC15950070257E /* VerificationCodeVC.swift */; };
 		F90455B922FC53100070257E /* CMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B822FC53100070257E /* CMTextField.swift */; };
@@ -410,6 +412,8 @@
 		F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntitiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7244879ECE35B1661ED22AA /* Pods-PlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		F73218C84906851A219D2046 /* Pods_Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F900F2B723029B290020132A /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		F900F2B923029B980020132A /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		F904559622FC15950070257E /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
 		F904559722FC15950070257E /* VerificationCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		F90455B822FC53100070257E /* CMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTextField.swift; sourceTree = "<group>"; };
@@ -595,6 +599,8 @@
 			isa = PBXGroup;
 			children = (
 				429BAD2023008E330087DBAD /* SideMenuTableViewController.swift */,
+				F900F2B723029B290020132A /* SideMenuCell.swift */,
+				F900F2B923029B980020132A /* SideMenuViewModel.swift */,
 				429BAD1C23008DD20087DBAD /* DashboardViewController.swift */,
 				429BAD1823008D380087DBAD /* Implementations */,
 				429BAD1923008D380087DBAD /* Interfaces */,
@@ -1803,7 +1809,9 @@
 				429BAD0123008BC60087DBAD /* IRouter.swift in Sources */,
 				429BAD2D23008EE60087DBAD /* VehiclesViewController.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
+				F900F2B823029B290020132A /* SideMenuCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
+				F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */,
 				42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
 				429BAD0623008BC60087DBAD /* LoginRouting.swift in Sources */,
