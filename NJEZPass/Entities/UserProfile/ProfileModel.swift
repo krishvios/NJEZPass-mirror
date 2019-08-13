@@ -19,14 +19,17 @@ public enum ProfileModel {
         public var financialInformation: FinancialInformation?
         public var replenishmentInformation: ReplenishmentInformation?
         public var personalInformation: PersonalInformation?
+        public var failureMessage: String?
+        
         public var route: Route?
        
-        public init(accountInformation: AccountInformation?, financialInformation: FinancialInformation?, replenishmentInformation: ReplenishmentInformation?, personalInformation: PersonalInformation?,     route: Route?) {
+        public init(accountInformation: AccountInformation?, financialInformation: FinancialInformation?, replenishmentInformation: ReplenishmentInformation?, personalInformation: PersonalInformation?, failureMessage: String?, route: Route?) {
             
             self.accountInformation = accountInformation
             self.financialInformation = financialInformation
             self.replenishmentInformation = replenishmentInformation
             self.personalInformation = personalInformation
+            self.failureMessage = failureMessage
             self.route = route
         }
         
@@ -80,7 +83,18 @@ public enum ProfileModel {
     }
     
     public struct PresentionModel {
-        public var personalInformation: PersonalInformation?
+        public var message: String?
+        public var detailInfo: DetailInfo?
+        
+        public struct DetailInfo {
+            public var personalInformation: PersonalInformation?
+            public var financialInformation: FinancialInformation?
+            
+            public init(personalInfo: PersonalInformation, financialInfo: FinancialInformation) {
+                self.personalInformation = personalInfo
+                self.financialInformation = financialInfo
+            }
+        }
         public var route: Route?
         public init() {
             

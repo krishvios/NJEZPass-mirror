@@ -16,8 +16,8 @@ import Entities
 extension LoginRouter: IRouter {
     func perform(viewModel: Any) {
         //push viewcontroller
-        if let loginViewModel = viewModel as? LoginModel.PresentionModel {
-            print("router: viewModel: ", loginViewModel.accessToken)
+        if let loginViewModel = viewModel as? ProfileModel.PresentionModel {
+            
             if let route = loginViewModel.route {
                 switch route.navigation {
                 case .popup:
@@ -43,10 +43,14 @@ extension LoginRouter: IRouter {
         print("router: route: ", route.path)
         //push viewcontroller
     }
-    func push(viewModel: LoginModel.PresentionModel) {
+    func push(viewModel: ProfileModel.PresentionModel) {
         if let route = viewModel.route {
             print("router: route: ", route.path)
             //push viewcontroller
+            
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: route.path) as! DeviceVerificationVC
+            self.navigateToVC(destination: vc)
         }
     }
     func present(message: String) {

@@ -14,6 +14,7 @@ import UIKit
 import Entities
 import Domain
 extension LoginPresenter: IResponseHandler {
+    
     func onSuccess<T>(response: T) {
         print("onSucess: ", response)
         if let responseModel = response as? LoginModel.Response {
@@ -24,10 +25,28 @@ extension LoginPresenter: IResponseHandler {
                 viewController?.loginFailed(viewModel: viewModel)
             } else {
                 viewModel.message = responseModel.access_token ?? "" + Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginSuccess)
-                viewModel.accessToken = responseModel.access_token
+                viewModel.accessToken = "Bearer " + responseModel.access_token!
+                UserDefaults.standard.set(viewModel.accessToken, forKey: AppStringKeys.accessToken)
                 viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
                 viewController?.loginSuccess(viewModel: viewModel)
             }
+        } else if let responseModel = response as? ProfileModel.Response {
+            var viewModel = ProfileModel.PresentionModel()
+            if let msg = responseModel.failureMessage {
+                viewModel.message = msg
+                viewController?.userProfileFailed(viewModel: viewModel)
+            } else {
+                viewModel.detailInfo?.personalInformation = responseModel.personalInformation
+                viewModel.detailInfo?.financialInformation = responseModel.financialInformation
+                viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+                
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                appDelegate!.detailInfo?.personalInformation = responseModel.personalInformation
+                appDelegate!.detailInfo?.financialInformation = responseModel.financialInformation
+                
+                viewController?.userProfileSuccess(viewModel: viewModel)
+            }
+            print(responseModel)
         }
     }
 
