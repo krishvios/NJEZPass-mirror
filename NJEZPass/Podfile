@@ -36,6 +36,9 @@ target 'NJEZPass' do
     pod 'MBProgressHUD', '~> 1.1.0'
     pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS'
     pod 'SideMenu'
+    pod 'KeychainAccess'
+
+
     
 
   target 'NJEZPassTests' do
