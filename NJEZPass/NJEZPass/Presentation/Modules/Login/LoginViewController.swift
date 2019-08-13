@@ -16,6 +16,7 @@ import Domain
 import Platform
 import Apollo_iOS
 import MBProgressHUD
+import KeychainAccess
 
 class LoginViewController: UIViewController {
     
@@ -23,7 +24,15 @@ class LoginViewController: UIViewController {
     var router: IRouter?
     @IBOutlet weak var txtUserID: ApolloTextInputField!
     @IBOutlet weak var txtPassword: ApolloTextInputField!
-    @IBOutlet weak var progressActivity: UIActivityIndicatorView!
+        {
+        didSet
+        {
+            txtPassword.validationType = .password
+        }
+    }
+    @IBOutlet weak var loginButton: UIButton!
+
+    @IBOutlet weak var rememberMe: UISwitch!
     
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -34,6 +43,7 @@ class LoginViewController: UIViewController {
         super.init(coder: aDecoder)
         setup()
     }
+    
     // MARK: Setup
     private func setup() {
         let configurator = LoginConfigurator()
@@ -42,9 +52,38 @@ class LoginViewController: UIViewController {
         router = configurator.router
     }
     
+    private func fillCredentials() {
+        print(#function)
+        let keychain = Keychain(service: "com.conduent.NJEZPass")
+        
+        do {
+            if let userId = try keychain.get("userId") {
+                self.txtUserID.text = userId
+            }
+        }
+        catch let error {
+            print(error)
+        }
+        
+        do {
+            if let password = try keychain.get("password") {
+                self.txtPassword.text = password
+            }
+        }
+        catch let error {
+            print(error)
+        }
+    }
+    
+    // MARK: ViewController lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fillCredentials()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,8 +94,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        txtUserID.delegate = self
+        txtPassword.delegate = self
+        loginButton.isEnabled = false
+        hideKeyboardWhenTap()
+        toggleLoginButtonColor()
     }
+    
     @IBAction func backTapped(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -76,6 +120,8 @@ class LoginViewController: UIViewController {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             interactor?.login(username: username, password: password, requestType: .remote)
             
+            //saveCredentials()
+            
         } else {
             DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
         }
@@ -86,4 +132,83 @@ class LoginViewController: UIViewController {
     
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
     }
+    
+    private func validateInput(text: String, textField: ApolloTextInputField) {
+        
+        loginButton.isEnabled = false
+        
+        if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
+            loginButton.isEnabled = true
+        }
+
+        toggleLoginButtonColor()
+    }
+    
+    func toggleLoginButtonColor() {
+        if loginButton.isEnabled {
+            loginButton.backgroundColor = #colorLiteral(red: 0.4641762972, green: 0.2112366259, blue: 0.5424402356, alpha: 1)
+        } else {
+            loginButton.backgroundColor = #colorLiteral(red: 0.4489307404, green: 0.09403731674, blue: 0.5118483901, alpha: 0.5)
+        }
+    }
+    
+    func hideKeyboardWhenTap() {
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
+        
+    }
+    
+    public func saveCredentials() {
+        print(#function)
+        let keychain = Keychain(service: "com.conduent.NJEZPass")
+        
+        do {
+            try keychain.set(txtUserID.text!, key: "userId")
+        }
+        catch let error {
+            print(error)
+        }
+        
+        do {
+            try keychain.set(txtPassword.text!, key: "password")
+        }
+        catch let error {
+            print(error)
+        }
+    }
+}
+
+extension LoginViewController: ApolloTextInputFieldDelegate {
+    
+    func lawTextFieldDidBeginEditing(textField: ApolloTextInputField) {
+        
+    }
+    
+    func lawTextFieldDidEndEditing(textField: ApolloTextInputField) {
+        
+        validateInput(text: textField.text ?? "", textField: textField)
+    }
+    
+    func lawTextFieldDidChange(textField: ApolloTextInputField) {
+    }
+    
+    func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        return true
+    }
+    
+    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
+        return true
+    }
+    
 }

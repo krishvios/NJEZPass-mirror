@@ -19,6 +19,11 @@ import MBProgressHUD
 extension LoginViewController: ILoginViewable {
     func loginSuccess(viewModel: LoginModel.PresentionModel) {
 //        progressActivity.stopAnimating()
+
+        if rememberMe.isOn {
+
+            self.saveCredentials()
+        }
         
         MBProgressHUD.hide(for: self.view, animated: true)
         
