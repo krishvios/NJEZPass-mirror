@@ -73,6 +73,8 @@ class LoginViewController: UIViewController {
         catch let error {
             print(error)
         }
+        
+        validateInput()
     }
     
     // MARK: ViewController lifecycle
@@ -133,8 +135,8 @@ class LoginViewController: UIViewController {
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
     }
     
-    private func validateInput(text: String, textField: ApolloTextInputField) {
-        
+    private func validateInput() {
+
         loginButton.isEnabled = false
         
         if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
@@ -196,7 +198,7 @@ extension LoginViewController: ApolloTextInputFieldDelegate {
     
     func lawTextFieldDidEndEditing(textField: ApolloTextInputField) {
         
-        validateInput(text: textField.text ?? "", textField: textField)
+        validateInput()
     }
     
     func lawTextFieldDidChange(textField: ApolloTextInputField) {
