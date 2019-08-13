@@ -15,6 +15,7 @@ enum AppStringKeys {
     static let invalidUserDetails = "INVALID_USER_DETAILS"
     static let ok = "OK"
     static let versionString = "VERSION_STRING_VALUE"
+    static let accessToken = "AccessToken"
 }
 enum AppGraphicKeys {
     static let checkboxChecked = "checkbox-checked"
@@ -26,4 +27,5 @@ enum AppRegExKeys {
 enum AppUIElementKeys {
     static let login = "LoginViewController"
     static let home = "HomeViewController"
+    static let deviceVerification = "DeviceVerificationVC"
 }

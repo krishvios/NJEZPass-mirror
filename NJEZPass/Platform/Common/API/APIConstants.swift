@@ -11,23 +11,16 @@ import UIKit
 public struct APIConstants {
 
     public enum  HostUrl {
-        public static let prodUrl = "https://ws.mybenefitwallet.com/infox/services"
-        public static let qaUrl = "https://ws.qa.mybenefitwallet.com/infox/services"
-        public static let devURL  = "http://ws.dev.mybenefitwallet.com/infox/services"
-        public static let demoUrl = "https://ws.demo.mybenefitwallet.com/infox/services"
-        public static let local = "http://bde284ce.ngrok.io/InfoExService/services"
-
-        public static let termsConditionUrl = "https://mybenefitwallet.com/CMS/docs/default/ClaimTermsConditions.pdf"
-        public static let resourceUrl = "https://mybenefitwallet.com/resource-center.html"
-        public static let appstoreUrl = "https://itunes.apple.com/us/app/benefitwallet/id1225130377?ls=1&mt=8"
-
+        public static let prodUrl = "https://maas-test.services.conduent.com/"
+        public static let qaUrl = "https://maas-test.services.conduent.com/"
+        public static let devURL = "https://maas-test.services.conduent.com/"
+        public static let demoUrl = "https://maas-test.services.conduent.com/"
+        public static let local = "https://maas-test.services.conduent.com/"
     }
 
     public enum ServiceNames {
-        public static let checkAvailableUsers = "checkAvailableUsers"
-        public static let checkFirstUser = "checkFirstUser"
-        public static let registerUser = "registerUser"
-        public static let loginUser = "LoginWSPort/authenticateLogin"
+        public static let profileOverview = "bosuser/api/account/overview"
+        public static let loginUser = "oauth/token"
     }
 
     public enum DefaultParams {

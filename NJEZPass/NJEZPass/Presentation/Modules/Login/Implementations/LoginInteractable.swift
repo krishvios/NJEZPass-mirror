@@ -17,7 +17,7 @@ import Platform
 
 extension LoginInteractor: ILoginInteractable {
     func login(username: String, password: String, requestType: Constants.RequestCategory) {
-        var request = LoginModel.Request(userName:username, password:password)
+        let request = LoginModel.Request(userName:username, password:password)
         
         if let responseHandler = presenter {
             let interfaceObj = loginUsecaseProvider.provideLoginUsecase(requestType: requestType, handler: responseHandler)
@@ -27,6 +27,10 @@ extension LoginInteractor: ILoginInteractable {
     
     func getProfileOverview(accessToken: String, requestType: Constants.RequestCategory) {
         
+        if let responseHandler = presenter {
+            let interfaceObj = userProfileUsecaseProvider.provideProfileOverviewUsecase(requestType: requestType, handler: responseHandler)
+            interfaceObj.getProfileOverview(accessToken: accessToken)
+        }
     }
 
 }

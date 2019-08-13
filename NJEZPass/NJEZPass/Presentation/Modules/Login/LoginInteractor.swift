@@ -18,4 +18,5 @@ import Platform
 class LoginInteractor {
     var presenter: IResponseHandler?
     var loginUsecaseProvider = LoginUsecaseProvider()
+    var userProfileUsecaseProvider = UserProfileUsecaseProvider()
 }

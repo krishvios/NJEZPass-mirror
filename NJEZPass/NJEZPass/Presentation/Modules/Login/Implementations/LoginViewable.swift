@@ -25,8 +25,9 @@ extension LoginViewController: ILoginViewable {
             self.saveCredentials()
         }
         
-        MBProgressHUD.hide(for: self.view, animated: true)
-        
+//        MBProgressHUD.hide(for: self.view, animated: true)
+        let token:String = UserDefaults.standard.value(forKey: AppStringKeys.accessToken) as! String
+        interactor?.getProfileOverview(accessToken: token, requestType: .remote)
 //        router?.perform(viewModel: viewModel)
     }
     func loginFailed(viewModel: LoginModel.PresentionModel) {
@@ -35,9 +36,12 @@ extension LoginViewController: ILoginViewable {
         MBProgressHUD.hide(for: self.view, animated: true)
     }
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        
         router?.perform(viewModel: viewModel)
     }
     func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
         router?.perform(viewModel: viewModel)
     }
 }
