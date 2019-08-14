@@ -1401,6 +1401,17 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-B1-A2F">
                                                     <rect key="frame" x="3" y="52" width="314" height="187"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcI-Vc-gD9">
+                                                            <rect key="frame" x="157" y="32" width="1" height="111"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="1" id="Vhr-GQ-Q5m"/>
+                                                                <constraint firstAttribute="height" constant="111" id="WPl-xT-1dN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgo-Q5-VLq">
                                                             <rect key="frame" x="9" y="82" width="130" height="20"/>
                                                             <constraints>
@@ -1461,6 +1472,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="cgo-Q5-VLq" firstAttribute="firstBaseline" secondItem="zOF-MZ-5Le" secondAttribute="firstBaseline" id="1ds-OF-v4Y"/>
+                                                        <constraint firstItem="GcI-Vc-gD9" firstAttribute="centerX" secondItem="l8d-B1-A2F" secondAttribute="centerX" id="2lP-Sb-iWs"/>
                                                         <constraint firstItem="2U6-MS-pe1" firstAttribute="top" secondItem="l8d-B1-A2F" secondAttribute="top" constant="41" id="7Hl-8G-Hzl"/>
                                                         <constraint firstItem="KLe-eA-1Kn" firstAttribute="trailing" secondItem="l8d-B1-A2F" secondAttribute="trailingMargin" constant="-2" id="7YA-uY-Amf"/>
                                                         <constraint firstItem="B89-tG-mPW" firstAttribute="baseline" secondItem="HO6-ob-pRN" secondAttribute="baseline" id="8u4-CU-olI"/>
@@ -1470,6 +1482,7 @@
                                                         <constraint firstItem="d1j-Ee-pqg" firstAttribute="top" secondItem="l8d-B1-A2F" secondAttribute="top" constant="37" id="HZW-zw-ncN"/>
                                                         <constraint firstItem="B89-tG-mPW" firstAttribute="top" secondItem="cgo-Q5-VLq" secondAttribute="bottom" constant="14" id="KuP-dt-Mc0"/>
                                                         <constraint firstAttribute="bottom" secondItem="B89-tG-mPW" secondAttribute="bottom" constant="41" id="Okf-lD-Sj7"/>
+                                                        <constraint firstItem="GcI-Vc-gD9" firstAttribute="top" secondItem="l8d-B1-A2F" secondAttribute="top" constant="32" id="Tdd-59-yId"/>
                                                         <constraint firstItem="HO6-ob-pRN" firstAttribute="leading" secondItem="B89-tG-mPW" secondAttribute="trailing" constant="35" id="Ugs-DJ-LgD"/>
                                                         <constraint firstItem="B89-tG-mPW" firstAttribute="leading" secondItem="l8d-B1-A2F" secondAttribute="leading" constant="9" id="VQL-Cz-jUB"/>
                                                         <constraint firstItem="KLe-eA-1Kn" firstAttribute="centerX" secondItem="zOF-MZ-5Le" secondAttribute="centerX" id="WRV-su-hbW"/>
