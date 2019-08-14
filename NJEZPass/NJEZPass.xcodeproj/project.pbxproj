@@ -138,6 +138,7 @@
 		9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */; };
 		9BCA993822F4614100C3BB7D /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA993722F4614100C3BB7D /* FAQ.storyboard */; };
 		9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993A22F466E600C3BB7D /* FAQViewController.swift */; };
+		9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */; };
 		9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844A22F184C400F94DE2 /* CMLabel.swift */; };
 		9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */; };
 		9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */; };
@@ -397,6 +398,7 @@
 		9BD4844A22F184C400F94DE2 /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
 		9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountViewController.swift; sourceTree = "<group>"; };
 		9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
+		9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCell.swift; sourceTree = "<group>"; };
 		9EEB18953A7D4ECB4ACB2570 /* Pods-Platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.release.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.release.xcconfig"; sourceTree = "<group>"; };
 		A7ECE26A6D59D5E598E42C99 /* Pods-PlatformTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B205657880100376A070A2BA /* Pods_PlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -602,6 +604,7 @@
 				F900F2B723029B290020132A /* SideMenuCell.swift */,
 				F900F2B923029B980020132A /* SideMenuViewModel.swift */,
 				429BAD1C23008DD20087DBAD /* DashboardViewController.swift */,
+				9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */,
 				429BAD1823008D380087DBAD /* Implementations */,
 				429BAD1923008D380087DBAD /* Interfaces */,
 			);
@@ -1794,6 +1797,7 @@
 				9B0FD89522FD9152004A596B /* CMStackView.swift in Sources */,
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
+				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */,

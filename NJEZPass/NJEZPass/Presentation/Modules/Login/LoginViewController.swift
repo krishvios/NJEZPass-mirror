@@ -56,22 +56,25 @@ class LoginViewController: UIViewController {
         print(#function)
         let keychain = Keychain(service: "com.conduent.NJEZPass")
         
-        do {
-            if let userId = try keychain.get("userId") {
-                self.txtUserID.text = userId
+        DispatchQueue.global().async {
+            
+            do {
+                if let userId = try keychain.authenticationPrompt("Authenticate to login to server").get("userId") {
+                    self.txtUserID.text = userId
+                }
             }
-        }
-        catch let error {
-            print(error)
-        }
-        
-        do {
-            if let password = try keychain.get("password") {
-                self.txtPassword.text = password
+            catch let error {
+                print(error)
             }
-        }
-        catch let error {
-            print(error)
+            
+            do {
+                if let password = try keychain.authenticationPrompt("Authenticate to login to server").get("password") {
+                    self.txtPassword.text = password
+                }
+            }
+            catch let error {
+                print(error)
+            }
         }
         
         validateInput()

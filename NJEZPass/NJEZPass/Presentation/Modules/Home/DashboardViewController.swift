@@ -99,24 +99,32 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cellIdentifier = "ViolationData"
-        
-    
-         switch indexPath.row {
+        switch indexPath.row {
          
-         case 0:
-         cellIdentifier = "NavigationCell"
-         //case 1:
-         //cellIdentifier = "PayTollsCell"
-         case 1:
-         cellIdentifier = "NewsRoomCell"
-         case 2:
-         cellIdentifier = "ViewTollFacilitiesCell"
-         case 3:
-         cellIdentifier = "TravelToolsCell"
-         default:
-         cellIdentifier = "TravelToolsCell"
-         }
-        
+            case 0:
+            cellIdentifier = "ProfileNavigationCell"
+            
+            if let profileNavigationCell = tableView.dequeueReusableCell(withIdentifier: "\(ProfileNavigationCell.self)") as? ProfileNavigationCell {
+                
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                if let balance = appDelegate!.detailInfo?.financialInformation?.violationBalance {
+                    profileNavigationCell.violationsBalance.text =  "$ \(balance)"
+                }
+                if let balance = appDelegate!.detailInfo?.financialInformation?.currentBalance {
+                    profileNavigationCell.availableBalance.text =  "$ \(balance)"
+                }
+                return profileNavigationCell
+            }
+            
+            case 1:
+            cellIdentifier = "NewsRoomCell"
+            case 2:
+            cellIdentifier = "ViewTollFacilitiesCell"
+            case 3:
+            cellIdentifier = "TravelToolsCell"
+            default:
+            cellIdentifier = "TravelToolsCell"
+        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         
