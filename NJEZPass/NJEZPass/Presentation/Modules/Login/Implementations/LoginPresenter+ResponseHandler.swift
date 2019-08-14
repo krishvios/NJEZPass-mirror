@@ -36,13 +36,12 @@ extension LoginPresenter: IResponseHandler {
                 viewModel.message = msg
                 viewController?.userProfileFailed(viewModel: viewModel)
             } else {
-                viewModel.detailInfo?.personalInformation = responseModel.personalInformation
-                viewModel.detailInfo?.financialInformation = responseModel.financialInformation
+                viewModel.detailInfo = ProfileModel.PresentionModel.DetailInfo(personalInfo: responseModel.personalInformation!, financialInfo: responseModel.financialInformation!)
                 viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
                 
                 let appDelegate = UIApplication.shared.delegate as? AppDelegate
-                appDelegate!.detailInfo?.personalInformation = responseModel.personalInformation
-                appDelegate!.detailInfo?.financialInformation = responseModel.financialInformation
+                
+                appDelegate?.detailInfo = viewModel.detailInfo
                 
                 viewController?.userProfileSuccess(viewModel: viewModel)
             }

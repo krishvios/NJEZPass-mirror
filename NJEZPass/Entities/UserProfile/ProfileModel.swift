@@ -99,5 +99,12 @@ public enum ProfileModel {
         public init() {
             
         }
+        
+        public init(message: String?, detailInfo: DetailInfo?, route: Route?) {
+            
+            self.message = message
+            self.detailInfo = detailInfo
+            self.route = route
+        }
     }
 }
