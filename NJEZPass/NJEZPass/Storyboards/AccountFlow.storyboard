@@ -95,13 +95,13 @@
                     <connections>
                         <outlet property="tableView" destination="jzI-Ob-Ft6" id="rpW-JG-WlC"/>
                         <segue destination="LkJ-2H-Ltz" kind="show" identifier="EditProfile" id="SI5-gd-32N"/>
-                        <segue destination="p1V-Cb-aGt" kind="show" identifier="AccountBal" id="uCg-Kd-aQO"/>
                         <segue destination="jmz-s9-86j" kind="show" identifier="AccountActivity" id="lzC-ib-6xm"/>
                         <segue destination="Xxi-3c-gdX" kind="show" identifier="Settings" id="qgI-8F-Bh3"/>
                         <segue destination="7oZ-gg-iBI" kind="show" identifier="PaymentMethods" id="w4M-ax-EAi"/>
                         <segue destination="XAm-Uv-K6q" kind="show" identifier="Violations" id="X3a-sX-aUq"/>
                         <segue destination="o1v-CV-4Af" kind="show" identifier="TagsFlow" id="09r-ma-Auo"/>
                         <segue destination="r9f-gb-iov" kind="show" identifier="FAQ" id="tZ9-sK-wek"/>
+                        <segue destination="AWn-j7-i9P" kind="show" identifier="AccountBal" id="jUl-o1-FnT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZh-Yj-p0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,42 +281,13 @@
             </objects>
             <point key="canvasLocation" x="1721" y="1016"/>
         </scene>
-        <!--Account Balance-->
-        <scene sceneID="IJ3-kK-sQf">
+        <!--AccountBalance-->
+        <scene sceneID="m5B-uy-IOC">
             <objects>
-                <viewController title="Account Balance" id="p1V-Cb-aGt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SdZ-oD-Fvs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Balance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87p-Ng-A1b">
-                                <rect key="frame" x="58" y="125" width="259" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$355.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUY-c2-2cc">
-                                <rect key="frame" x="116" y="162" width="142" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGp-eo-cOq">
-                                <rect key="frame" x="116" y="493" width="144" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="C2R-ob-gl5"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ec-WU-Jul" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="AccountBal" storyboardName="AccountBalance" id="AWn-j7-i9P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOx-M3-BEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-419"/>
+            <point key="canvasLocation" x="935" y="-407"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="acr-6M-BfA">

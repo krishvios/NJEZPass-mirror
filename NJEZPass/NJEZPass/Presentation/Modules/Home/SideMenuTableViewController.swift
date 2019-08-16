@@ -43,28 +43,30 @@ class SideMenuTableViewController: UITableViewController {
         let selectedCell: SideMenuCell = tableView.cellForRow(at: indexPath) as! SideMenuCell
         selectedCell.contentView.backgroundColor = UIColor(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1.0)
         selectedCell.selectedView.backgroundColor = UIColor(red: 105/255.0, green: 32/255.0, blue: 126/255.0, alpha: 1.0)
-       
         
-        if indexPath.row == 8 {
-            let actionSheetController = UIAlertController(title: "", message: "Are you sure you want to log out of the app?", preferredStyle: .actionSheet)
-            
-            guard let delegate = UIApplication.shared.delegate as? AppDelegate  else {
-                return
-            }
-            
-            let signOutActionButton = UIAlertAction(title: "Log Out", style: .default) { action in
-                let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-                let vc = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
-                delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
-                
-            }
-            actionSheetController.addAction(signOutActionButton)
-            let cancelActionButton = UIAlertAction(title: "Cancel", style: .destructive) { action -> Void in
-                actionSheetController.view.tintColor = UIColor.red
-            }
-            actionSheetController.addAction(cancelActionButton)
-            
-            self.present(actionSheetController, animated: true, completion: nil)
+        switch indexPath.row {
+        case 0:
+            print("Home")
+        case 1:
+            print("Account")
+            self.navigateToAccount()
+        case 2:
+            print("Transcations")
+        case 3:
+            print("Vehicles")
+        case 4:
+            print("Tags")
+        case 5:
+            print("Violation")
+        case 6:
+            print("FAQs")
+        case 7:
+            print("Contact Us")
+        case 8:
+            print("Logout")
+            self.performLogout()
+        default:
+            break
         }
     }
     
@@ -72,6 +74,39 @@ class SideMenuTableViewController: UITableViewController {
         let selectedCell: SideMenuCell = tableView.cellForRow(at: indexPath) as! SideMenuCell
         selectedCell.contentView.backgroundColor = .white
         selectedCell.selectedView.backgroundColor = .white
+    }
+    
+    func navigateToAccount() {
+        
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate  else {
+            return
+        }
+        
+        let storyBoard = UIStoryboard(name: "AccountFlow", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MyAccountView") as! AccountViewController
+        delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+    }
+    
+    func performLogout()  {
+        let actionSheetController = UIAlertController(title: "", message: "Are you sure you want to log out of the app?", preferredStyle: .actionSheet)
+        
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate  else {
+            return
+        }
+        
+        let signOutActionButton = UIAlertAction(title: "Log Out", style: .default) { action in
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+            delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+            
+        }
+        actionSheetController.addAction(signOutActionButton)
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .destructive) { action -> Void in
+            actionSheetController.view.tintColor = UIColor.red
+        }
+        actionSheetController.addAction(cancelActionButton)
+        
+        self.present(actionSheetController, animated: true, completion: nil)
     }
     
 }
