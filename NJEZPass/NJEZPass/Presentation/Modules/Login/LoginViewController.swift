@@ -121,10 +121,16 @@ class LoginViewController: UIViewController {
     
     func doLogin() {
         if let username = txtUserID.text, let password = txtPassword.text {
-//            self.progressActivity.startAnimating()
-            MBProgressHUD.showAdded(to: self.view, animated: true)
-            interactor?.login(username: username, password: password, requestType: .remote)
             
+            //online login flow
+//            MBProgressHUD.showAdded(to: self.view, animated: true)
+//            interactor?.login(username: username, password: password, requestType: .remote)
+            
+            //direct login flow in case of api error
+            var viewModel = ProfileModel.PresentionModel()
+            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+
+            router?.perform(viewModel: viewModel)
             //saveCredentials()
             
         } else {

@@ -39,6 +39,8 @@
 		429BAD4A23016B950087DBAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4123016B950087DBAD /* Extensions.swift */; };
 		429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4323016B950087DBAD /* IAPIServicable.swift */; };
 		429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4423016B950087DBAD /* IResponseHandler.swift */; };
+		429BAD5723068F200087DBAD /* AccountBalance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD5623068F200087DBAD /* AccountBalance.storyboard */; };
+		429BAD5C2306A0ED0087DBAD /* AccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD5B2306A0ED0087DBAD /* AccountBalanceViewController.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -288,6 +290,8 @@
 		429BAD4123016B950087DBAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		429BAD4323016B950087DBAD /* IAPIServicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPIServicable.swift; sourceTree = "<group>"; };
 		429BAD4423016B950087DBAD /* IResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IResponseHandler.swift; sourceTree = "<group>"; };
+		429BAD5623068F200087DBAD /* AccountBalance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountBalance.storyboard; sourceTree = "<group>"; };
+		429BAD5B2306A0ED0087DBAD /* AccountBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceViewController.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -705,6 +709,30 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		429BAD582306A0D50087DBAD /* Account Balance */ = {
+			isa = PBXGroup;
+			children = (
+				429BAD592306A0D50087DBAD /* Implementations */,
+				429BAD5A2306A0D50087DBAD /* Interfaces */,
+				429BAD5B2306A0ED0087DBAD /* AccountBalanceViewController.swift */,
+			);
+			path = "Account Balance";
+			sourceTree = "<group>";
+		};
+		429BAD592306A0D50087DBAD /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		429BAD5A2306A0D50087DBAD /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		42BE355C22FBF7DE00AAF8E3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,6 +878,7 @@
 				9B5C6D8922F1D26500DA6151 /* Violations.storyboard */,
 				9BCA993222F44EED00C3BB7D /* ContactUs.storyboard */,
 				9BCA993722F4614100C3BB7D /* FAQ.storyboard */,
+				429BAD5623068F200087DBAD /* AccountBalance.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1009,6 +1038,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				429BAD582306A0D50087DBAD /* Account Balance */,
 				429BACEF23008BC60087DBAD /* Common */,
 				429BACF223008BC60087DBAD /* Login */,
 				429BAD0F23008C610087DBAD /* Edit Profile */,
@@ -1492,6 +1522,7 @@
 				42DC225A22E1C0C500A59D80 /* AccountFlow.storyboard in Resources */,
 				42DC225722E1C0C500A59D80 /* VehiclesFlow.storyboard in Resources */,
 				42DC225822E1C0C500A59D80 /* UserFlow.storyboard in Resources */,
+				429BAD5723068F200087DBAD /* AccountBalance.storyboard in Resources */,
 				9B5C6D8A22F1D26500DA6151 /* Violations.storyboard in Resources */,
 				9B0FD8A822FD965C004A596B /* OpenSans-Light.ttf in Resources */,
 				5EE3DFBC22DEFCAC007EDCC7 /* Main.storyboard in Resources */,
@@ -1763,6 +1794,7 @@
 				5ED413A522EE140B00F5757B /* APIConfiguration.swift in Sources */,
 				429BAD0823008BC60087DBAD /* LoginPresenter+ResponseHandler.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
+				429BAD5C2306A0ED0087DBAD /* AccountBalanceViewController.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -2123,7 +2155,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2132,6 +2166,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2143,7 +2178,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2152,6 +2189,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
