@@ -1045,6 +1045,7 @@
                         <segue destination="IOL-l5-YGR" kind="show" identifier="AccountFlow" id="sFy-Op-1qI"/>
                         <segue destination="RGM-jM-b72" kind="show" identifier="TransactionsFlow" id="Idi-zt-12V"/>
                         <segue destination="Jud-07-i3l" kind="show" identifier="VehiclesFlow" id="jmC-vD-cYg"/>
+                        <segue destination="ywI-05-gH9" kind="show" identifier="DashboardView" id="CiN-cq-gJh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKp-Un-066" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1057,7 +1058,7 @@
                 <viewControllerPlaceholder storyboardName="AccountFlow" id="IOL-l5-YGR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLe-l7-ef0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5358" y="223"/>
+            <point key="canvasLocation" x="5378" y="-161"/>
         </scene>
         <!--TransactionsFlow-->
         <scene sceneID="59r-8x-lA2">
@@ -1065,7 +1066,7 @@
                 <viewControllerPlaceholder storyboardName="TransactionsFlow" id="RGM-jM-b72" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpH-tC-4x0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5380" y="290"/>
+            <point key="canvasLocation" x="5405" y="-99"/>
         </scene>
         <!--VehiclesFlow-->
         <scene sceneID="O6Y-9Y-dKT">
@@ -1073,7 +1074,7 @@
                 <viewControllerPlaceholder storyboardName="VehiclesFlow" id="Jud-07-i3l" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jM-4M-3hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5358" y="363"/>
+            <point key="canvasLocation" x="5378" y="-39"/>
         </scene>
         <!--TagsFlow-->
         <scene sceneID="G0a-mM-SbW">
@@ -1081,7 +1082,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="TagsView" storyboardName="TagsFlow" id="2AS-mu-cUg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54W-LH-RyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5340" y="-88"/>
+            <point key="canvasLocation" x="5358" y="16"/>
         </scene>
         <!--Violations-->
         <scene sceneID="3nz-RD-eCl">
@@ -1089,7 +1090,7 @@
                 <viewControllerPlaceholder storyboardName="Violations" id="BL1-f8-1XM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2O-54-QSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5343" y="-5"/>
+            <point key="canvasLocation" x="5362" y="78"/>
         </scene>
         <!--ContactUs-->
         <scene sceneID="PCs-9c-oRz">
@@ -1097,7 +1098,7 @@
                 <viewControllerPlaceholder storyboardName="ContactUs" id="ajX-RY-mG3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mim-cV-zXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5346" y="59"/>
+            <point key="canvasLocation" x="5364" y="200"/>
         </scene>
         <!--FAQ-->
         <scene sceneID="1Em-EJ-E4L">
@@ -1105,7 +1106,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="FAQ" storyboardName="FAQ" id="fiJ-Ld-98V" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGe-WE-Hrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5314" y="139"/>
+            <point key="canvasLocation" x="5328" y="139"/>
         </scene>
         <!--Dashboard View-->
         <scene sceneID="4vp-ZQ-OnG">
@@ -1893,4 +1894,7 @@
         <image name="unselectedRadioButton" width="24" height="24"/>
         <image name="whiteArrow" width="58" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CiN-cq-gJh"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -56,7 +56,6 @@ class SideMenuTableViewController: UITableViewController {
                 let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
                 let vc = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
                 delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
-                
             }
             actionSheetController.addAction(signOutActionButton)
             let cancelActionButton = UIAlertAction(title: "Cancel", style: .destructive) { action -> Void in
@@ -65,6 +64,8 @@ class SideMenuTableViewController: UITableViewController {
             actionSheetController.addAction(cancelActionButton)
             
             self.present(actionSheetController, animated: true, completion: nil)
+        } else {
+            self.performSegue(withIdentifier: viewModel.segueIdentifiers[indexPath.row], sender: nil)
         }
     }
     
@@ -75,3 +76,4 @@ class SideMenuTableViewController: UITableViewController {
     }
     
 }
+ 
