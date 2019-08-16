@@ -75,5 +75,38 @@ class SideMenuTableViewController: UITableViewController {
         selectedCell.selectedView.backgroundColor = .white
     }
     
+    func navigateToAccount() {
+        
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate  else {
+            return
+        }
+        
+        let storyBoard = UIStoryboard(name: "AccountFlow", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "MyAccountView") as! AccountViewController
+        delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+    }
+    
+    func performLogout()  {
+        let actionSheetController = UIAlertController(title: "", message: "Are you sure you want to log out of the app?", preferredStyle: .actionSheet)
+        
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate  else {
+            return
+        }
+        
+        let signOutActionButton = UIAlertAction(title: "Log Out", style: .default) { action in
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+            delegate.window?.rootViewController = UINavigationController(rootViewController: vc)
+            
+        }
+        actionSheetController.addAction(signOutActionButton)
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .destructive) { action -> Void in
+            actionSheetController.view.tintColor = UIColor.red
+        }
+        actionSheetController.addAction(cancelActionButton)
+        
+        self.present(actionSheetController, animated: true, completion: nil)
+    }
+    
 }
  
