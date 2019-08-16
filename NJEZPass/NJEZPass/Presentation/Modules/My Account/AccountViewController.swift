@@ -10,7 +10,9 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-    let rowItems = ["Edit Profile","Account Balance","Payment Methods","Tags","Violations","Account Activity","Settings"]
+    let rowItems = ["Edit Profile","Account Balance","Payment Methods","Account Activity","Settings"]
+
+//    let rowItems = ["Edit Profile","Account Balance","Payment Methods","Tags","Violations","Account Activity","Settings"]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -66,21 +68,14 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
             self.performSegue(withIdentifier: "PaymentMethods", sender: nil)
             break;
         case 3:
-            self.performSegue(withIdentifier: "TagsFlow", sender: nil)
-            break;
-        case 4:
-            self.performSegue(withIdentifier: "Violations", sender: nil)
-            break;
-        case 5:
             self.performSegue(withIdentifier: "AccountActivity", sender: nil)
             break;
-        case 6:
+        case 4:
             self.performSegue(withIdentifier: "Settings", sender: nil)
             break;
         default:
             break;
         }
-        
     }
      
 }
