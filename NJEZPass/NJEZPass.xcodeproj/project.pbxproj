@@ -1019,12 +1019,12 @@
 				9BCA993422F4509B00C3BB7D /* ContactsUs */,
 				9B008B3A22F320AD0098BCDC /* Tags */,
 				9B5C6D8D22F2BC0400DA6151 /* Violations */,
-				9BD4844922F184AD00F94DE2 /* CMComponents */,
 				9B67913722EEE5E500522E63 /* Payment Methods */,
 				5EE3E06522E73061007EDCC7 /* TwoFactorAuth */,
 				F904559522FC15950070257E /* Verification */,
 				429BAD2823008EE60087DBAD /* Transcations */,
 				429BAD2A23008EE60087DBAD /* Vehicles */,
+				9BD4844922F184AD00F94DE2 /* CMComponents */,
 			);
 			path = Modules;
 			sourceTree = "<group>";

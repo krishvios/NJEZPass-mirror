@@ -52,7 +52,7 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = item
         return cell
     }
-    /*
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
@@ -82,5 +82,5 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
     }
-     */
+     
 }
