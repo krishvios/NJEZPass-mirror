@@ -141,6 +141,9 @@
 		9BCA993822F4614100C3BB7D /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA993722F4614100C3BB7D /* FAQ.storyboard */; };
 		9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993A22F466E600C3BB7D /* FAQViewController.swift */; };
 		9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */; };
+		9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3EA62230A9610003A9FC1 /* InputFieldTableViewCell.swift */; };
+		9BD3EA65230BD1F2003A9FC1 /* CityStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3EA64230BD1F2003A9FC1 /* CityStateTableViewCell.swift */; };
+		9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD3EA66230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift */; };
 		9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844A22F184C400F94DE2 /* CMLabel.swift */; };
 		9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */; };
 		9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */; };
@@ -399,6 +402,9 @@
 		9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		9BCA993722F4614100C3BB7D /* FAQ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		9BCA993A22F466E600C3BB7D /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		9BD3EA62230A9610003A9FC1 /* InputFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldTableViewCell.swift; sourceTree = "<group>"; };
+		9BD3EA64230BD1F2003A9FC1 /* CityStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStateTableViewCell.swift; sourceTree = "<group>"; };
+		9BD3EA66230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryZipcodeTableViewCell.swift; sourceTree = "<group>"; };
 		9BD4844A22F184C400F94DE2 /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
 		9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountViewController.swift; sourceTree = "<group>"; };
 		9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
@@ -559,6 +565,9 @@
 				429BAD1123008C610087DBAD /* EditProfileViewController.swift */,
 				429BAD1023008C610087DBAD /* Implementations */,
 				429BAD1223008C610087DBAD /* Interfaces */,
+				9BD3EA62230A9610003A9FC1 /* InputFieldTableViewCell.swift */,
+				9BD3EA64230BD1F2003A9FC1 /* CityStateTableViewCell.swift */,
+				9BD3EA66230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift */,
 			);
 			path = "Edit Profile";
 			sourceTree = "<group>";
@@ -1805,6 +1814,7 @@
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
+				9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */,
 				429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				5EE3DFB722DEFCAC007EDCC7 /* AppDelegate.swift in Sources */,
@@ -1820,6 +1830,7 @@
 				5ED413A322EE129A00F5757B /* Constants.swift in Sources */,
 				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
+				9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */,
 				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				429BAD0923008BC60087DBAD /* LoginInteractable.swift in Sources */,
@@ -1860,6 +1871,7 @@
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
+				9BD3EA65230BD1F2003A9FC1 /* CityStateTableViewCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				429BAD0523008BC60087DBAD /* LoginViewController.swift in Sources */,
 				5ED413A722EE204300F5757B /* APIClient.swift in Sources */,
@@ -2156,17 +2168,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JZFGZ22Z6S;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = NJEZPassDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2179,17 +2191,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JZFGZ22Z6S;
 				INFOPLIST_FILE = NJEZPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.NJEZPass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = NJEZPassDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
