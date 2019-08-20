@@ -41,7 +41,7 @@
 If your tag is not working properly, you must return it to the E-ZPass Customer Service Center for a replacement and to ensure environmentally sensitive disposal.</string>
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="14" name="OpenSans"/>
+                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="28.299999237060547">
@@ -302,102 +302,11 @@ If your tag is not working properly, you must return it to the E-ZPass Customer 
 
 If you are an individual account holder, the E-ZPass tag deposit is waived for credit card customers. Check or cash customers will be charged a $10 refundable deposit per tag. You will be receiving your tags and account profile in the mail within 5-7 business days. 
 
-</string>
-                                                            <attributes>
-                                                                <font key="NSFont" size="14" name="OpenSans"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                    <tabStops>
-                                                                        <textTab alignment="left" location="28.299999237060547">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="56.650001525878906">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="85">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="113.34999847412109">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="141.69999694824219">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="170.05000305175781">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="198.39999389648438">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="226.75">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="255.10000610351562">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="283.45001220703125">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="311.79998779296875">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="340.14999389648438">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                    </tabStops>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Note:">
-                                                            <attributes>
-                                                                <font key="NSFont" size="14" name="OpenSans-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                    <tabStops>
-                                                                        <textTab alignment="left" location="28.299999237060547">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="56.650001525878906">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="85">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="113.34999847412109">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="141.69999694824219">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="170.05000305175781">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="198.39999389648438">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="226.75">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="255.10000610351562">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="283.45001220703125">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="311.79998779296875">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                        <textTab alignment="left" location="340.14999389648438">
-                                                                            <options/>
-                                                                        </textTab>
-                                                                    </tabStops>
-                                                                </paragraphStyle>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment>
-                                                            <string key="content"> All tags, including replacements, are shipped with a read-prevention bag and adhesive strip set. 
+Note: All tags, including replacements, are shipped with a read-prevention bag and adhesive strip set. 
 
 To learn about all available plans, please see: </string>
                                                             <attributes>
-                                                                <font key="NSFont" size="14" name="OpenSans"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -443,7 +352,7 @@ To learn about all available plans, please see: </string>
                                                         <fragment content="Description of Available Plans">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.37733" green="0.14695" blue="0.47846" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <font key="NSFont" size="14" name="OpenSans"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                     <tabStops>
                                                                         <textTab alignment="left" location="28.299999237060547">
@@ -600,7 +509,7 @@ To learn about all available plans, please see: </string>
                                         <rect key="frame" x="0.0" y="596" width="320" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8X7-xt-WmI" id="ThO-Z9-UUv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZL-Af-vcV" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
@@ -669,20 +578,13 @@ To learn about all available plans, please see: </string>
                                             <constraint firstAttribute="width" constant="276" id="ynp-Vm-lTT"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Submission Successful">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="OpenSans-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment>
-                                                <string key="content">
+                                                <string key="content">Submission Successful
 
 We’ve successfully processed your tag request! Confirmation details have been sent to the email we have on file.</string>
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="OpenSans"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
