@@ -36,14 +36,14 @@
 
 To pay by check, follow the instructions described on the violation notice, or visit the E-ZPass </string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="OpenSans"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Customer Service Center.">
                                         <attributes>
                                             <color key="NSColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="14" name="OpenSans"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -451,7 +451,7 @@ To pay by check, follow the instructions described on the violation notice, or v
                                 <attributedString key="attributedText">
                                     <fragment content="Select the payment method you would like to use to pay your violation(s).">
                                         <attributes>
-                                            <font key="NSFont" size="14" name="OpenSans"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -765,20 +765,13 @@ To pay by check, follow the instructions described on the violation notice, or v
                                             <constraint firstAttribute="width" constant="276" id="X3u-15-wU9"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Payment Successful">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="OpenSans-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment>
-                                                <string key="content">
+                                                <string key="content">Payment Successful
 
 We’ve successfully processed your payment! Confirmation details of this transaction have been sent to the email we have on file..</string>
                                                 <attributes>
                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="14" name="OpenSans"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
