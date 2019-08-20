@@ -157,6 +157,7 @@
 		F9BECCEA230BD370002D2845 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE9230BD370002D2845 /* GradientView.swift */; };
 		F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */; };
 		F9BECCF0230BF57E002D2845 /* TransactionHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */; };
+		F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -433,6 +434,7 @@
 		F9BECCE9230BD370002D2845 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReplenishAccountVC.swift; path = "NJEZPass/Presentation/Modules/Account Balance/ReplenishAccountVC.swift"; sourceTree = SOURCE_ROOT; };
 		F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryVC.swift; sourceTree = "<group>"; };
+		F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -660,8 +662,9 @@
 			children = (
 				429BAD312300907B0087DBAD /* UITextField+Extension.swift */,
 				429BAD322300907B0087DBAD /* UINavigationItem+Extension.swift */,
-				429BAD352300910A0087DBAD /* UINavigationBar+Extensions.swift */,
 				F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */,
+				F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */,
+				429BAD352300910A0087DBAD /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1870,6 +1873,7 @@
 				F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */,
 				42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
+				F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */,
 				429BAD0623008BC60087DBAD /* LoginRouting.swift in Sources */,
 				42BE356F22FBF7DE00AAF8E3 /* DropDownViewWithTableView.swift in Sources */,
 				5ED413A722EE204300F5757B /* APIClient.swift in Sources */,
