@@ -12,14 +12,17 @@ class AccountViewController: UIViewController {
     
     let rowItems = ["Edit Profile","Account Balance","Payment Methods","Account Activity","Settings"]
 
-//    let rowItems = ["Edit Profile","Account Balance","Payment Methods","Tags","Violations","Account Activity","Settings"]
-
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView.init()
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = .white
     }
     
     @IBAction func homeButtonAction(_ sender: Any) {
