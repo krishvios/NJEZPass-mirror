@@ -80,20 +80,12 @@ class LoginViewController: UIViewController {
         validateInput()
     }
     
-    // MARK: ViewController lifecycle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         fillCredentials()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLoad() {
@@ -123,14 +115,14 @@ class LoginViewController: UIViewController {
         if let username = txtUserID.text, let password = txtPassword.text {
             
             //online login flow
-//            MBProgressHUD.showAdded(to: self.view, animated: true)
-//            interactor?.login(username: username, password: password, requestType: .remote)
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            interactor?.login(username: username, password: password, requestType: .remote)
             
             //direct login flow in case of api error
-            var viewModel = ProfileModel.PresentionModel()
-            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
-
-            router?.perform(viewModel: viewModel)
+//            var viewModel = ProfileModel.PresentionModel()
+//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+//
+//            router?.perform(viewModel: viewModel)
             //saveCredentials()
             
         } else {
@@ -139,9 +131,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassClicked(_ sender: Any) {
+        
     }
     
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
+        
     }
     
     private func validateInput() {

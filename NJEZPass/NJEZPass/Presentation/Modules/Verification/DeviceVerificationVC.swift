@@ -9,7 +9,7 @@
 import UIKit
 
 class DeviceVerificationVC: UIViewController {
-
+    
     @IBOutlet weak var emailOption: UIImageView!
     @IBOutlet weak var mobileOption: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
@@ -17,23 +17,26 @@ class DeviceVerificationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationItem.addNavBarImage()
         guard let delegate = UIApplication.shared.delegate as? AppDelegate,
-              let personalInfo = delegate.detailInfo?.personalInformation,
-              let email = personalInfo.emailAddress,
-              let mobile = personalInfo.cellPhone else {
-                handleEmailProtection(with: "narasimhulu@conduent.com")
-                handleMobileNumberProtection(with: "(000)345-4562")
-            return
+            let personalInfo = delegate.detailInfo?.personalInformation,
+            let email = personalInfo.emailAddress,
+            let mobile = personalInfo.cellPhone else {
+                return
         }
         
         handleEmailProtection(with: email)
         handleMobileNumberProtection(with: mobile)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    
     func handleEmailProtection(with email: String) {
-        
         var emailName = email.split(separator: "@")
         var protectedEmail = ""
         for (index, letter) in emailName[0].enumerated() {
@@ -43,7 +46,6 @@ class DeviceVerificationVC: UIViewController {
                 protectedEmail.append("*")
             }
         }
-        print("emailName", (protectedEmail + "@" + emailName[1]))
         emailLabel.text = "Email \(protectedEmail + "@" + emailName[1])"
     }
     
@@ -60,10 +62,8 @@ class DeviceVerificationVC: UIViewController {
                 protectedMobile.append(number)
             }
         }
-        print("mobile", protectedMobile)
         mobileLabel.text = "Text \(protectedMobile)"
     }
-    
     
     func hasSpecialCharacters(character: String) -> Bool {
         do {
@@ -83,12 +83,9 @@ class DeviceVerificationVC: UIViewController {
         if let button = sender as? UIButton {
             if button.isSelected {
                 // set deselected
-               // button.isSelected = false
                 mobileOption.image = #imageLiteral(resourceName: "selectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
             } else {
-                // set selected
-               // button.isSelected = true
                 mobileOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             }
@@ -98,17 +95,12 @@ class DeviceVerificationVC: UIViewController {
     @IBAction func mobileTapped(_ sender: Any) {
         if let button = sender as? UIButton {
             if button.isSelected {
-                // set deselected
-                // button.isSelected = false
                 mobileOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             } else {
-                // set selected
-                // button.isSelected = true
                 mobileOption.image = #imageLiteral(resourceName: "selectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
             }
         }
     }
-    
 }

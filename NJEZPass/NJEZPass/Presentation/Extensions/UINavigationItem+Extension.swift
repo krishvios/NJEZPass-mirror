@@ -9,7 +9,6 @@
 import UIKit
 
 extension UINavigationItem {
-    
     func addNavBarImage()  {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
