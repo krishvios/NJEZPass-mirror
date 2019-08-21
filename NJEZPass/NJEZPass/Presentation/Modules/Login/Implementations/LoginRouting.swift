@@ -37,6 +37,26 @@ extension LoginRouter: IRouter {
                     delegate?.showMessage(message: msg)
                 }
             }
+        } else if let viewModel = viewModel as? LoginModel.PresentionModel {
+            if let route = viewModel.route {
+                switch route.navigation {
+                   
+                case .present:
+                    if let msg = viewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .popup:
+                    if let msg = viewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .push: do {}
+                }
+            }
+                else {
+                if let msg = viewModel.message {
+                    delegate?.showMessage(message: msg)
+                }
+            }
         }
     }
     func push(route: Route) {

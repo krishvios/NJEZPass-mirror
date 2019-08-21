@@ -213,7 +213,15 @@ class APIService: IAPIServicable {
                                 }
                             case 201...500:
                                 print("statusCode: ", statusCode)
-                                let error = NSError(domain: "\(APIConstants.ServiceNames.loginUser)", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error from server"])
+                                
+                                let errorMessage: String = "Error from server"
+                                
+                                if let jsonResponse = try? JSONSerialization.jsonObject(with:
+                                    data, options: []) {
+                                    print(jsonResponse)
+                                }
+                                
+                                let error = NSError(domain: "\(APIConstants.ServiceNames.loginUser)", code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])
                                 completion?(APIResponse.onFailure(error: APIError.general(error: error)))
                             default:
                                 print("response not handled in block")
