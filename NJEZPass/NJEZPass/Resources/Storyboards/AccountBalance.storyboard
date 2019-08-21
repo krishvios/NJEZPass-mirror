@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RTA-ga-ai0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qyO-vi-ZB4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,6 @@
         <!--Account Balance-->
         <scene sceneID="30h-Rl-PQE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YRt-UL-3gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccountBalanceVC" title="Account Balance" id="RTA-ga-ai0" customClass="AccountBalanceVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EU5-kk-Kph">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -229,6 +228,7 @@
                         <outlet property="viewTransactionButton" destination="s0W-WE-W3E" id="ucv-iT-BWI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRt-UL-3gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428" y="-448"/>
         </scene>
@@ -357,7 +357,6 @@
         <!--Account Balance-->
         <scene sceneID="hWr-Mj-QSd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xSd-Yu-sSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ReplenishAccountVC" title="Account Balance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vRR-Vl-n8J" customClass="ReplenishAccountVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eao-2t-9yb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -479,8 +478,146 @@
                         <barButtonItem key="backBarButtonItem" title="     " id="R8C-sw-Pbk"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSd-Yu-sSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2200.8000000000002" y="-433.13343328335833"/>
+        </scene>
+        <!--Payment AmountVC-->
+        <scene sceneID="OdN-OP-UaH">
+            <objects>
+                <viewController id="qyO-vi-ZB4" customClass="PaymentAmountVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Bx-XH-yay" customClass="GradientView" customModule="NJEZPass" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKJ-Yq-7l3">
+                                <rect key="frame" x="126.5" y="118" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="W1o-Sf-pH1"/>
+                                    <constraint firstAttribute="height" constant="21" id="hoW-Ff-FJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4q-iF-ExX">
+                                <rect key="frame" x="0.0" y="53" width="375" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="TxN-rp-Tbv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-x1-H7x">
+                                <rect key="frame" x="26" y="183" width="323" height="374"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bGT-If-Bn1">
+                                    <size key="itemSize" width="88" height="85"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NumberPadCell" id="mvb-yh-5AQ" customClass="NumberPadCell" customModule="NJEZPass" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="85"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="88" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG0-8H-YfB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="85"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="mvb-yh-5AQ" eventType="touchUpInside" id="jig-On-n0K"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="MG0-8H-YfB" secondAttribute="trailing" id="C3g-P3-Gx1"/>
+                                            <constraint firstAttribute="bottom" secondItem="MG0-8H-YfB" secondAttribute="bottom" id="Lsi-Nu-7co"/>
+                                            <constraint firstItem="MG0-8H-YfB" firstAttribute="leading" secondItem="mvb-yh-5AQ" secondAttribute="leading" id="XXH-Br-PVS"/>
+                                            <constraint firstItem="MG0-8H-YfB" firstAttribute="top" secondItem="mvb-yh-5AQ" secondAttribute="top" id="b0R-s9-2v0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="numberButton" destination="MG0-8H-YfB" id="k4U-uz-tEg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qyO-vi-ZB4" id="Y6I-86-Qqu"/>
+                                    <outlet property="delegate" destination="qyO-vi-ZB4" id="wxx-2U-v3d"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yk-KI-Mdo" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                <rect key="frame" x="26" y="595" width="323" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Pv3-eA-PnS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="0.63960717429577463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dOi-x1-H7x" firstAttribute="leading" secondItem="T2i-fr-Z0y" secondAttribute="leading" constant="26" id="44p-bB-2ek"/>
+                            <constraint firstItem="dOi-x1-H7x" firstAttribute="top" secondItem="sKJ-Yq-7l3" secondAttribute="bottom" constant="44" id="Sg7-XR-beD"/>
+                            <constraint firstItem="sKJ-Yq-7l3" firstAttribute="centerX" secondItem="dOi-x1-H7x" secondAttribute="centerX" id="UoU-4Z-dmb"/>
+                            <constraint firstItem="dOi-x1-H7x" firstAttribute="trailing" secondItem="7yk-KI-Mdo" secondAttribute="trailing" id="Xwn-1g-2tp"/>
+                            <constraint firstItem="T2i-fr-Z0y" firstAttribute="bottom" secondItem="7yk-KI-Mdo" secondAttribute="bottom" constant="25" id="cfJ-fV-m3a"/>
+                            <constraint firstItem="H4q-iF-ExX" firstAttribute="top" secondItem="T2i-fr-Z0y" secondAttribute="top" constant="33" id="d8G-ew-MNa"/>
+                            <constraint firstItem="sKJ-Yq-7l3" firstAttribute="top" secondItem="H4q-iF-ExX" secondAttribute="bottom" constant="8" symbolic="YES" id="gCA-PT-Llo"/>
+                            <constraint firstItem="H4q-iF-ExX" firstAttribute="leading" secondItem="6Bx-XH-yay" secondAttribute="leading" id="gtb-zy-taV"/>
+                            <constraint firstItem="dOi-x1-H7x" firstAttribute="leading" secondItem="7yk-KI-Mdo" secondAttribute="leading" id="iIG-Wq-Kvr"/>
+                            <constraint firstAttribute="trailing" secondItem="H4q-iF-ExX" secondAttribute="trailing" id="qfN-0f-EGT"/>
+                            <constraint firstItem="H4q-iF-ExX" firstAttribute="centerX" secondItem="sKJ-Yq-7l3" secondAttribute="centerX" id="t2g-H1-14Z"/>
+                            <constraint firstItem="7yk-KI-Mdo" firstAttribute="top" secondItem="dOi-x1-H7x" secondAttribute="bottom" constant="38" id="u46-my-7Yh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T2i-fr-Z0y"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.0" green="0.70588235290000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="H4q-iF-ExX" id="fJj-DI-OH7"/>
+                        <outlet property="numberPadCollectionView" destination="dOi-x1-H7x" id="E6o-eC-gOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAr-rC-j2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3053.5999999999999" y="-433.13343328335833"/>
         </scene>
     </scenes>
 </document>
