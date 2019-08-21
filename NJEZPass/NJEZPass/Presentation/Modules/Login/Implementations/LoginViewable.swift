@@ -32,8 +32,10 @@ extension LoginViewController: ILoginViewable {
     }
     func loginFailed(viewModel: LoginModel.PresentionModel) {
 //        progressActivity.stopAnimating()
-//        router?.perform(viewModel: viewModel)
         MBProgressHUD.hide(for: self.view, animated: true)
+        var viewModel = viewModel
+        viewModel.route = Route(id: AppStringKeys.loginFailure, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.present)
+        router?.perform(viewModel: viewModel)
     }
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
