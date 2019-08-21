@@ -66,7 +66,6 @@
 		429BAD94230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD79230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf */; };
 		429BAD95230C58B80087DBAD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD7A230C58B80087DBAD /* OpenSans-Regular.ttf */; };
 		429BAD96230C58B80087DBAD /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD7B230C58B80087DBAD /* OpenSans-BoldItalic.ttf */; };
-		429BAD97230C58B80087DBAD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD7C230C58B80087DBAD /* Info.plist */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -1550,7 +1549,6 @@
 				429BAD8A230C58B80087DBAD /* Main.storyboard in Resources */,
 				429BAD94230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				429BAD93230C58B80087DBAD /* OpenSans-SemiboldItalic.ttf in Resources */,
-				429BAD97230C58B80087DBAD /* Info.plist in Resources */,
 				429BAD89230C58B80087DBAD /* LaunchScreen.storyboard in Resources */,
 				429BAD90230C58B80087DBAD /* OpenSans-ExtraBold.ttf in Resources */,
 				429BAD8C230C58B80087DBAD /* OpenSans-Semibold.ttf in Resources */,
@@ -1850,7 +1848,6 @@
 				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */,
-				5ED413A022EE0F0300F5757B /* APIRouter.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				429BAD0923008BC60087DBAD /* LoginInteractable.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
@@ -2188,7 +2185,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZFGZ22Z6S;
-				INFOPLIST_FILE = NJEZPass/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NJEZPass/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2211,7 +2208,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZFGZ22Z6S;
-				INFOPLIST_FILE = NJEZPass/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NJEZPass/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
