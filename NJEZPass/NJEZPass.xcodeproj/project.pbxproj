@@ -153,6 +153,8 @@
 		F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559622FC15950070257E /* DeviceVerificationVC.swift */; };
 		F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559722FC15950070257E /* VerificationCodeVC.swift */; };
 		F90455B922FC53100070257E /* CMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B822FC53100070257E /* CMTextField.swift */; };
+		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
+		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */; };
 		F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */; };
 		F9BECCEA230BD370002D2845 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE9230BD370002D2845 /* GradientView.swift */; };
@@ -431,6 +433,8 @@
 		F904559622FC15950070257E /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
 		F904559722FC15950070257E /* VerificationCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		F90455B822FC53100070257E /* CMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTextField.swift; sourceTree = "<group>"; };
+		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
+		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceCell.swift; sourceTree = "<group>"; };
 		F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F9BECCE9230BD370002D2845 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -737,6 +741,8 @@
 				429BAD5B2306A0ED0087DBAD /* AccountBalanceVC.swift */,
 				F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */,
 				F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */,
+				F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */,
+				F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */,
 			);
 			path = "Account Balance";
 			sourceTree = "<group>";
@@ -1828,7 +1834,9 @@
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */,
+				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
+				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
 				9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
 				F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */,
