@@ -32,8 +32,9 @@ class DeviceVerificationVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.restoreInitialStateWith(backButtonHidden: false, navBarHidden: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
     
     func handleEmailProtection(with email: String) {
         var emailName = email.split(separator: "@")

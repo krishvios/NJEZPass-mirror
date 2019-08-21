@@ -23,29 +23,13 @@ class LandingViewController: UIViewController, UITableViewDataSource, UITableVie
         return pickerView
     }()
     
-    // MARK: - UIViewController LifeCycle methods
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-
+ 
     func doneClicked(selectedString:String) {
         self.cmPickerView.isHidden = true
         navigationCell?.selectLanguageButton.setTitle(selectedString, for: .normal)
