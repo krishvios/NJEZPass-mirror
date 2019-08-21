@@ -115,14 +115,14 @@ class LoginViewController: UIViewController {
         if let username = txtUserID.text, let password = txtPassword.text {
             
             //online login flow
-//            MBProgressHUD.showAdded(to: self.view, animated: true)
-//            interactor?.login(username: username, password: password, requestType: .remote)
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            interactor?.login(username: username, password: password, requestType: .remote)
             
             //direct login flow in case of api error
-            var viewModel = ProfileModel.PresentionModel()
-            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
-
-            router?.perform(viewModel: viewModel)
+//            var viewModel = ProfileModel.PresentionModel()
+//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+//
+//            router?.perform(viewModel: viewModel)
             //saveCredentials()
             
         } else {
@@ -131,9 +131,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassClicked(_ sender: Any) {
+        
     }
     
     @IBAction func biometricAuthBtnClicked(_ sender: Any) {
+        
     }
     
     private func validateInput() {
