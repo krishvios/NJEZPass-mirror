@@ -66,6 +66,9 @@
 		429BAD94230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD79230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf */; };
 		429BAD95230C58B80087DBAD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD7A230C58B80087DBAD /* OpenSans-Regular.ttf */; };
 		429BAD96230C58B80087DBAD /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD7B230C58B80087DBAD /* OpenSans-BoldItalic.ttf */; };
+		429C6A00230D4B0C0055CFBD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 429C69FF230D4B0C0055CFBD /* Localization.strings */; };
+		429C6A03230D519E0055CFBD /* LoginAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A02230D519E0055CFBD /* LoginAPITests.swift */; };
+		429C6A05230D51DA0055CFBD /* PlatformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A04230D51D90055CFBD /* PlatformUtility.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -328,6 +331,9 @@
 		429BAD7A230C58B80087DBAD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		429BAD7B230C58B80087DBAD /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		429BAD7C230C58B80087DBAD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		429C69FF230D4B0C0055CFBD /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
+		429C6A02230D519E0055CFBD /* LoginAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPITests.swift; sourceTree = "<group>"; };
+		429C6A04230D51D90055CFBD /* PlatformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformUtility.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -774,6 +780,7 @@
 				429BAD6F230C58B80087DBAD /* AppDelegate.swift */,
 				429BAD70230C58B80087DBAD /* open-sans */,
 				429BAD7C230C58B80087DBAD /* Info.plist */,
+				429C69FF230D4B0C0055CFBD /* Localization.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -812,6 +819,14 @@
 				429BAD7B230C58B80087DBAD /* OpenSans-BoldItalic.ttf */,
 			);
 			path = "open-sans";
+			sourceTree = "<group>";
+		};
+		429C6A01230D519E0055CFBD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A02230D519E0055CFBD /* LoginAPITests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		42BE355C22FBF7DE00AAF8E3 /* Common */ = {
@@ -896,6 +911,7 @@
 		42BE358A22FBF96B00AAF8E3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A04230D51D90055CFBD /* PlatformUtility.swift */,
 				42BE358B22FBF96B00AAF8E3 /* BaseWorker.swift */,
 			);
 			path = Utilities;
@@ -1064,6 +1080,7 @@
 		5EE3E03C22DEFD1E007EDCC7 /* PlatformTests */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A01230D519E0055CFBD /* Login */,
 				5EE3E03D22DEFD1E007EDCC7 /* PlatformTests.swift */,
 				5EE3E03F22DEFD1E007EDCC7 /* Info.plist */,
 			);
@@ -1570,6 +1587,7 @@
 				429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */,
 				429BAD88230C58B80087DBAD /* Assets.xcassets in Resources */,
 				429BAD95230C58B80087DBAD /* OpenSans-Regular.ttf in Resources */,
+				429C6A00230D4B0C0055CFBD /* Localization.strings in Resources */,
 				429BAD7F230C58B80087DBAD /* AccountFlow.storyboard in Resources */,
 				429BAD96230C58B80087DBAD /* OpenSans-BoldItalic.ttf in Resources */,
 			);
@@ -1981,6 +1999,7 @@
 				42BE359822FBF96B00AAF8E3 /* LoginUsecaseLocal.swift in Sources */,
 				42BE35B722FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift in Sources */,
 				42BE35B322FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift in Sources */,
+				429C6A05230D51DA0055CFBD /* PlatformUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1988,6 +2007,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429C6A03230D519E0055CFBD /* LoginAPITests.swift in Sources */,
 				5EE3E03E22DEFD1E007EDCC7 /* PlatformTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2195,17 +2215,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JZFGZ22Z6S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
 				INFOPLIST_FILE = "$(SRCROOT)/NJEZPass/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NJEZPassDev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2218,17 +2238,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JZFGZ22Z6S;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7GZQ5ZFDG2;
 				INFOPLIST_FILE = "$(SRCROOT)/NJEZPass/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NJEZPassDev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
