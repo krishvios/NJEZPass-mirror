@@ -29,7 +29,8 @@ class LandingViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
- 
+    // MARK: - CMPickerView Delegate methods
+
     func doneClicked(selectedString:String) {
         self.cmPickerView.isHidden = true
         navigationCell?.selectLanguageButton.setTitle(selectedString, for: .normal)
