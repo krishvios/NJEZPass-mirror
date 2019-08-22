@@ -9,10 +9,18 @@
 import UIKit
 import Apollo_iOS
 
+protocol CountryZipcodeDelegate:class {
+    func countrySelected(countryField:ApolloTextInputField?)
+}
+
 class CountryZipcodeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countryTextField: ApolloTextInputField!
     @IBOutlet weak var zipcodeTextField: ApolloTextInputField!
+
+    @IBOutlet weak var countrySelectButton: UIButton!
+
+    weak var delegate:CountryZipcodeDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +35,9 @@ class CountryZipcodeTableViewCell: UITableViewCell {
     
     func setPickerView(picker:CMPickerView, with Target:EditProfileViewController) {
         
+    }
+    
+    @IBAction func countryClicked(_ sender: Any) {
+        delegate?.countrySelected(countryField: countryTextField)
     }
 }

@@ -9,10 +9,18 @@
 import UIKit
 import Apollo_iOS
 
+protocol CityStateDelegate:class {
+    func stateSelected(stateField:ApolloTextInputField?)
+}
+
 class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
 
     @IBOutlet weak var cityTextField: ApolloTextInputField!
     @IBOutlet weak var stateTextField: ApolloTextInputField!
+    
+    @IBOutlet weak var stateSelectButton: UIButton!
+
+    weak var delegate:CityStateDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,4 +44,9 @@ class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
 //        textField.inputAccessoryView = CMPickerView(frame: CGRect.zero)
         
     }
+    
+    @IBAction func stateClicked(_ sender: Any) {
+        delegate?.stateSelected(stateField: stateTextField)
+    }
+    
 }

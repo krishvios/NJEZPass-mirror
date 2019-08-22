@@ -55,6 +55,7 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.rowItems[indexPath.row]
         cell.textLabel?.text = item
+        cell.textLabel?.font = UIFont(name: "OpenSans", size: 14)
         return cell
     }
     
