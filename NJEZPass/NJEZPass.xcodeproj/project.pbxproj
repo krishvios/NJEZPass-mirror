@@ -145,6 +145,14 @@
 		9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844A22F184C400F94DE2 /* CMLabel.swift */; };
 		9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */; };
 		9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */; };
+		9BDB1F31230ECB0C006CE739 /* IEditProfileViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F2F230ECB0C006CE739 /* IEditProfileViewable.swift */; };
+		9BDB1F32230ECB0C006CE739 /* IEditProfileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F30230ECB0C006CE739 /* IEditProfileInteractable.swift */; };
+		9BDB1F35230ECB18006CE739 /* EditProfileInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F33230ECB18006CE739 /* EditProfileInteractable.swift */; };
+		9BDB1F36230ECB18006CE739 /* EditProfileViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F34230ECB18006CE739 /* EditProfileViewable.swift */; };
+		9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F37230ECB22006CE739 /* EditProfileConfigurator.swift */; };
+		9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F38230ECB22006CE739 /* EditProfilePresenter.swift */; };
+		9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F39230ECB22006CE739 /* EditProfileRouter.swift */; };
+		9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDB1F3A230ECB22006CE739 /* EditProfileInteractor.swift */; };
 		9BED144E230D778300C59899 /* country_states.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BED144D230D778300C59899 /* country_states.json */; };
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
@@ -413,6 +421,14 @@
 		9BD4844A22F184C400F94DE2 /* CMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLabel.swift; sourceTree = "<group>"; };
 		9BD4844D22F1A52700F94DE2 /* AddBankAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankAccountViewController.swift; sourceTree = "<group>"; };
 		9BD4844F22F1B5D900F94DE2 /* AddCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardViewController.swift; sourceTree = "<group>"; };
+		9BDB1F2F230ECB0C006CE739 /* IEditProfileViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEditProfileViewable.swift; sourceTree = "<group>"; };
+		9BDB1F30230ECB0C006CE739 /* IEditProfileInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEditProfileInteractable.swift; sourceTree = "<group>"; };
+		9BDB1F33230ECB18006CE739 /* EditProfileInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileInteractable.swift; sourceTree = "<group>"; };
+		9BDB1F34230ECB18006CE739 /* EditProfileViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewable.swift; sourceTree = "<group>"; };
+		9BDB1F37230ECB22006CE739 /* EditProfileConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileConfigurator.swift; sourceTree = "<group>"; };
+		9BDB1F38230ECB22006CE739 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		9BDB1F39230ECB22006CE739 /* EditProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		9BDB1F3A230ECB22006CE739 /* EditProfileInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
 		9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCell.swift; sourceTree = "<group>"; };
 		9BED144D230D778300C59899 /* country_states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_states.json; sourceTree = "<group>"; };
 		9EEB18953A7D4ECB4ACB2570 /* Pods-Platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.release.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.release.xcconfig"; sourceTree = "<group>"; };
@@ -577,6 +593,10 @@
 			isa = PBXGroup;
 			children = (
 				429BAD1123008C610087DBAD /* EditProfileViewController.swift */,
+				9BDB1F37230ECB22006CE739 /* EditProfileConfigurator.swift */,
+				9BDB1F3A230ECB22006CE739 /* EditProfileInteractor.swift */,
+				9BDB1F38230ECB22006CE739 /* EditProfilePresenter.swift */,
+				9BDB1F39230ECB22006CE739 /* EditProfileRouter.swift */,
 				429BAD1023008C610087DBAD /* Implementations */,
 				429BAD1223008C610087DBAD /* Interfaces */,
 				9BD3EA62230A9610003A9FC1 /* InputFieldTableViewCell.swift */,
@@ -589,6 +609,8 @@
 		429BAD1023008C610087DBAD /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				9BDB1F33230ECB18006CE739 /* EditProfileInteractable.swift */,
+				9BDB1F34230ECB18006CE739 /* EditProfileViewable.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -596,6 +618,8 @@
 		429BAD1223008C610087DBAD /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				9BDB1F30230ECB0C006CE739 /* IEditProfileInteractable.swift */,
+				9BDB1F2F230ECB0C006CE739 /* IEditProfileViewable.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1839,6 +1863,7 @@
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */,
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
+				9BDB1F35230ECB18006CE739 /* EditProfileInteractable.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
 				9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */,
@@ -1847,15 +1872,19 @@
 				429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
+				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				429BAD0C23008BC60087DBAD /* ILoginInteractable.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				F90455B922FC53100070257E /* CMTextField.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
+				9BDB1F32230ECB0C006CE739 /* IEditProfileInteractable.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
+				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
 				F9BECCF0230BF57E002D2845 /* TransactionHistoryVC.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
+				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
@@ -1867,7 +1896,9 @@
 				429BAD342300907B0087DBAD /* UINavigationItem+Extension.swift in Sources */,
 				9B0FD89522FD9152004A596B /* CMStackView.swift in Sources */,
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
+				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
+				9BDB1F36230ECB18006CE739 /* EditProfileViewable.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
@@ -1892,6 +1923,7 @@
 				F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */,
 				429BAD0623008BC60087DBAD /* LoginRouting.swift in Sources */,
 				42BE356F22FBF7DE00AAF8E3 /* DropDownViewWithTableView.swift in Sources */,
+				9BDB1F31230ECB0C006CE739 /* IEditProfileViewable.swift in Sources */,
 				42BE357222FBF7DE00AAF8E3 /* DropDownPickerView.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,

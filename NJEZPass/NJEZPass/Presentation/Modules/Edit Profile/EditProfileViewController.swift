@@ -22,9 +22,6 @@ class EditProfileViewController: UIViewController {
     var personalInfoPlaceholderArr = ["First Name", "Last Name", "Address Line 1", "Address Line 2"]
     var contactInfoPlaceholderArr = ["Email", "Daytime Phone", "Evening Phone", "Cell Phone"]
     fileprivate var selectedState = ""
-    fileprivate var usaStates:NSArray?
-    fileprivate var caStates:NSArray?
-    fileprivate var selectedCountry = ""
     fileprivate var selectedField:ApolloTextInputField?
 //    var retrivalEnum:RetrivalEnum = .abbreviation
     lazy fileprivate var countrySelectionPicker: CMPickerView! = {
@@ -183,6 +180,10 @@ extension EditProfileViewController: CityStateDelegate {
 
 // Parsing JSONLocal
 /*
+ fileprivate var usaStates:NSArray?
+ fileprivate var caStates:NSArray?
+ fileprivate var selectedCountry = ""
+
 if let path = Bundle.main.path(forResource: "country_states", ofType: "json") {
     do {
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
