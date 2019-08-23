@@ -9,7 +9,50 @@
 import UIKit
 import SideMenu
 
-class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ProfileNavigationCellDelegate {
+    
+    // MARK: - Profile Navigation Delegate methods
+    
+    func flowChosen(viewChosen: ViewChosen) {
+        var segueIdentifier = "showAccountFlow"
+        
+        let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+        switch viewChosen {
+            
+            case .accountView:
+                segueIdentifier = "showAccountFlow"
+                print("")
+            
+            case .tagsView:
+                segueIdentifier = "showTagsFlow"
+                print("")
+            
+            case .vehiclesView:
+                segueIdentifier = "showVehiclesFlow"
+                print("")
+            
+            case .transactionsView:
+                segueIdentifier = "showTransactionsFlow"
+                print("")
+            
+            default:
+                segueIdentifier = ""
+                print("")
+        }
+        
+        let vc = storyBoard.instantiateViewController(withIdentifier: segueIdentifier)
+        self.navigateToVC(destination: vc)
+    }
+    
+    // MARK: Navigation
+    func navigateToVC(destination: UIViewController) {
+        if let viewController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+            viewController.pushViewController(destination, animated: true)
+        }
+        else {
+            UIApplication.shared.keyWindow?.rootViewController?.show(destination, sender: nil)
+        }
+    }
     
     @IBOutlet weak var tbleView: UITableView!
     
@@ -113,6 +156,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                 if let balance = appDelegate!.detailInfo?.financialInformation?.currentBalance {
                     profileNavigationCell.availableBalance.text =  "$ \(balance)"
                 }
+                
+                profileNavigationCell.delegate = self
                 return profileNavigationCell
             }
             
