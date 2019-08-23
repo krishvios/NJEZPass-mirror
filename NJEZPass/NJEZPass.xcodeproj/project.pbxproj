@@ -69,6 +69,16 @@
 		429C6A00230D4B0C0055CFBD /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 429C69FF230D4B0C0055CFBD /* Localization.strings */; };
 		429C6A03230D519E0055CFBD /* LoginAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A02230D519E0055CFBD /* LoginAPITests.swift */; };
 		429C6A05230D51DA0055CFBD /* PlatformUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A04230D51D90055CFBD /* PlatformUtility.swift */; };
+		429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A08230E9FD30055CFBD /* BankAccountModel.swift */; };
+		429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A0A230E9FE50055CFBD /* CreditCardModel.swift */; };
+		429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A0C230EAB790055CFBD /* PaymentMethodsModel.swift */; };
+		429C6A10230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A0F230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift */; };
+		429C6A12230EBAD50055CFBD /* IPaymentMethodsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A11230EBAD50055CFBD /* IPaymentMethodsUsecase.swift */; };
+		429C6A15230FCD240055CFBD /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A14230FCD240055CFBD /* EditProfileModel.swift */; };
+		429C6A18230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A17230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift */; };
+		429C6A1A230FDD6C0055CFBD /* IEditProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */; };
+		429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */; };
+		429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -342,6 +352,16 @@
 		429C69FF230D4B0C0055CFBD /* Localization.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		429C6A02230D519E0055CFBD /* LoginAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPITests.swift; sourceTree = "<group>"; };
 		429C6A04230D51D90055CFBD /* PlatformUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformUtility.swift; sourceTree = "<group>"; };
+		429C6A08230E9FD30055CFBD /* BankAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountModel.swift; sourceTree = "<group>"; };
+		429C6A0A230E9FE50055CFBD /* CreditCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardModel.swift; sourceTree = "<group>"; };
+		429C6A0C230EAB790055CFBD /* PaymentMethodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsModel.swift; sourceTree = "<group>"; };
+		429C6A0F230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPaymentMethodsUsecaseProvider.swift; sourceTree = "<group>"; };
+		429C6A11230EBAD50055CFBD /* IPaymentMethodsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPaymentMethodsUsecase.swift; sourceTree = "<group>"; };
+		429C6A14230FCD240055CFBD /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		429C6A17230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileUsecaseProvider.swift; sourceTree = "<group>"; };
+		429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileUsecase.swift; sourceTree = "<group>"; };
+		429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseProvider.swift; sourceTree = "<group>"; };
+		429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -713,6 +733,8 @@
 		429BAD3723016B950087DBAD /* UsecaseInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A16230FDC830055CFBD /* Edit Profile */,
+				429C6A0E230EBA990055CFBD /* PaymentMethods */,
 				429BAD3823016B950087DBAD /* UserProfile */,
 				429BAD3B23016B950087DBAD /* Login */,
 			);
@@ -853,6 +875,58 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		429C6A06230E9C490055CFBD /* PaymentMethods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PaymentMethods;
+			sourceTree = "<group>";
+		};
+		429C6A07230E9FAF0055CFBD /* Payment Methods */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A08230E9FD30055CFBD /* BankAccountModel.swift */,
+				429C6A0A230E9FE50055CFBD /* CreditCardModel.swift */,
+				429C6A0C230EAB790055CFBD /* PaymentMethodsModel.swift */,
+			);
+			path = "Payment Methods";
+			sourceTree = "<group>";
+		};
+		429C6A0E230EBA990055CFBD /* PaymentMethods */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A0F230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift */,
+				429C6A11230EBAD50055CFBD /* IPaymentMethodsUsecase.swift */,
+			);
+			path = PaymentMethods;
+			sourceTree = "<group>";
+		};
+		429C6A13230FCD060055CFBD /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A14230FCD240055CFBD /* EditProfileModel.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		429C6A16230FDC830055CFBD /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A17230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift */,
+				429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */,
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		429C6A1B230FDF360055CFBD /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */,
+				429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		42BE355C22FBF7DE00AAF8E3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +1027,8 @@
 		42BE358F22FBF96B00AAF8E3 /* UsecaseImplementations */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A1B230FDF360055CFBD /* EditProfile */,
+				429C6A06230E9C490055CFBD /* PaymentMethods */,
 				42BE35B122FDA02F00AAF8E3 /* UserProfile */,
 				42BE359022FBF96B00AAF8E3 /* Login */,
 			);
@@ -1051,6 +1127,8 @@
 		5EE3DFEA22DEFCE3007EDCC7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A13230FCD060055CFBD /* EditProfile */,
+				429C6A07230E9FAF0055CFBD /* Payment Methods */,
 				42BE35AD22FD7F0E00AAF8E3 /* UserProfile */,
 				42BE357922FBF94400AAF8E3 /* Common */,
 				42BE357422FBF94400AAF8E3 /* Home */,
@@ -1982,8 +2060,12 @@
 				42BE358422FBF94400AAF8E3 /* Route.swift in Sources */,
 				42BE358322FBF94400AAF8E3 /* LoginModel.swift in Sources */,
 				42BE358522FBF94400AAF8E3 /* APIError.swift in Sources */,
+				429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */,
 				42BE358822FBF94400AAF8E3 /* APIRequest.swift in Sources */,
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
+				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,
+				429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */,
+				429C6A15230FCD240055CFBD /* EditProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2000,11 +2082,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				429BAD4923016B950087DBAD /* Constants.swift in Sources */,
+				429C6A1A230FDD6C0055CFBD /* IEditProfileUsecase.swift in Sources */,
 				429BAD4A23016B950087DBAD /* Extensions.swift in Sources */,
+				429C6A10230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift in Sources */,
 				429BAD4823016B950087DBAD /* ILoginUsecaseProvider.swift in Sources */,
 				429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */,
+				429C6A12230EBAD50055CFBD /* IPaymentMethodsUsecase.swift in Sources */,
 				429BAD4723016B950087DBAD /* ILoginUsecase.swift in Sources */,
 				429BAD4523016B950087DBAD /* IUserProfileUsecase.swift in Sources */,
+				429C6A18230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift in Sources */,
 				429BAD4623016B950087DBAD /* IUserProfileUsecaseProvider.swift in Sources */,
 				429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */,
 			);
@@ -2023,7 +2109,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BE359522FBF96B00AAF8E3 /* APIService.swift in Sources */,
+				429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */,
 				42BE359722FBF96B00AAF8E3 /* LoginUsecaseRemote.swift in Sources */,
+				429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */,
 				42BE359422FBF96B00AAF8E3 /* BaseWorker.swift in Sources */,
 				42BE359622FBF96B00AAF8E3 /* APIConstants.swift in Sources */,
 				42BE35B522FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift in Sources */,

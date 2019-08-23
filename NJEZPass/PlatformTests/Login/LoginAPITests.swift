@@ -60,7 +60,7 @@ class LoginAPITests: XCTestCase {
 extension LoginAPITests : IResponseHandler {
     func onSuccess<T>(response: T) {
         if let res = response as? LoginModel.Response {
-            PlatformUtility.session_id = res.access_token
+            PlatformUtility.accessToken = res.access_token
             self.loginResponse = res
         }
         responseExpectation?.fulfill()
