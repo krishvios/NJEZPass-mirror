@@ -37,7 +37,7 @@ target 'NJEZPass' do
     pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS'
     pod 'SideMenu'
     pod 'KeychainAccess'
-
+    pod 'SJSegmentedScrollView'
 
     
 

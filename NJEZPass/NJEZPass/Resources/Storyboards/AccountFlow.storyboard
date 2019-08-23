@@ -95,7 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="DQt-6k-hSs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="ZHE-bO-hTR">
-                        <barButtonItem key="backBarButtonItem" title="           " id="1zr-7H-V1A"/>
+                        <barButtonItem key="backBarButtonItem" title="                " id="1zr-7H-V1A"/>
                         <barButtonItem key="leftBarButtonItem" image="menu" id="AZs-Cm-e5n">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -105,7 +105,7 @@
                         <segue destination="LkJ-2H-Ltz" kind="show" identifier="EditProfile" id="SI5-gd-32N"/>
                         <segue destination="jmz-s9-86j" kind="show" identifier="AccountActivity" id="lzC-ib-6xm"/>
                         <segue destination="Xxi-3c-gdX" kind="show" identifier="Settings" id="qgI-8F-Bh3"/>
-                        <segue destination="7oZ-gg-iBI" kind="show" identifier="PaymentMethods" id="w4M-ax-EAi"/>
+                        <segue destination="7oZ-gg-iBI" kind="show" identifier="PaymentMethods" animates="NO" id="w4M-ax-EAi"/>
                         <segue destination="XAm-Uv-K6q" kind="show" identifier="Violations" id="X3a-sX-aUq"/>
                         <segue destination="o1v-CV-4Af" kind="show" identifier="TagsFlow" id="09r-ma-Auo"/>
                         <segue destination="r9f-gb-iov" kind="show" identifier="FAQ" id="tZ9-sK-wek"/>
@@ -302,7 +302,7 @@
             <objects>
                 <viewController title="Edit Profile" id="LkJ-2H-Ltz" customClass="EditProfileViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAP-0b-BBG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GXp-1P-kqO">
@@ -731,7 +731,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -39,7 +39,7 @@
 		429BAD4A23016B950087DBAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4123016B950087DBAD /* Extensions.swift */; };
 		429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4323016B950087DBAD /* IAPIServicable.swift */; };
 		429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD4423016B950087DBAD /* IResponseHandler.swift */; };
-		429BAD5C2306A0ED0087DBAD /* AccountBalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD5B2306A0ED0087DBAD /* AccountBalanceVC.swift */; };
+		429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD5B2306A0ED0087DBAD /* AccountPrepaidVC.swift */; };
 		429BAD7D230C58B80087DBAD /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD5F230C58B80087DBAD /* PaymentMethods.storyboard */; };
 		429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD60230C58B80087DBAD /* VehiclesFlow.storyboard */; };
 		429BAD7F230C58B80087DBAD /* AccountFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD61230C58B80087DBAD /* AccountFlow.storyboard */; };
@@ -177,11 +177,12 @@
 		F90455B922FC53100070257E /* CMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B822FC53100070257E /* CMTextField.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
+		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
 		F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */; };
 		F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */; };
 		F9BECCEA230BD370002D2845 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE9230BD370002D2845 /* GradientView.swift */; };
 		F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */; };
-		F9BECCF0230BF57E002D2845 /* TransactionHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */; };
+		F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCEF230BF57E002D2845 /* AccountViolationVC.swift */; };
 		F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
@@ -321,7 +322,7 @@
 		429BAD4123016B950087DBAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		429BAD4323016B950087DBAD /* IAPIServicable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPIServicable.swift; sourceTree = "<group>"; };
 		429BAD4423016B950087DBAD /* IResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IResponseHandler.swift; sourceTree = "<group>"; };
-		429BAD5B2306A0ED0087DBAD /* AccountBalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceVC.swift; sourceTree = "<group>"; };
+		429BAD5B2306A0ED0087DBAD /* AccountPrepaidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPrepaidVC.swift; sourceTree = "<group>"; };
 		429BAD5F230C58B80087DBAD /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
 		429BAD60230C58B80087DBAD /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
 		429BAD61230C58B80087DBAD /* AccountFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountFlow.storyboard; sourceTree = "<group>"; };
@@ -479,11 +480,12 @@
 		F90455B822FC53100070257E /* CMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTextField.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
+		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
 		F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceCell.swift; sourceTree = "<group>"; };
 		F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F9BECCE9230BD370002D2845 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReplenishAccountVC.swift; path = "NJEZPass/Presentation/Modules/Account Balance/ReplenishAccountVC.swift"; sourceTree = SOURCE_ROOT; };
-		F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryVC.swift; sourceTree = "<group>"; };
+		F9BECCEF230BF57E002D2845 /* AccountViolationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViolationVC.swift; sourceTree = "<group>"; };
 		F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -792,11 +794,12 @@
 				429BAD592306A0D50087DBAD /* Implementations */,
 				429BAD5A2306A0D50087DBAD /* Interfaces */,
 				F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */,
-				429BAD5B2306A0ED0087DBAD /* AccountBalanceVC.swift */,
-				F9BECCEF230BF57E002D2845 /* TransactionHistoryVC.swift */,
+				429BAD5B2306A0ED0087DBAD /* AccountPrepaidVC.swift */,
+				F9BECCEF230BF57E002D2845 /* AccountViolationVC.swift */,
 				F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */,
 				F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */,
 				F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */,
+				F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */,
 			);
 			path = "Account Balance";
 			sourceTree = "<group>";
@@ -1946,7 +1949,7 @@
 				429BAD2123008E330087DBAD /* SideMenuTableViewController.swift in Sources */,
 				429BAD0823008BC60087DBAD /* LoginPresenter+ResponseHandler.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
-				429BAD5C2306A0ED0087DBAD /* AccountBalanceVC.swift in Sources */,
+				429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -1977,13 +1980,14 @@
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
-				F9BECCF0230BF57E002D2845 /* TransactionHistoryVC.swift in Sources */,
+				F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				9BD4844B22F184C400F94DE2 /* CMLabel.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
+				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
 				9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				429BAD0923008BC60087DBAD /* LoginInteractable.swift in Sources */,

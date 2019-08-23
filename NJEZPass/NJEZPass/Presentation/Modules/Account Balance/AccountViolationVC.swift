@@ -1,5 +1,5 @@
 //
-//  TransactionHistoryVC.swift
+//  AccountViolationVC.swift
 //  NJEZPass
 //
 //  Created by N, Narasimhulu on 20/08/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionHistoryVC: UIViewController {
+class AccountViolationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,19 +17,19 @@ class TransactionHistoryVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.barTintColor = .white
     }
 }
 
-extension TransactionHistoryVC: UITableViewDelegate, UITableViewDataSource {
+extension AccountViolationVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 20
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 7
+        return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
