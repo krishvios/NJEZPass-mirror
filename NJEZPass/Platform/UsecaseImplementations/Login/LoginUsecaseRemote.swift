@@ -41,6 +41,8 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
         APIService.shared.requestMuliPartAPI(request: requestAPI, decodingType: T.self, completion: { response in
             switch response {
             case .onSuccess(let jsonData):
+                let responseModel = jsonData as? LoginModel.Response
+                PlatformUtility.accessToken = "Bearer" + (responseModel?.access_token)!
                 self.responseHandler.onSuccess(response: jsonData)
             case .onFailure(let err):
                 self.responseHandler.onError(err: err)

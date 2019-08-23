@@ -10,9 +10,9 @@ import Foundation
 
 public struct PlatformUtility {
     
-    public static var session_id : String? = nil
-    public static func getSessionId() ->String?{
-        return session_id
+    public static var accessToken : String? = nil
+    public static func getaccessToken() ->String?{
+        return accessToken
     }
 }
 
