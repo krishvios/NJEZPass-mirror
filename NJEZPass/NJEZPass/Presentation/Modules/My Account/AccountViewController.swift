@@ -12,14 +12,17 @@ class AccountViewController: UIViewController {
     
     let rowItems = ["Edit Profile","Account Balance","Payment Methods","Account Activity","Settings"]
 
-//    let rowItems = ["Edit Profile","Account Balance","Payment Methods","Tags","Violations","Account Activity","Settings"]
-
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView.init()
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = .white
     }
     
     @IBAction func homeButtonAction(_ sender: Any) {
@@ -52,6 +55,7 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.rowItems[indexPath.row]
         cell.textLabel?.text = item
+        cell.textLabel?.font = UIFont(name: "OpenSans", size: 14)
         return cell
     }
     
@@ -77,4 +81,5 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
             break;
         }
     }
+     
 }

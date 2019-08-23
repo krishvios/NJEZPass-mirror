@@ -54,7 +54,7 @@ extension LoginPresenter: IResponseHandler {
         var viewModel = LoginModel.PresentionModel()
         viewModel.message = Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginFailure)
         viewModel.accessToken = ""
-        viewController?.loginSuccess(viewModel: viewModel)
+        viewController?.loginFailed(viewModel: viewModel)
     }
 
 }

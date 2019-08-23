@@ -1,0 +1,12 @@
+/* 
+  Localization.strings
+  NJEZPass
+
+  Created by Gudavarthi, Pardhu on 21/08/19.
+  Copyright © 2019 Conduent. All rights reserved.
+*/
+"APP_NAME" = "NJ EZPass";
+"INVALID_USER_DETAILS" = "Invalid User details";
+"OK" = "OK";
+"LOGIN_SUCCESS" = "login success";
+"LOGIN_FAILURE" = "login failure";

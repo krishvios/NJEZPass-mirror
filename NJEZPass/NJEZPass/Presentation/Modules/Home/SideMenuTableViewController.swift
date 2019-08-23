@@ -44,29 +44,10 @@ class SideMenuTableViewController: UITableViewController {
         selectedCell.contentView.backgroundColor = UIColor(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1.0)
         selectedCell.selectedView.backgroundColor = UIColor(red: 105/255.0, green: 32/255.0, blue: 126/255.0, alpha: 1.0)
         
-        switch indexPath.row {
-        case 0:
-            print("Home")
-        case 1:
-            print("Account")
-            self.navigateToAccount()
-        case 2:
-            print("Transcations")
-        case 3:
-            print("Vehicles")
-        case 4:
-            print("Tags")
-        case 5:
-            print("Violation")
-        case 6:
-            print("FAQs")
-        case 7:
-            print("Contact Us")
-        case 8:
-            print("Logout")
-            self.performLogout()
-        default:
-            break
+        if indexPath.row == 8 {
+            performLogout()
+        } else {
+            self.performSegue(withIdentifier: viewModel.segueIdentifiers[indexPath.row], sender: nil)
         }
     }
     
@@ -110,3 +91,4 @@ class SideMenuTableViewController: UITableViewController {
     }
     
 }
+ 
