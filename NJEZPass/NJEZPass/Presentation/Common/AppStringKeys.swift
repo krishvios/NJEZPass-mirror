@@ -29,3 +29,8 @@ enum AppUIElementKeys {
     static let home = "HomeViewController"
     static let deviceVerification = "DeviceVerificationVC"
 }
+
+enum AppKey{
+    static let quesKey = "ques"
+    static let ansKey = "ans"
+}

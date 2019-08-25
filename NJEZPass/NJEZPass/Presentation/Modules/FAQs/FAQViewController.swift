@@ -19,13 +19,13 @@ class FAQViewController: UITableViewController {
     let data =
         [
         
-        [K.AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , K.AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
+        [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
                 
-    [K.AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , K.AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
+    [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
     
-    [K.AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , K.AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
+    [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
         
-         [K.AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur ?" , K.AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."]
+         [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur ?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."]
         
                 ]
     
@@ -63,11 +63,11 @@ class FAQViewController: UITableViewController {
         let ansBackView = cell!.viewWithTag(ViewTags.ansCoantinerT)!
 
         
-        quesLabel.text = data[indexPath.row][K.AppKey.quesKey]
+        quesLabel.text = data[indexPath.row][AppKey.quesKey]
         if let index = selectedIndex{
             if indexPath == index{
                 ansBackView.isHidden = false
-                ansLabel.text = data[indexPath.row][K.AppKey.ansKey]
+                ansLabel.text = data[indexPath.row][AppKey.ansKey]
                 iconLabel.text = "-"
                 return cell!
             }
@@ -103,7 +103,7 @@ class FAQViewController: UITableViewController {
         }else{                  // Expand
             selectedIndex = indexPath
             iconLabel.text = "-"
-            ansLabel.text = data[indexPath.row][K.AppKey.ansKey]
+            ansLabel.text = data[indexPath.row][AppKey.ansKey]
         }
         
         tableView.endUpdates()
