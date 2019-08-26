@@ -10,22 +10,19 @@ import UIKit
 
 
 extension UIView {
-    func configure(with radius: CGFloat, andDefaultShadowWithColor shadowColor: UIColor) {
+    func configure(with radius: CGFloat, borderColor: UIColor) {
         self.layer.cornerRadius = radius
-        self.layer.shadowColor = shadowColor.cgColor
-        configureShadowProperties(withDefaultShadowOffset: CGSize(width: 0.0, height: 1.0), andDefaultShadowRadius: 5.0, andDefaultShadowOpacity: 1.0)
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = 1
+        configureShadowProperties(withDefaultShadowOffset: CGSize(width: 0, height: 0), andDefaultShadowRadius: 10, andDefaultShadowOpacity: 0.1)
         self.layer.masksToBounds = false
+        self.layer.masksToBounds = true
     }
+    
     func configureShadowProperties(withDefaultShadowOffset shadowOffset: CGSize, andDefaultShadowRadius shadowRadius: CGFloat, andDefaultShadowOpacity shadowOpacity: Float) {
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowRadius = shadowRadius
         self.layer.shadowOpacity = shadowOpacity
     }
-    
-    func setBorder(color:UIColor, width:CGFloat)  {
-        self.layer.borderColor = color.cgColor
-        self.layer.borderWidth = width
-    }
 }
-
 
