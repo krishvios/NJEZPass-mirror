@@ -1,5 +1,5 @@
 //
-//  AccountBalanceVC.swift
+//  AccountPrepaidVC.swift
 //  NJEZPass
 //
 //  Created by Gudavarthi, Pardhu on 16/08/19.
@@ -8,30 +8,22 @@
 
 import UIKit
 
-class AccountBalanceVC: UIViewController {
+class AccountPrepaidVC: UIViewController {
     
     @IBOutlet weak var accountBalance: UILabel!
-    @IBOutlet weak var replenishAccountButton: UIButton!
-    @IBOutlet weak var viewTransactionButton: UIButton!
-    @IBOutlet weak var accountView: UIView!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Account Balance"
+  
+//        self.navigationController?.navigationBar.setGradientBackground(colors: [
+//            UIColor(red: 105/255, green: 32/255, blue: 126/255, alpha: 1.0).cgColor,
+//            UIColor(red: 19/255, green: 140/255, blue: 145/255, alpha: 1.0).cgColor
+//            ])
         
-        replenishAccountButton.layer.borderColor = UIColor.white.cgColor
-        replenishAccountButton.layer.borderWidth = 1.0
-        
-        viewTransactionButton.layer.borderColor = UIColor.purple.cgColor
-        viewTransactionButton.layer.borderWidth = 1.0
-        
-        self.navigationController?.navigationBar.setGradientBackground(colors: [
-            UIColor(red: 105/255, green: 32/255, blue: 126/255, alpha: 1.0).cgColor,
-            UIColor(red: 19/255, green: 140/255, blue: 145/255, alpha: 1.0).cgColor
-            ])
-        self.navigationController?.navigationBar.tintColor = .white
+        //self.navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -40,14 +32,32 @@ class AccountBalanceVC: UIViewController {
     
 }
 
-extension AccountBalanceVC: UITableViewDelegate, UITableViewDataSource {
+extension AccountPrepaidVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 7
+        return 10
+    }
+    
+    private func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(section == 0) {
+            return "Today"
+        } else {
+            return "Aug 12"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(section == 0) {
+            return 1
+        } else if(section == 1) {
+            return 2
+        } else {
+            return 4
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -56,9 +66,6 @@ extension AccountBalanceVC: UITableViewDelegate, UITableViewDataSource {
         return header
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 63

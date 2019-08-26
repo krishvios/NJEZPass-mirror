@@ -25,6 +25,12 @@ struct K {
         static let value = "value"
 
     }
+    
+    struct AppKey{
+        static let quesKey = "ques"
+        static let ansKey = "ans"
+
+    }
 }
 
 enum HTTPHeaderField: String {
