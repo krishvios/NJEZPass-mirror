@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PE5-c6-oYV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qyO-vi-ZB4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,6 +18,7 @@
         <!--Account Segment Controller-->
         <scene sceneID="QVw-5i-20L">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoN-eK-Rrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PE5-c6-oYV" customClass="AccountSegmentController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uih-ad-evm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -26,13 +27,13 @@
                         <viewLayoutGuide key="safeArea" id="zIR-Cg-Lhc"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qoN-eK-Rrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="574" y="-442"/>
         </scene>
         <!--Account Balance-->
         <scene sceneID="30h-Rl-PQE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRt-UL-3gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccountPrepaidVC" title="Account Balance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RTA-ga-ai0" customClass="AccountPrepaidVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EU5-kk-Kph">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -247,13 +248,13 @@
                         <barButtonItem key="backBarButtonItem" title="     " id="PCm-QR-B1O"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YRt-UL-3gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428" y="-448.42578710644682"/>
         </scene>
         <!--Account ViolationVC-->
         <scene sceneID="Xtn-o6-AGN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFl-hG-YVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccountViolationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="awg-nK-M0m" customClass="AccountViolationVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pg3-WL-AQI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -426,13 +427,13 @@
                         <viewLayoutGuide key="safeArea" id="cJZ-S0-Ned"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YFl-hG-YVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2120.8000000000002" y="-442.12893553223392"/>
         </scene>
         <!--Payment AmountVC-->
         <scene sceneID="OdN-OP-UaH">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAr-rC-j2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qyO-vi-ZB4" customClass="PaymentAmountVC" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Bx-XH-yay" customClass="GradientView" customModule="NJEZPass" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -563,9 +564,8 @@
                         <outlet property="numberPadCollectionView" destination="dOi-x1-H7x" id="E6o-eC-gOn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eAr-rC-j2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863" y="-431"/>
+            <point key="canvasLocation" x="3023" y="-564"/>
         </scene>
     </scenes>
 </document>

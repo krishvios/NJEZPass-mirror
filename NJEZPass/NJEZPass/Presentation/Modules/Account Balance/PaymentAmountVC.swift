@@ -26,6 +26,14 @@ class PaymentAmountVC: UIViewController {
             ])
         self.navigationController?.navigationBar.tintColor = .white
     }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }
 
 extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate {
