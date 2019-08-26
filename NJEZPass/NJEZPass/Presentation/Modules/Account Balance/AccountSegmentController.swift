@@ -36,5 +36,9 @@ class AccountSegmentController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
 }
 
