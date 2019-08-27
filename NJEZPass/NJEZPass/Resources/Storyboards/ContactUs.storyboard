@@ -18,7 +18,7 @@
         <!--Contact Us View Controller-->
         <scene sceneID="k0z-Py-r9C">
             <objects>
-                <tableViewController storyboardIdentifier="ContactUs" id="yb3-m9-XeR" customClass="ContactUsViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactUs" hidesBottomBarWhenPushed="YES" id="yb3-m9-XeR" customClass="ContactUsViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pvE-MD-1sc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +183,7 @@
         <!--Tags Submission Status View Controller-->
         <scene sceneID="zRR-Ib-041">
             <objects>
-                <viewController id="oNW-g0-rxk" customClass="TagsSubmissionStatusViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="oNW-g0-rxk" customClass="TagsSubmissionStatusViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgw-fa-rAj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

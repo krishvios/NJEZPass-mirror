@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         txtUserID.delegate = self
         txtPassword.delegate = self
-       // loginButton.isEnabled = false
+        loginButton.isEnabled = false
         hideKeyboardWhenTap()
         toggleLoginButtonColor()
     }
@@ -130,7 +130,7 @@ class LoginViewController: UIViewController {
     private func validateInput() {
         //loginButton.isEnabled = false
         if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
-           // loginButton.isEnabled = true
+            loginButton.isEnabled = true
         }
         toggleLoginButtonColor()
     }
