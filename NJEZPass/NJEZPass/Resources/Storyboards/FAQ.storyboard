@@ -17,7 +17,7 @@
         <!--FAQs-->
         <scene sceneID="lFL-ad-0wV">
             <objects>
-                <tableViewController storyboardIdentifier="FAQ" title="FAQs" id="fES-Gp-RaO" customClass="FAQViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FAQ" title="FAQs" hidesBottomBarWhenPushed="YES" id="fES-Gp-RaO" customClass="FAQViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y7w-36-yg3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
