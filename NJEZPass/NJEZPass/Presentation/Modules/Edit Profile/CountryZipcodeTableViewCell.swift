@@ -13,7 +13,7 @@ protocol CountryZipcodeDelegate:class {
     func countrySelected(countryField:ApolloTextInputField?)
 }
 
-class CountryZipcodeTableViewCell: UITableViewCell {
+class CountryZipcodeTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
 
     @IBOutlet weak var countryTextField: ApolloTextInputField!
     @IBOutlet weak var zipcodeTextField: ApolloTextInputField!
@@ -25,6 +25,7 @@ class CountryZipcodeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        zipcodeTextField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +36,11 @@ class CountryZipcodeTableViewCell: UITableViewCell {
     
     func setPickerView(picker:CMPickerView, with Target:EditProfileViewController) {
         
+    }
+    
+    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
+        self.endEditing(true)
+        return true
     }
     
     @IBAction func countryClicked(_ sender: Any) {

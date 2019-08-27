@@ -26,7 +26,7 @@ class EditProfileViewController: UIViewController {
 //    var retrivalEnum:RetrivalEnum = .abbreviation
     lazy fileprivate var countrySelectionPicker: CMPickerView! = {
         
-        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tableView.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
         pickerView.pickerArray = ["USA","Canada"]
         pickerView.viewDelegate = self
         return pickerView
@@ -34,7 +34,7 @@ class EditProfileViewController: UIViewController {
     
     lazy fileprivate var stateSelectionPicker: CMPickerView! = {
         
-        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tableView.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
         pickerView.pickerArray = ["Oklahoma","Georgia"]
         pickerView.viewDelegate = self
         return pickerView

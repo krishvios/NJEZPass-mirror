@@ -45,6 +45,11 @@ class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
         
     }
     
+    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
+        self.endEditing(true)
+        return true
+    }
+    
     @IBAction func stateClicked(_ sender: Any) {
         delegate?.stateSelected(stateField: stateTextField)
     }

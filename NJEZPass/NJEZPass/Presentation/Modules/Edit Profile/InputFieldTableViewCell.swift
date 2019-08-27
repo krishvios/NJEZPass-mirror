@@ -9,13 +9,14 @@
 import UIKit
 import Apollo_iOS
 
-class InputFieldTableViewCell: UITableViewCell {
+class InputFieldTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
     
     @IBOutlet weak var textField: ApolloTextInputField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textField.delegate = self
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,6 +27,12 @@ class InputFieldTableViewCell: UITableViewCell {
 
     public func setPlaceHolder(with string:String) {
         textField.placeholder = string
+    }
+    
+    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool{
+        print(#function)
+        self.endEditing(true)
+        return true
     }
     
 }
