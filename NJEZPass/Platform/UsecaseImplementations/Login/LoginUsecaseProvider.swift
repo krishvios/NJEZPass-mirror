@@ -15,8 +15,6 @@ open class LoginUsecaseProvider: ILoginUsecaseProvider {
     }
     public func provideLoginUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> ILoginUsecase {
         switch requestType {
-        case .local:
-            return LoginUsecaseLocal(handler: handler)
         case .remote:
             return LoginUsecaseRemote<LoginModel.Response>(handler: handler)
         }

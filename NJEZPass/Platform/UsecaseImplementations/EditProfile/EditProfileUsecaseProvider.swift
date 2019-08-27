@@ -18,9 +18,6 @@ open class EditProfileUsecaseProvider: IEditProfileUsecaseProvider {
         switch requestType {
         case .remote:
             return EditProfileUsecaseRemote<EditProfileModel.Response>(handler: handler)
-        case .local:
-            print("local")
-            return EditProfileUsecaseRemote<EditProfileModel.Response>(handler: handler)
         }
     }
 }
