@@ -42,7 +42,6 @@
 		429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD5B2306A0ED0087DBAD /* AccountPrepaidVC.swift */; };
 		429BAD7D230C58B80087DBAD /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD5F230C58B80087DBAD /* PaymentMethods.storyboard */; };
 		429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD60230C58B80087DBAD /* VehiclesFlow.storyboard */; };
-		429BAD7F230C58B80087DBAD /* AccountFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD61230C58B80087DBAD /* AccountFlow.storyboard */; };
 		429BAD80230C58B80087DBAD /* FAQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD62230C58B80087DBAD /* FAQ.storyboard */; };
 		429BAD81230C58B80087DBAD /* LandingHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD63230C58B80087DBAD /* LandingHeader.xib */; };
 		429BAD82230C58B80087DBAD /* TagsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD64230C58B80087DBAD /* TagsFlow.storyboard */; };
@@ -50,7 +49,6 @@
 		429BAD84230C58B80087DBAD /* UserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD66230C58B80087DBAD /* UserFlow.storyboard */; };
 		429BAD85230C58B80087DBAD /* TransactionsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD67230C58B80087DBAD /* TransactionsFlow.storyboard */; };
 		429BAD86230C58B80087DBAD /* ContactUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD68230C58B80087DBAD /* ContactUs.storyboard */; };
-		429BAD87230C58B80087DBAD /* AccountBalance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD69230C58B80087DBAD /* AccountBalance.storyboard */; };
 		429BAD88230C58B80087DBAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD6A230C58B80087DBAD /* Assets.xcassets */; };
 		429BAD89230C58B80087DBAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD6B230C58B80087DBAD /* LaunchScreen.storyboard */; };
 		429BAD8A230C58B80087DBAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 429BAD6D230C58B80087DBAD /* Main.storyboard */; };
@@ -325,7 +323,6 @@
 		429BAD5B2306A0ED0087DBAD /* AccountPrepaidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPrepaidVC.swift; sourceTree = "<group>"; };
 		429BAD5F230C58B80087DBAD /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
 		429BAD60230C58B80087DBAD /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
-		429BAD61230C58B80087DBAD /* AccountFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountFlow.storyboard; sourceTree = "<group>"; };
 		429BAD62230C58B80087DBAD /* FAQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FAQ.storyboard; sourceTree = "<group>"; };
 		429BAD63230C58B80087DBAD /* LandingHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingHeader.xib; sourceTree = "<group>"; };
 		429BAD64230C58B80087DBAD /* TagsFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TagsFlow.storyboard; sourceTree = "<group>"; };
@@ -333,7 +330,6 @@
 		429BAD66230C58B80087DBAD /* UserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFlow.storyboard; sourceTree = "<group>"; };
 		429BAD67230C58B80087DBAD /* TransactionsFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TransactionsFlow.storyboard; sourceTree = "<group>"; };
 		429BAD68230C58B80087DBAD /* ContactUs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactUs.storyboard; sourceTree = "<group>"; };
-		429BAD69230C58B80087DBAD /* AccountBalance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountBalance.storyboard; sourceTree = "<group>"; };
 		429BAD6A230C58B80087DBAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		429BAD6C230C58B80087DBAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		429BAD6E230C58B80087DBAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -839,7 +835,6 @@
 			children = (
 				429BAD5F230C58B80087DBAD /* PaymentMethods.storyboard */,
 				429BAD60230C58B80087DBAD /* VehiclesFlow.storyboard */,
-				429BAD61230C58B80087DBAD /* AccountFlow.storyboard */,
 				429BAD62230C58B80087DBAD /* FAQ.storyboard */,
 				429BAD63230C58B80087DBAD /* LandingHeader.xib */,
 				429BAD64230C58B80087DBAD /* TagsFlow.storyboard */,
@@ -847,7 +842,6 @@
 				429BAD66230C58B80087DBAD /* UserFlow.storyboard */,
 				429BAD67230C58B80087DBAD /* TransactionsFlow.storyboard */,
 				429BAD68230C58B80087DBAD /* ContactUs.storyboard */,
-				429BAD69230C58B80087DBAD /* AccountBalance.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1670,7 +1664,6 @@
 			files = (
 				429BAD83230C58B80087DBAD /* Violations.storyboard in Resources */,
 				429BAD8F230C58B80087DBAD /* Apache License.txt in Resources */,
-				429BAD87230C58B80087DBAD /* AccountBalance.storyboard in Resources */,
 				429BAD84230C58B80087DBAD /* UserFlow.storyboard in Resources */,
 				429BAD7D230C58B80087DBAD /* PaymentMethods.storyboard in Resources */,
 				429BAD81230C58B80087DBAD /* LandingHeader.xib in Resources */,
@@ -1693,7 +1686,6 @@
 				429BAD88230C58B80087DBAD /* Assets.xcassets in Resources */,
 				429BAD95230C58B80087DBAD /* OpenSans-Regular.ttf in Resources */,
 				429C6A00230D4B0C0055CFBD /* Localization.strings in Resources */,
-				429BAD7F230C58B80087DBAD /* AccountFlow.storyboard in Resources */,
 				429BAD96230C58B80087DBAD /* OpenSans-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
