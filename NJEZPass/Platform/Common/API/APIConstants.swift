@@ -21,6 +21,11 @@ public struct APIConstants {
     public enum ServiceNames {
         public static let profileOverview = "bosuser/api/account/overview"
         public static let loginUser = "oauth/token"
+        public static let profileUpdate = "api/account/holderinfo"
+        public static let getPaymentMethods = "api/account/paymentmethods"
+        public static let modifyBankAccount = "api/account/paymentmethod/primary"
+        public static let modifyCreditCard = "api/account/paymentmethod/secondary"
+
     }
 
     public enum DefaultParams {

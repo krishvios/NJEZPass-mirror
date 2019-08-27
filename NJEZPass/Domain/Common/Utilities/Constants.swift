@@ -10,7 +10,8 @@ import Foundation
 
 public enum Constants {
     public enum RequestCategory {
-        case local
+//     as of now application flow is online
+//        case local
         case remote
     }
 }
