@@ -34,7 +34,7 @@ target 'NJEZPass' do
   # Pods for NJEZPass
 
     pod 'Alamofire', '~> 5.0.0-beta.5'
-    pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS'
+    pod 'Apollo_iOS/ApolloTextInputField', :git => 'https://dev.azure.com/CTIMobility/NJEZPASS_IOS/_git/Cti.Mobility.Apollo-iOS'
     pod 'SideMenu'
     
   target 'NJEZPassTests' do
