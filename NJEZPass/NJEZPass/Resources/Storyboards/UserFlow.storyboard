@@ -806,7 +806,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-CQ-Dvj">
-                                <rect key="frame" x="24" y="40" width="327" height="35"/>
+                                <rect key="frame" x="24" y="40" width="329" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fat-5Q-jMm"/>
                                 </constraints>
@@ -814,17 +814,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the verification code that was sent to your device." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-tn-s5M">
-                                <rect key="frame" x="24" y="83" width="327" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="vAu-AR-TCt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-Pl-e5O">
-                                <rect key="frame" x="24" y="249" width="327" height="44"/>
+                                <rect key="frame" x="24" y="249" width="329" height="44"/>
                                 <color key="backgroundColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="V2z-qS-eVq"/>
@@ -838,11 +829,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-Wz-VCI">
-                                <rect key="frame" x="24" y="158" width="328" height="50"/>
+                                <rect key="frame" x="24" y="158" width="329" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-EB-4MG">
-                                        <rect key="frame" x="0.0" y="10" width="322" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-EB-4MG">
+                                        <rect key="frame" x="0.0" y="10" width="330" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Bi-qhE" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -854,7 +844,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-gu-mME" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="68" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="70" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="sT1-ST-aj7"/>
@@ -863,13 +853,13 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-lU-ozT" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="136" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="140" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-tO-G5o" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="210" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="xB5-3K-u28"/>
@@ -878,7 +868,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Guq-Ov-J17" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="272" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="280" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -886,6 +876,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="dXM-gu-mME" firstAttribute="width" secondItem="esL-Bi-qhE" secondAttribute="width" id="1Ka-TV-TLc"/>
+                                            <constraint firstAttribute="height" constant="30" id="Dnf-Qm-h7h"/>
                                             <constraint firstItem="K6L-lU-ozT" firstAttribute="width" secondItem="esL-Bi-qhE" secondAttribute="width" id="RhU-VD-F88"/>
                                             <constraint firstItem="vaX-tO-G5o" firstAttribute="width" secondItem="esL-Bi-qhE" secondAttribute="width" id="SRh-zi-6GW"/>
                                             <constraint firstItem="Guq-Ov-J17" firstAttribute="width" secondItem="esL-Bi-qhE" secondAttribute="width" id="lK0-Qh-k7W"/>
@@ -893,23 +884,39 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NgA-KS-I0b"/>
+                                    <constraint firstItem="uWy-EB-4MG" firstAttribute="leading" secondItem="rlz-Wz-VCI" secondAttribute="leading" id="ZjS-Lj-EKo"/>
+                                    <constraint firstItem="uWy-EB-4MG" firstAttribute="top" secondItem="rlz-Wz-VCI" secondAttribute="top" constant="10" id="ggC-tX-Sab"/>
+                                    <constraint firstAttribute="trailing" secondItem="uWy-EB-4MG" secondAttribute="trailing" constant="-1" id="wHt-TY-Cuc"/>
+                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the verification code that was sent to your device." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-tn-s5M">
+                                <rect key="frame" x="24" y="91" width="329" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="vAu-AR-TCt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wnF-yE-iWv" firstAttribute="trailing" secondItem="FCK-Pl-e5O" secondAttribute="trailing" constant="24" id="3yu-L9-EC6"/>
                             <constraint firstItem="FCK-Pl-e5O" firstAttribute="leading" secondItem="wnF-yE-iWv" secondAttribute="leading" constant="24" id="6Lc-ln-2gL"/>
                             <constraint firstItem="wnF-yE-iWv" firstAttribute="trailing" secondItem="Vsx-CQ-Dvj" secondAttribute="trailing" constant="24" id="AVE-pH-N5W"/>
-                            <constraint firstItem="QUX-tn-s5M" firstAttribute="top" secondItem="Vsx-CQ-Dvj" secondAttribute="bottom" constant="8" id="BAc-SN-A0e"/>
+                            <constraint firstItem="QUX-tn-s5M" firstAttribute="top" secondItem="Vsx-CQ-Dvj" secondAttribute="bottom" constant="16" id="BAc-SN-A0e"/>
+                            <constraint firstItem="rlz-Wz-VCI" firstAttribute="leading" secondItem="wnF-yE-iWv" secondAttribute="leading" constant="24" id="COU-KK-VR6"/>
                             <constraint firstItem="FCK-Pl-e5O" firstAttribute="top" secondItem="rlz-Wz-VCI" secondAttribute="bottom" constant="41" id="JxL-n7-aLi"/>
-                            <constraint firstItem="rlz-Wz-VCI" firstAttribute="top" secondItem="QUX-tn-s5M" secondAttribute="bottom" constant="32" id="NFA-HQ-wtK"/>
+                            <constraint firstItem="rlz-Wz-VCI" firstAttribute="top" secondItem="QUX-tn-s5M" secondAttribute="bottom" constant="24" id="NFA-HQ-wtK"/>
                             <constraint firstItem="Vsx-CQ-Dvj" firstAttribute="top" secondItem="wnF-yE-iWv" secondAttribute="top" constant="20" id="Qty-fO-7bf"/>
-                            <constraint firstItem="rlz-Wz-VCI" firstAttribute="trailing" secondItem="QUX-tn-s5M" secondAttribute="trailing" constant="1" id="Sdm-AM-kpp"/>
+                            <constraint firstItem="rlz-Wz-VCI" firstAttribute="trailing" secondItem="QUX-tn-s5M" secondAttribute="trailing" id="Sdm-AM-kpp"/>
                             <constraint firstItem="QUX-tn-s5M" firstAttribute="leading" secondItem="wnF-yE-iWv" secondAttribute="leading" constant="24" id="Vkt-mX-mdI"/>
                             <constraint firstItem="rlz-Wz-VCI" firstAttribute="leading" secondItem="QUX-tn-s5M" secondAttribute="leading" id="ZDt-qp-ECs"/>
                             <constraint firstItem="wnF-yE-iWv" firstAttribute="trailing" secondItem="QUX-tn-s5M" secondAttribute="trailing" constant="24" id="ePb-dM-okY"/>
                             <constraint firstItem="Vsx-CQ-Dvj" firstAttribute="leading" secondItem="wnF-yE-iWv" secondAttribute="leading" constant="24" id="oFy-Bz-ykg"/>
-                            <constraint firstAttribute="bottom" secondItem="rlz-Wz-VCI" secondAttribute="bottom" constant="459" id="tpd-no-1aN"/>
+                            <constraint firstItem="wnF-yE-iWv" firstAttribute="trailing" secondItem="rlz-Wz-VCI" secondAttribute="trailing" constant="24" id="ztb-BN-xsv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wnF-yE-iWv"/>
                     </view>
