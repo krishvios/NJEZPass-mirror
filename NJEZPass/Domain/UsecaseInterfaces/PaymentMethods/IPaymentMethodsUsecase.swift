@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import Entities
+
+public protocol IPaymentMethodsUsecase {
+    func getPaymentMethods(request: PaymentMethodsModel.Request)
+    func addBankAccount(request: BankAccountModel.Request)
+    func editBankAccount(request: BankAccountModel.Request)
+    func deleteBankAccount(request: BankAccountModel.Request)
+    func addCreditCard(request: CreditCardModel.Request)
+    func editCreditCard(request: CreditCardModel.Request)
+    func deleteCreditCard(request: CreditCardModel.Request)
+
+}

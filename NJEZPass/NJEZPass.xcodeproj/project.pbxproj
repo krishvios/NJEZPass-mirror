@@ -77,6 +77,8 @@
 		429C6A1A230FDD6C0055CFBD /* IEditProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */; };
 		429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */; };
 		429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */; };
+		429C6A3D231512100055CFBD /* PaymentMethodsUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */; };
+		429C6A3E231512100055CFBD /* PaymentMethodsUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -359,6 +361,8 @@
 		429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileUsecase.swift; sourceTree = "<group>"; };
 		429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseProvider.swift; sourceTree = "<group>"; };
 		429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseRemote.swift; sourceTree = "<group>"; };
+		429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsUsecaseProvider.swift; sourceTree = "<group>"; };
+		429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -875,6 +879,8 @@
 		429C6A06230E9C490055CFBD /* PaymentMethods */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */,
+				429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */,
 			);
 			path = PaymentMethods;
 			sourceTree = "<group>";
@@ -2105,7 +2111,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BE359522FBF96B00AAF8E3 /* APIService.swift in Sources */,
+				429C6A3E231512100055CFBD /* PaymentMethodsUsecaseRemote.swift in Sources */,
 				429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */,
+				429C6A3D231512100055CFBD /* PaymentMethodsUsecaseProvider.swift in Sources */,
 				42BE359722FBF96B00AAF8E3 /* LoginUsecaseRemote.swift in Sources */,
 				429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */,
 				42BE359422FBF96B00AAF8E3 /* BaseWorker.swift in Sources */,
