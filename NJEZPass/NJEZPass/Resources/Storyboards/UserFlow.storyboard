@@ -764,7 +764,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fsB-U1-Sb2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="39Z-YA-iWZ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabHome" id="39Z-YA-iWZ"/>
                     <connections>
                         <outlet property="prepaidBalanceView" destination="wVy-Oo-D5B" id="zpZ-fW-Xwv"/>
                         <outlet property="violationsBalanceView" destination="pAd-ry-va1" id="UqH-es-Kmo"/>
@@ -784,20 +784,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yvq-45-E8A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" id="hDg-JN-174"/>
+                    <tabBarItem key="tabBarItem" title="Transactions" image="tabTransactions" id="hDg-JN-174"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhG-0b-1hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3238" y="-92"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="uAe-hr-oLN">
             <objects>
-                <tabBarController storyboardIdentifier="MyAccountView" id="lyI-Pf-jTF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyAccountView" id="lyI-Pf-jTF" customClass="TabBarViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byJ-0E-wHH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="UCK-b0-XwD" kind="relationship" relationship="viewControllers" id="YqB-HP-vqj"/>
@@ -944,7 +946,7 @@
             </objects>
             <point key="canvasLocation" x="1472.8" y="-616.64167916041981"/>
         </scene>
-        <!--View Controller-->
+        <!--More-->
         <scene sceneID="mYs-oH-FtK">
             <objects>
                 <viewController id="VIJ-6e-one" sceneMemberID="viewController">
@@ -954,7 +956,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="U4J-PZ-DRJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="BmI-PH-2YL"/>
+                    <tabBarItem key="tabBarItem" title="More" image="tabMore" id="BmI-PH-2YL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIR-hG-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1263,7 +1265,7 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oki-ub-e1n">
                                                             <rect key="frame" x="0.0" y="0.0" width="6" height="63"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" red="0.85098385809999999" green="0.12518046499999999" blue="0.26105355460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="6" id="hPQ-a9-1YV"/>
                                                             </constraints>
@@ -1517,7 +1519,7 @@
         <scene sceneID="E03-3P-Ags">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AU2-4r-ELk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Balances" id="1kj-SB-nah"/>
+                    <tabBarItem key="tabBarItem" title="Balances" image="tabBalances" id="1kj-SB-nah"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GtN-Vl-J7g">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1605,11 +1607,11 @@
             </objects>
             <point key="canvasLocation" x="5403" y="-589"/>
         </scene>
-        <!--Account-->
+        <!--MyAccount-->
         <scene sceneID="htA-iB-jEG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y89-NB-huj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" id="s5A-3I-1fL"/>
+                    <tabBarItem key="tabBarItem" title="MyAccount" image="tabMyAccount" id="s5A-3I-1fL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qa4-Dc-Ajf">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -2085,6 +2087,11 @@
         <image name="dropDownBlack" width="12" height="6"/>
         <image name="payBill" width="60" height="60"/>
         <image name="purpleArrow" width="58" height="58"/>
+        <image name="tabBalances" width="9" height="20"/>
+        <image name="tabHome" width="20" height="18"/>
+        <image name="tabMore" width="21" height="5"/>
+        <image name="tabMyAccount" width="15" height="20"/>
+        <image name="tabTransactions" width="20" height="13"/>
         <image name="unselectedRadioButton" width="24" height="24"/>
         <image name="whiteArrow" width="58" height="58"/>
     </resources>
