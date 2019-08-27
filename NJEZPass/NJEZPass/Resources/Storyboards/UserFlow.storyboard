@@ -1593,11 +1593,13 @@
                         <outlet property="tableView" destination="h4d-Vz-PfI" id="7sH-P6-fpu"/>
                         <segue destination="fsf-qm-wv7" kind="show" identifier="PaymentMethods" id="dia-Ci-zED"/>
                         <segue destination="YxL-dc-alV" kind="show" identifier="EditProfile" id="iIJ-ne-84r"/>
+                        <segue destination="0Qy-qa-0s4" kind="show" identifier="FAQ" id="hzk-xP-Osv"/>
+                        <segue destination="nHD-Pt-8uu" kind="show" identifier="ContactUs" id="mKg-fh-eTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HcA-zE-Ugt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4826" y="-133"/>
+            <point key="canvasLocation" x="4892" y="-165"/>
         </scene>
         <!--PaymentMethods-->
         <scene sceneID="44Y-Lc-8U0">
@@ -1606,6 +1608,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eiY-vt-QOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5403" y="-589"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="k1O-9W-I9c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FAQ" id="0Qy-qa-0s4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3A-99-9k3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5707" y="-571"/>
+        </scene>
+        <!--ContactUs-->
+        <scene sceneID="7jr-ap-RH0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactUs" id="nHD-Pt-8uu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbU-sY-faZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5906" y="-535"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="htA-iB-jEG">
@@ -1639,7 +1657,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YMB-kb-xog">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="31" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
@@ -2076,7 +2094,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h44-nn-JSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5450" y="-134"/>
+            <point key="canvasLocation" x="5850" y="-123"/>
         </scene>
     </scenes>
     <resources>
