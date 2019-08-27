@@ -6,7 +6,7 @@
 
 trigger:
 - CI-CD
-
+ 
 pool:
 # virtual os image
 
