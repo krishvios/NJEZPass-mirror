@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Property List.plist
+   Sample
+
+   Created by Anuj Kumar Singh on 12/08/19.
+   Copyright (c) 2019 Anuj Kumar Singh. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>method</key>
+        <string>development</string>
+        <key>teamID</key>
+        <string>JZFGZ22Z6S</string>
+        <key>uploadBitcode</key>
+        <true/>
+        <key>compileBitcode</key>
+        <true/>
+        <key>uploadSymbols</key>
+        <true/>
+        <key>signingStyle</key>
+        <string>manual</string>
+        <key>signingCertificate</key>
+        <string>iPhone Developer</string>
+        <key>provisioningProfiles</key>
+        <dict>
+            <key>com.conduent.EZPassNJ</key>
+            <string>NJEZPassDev</string>
+        </dict>
+    </dict>
+</plist>
