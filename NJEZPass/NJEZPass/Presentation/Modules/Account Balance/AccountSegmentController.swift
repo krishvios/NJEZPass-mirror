@@ -27,6 +27,8 @@ class AccountSegmentController: UIViewController {
                                                                     segmentControllers: [
                                                                         accountPrepaidVC,
                                                                         accountViolationVC])
+            segmentedViewController.segmentSelectedTitleColor = UIColor.purple
+            segmentedViewController.selectedSegmentViewColor = UIColor.purple
             addChild(segmentedViewController)
             self.view.addSubview(segmentedViewController.view)
             segmentedViewController.view.frame = self.view.bounds
@@ -35,6 +37,8 @@ class AccountSegmentController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
