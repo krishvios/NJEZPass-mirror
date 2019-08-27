@@ -83,7 +83,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Usericon" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-0t-X0i">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payBill" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-0t-X0i">
                                                         <rect key="frame" x="16" y="3" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="60" id="cpd-sr-zpm"/>
@@ -2068,9 +2068,9 @@
         <image name="LoginBackground" width="375" height="246"/>
         <image name="NJLogo" width="215" height="28"/>
         <image name="Signup" width="60" height="60"/>
-        <image name="Usericon" width="60" height="60"/>
         <image name="arrow" width="26" height="48"/>
         <image name="dropDownBlack" width="12" height="6"/>
+        <image name="payBill" width="60" height="60"/>
         <image name="purpleArrow" width="58" height="58"/>
         <image name="unselectedRadioButton" width="24" height="24"/>
         <image name="whiteArrow" width="58" height="58"/>
