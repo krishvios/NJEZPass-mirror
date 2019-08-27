@@ -1,0 +1,89 @@
+# Xcode
+
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+trigger:
+- CI-CD
+
+pool:
+# virtual os image
+
+  vmImage: 'macos-latest'
+# variable used in program   
+variables:
+  scheme: 'NJEZPass'
+  sdk: 'iphoneos'
+  configuration: 'Release'
+
+# Install Certificates  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
+steps:
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'SharadCert.p12'
+    certPwd: 'CTS@1234'
+
+# Install Provisning profile  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'NJEZPassDev.mobileprovision'
+     
+
+# Install pod 
+- task: CocoaPods@0
+  inputs:
+    forceRepoUpdate: true
+    projectDirectory: '$(system.defaultWorkingDirectory)/NJEZPass'
+    displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+  
+
+
+# Run build and make ipa
+
+- script: echo This is pipeline $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)
+- task: Xcode@5
+  inputs:
+    actions: 'build'
+    packageApp: true
+    archivePath: '$(build.artifactStagingDirectory)'
+    xcWorkspacePath: 'NJEZPass/NJEZPass.xcworkspace'
+    configuration: '$(configuration)'
+    scheme: '$(scheme)'
+    signingOption: 'manual' # auto,manual,default
+    useXcpretty: true   
+    exportOptions: 'plist' # Optional. Options: auto, plist, specify
+    exportMethod: 'development' # Required when exportOptions == Specify
+    exportOptionsPlist: 'exportOptions.plist' # Required when exportOptions == Plist
+    teamId: 'JZFGZ22Z6S'
+    provisioningProfileName: 'NJEZPassDev'
+    xcodeVersion: 'default'
+
+    
+# Copy the ipa from the produced build and then paste it into Artificate
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.ipa'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
+# Publish Artificates folder 
+- task: PublishBuildArtifacts@1
+  inputs:
+      pathToPublish: '$(build.artifactStagingDirectory)'
+      artifactName: 'outputs'
+      artifactType: 'container'
+
+
+# App Center Publish 
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'App_Center_NJEZPass-iOS' # Variable
+    appSlug: 'anujkumar.singh-conduent.com/NJ-EZ-Pass-iOS' # Variable
+    appFile: '**/*.ipa'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'App Releases'
+    destinationType: 'groups'
+      
