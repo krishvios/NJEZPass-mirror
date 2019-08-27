@@ -1431,8 +1431,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-jL-Smd">
-                                <rect key="frame" x="0.0" y="20" width="56" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-jL-Smd">
+                                <rect key="frame" x="6" y="2" width="56" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="56" id="UmB-W2-7Bg"/>
                                     <constraint firstAttribute="height" constant="58" id="zs6-hU-IPN"/>
@@ -1440,7 +1440,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" backgroundImage="whiteArrow"/>
                                 <connections>
-                                    <action selector="backButtonTapped:" destination="SyC-ZV-mkU" eventType="touchUpInside" id="Pug-Wi-xyR"/>
                                     <action selector="backTapped:" destination="h79-ub-o5E" eventType="touchUpInside" id="hmK-4K-xG2"/>
                                 </connections>
                             </button>
@@ -1450,8 +1449,6 @@
                             <constraint firstItem="Njq-rE-rTJ" firstAttribute="bottom" secondItem="Lwu-6G-oT8" secondAttribute="bottom" constant="24" id="0Ju-O5-fZn"/>
                             <constraint firstItem="NvG-pn-9CA" firstAttribute="top" secondItem="adL-sE-eiW" secondAttribute="bottom" constant="44" id="DZ2-yV-qSd"/>
                             <constraint firstItem="NvG-pn-9CA" firstAttribute="leading" secondItem="Lwu-6G-oT8" secondAttribute="leading" id="HRt-dE-xfb"/>
-                            <constraint firstItem="XUa-jL-Smd" firstAttribute="top" secondItem="Njq-rE-rTJ" secondAttribute="top" id="NmK-lg-SNh"/>
-                            <constraint firstItem="XUa-jL-Smd" firstAttribute="leading" secondItem="Njq-rE-rTJ" secondAttribute="leading" id="Uzn-gu-aW6"/>
                             <constraint firstItem="NvG-pn-9CA" firstAttribute="trailing" secondItem="Lwu-6G-oT8" secondAttribute="trailing" id="X9u-m3-nET"/>
                             <constraint firstItem="aMJ-gE-ma0" firstAttribute="top" secondItem="Njq-rE-rTJ" secondAttribute="top" constant="51" id="cVT-17-Gx0"/>
                             <constraint firstItem="aMJ-gE-ma0" firstAttribute="leading" secondItem="mlx-9D-k9M" secondAttribute="leading" id="dR5-Kd-yTw"/>
@@ -1490,6 +1487,7 @@
         <!--Balances-->
         <scene sceneID="E03-3P-Ags">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ep-Ww-Sp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AU2-4r-ELk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Balances" id="1kj-SB-nah"/>
                     <toolbarItems/>
@@ -1502,7 +1500,6 @@
                         <segue destination="lMg-cw-fHA" kind="relationship" relationship="rootViewController" id="Zfa-YW-MU5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ep-Ww-Sp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2560.8000000000002" y="735.38230884557731"/>
         </scene>

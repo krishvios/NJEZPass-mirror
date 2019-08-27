@@ -14,8 +14,6 @@ class AccountSegmentController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Account Balance"
-        
         if let storyboard = self.storyboard {
             let accountPrepaidVC = storyboard
                 .instantiateViewController(withIdentifier: "AccountPrepaidVC")
