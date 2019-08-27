@@ -2063,7 +2063,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YMB-kb-xog" firstAttribute="trailing" secondItem="oYY-5d-6yF" secondAttribute="trailing" id="RMh-Yj-ggo"/>
-                            <constraint firstItem="YMB-kb-xog" firstAttribute="top" secondItem="ax7-ES-7Cb" secondAttribute="top" id="aYh-xT-ErD"/>
+                            <constraint firstItem="YMB-kb-xog" firstAttribute="top" secondItem="ax7-ES-7Cb" secondAttribute="top" constant="31" id="aYh-xT-ErD"/>
                             <constraint firstItem="YMB-kb-xog" firstAttribute="bottom" secondItem="oYY-5d-6yF" secondAttribute="bottom" id="cE9-GE-NlT"/>
                             <constraint firstItem="YMB-kb-xog" firstAttribute="leading" secondItem="oYY-5d-6yF" secondAttribute="leading" id="fvn-hq-Is7"/>
                         </constraints>
