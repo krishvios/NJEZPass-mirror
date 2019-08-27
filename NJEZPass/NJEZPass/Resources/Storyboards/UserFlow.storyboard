@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diG-6I-sa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="735"/>
+            <point key="canvasLocation" x="3206" y="735"/>
         </scene>
         <!--Home-->
         <scene sceneID="L1R-Yv-WiI">
@@ -747,12 +747,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhG-0b-1hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3414" y="-105"/>
+            <point key="canvasLocation" x="3238" y="-92"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uAe-hr-oLN">
             <objects>
-                <tabBarController id="lyI-Pf-jTF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyAccountView" id="lyI-Pf-jTF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byJ-0E-wHH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -762,8 +762,8 @@
                         <segue destination="UCK-b0-XwD" kind="relationship" relationship="viewControllers" id="YqB-HP-vqj"/>
                         <segue destination="AU2-4r-ELk" kind="relationship" relationship="viewControllers" id="sso-ai-Zlh"/>
                         <segue destination="hbv-yf-Mrd" kind="relationship" relationship="viewControllers" id="FS6-5U-AjM"/>
-                        <segue destination="Gsm-gA-Jjv" kind="relationship" relationship="viewControllers" id="fPn-ss-ryI"/>
-                        <segue destination="VIJ-6e-one" kind="relationship" relationship="viewControllers" id="7xN-cl-H8A"/>
+                        <segue destination="SbV-oX-MRW" kind="relationship" relationship="viewControllers" id="DIX-76-aqO"/>
+                        <segue destination="VIJ-6e-one" kind="relationship" relationship="viewControllers" id="jEr-ZU-jqs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFz-nD-RSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -779,7 +779,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-CQ-Dvj">
-                                <rect key="frame" x="24" y="40" width="329" height="35"/>
+                                <rect key="frame" x="24" y="40" width="327" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fat-5Q-jMm"/>
                                 </constraints>
@@ -788,7 +788,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the verification code that was sent to your device." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-tn-s5M">
-                                <rect key="frame" x="24" y="83" width="329" height="43"/>
+                                <rect key="frame" x="24" y="83" width="327" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="vAu-AR-TCt"/>
                                 </constraints>
@@ -797,7 +797,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-Pl-e5O">
-                                <rect key="frame" x="24" y="249" width="329" height="44"/>
+                                <rect key="frame" x="24" y="249" width="327" height="44"/>
                                 <color key="backgroundColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="V2z-qS-eVq"/>
@@ -811,13 +811,13 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-Wz-VCI">
-                                <rect key="frame" x="0.0" y="158" width="377" height="50"/>
+                                <rect key="frame" x="0.0" y="158" width="375" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-EB-4MG">
-                                        <rect key="frame" x="23" y="10" width="330" height="30"/>
+                                        <rect key="frame" x="23" y="10" width="328" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Bi-qhE" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="VO3-n6-qbi"/>
@@ -826,7 +826,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-gu-mME" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="70" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="69.5" y="0.0" width="49.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="sT1-ST-aj7"/>
@@ -835,13 +835,13 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-lU-ozT" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="140" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="139" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-tO-G5o" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="210" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="209" y="0.0" width="49.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="xB5-3K-u28"/>
@@ -850,7 +850,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Guq-Ov-J17" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="278.5" y="0.0" width="49.5" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -917,23 +917,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIR-hG-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3948" y="734"/>
+            <point key="canvasLocation" x="3870" y="734"/>
         </scene>
-        <!--My Account-->
-        <scene sceneID="K74-LV-mc9">
+        <!--AccountFlow-->
+        <scene sceneID="ZVh-hT-AEL">
             <objects>
-                <viewController id="Gsm-gA-Jjv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="38s-m3-qjh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Bpp-EF-HM1"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="My Account" id="0J6-3E-sTz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ek-yT-FyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AccountFlow" id="SbV-oX-MRW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Dlj-KH-fBU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6y-64-ZI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4268" y="-92"/>
+            <point key="canvasLocation" x="3887" y="-345"/>
         </scene>
         <!--Account Balance-->
         <scene sceneID="QXs-yB-JNZ">
