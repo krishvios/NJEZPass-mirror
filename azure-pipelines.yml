@@ -3,28 +3,28 @@
 # Build, test, and archive an Xcode workspace on macOS.
 # Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
-
+#1
 trigger:
 - CI-CD
  
 pool:
-# virtual os image
+#2 virtual os image
 
   vmImage: 'macos-latest'
-# variable used in program   
+#3 variable used in program   
 variables:
   scheme: 'NJEZPass'
   sdk: 'iphoneos'
   configuration: 'Release'
 
-# Install Certificates  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
+#4 Install Certificates  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
 steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'SharadCert.p12'
     certPwd: 'CTS@1234'
 
-# Install Provisning profile  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
+#5 Install Provisning profile  .. go to library under the pipelines tabs on right section . under the secure file ... Pipelines/Library/SecrureFiles
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
@@ -32,7 +32,7 @@ steps:
     provProfileSecureFile: 'NJEZPassDev.mobileprovision'
      
 
-# Install pod 
+#6 Install pod 
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
@@ -40,10 +40,9 @@ steps:
     displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
   
 
+# - script: echo This is pipeline $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)
 
-# Run build and make ipa
-
-- script: echo This is pipeline $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)
+#7 Run build and make ipa
 - task: Xcode@5
   inputs:
     actions: 'build'
@@ -62,13 +61,13 @@ steps:
     xcodeVersion: 'default'
 
     
-# Copy the ipa from the produced build and then paste it into Artificate
+#8 Copy the ipa from the produced build and then paste it into Artificate
 - task: CopyFiles@2
   inputs:
     contents: '**/*.ipa'
     targetFolder: '$(build.artifactStagingDirectory)'
 
-# Publish Artificates folder 
+#9 Publish Artificates folder 
 - task: PublishBuildArtifacts@1
   inputs:
       pathToPublish: '$(build.artifactStagingDirectory)'
@@ -76,7 +75,7 @@ steps:
       artifactType: 'container'
 
 
-# App Center Publish 
+#10 App Center Publish 
 
 - task: AppCenterDistribute@3
   inputs:
@@ -86,7 +85,9 @@ steps:
     releaseNotesOption: 'input'
     releaseNotesInput: 'App Releases'
     destinationType: 'groups'
-      
+
+#11 App Center Publish     
+
 - task: CopyFilesOverSSH@0
   inputs:
       sshEndpoint: 'CTI_Server'
