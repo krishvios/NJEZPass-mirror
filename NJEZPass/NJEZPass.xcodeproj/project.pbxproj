@@ -77,6 +77,8 @@
 		429C6A1A230FDD6C0055CFBD /* IEditProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */; };
 		429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */; };
 		429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */; };
+		429C6A3D231512100055CFBD /* PaymentMethodsUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */; };
+		429C6A3E231512100055CFBD /* PaymentMethodsUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */; };
 		42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */; };
 		42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */; };
 		42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */; };
@@ -173,6 +175,7 @@
 		F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559622FC15950070257E /* DeviceVerificationVC.swift */; };
 		F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559722FC15950070257E /* VerificationCodeVC.swift */; };
 		F90455B922FC53100070257E /* CMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90455B822FC53100070257E /* CMTextField.swift */; };
+		F944F856231536B3002FE834 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F855231536B3002FE834 /* TabBarViewController.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
@@ -359,6 +362,8 @@
 		429C6A19230FDD6C0055CFBD /* IEditProfileUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IEditProfileUsecase.swift; sourceTree = "<group>"; };
 		429C6A1C230FDF700055CFBD /* EditProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseProvider.swift; sourceTree = "<group>"; };
 		429C6A1E230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsecaseRemote.swift; sourceTree = "<group>"; };
+		429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsUsecaseProvider.swift; sourceTree = "<group>"; };
+		429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentMethodsUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringKeys.swift; sourceTree = "<group>"; };
@@ -474,6 +479,7 @@
 		F904559622FC15950070257E /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
 		F904559722FC15950070257E /* VerificationCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		F90455B822FC53100070257E /* CMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTextField.swift; sourceTree = "<group>"; };
+		F944F855231536B3002FE834 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
@@ -875,6 +881,8 @@
 		429C6A06230E9C490055CFBD /* PaymentMethods */ = {
 			isa = PBXGroup;
 			children = (
+				429C6A3B2315120F0055CFBD /* PaymentMethodsUsecaseProvider.swift */,
+				429C6A3C2315120F0055CFBD /* PaymentMethodsUsecaseRemote.swift */,
 			);
 			path = PaymentMethods;
 			sourceTree = "<group>";
@@ -1218,6 +1226,7 @@
 				429BAD2A23008EE60087DBAD /* Vehicles */,
 				9BD4844922F184AD00F94DE2 /* CMComponents */,
 				F9BECCE9230BD370002D2845 /* GradientView.swift */,
+				F944F855231536B3002FE834 /* TabBarViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2019,6 +2028,7 @@
 				42BE357222FBF7DE00AAF8E3 /* DropDownPickerView.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
+				F944F856231536B3002FE834 /* TabBarViewController.swift in Sources */,
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
@@ -2105,7 +2115,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BE359522FBF96B00AAF8E3 /* APIService.swift in Sources */,
+				429C6A3E231512100055CFBD /* PaymentMethodsUsecaseRemote.swift in Sources */,
 				429C6A1F230FDF8B0055CFBD /* EditProfileUsecaseRemote.swift in Sources */,
+				429C6A3D231512100055CFBD /* PaymentMethodsUsecaseProvider.swift in Sources */,
 				42BE359722FBF96B00AAF8E3 /* LoginUsecaseRemote.swift in Sources */,
 				429C6A1D230FDF700055CFBD /* EditProfileUsecaseProvider.swift in Sources */,
 				42BE359422FBF96B00AAF8E3 /* BaseWorker.swift in Sources */,

@@ -18,7 +18,7 @@ class AccountViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView.init()
-        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.tintColor = .purple
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         txtUserID.delegate = self
         txtPassword.delegate = self
-       // loginButton.isEnabled = false
+        loginButton.isEnabled = false
         hideKeyboardWhenTap()
         toggleLoginButtonColor()
     }
@@ -104,8 +104,8 @@ class LoginViewController: UIViewController {
         if let username = txtUserID.text, let password = txtPassword.text {
             
             //online login flow
-//            MBProgressHUD.showAdded(to: self.view, animated: true)
-//            interactor?.login(username: username, password: password, requestType: .remote)
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            interactor?.login(username: username, password: password, requestType: .remote)
             
 //            direct login flow in case of api error
             var viewModel = ProfileModel.PresentionModel()
@@ -130,7 +130,7 @@ class LoginViewController: UIViewController {
     private func validateInput() {
         //loginButton.isEnabled = false
         if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
-           // loginButton.isEnabled = true
+            loginButton.isEnabled = true
         }
         toggleLoginButtonColor()
     }
