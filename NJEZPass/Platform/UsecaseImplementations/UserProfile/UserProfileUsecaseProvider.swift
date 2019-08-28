@@ -17,8 +17,6 @@ open class UserProfileUsecaseProvider: IUserProfileUsecaseProvider {
     }
     public func provideProfileOverviewUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase {
         switch requestType {
-        case .local:
-            return UserProfileUsecaseLocal(handler: handler)
         case .remote:
             return UserProfileUsecaseRemote<ProfileModel.Response>(handler: handler)
         }
