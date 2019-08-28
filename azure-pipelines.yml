@@ -87,3 +87,13 @@ steps:
     releaseNotesInput: 'App Releases'
     destinationType: 'groups'
       
+- task: CopyFilesOverSSH@0
+  inputs:
+      sshEndpoint: 'CTI_Server'
+      sourceFolder: '$(build.artifactStagingDirectory)'
+      contents: '**'
+      targetFolder: '/var/www/html/upload/NJEZPass/ios'
+      clean: false
+      cleanContents: false
+      preservePaths: false
+      trustSSL: true
