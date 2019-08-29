@@ -14,6 +14,13 @@ import Apollo_iOS
 import MBProgressHUD
 import KeychainAccess
 
+protocol ILoginViewable {
+    func loginSuccess(viewModel: LoginModel.PresentionModel)
+    func loginFailed(viewModel: LoginModel.PresentionModel)
+    func userProfileSuccess(viewModel: ProfileModel.PresentionModel)
+    func userProfileFailed(viewModel: ProfileModel.PresentionModel)
+}
+
 class LoginViewController: UIViewController {
     
     var interactor: ILoginInteractable?
@@ -108,10 +115,10 @@ class LoginViewController: UIViewController {
             interactor?.login(username: username, password: password, requestType: .remote)
             
 //            direct login flow in case of api error
-            var viewModel = ProfileModel.PresentionModel()
-            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
-
-            router?.perform(viewModel: viewModel)
+//            var viewModel = ProfileModel.PresentionModel()
+//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+//
+//            router?.perform(viewModel: viewModel)
             saveCredentials()
             
         } else {
@@ -187,5 +194,47 @@ extension LoginViewController: ApolloTextInputFieldDelegate {
     
     func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
         return true
+    }
+}
+
+extension LoginViewController: ILoginViewable {
+    func loginSuccess(viewModel: LoginModel.PresentionModel) {
+        //        progressActivity.stopAnimating()
+        
+        if rememberMe.isOn {
+            
+            self.saveCredentials()
+        }
+        
+        //        MBProgressHUD.hide(for: self.view, animated: true)
+        let token:String = UserDefaults.standard.value(forKey: AppStringKeys.accessToken) as! String
+        interactor?.getProfileOverview(accessToken: token, requestType: .remote)
+        //        router?.perform(viewModel: viewModel)
+    }
+    func loginFailed(viewModel: LoginModel.PresentionModel) {
+        //        progressActivity.stopAnimating()
+        MBProgressHUD.hide(for: self.view, animated: true)
+        var viewModel = viewModel
+        viewModel.route = Route(id: AppStringKeys.loginFailure, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.present)
+        router?.perform(viewModel: viewModel)
+    }
+    func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        
+        router?.perform(viewModel: viewModel)
+    }
+    func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        router?.perform(viewModel: viewModel)
+    }
+}
+
+extension LoginViewController: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }
