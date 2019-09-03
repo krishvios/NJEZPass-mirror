@@ -5,7 +5,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 #1
 trigger:
-- CI-CD
+- CI-CD # branch name
  
 pool:
 #2 virtual os image
