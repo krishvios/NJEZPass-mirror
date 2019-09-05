@@ -14,8 +14,9 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var arrayOfImageNameForSelectedState = ["tabHome","tabBalances","tabTransactions","tabMyAccount", "tabMore"]
-        var arrayOfImageNameForUnselectedState = ["tabSelectedHome", "tabSelectedBalances","tabSelectedTransactions", "tabSelectedMyAccount", "tabSelectedMore"]
+//        var arrayOfImageNameForSelectedState = ["tabHome","tabBalances","tabTransactions","tabMyAccount", "tabMore"]
+        var arrayOfImageNameForSelectedState = ["tabHome","tabTransactions","tabMyAccount","tabNotifications", "tabMore"]
+        var arrayOfImageNameForUnselectedState = ["tabSelectedHome","tabSelectedTransactions", "tabSelectedMyAccount","tabSelectedNotifications", "tabSelectedMore"]
         
         if let count = self.tabBar.items?.count {
             for i in 0...(count - 1) {
