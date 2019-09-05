@@ -36,7 +36,7 @@ steps:
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
-    projectDirectory: '$(system.defaultWorkingDirectory)/NJEZPass'
+    projectDirectory: 'NJEZPass' #$(system.defaultWorkingDirectory)/NJEZPass
     displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
   
 
