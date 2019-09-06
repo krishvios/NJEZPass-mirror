@@ -772,23 +772,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJS-JU-Dge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2436" y="-375"/>
+            <point key="canvasLocation" x="2348" y="-656"/>
         </scene>
-        <!--Transactions-->
-        <scene sceneID="0Xh-Mh-pWb">
+        <!--TransactionsFlow-->
+        <scene sceneID="Q8o-Sn-zUN">
             <objects>
-                <viewController id="hbv-yf-Mrd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zk8-dP-tZP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yvq-45-E8A"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" image="tabTransactions" id="hDg-JN-174"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KhG-0b-1hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TransactionsFlow" id="6Dg-zm-DRW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Transactions" image="tabTransactions" id="pob-DD-bue"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19Z-VQ-y0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3249" y="-233"/>
+            <point key="canvasLocation" x="2796" y="-267"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="uAe-hr-oLN">
@@ -803,10 +797,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="UCK-b0-XwD" kind="relationship" relationship="viewControllers" id="YqB-HP-vqj"/>
-                        <segue destination="hbv-yf-Mrd" kind="relationship" relationship="viewControllers" id="FS6-5U-AjM"/>
-                        <segue destination="Y89-NB-huj" kind="relationship" relationship="viewControllers" id="wEX-Ww-nWb"/>
-                        <segue destination="AU2-4r-ELk" kind="relationship" relationship="viewControllers" id="etb-2k-Bpg"/>
-                        <segue destination="vYD-A7-ETo" kind="relationship" relationship="viewControllers" id="h0J-pS-1dF"/>
+                        <segue destination="6Dg-zm-DRW" kind="relationship" relationship="viewControllers" id="3wx-Tl-dbA"/>
+                        <segue destination="Y89-NB-huj" kind="relationship" relationship="viewControllers" id="VQ1-QJ-yqI"/>
+                        <segue destination="AU2-4r-ELk" kind="relationship" relationship="viewControllers" id="lIR-xG-j5X"/>
+                        <segue destination="vYD-A7-ETo" kind="relationship" relationship="viewControllers" id="bTO-gP-q5R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFz-nD-RSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2214,6 +2208,6 @@
         <image name="whiteArrow" width="58" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cqa-NW-fdC"/>
+        <segue reference="udC-Um-BJn"/>
     </inferredMetricsTieBreakers>
 </document>

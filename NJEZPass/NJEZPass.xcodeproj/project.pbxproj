@@ -142,11 +142,13 @@
 		9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */; };
 		9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */; };
 		9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83F69D22F98207006DDB4C /* LandingViewController.swift */; };
+		9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */; };
 		9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */; };
 		9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */; };
 		9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */; };
 		9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */; };
 		9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */; };
+		9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */; };
 		9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */; };
 		9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */; };
 		9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */; };
@@ -434,11 +436,13 @@
 		9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsDetailsTableViewController.swift; sourceTree = "<group>"; };
 		9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationViewController.swift; sourceTree = "<group>"; };
 		9B83F69D22F98207006DDB4C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPaymentViewController.swift; sourceTree = "<group>"; };
 		9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLabelCell.swift; sourceTree = "<group>"; };
 		9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDisplayCell.swift; sourceTree = "<group>"; };
 		9BAA563922F2E2F10037036F /* ViolationPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentMethodViewController.swift; sourceTree = "<group>"; };
 		9BAA563B22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolentsPaymentSummaryViewController.swift; sourceTree = "<group>"; };
 		9BAA563F22F2FFC10037036F /* ViolationPaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationPaymentStatusViewController.swift; sourceTree = "<group>"; };
+		9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeaderCell.swift; sourceTree = "<group>"; };
 		9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagViewController.swift; sourceTree = "<group>"; };
 		9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSubmissionStatusViewController.swift; sourceTree = "<group>"; };
 		9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -710,6 +714,8 @@
 			isa = PBXGroup;
 			children = (
 				429BAD2923008EE60087DBAD /* TransactionsViewController.swift */,
+				9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */,
+				9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */,
 			);
 			path = Transcations;
 			sourceTree = "<group>";
@@ -1966,6 +1972,7 @@
 				9BDB1F35230ECB18006CE739 /* EditProfileInteractable.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
+				9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */,
 				9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
 				F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */,
@@ -1992,6 +1999,7 @@
 				9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				429BAD0923008BC60087DBAD /* LoginInteractable.swift in Sources */,
+				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
 				429BAD342300907B0087DBAD /* UINavigationItem+Extension.swift in Sources */,

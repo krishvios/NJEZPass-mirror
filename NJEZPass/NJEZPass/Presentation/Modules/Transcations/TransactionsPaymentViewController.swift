@@ -1,15 +1,15 @@
 //
-//  PaymentAmountVC.swift
+//  TransactionsPaymentViewController.swift
 //  NJEZPass
 //
-//  Created by N, Narasimhulu on 21/08/19.
+//  Created by Amirapu, Vivek (External) on 06/09/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
 
-class PaymentAmountVC: UIViewController {
-
+class TransactionsPaymentViewController: UIViewController {
+    
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var numberPadCollectionView: UICollectionView!
     var enteredText = String()
@@ -18,7 +18,7 @@ class PaymentAmountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.setGradientBackground(colors: [
             UIColor(red: 105/255, green: 32/255, blue: 126/255, alpha: 1.0).cgColor,
@@ -48,7 +48,7 @@ class PaymentAmountVC: UIViewController {
     }
 }
 
-extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate {
+extension TransactionsPaymentViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count
@@ -81,10 +81,11 @@ extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate 
     }
 }
 
-extension Int {
-    func withCommas() -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.currency
-        return numberFormatter.string(from: NSNumber(value:self))!
-    }
-}
+//extension Int {
+//    func withCommas() -> String {
+//        let numberFormatter = NumberFormatter()
+//        numberFormatter.numberStyle = NumberFormatter.Style.currency
+//        return numberFormatter.string(from: NSNumber(value:self))!
+//    }
+//}
+
