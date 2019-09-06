@@ -15,7 +15,17 @@ import Entities
 import Domain
 import Platform
 
+protocol IEditProfileInteractable {
+    func updateProfileOverview(accessToken: String, requestType: Constants.RequestCategory)
+}
+
 class EditProfileInteractor {
     var presenter: IResponseHandler?
     var userProfileUsecaseProvider = UserProfileUsecaseProvider()
+}
+
+extension EditProfileInteractor: IEditProfileInteractable {
+    func updateProfileOverview(accessToken: String, requestType: Constants.RequestCategory) {
+        
+    }
 }

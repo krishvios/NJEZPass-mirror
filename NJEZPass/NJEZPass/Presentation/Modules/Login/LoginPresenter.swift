@@ -16,3 +16,48 @@ import Domain
 class LoginPresenter {
     var viewController: ILoginViewable?
 }
+
+extension LoginPresenter: IResponseHandler {
+    
+    func onSuccess<T>(response: T) {
+        print("onSucess: ", response)
+        if let responseModel = response as? LoginModel.Response {
+            var viewModel = LoginModel.PresentionModel()
+            if let msg = responseModel.failureMessage {
+                viewModel.message = msg
+                viewModel.accessToken = ""
+                viewController?.loginFailed(viewModel: viewModel)
+            } else {
+                viewModel.message = responseModel.access_token ?? "" + Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginSuccess)
+                viewModel.accessToken = "Bearer " + responseModel.access_token!
+                UserDefaults.standard.set(viewModel.accessToken, forKey: AppStringKeys.accessToken)
+                viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
+                viewController?.loginSuccess(viewModel: viewModel)
+            }
+        } else if let responseModel = response as? ProfileModel.Response {
+            var viewModel = ProfileModel.PresentionModel()
+            if let msg = responseModel.failureMessage {
+                viewModel.message = msg
+                viewController?.userProfileFailed(viewModel: viewModel)
+            } else {
+                viewModel.detailInfo = ProfileModel.PresentionModel.DetailInfo(personalInfo: responseModel.personalInformation!, financialInfo: responseModel.financialInformation!)
+                viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+                
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                
+                appDelegate?.detailInfo = viewModel.detailInfo
+                
+                viewController?.userProfileSuccess(viewModel: viewModel)
+            }
+            print(responseModel)
+        }
+    }
+    
+    func onError(err: APIError) {
+        print("onError: ", err)
+        var viewModel = LoginModel.PresentionModel()
+        viewModel.message = Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginFailure)
+        viewModel.accessToken = ""
+        viewController?.loginFailed(viewModel: viewModel)
+    }
+}
