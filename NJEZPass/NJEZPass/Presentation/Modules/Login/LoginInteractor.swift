@@ -15,8 +15,33 @@ import Entities
 import Domain
 import Platform
 
+protocol ILoginInteractable {
+    func login(username: String, password: String, requestType: Constants.RequestCategory)
+    func getProfileOverview(accessToken: String, requestType: Constants.RequestCategory)
+}
+
 class LoginInteractor {
     var presenter: IResponseHandler?
     var loginUsecaseProvider = LoginUsecaseProvider()
     var userProfileUsecaseProvider = UserProfileUsecaseProvider()
+}
+
+extension LoginInteractor: ILoginInteractable {
+    func login(username: String, password: String, requestType: Constants.RequestCategory) {
+        let request = LoginModel.Request(userName:username, password:password)
+        
+        if let responseHandler = presenter {
+            let interfaceObj = loginUsecaseProvider.provideLoginUsecase(requestType: requestType, handler: responseHandler)
+            interfaceObj.login(request: request)
+        }
+    }
+    
+    func getProfileOverview(accessToken: String, requestType: Constants.RequestCategory) {
+        
+        if let responseHandler = presenter {
+            let interfaceObj = userProfileUsecaseProvider.provideProfileOverviewUsecase(requestType: requestType, handler: responseHandler)
+            interfaceObj.getProfileOverview(accessToken: accessToken)
+        }
+    }
+    
 }
