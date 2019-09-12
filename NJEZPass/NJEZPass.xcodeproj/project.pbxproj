@@ -132,10 +132,18 @@
 		7BDDA510FB4D829E192A0FF0 /* Pods_NJEZPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE51622DBC685C9AFF3432DE /* Pods_NJEZPassUITests.framework */; };
 		9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */; };
 		9B03E0C022F0218F00354AD6 /* CMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B03E0BF22F0218F00354AD6 /* CMButton.swift */; };
+		9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */; };
+		9B0436E8232281AA00418268 /* PaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E7232281AA00418268 /* PaymentStatusViewController.swift */; };
 		9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373622FADC620093FABA /* UserNavigationCell.swift */; };
 		9B06373922FAF58E0093FABA /* CMPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373822FAF58E0093FABA /* CMPickerView.swift */; };
 		9B06373B22FB07E80093FABA /* CMToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06373A22FB07E80093FABA /* CMToolbar.swift */; };
 		9B0FD89522FD9152004A596B /* CMStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FD89422FD9152004A596B /* CMStackView.swift */; };
+		9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491123265DC500DC8AAE /* PayNowTableViewCell.swift */; };
+		9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B544913232667BA00DC8AAE /* CancelButtonTableViewCell.swift */; };
+		9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491523266A4C00DC8AAE /* FilterViewController.swift */; };
+		9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491723278F4500DC8AAE /* DateSelectionCell.swift */; };
+		9B54491A23278F5A00DC8AAE /* TransactionTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491923278F5A00DC8AAE /* TransactionTypeCell.swift */; };
+		9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491B2327A25700DC8AAE /* SearchButtonCell.swift */; };
 		9B5C6D8C22F1DB7800DA6151 /* CMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8B22F1DB7800DA6151 /* CMView.swift */; };
 		9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */; };
 		9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */; };
@@ -426,10 +434,18 @@
 		94716BDE53C161C5DB9FE59B /* Pods-EntitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EntitiesTests/Pods-EntitiesTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
 		9B03E0BF22F0218F00354AD6 /* CMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMButton.swift; sourceTree = "<group>"; };
+		9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSummaryViewController.swift; sourceTree = "<group>"; };
+		9B0436E7232281AA00418268 /* PaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusViewController.swift; sourceTree = "<group>"; };
 		9B06373622FADC620093FABA /* UserNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigationCell.swift; sourceTree = "<group>"; };
 		9B06373822FAF58E0093FABA /* CMPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPickerView.swift; sourceTree = "<group>"; };
 		9B06373A22FB07E80093FABA /* CMToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMToolbar.swift; sourceTree = "<group>"; };
 		9B0FD89422FD9152004A596B /* CMStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMStackView.swift; sourceTree = "<group>"; };
+		9B54491123265DC500DC8AAE /* PayNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowTableViewCell.swift; sourceTree = "<group>"; };
+		9B544913232667BA00DC8AAE /* CancelButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonTableViewCell.swift; sourceTree = "<group>"; };
+		9B54491523266A4C00DC8AAE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		9B54491723278F4500DC8AAE /* DateSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionCell.swift; sourceTree = "<group>"; };
+		9B54491923278F5A00DC8AAE /* TransactionTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTypeCell.swift; sourceTree = "<group>"; };
+		9B54491B2327A25700DC8AAE /* SearchButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonCell.swift; sourceTree = "<group>"; };
 		9B5C6D8B22F1DB7800DA6151 /* CMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMView.swift; sourceTree = "<group>"; };
 		9B5C6D8E22F2BC1900DA6151 /* ViolationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsViewController.swift; sourceTree = "<group>"; };
 		9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
@@ -716,6 +732,14 @@
 				429BAD2923008EE60087DBAD /* TransactionsViewController.swift */,
 				9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */,
 				9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */,
+				9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */,
+				9B0436E7232281AA00418268 /* PaymentStatusViewController.swift */,
+				9B54491123265DC500DC8AAE /* PayNowTableViewCell.swift */,
+				9B544913232667BA00DC8AAE /* CancelButtonTableViewCell.swift */,
+				9B54491523266A4C00DC8AAE /* FilterViewController.swift */,
+				9B54491723278F4500DC8AAE /* DateSelectionCell.swift */,
+				9B54491923278F5A00DC8AAE /* TransactionTypeCell.swift */,
+				9B54491B2327A25700DC8AAE /* SearchButtonCell.swift */,
 			);
 			path = Transcations;
 			sourceTree = "<group>";
@@ -1964,6 +1988,7 @@
 				429BAD8B230C58B80087DBAD /* AppDelegate.swift in Sources */,
 				429BAD1B23008D9F0087DBAD /* AccountViewController.swift in Sources */,
 				9B06373B22FB07E80093FABA /* CMToolbar.swift in Sources */,
+				9B54491A23278F5A00DC8AAE /* TransactionTypeCell.swift in Sources */,
 				F9BECCEA230BD370002D2845 /* GradientView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -1972,6 +1997,7 @@
 				9BDB1F35230ECB18006CE739 /* EditProfileInteractable.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
+				9B0436E8232281AA00418268 /* PaymentStatusViewController.swift in Sources */,
 				9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */,
 				9BD3EA63230A9610003A9FC1 /* InputFieldTableViewCell.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
@@ -1997,8 +2023,11 @@
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
 				9BD3EA67230BD20A003A9FC1 /* CountryZipcodeTableViewCell.swift in Sources */,
+				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				429BAD0923008BC60087DBAD /* LoginInteractable.swift in Sources */,
+				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
+				9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */,
 				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
@@ -2007,6 +2036,7 @@
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
+				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
 				9BDB1F36230ECB18006CE739 /* EditProfileViewable.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
@@ -2024,6 +2054,7 @@
 				429BAD0123008BC60087DBAD /* IRouter.swift in Sources */,
 				429BAD2D23008EE60087DBAD /* VehiclesViewController.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
+				9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */,
 				F900F2B823029B290020132A /* SideMenuCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */,
@@ -2039,6 +2070,7 @@
 				F944F856231536B3002FE834 /* TabBarViewController.swift in Sources */,
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
+				9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
 				9BD3EA65230BD1F2003A9FC1 /* CityStateTableViewCell.swift in Sources */,

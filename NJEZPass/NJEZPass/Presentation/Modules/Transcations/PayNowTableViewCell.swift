@@ -1,0 +1,34 @@
+//
+//  PayNowTableViewCell.swift
+//  NJEZPass
+//
+//  Created by Amirapu, Vivek (External) on 09/09/19.
+//  Copyright © 2019 Conduent. All rights reserved.
+//
+
+import UIKit
+
+protocol PayNowTableViewCellDelegate:class {
+    func payNowButtonClicked()
+}
+
+class PayNowTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var amountLabel: UIButton!
+    weak var delegate:PayNowTableViewCellDelegate!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+    @IBAction func payNowButtonClicked(){
+        delegate.payNowButtonClicked()
+    }
+}

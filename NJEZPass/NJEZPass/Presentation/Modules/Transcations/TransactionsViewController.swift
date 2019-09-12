@@ -98,6 +98,9 @@ extension TransactionsViewController:TransactionsHeaderDelegate {
     }
     
     func filtersClicked() {
-        
+        if let storyboard = self.storyboard {
+            let filtersVC = storyboard.instantiateViewController(withIdentifier: "FilterViewController")
+            self.present(filtersVC, animated: true, completion: nil)
+        }
     }
 }
