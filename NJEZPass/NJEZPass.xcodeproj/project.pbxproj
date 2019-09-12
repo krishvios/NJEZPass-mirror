@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2DC8DA232A22E60018966B /* NewsRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DC8D6232A22E50018966B /* NewsRoomTableViewCell.swift */; };
+		2A2DC8DB232A22E60018966B /* LoginTableViewDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DC8D7232A22E60018966B /* LoginTableViewDesignViewController.swift */; };
+		2A2DC8DC232A22E60018966B /* NewsRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DC8D8232A22E60018966B /* NewsRoomViewController.swift */; };
+		2A2DC8DD232A22E60018966B /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DC8D9232A22E60018966B /* LoginMethodsTableViewCell.swift */; };
 		429BAD0123008BC60087DBAD /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF023008BC60087DBAD /* IRouter.swift */; };
 		429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF123008BC60087DBAD /* IRoutable.swift */; };
 		429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF323008BC60087DBAD /* LoginInteractor.swift */; };
@@ -281,6 +285,10 @@
 		0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D71748B6717B0DF1A321A6 /* Pods-Platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.debug.xcconfig"; sourceTree = "<group>"; };
 		254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2DC8D6232A22E50018966B /* NewsRoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRoomTableViewCell.swift; sourceTree = "<group>"; };
+		2A2DC8D7232A22E60018966B /* LoginTableViewDesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewDesignViewController.swift; sourceTree = "<group>"; };
+		2A2DC8D8232A22E60018966B /* NewsRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRoomViewController.swift; sourceTree = "<group>"; };
+		2A2DC8D9232A22E60018966B /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
 		335C1D1951DC6B717592C408 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		429BACF023008BC60087DBAD /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
@@ -1254,6 +1262,10 @@
 		F9CAC7B922F8008800F15F10 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				2A2DC8D9232A22E60018966B /* LoginMethodsTableViewCell.swift */,
+				2A2DC8D7232A22E60018966B /* LoginTableViewDesignViewController.swift */,
+				2A2DC8D6232A22E50018966B /* NewsRoomTableViewCell.swift */,
+				2A2DC8D8232A22E60018966B /* NewsRoomViewController.swift */,
 				9B83F69D22F98207006DDB4C /* LandingViewController.swift */,
 				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
 			);
@@ -1834,8 +1846,10 @@
 			files = (
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
 				429BAD2123008E330087DBAD /* SideMenuTableViewController.swift in Sources */,
+				2A2DC8DA232A22E60018966B /* NewsRoomTableViewCell.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
 				429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */,
+				2A2DC8DC232A22E60018966B /* NewsRoomViewController.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -1865,6 +1879,7 @@
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
+				2A2DC8DD232A22E60018966B /* LoginMethodsTableViewCell.swift in Sources */,
 				42B493872317DBAC00E9B1A0 /* CMToolbar.swift in Sources */,
 				F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
@@ -1899,6 +1914,7 @@
 				429BAD2D23008EE60087DBAD /* VehiclesViewController.swift in Sources */,
 				42B493862317DBAC00E9B1A0 /* CMNavigationController.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
+				2A2DC8DB232A22E60018966B /* LoginTableViewDesignViewController.swift in Sources */,
 				F900F2B823029B290020132A /* SideMenuCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */,
