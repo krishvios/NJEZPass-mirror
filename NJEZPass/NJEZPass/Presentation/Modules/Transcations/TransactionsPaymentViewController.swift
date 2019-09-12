@@ -46,6 +46,16 @@ class TransactionsPaymentViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    @IBAction func backClicked(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
+    
+//    TransactionsPaymentViewController
+    @IBAction func continueClicked(){
+        
+    }
 }
 
 extension TransactionsPaymentViewController: UICollectionViewDataSource, UICollectionViewDelegate {
