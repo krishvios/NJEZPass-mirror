@@ -68,6 +68,5 @@ class CMView: UIView {
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         layer.shadowOpacity = 0.4
         layer.shadowPath = shadowPath.cgPath
-        self.clipsToBounds = true
     }
 }
