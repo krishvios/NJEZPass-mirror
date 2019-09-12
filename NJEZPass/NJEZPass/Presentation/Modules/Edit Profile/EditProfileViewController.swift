@@ -8,12 +8,18 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
 
 //enum RetrivalEnum:String{
 //    case abbreviation
 //    case name
 //    case states
 //}
+
+protocol IEditProfileViewable {
+    func updateProfileSuccess(viewModel: ProfileModel.PresentionModel)
+    func updateProfileFailed(viewModel: ProfileModel.PresentionModel)
+}
 
 class EditProfileViewController: UIViewController {
     
@@ -224,3 +230,15 @@ if let path = Bundle.main.path(forResource: "country_states", ofType: "json") {
     }
 }
 */
+
+extension EditProfileViewController: IEditProfileViewable {
+    func updateProfileSuccess(viewModel: ProfileModel.PresentionModel) {
+        let token:String = UserDefaults.standard.value(forKey: AppStringKeys.accessToken) as! String
+        //        interactor?.updateProfileOverview(accessToken: token, requestType: .remote)
+    }
+    
+    func updateProfileFailed(viewModel: ProfileModel.PresentionModel) {
+        var viewModel = viewModel
+        //        viewModel.route = Route(id: AppStringKeys.updateProfileFailure, path: AppUIElementKeys.editProfile, nextURL: "", navigation: NavigationInfo.present)
+    }
+}

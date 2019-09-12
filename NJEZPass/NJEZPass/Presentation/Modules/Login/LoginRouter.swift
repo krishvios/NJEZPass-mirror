@@ -19,3 +19,81 @@ class LoginRouter {
         self.delegate = delegate
     }
 }
+
+extension LoginRouter: IRouter {
+    func perform(viewModel: Any) {
+        //push viewcontroller
+        if let loginViewModel = viewModel as? ProfileModel.PresentionModel {
+            
+            if let route = loginViewModel.route {
+                switch route.navigation {
+                case .popup:
+                    if let msg = loginViewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .present:
+                    if let msg = loginViewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .push:
+                    //                    push(route: route)
+                    push(viewModel: loginViewModel)
+                }
+            } else {
+                if let msg = loginViewModel.message {
+                    delegate?.showMessage(message: msg)
+                }
+            }
+        } else if let viewModel = viewModel as? LoginModel.PresentionModel {
+            if let route = viewModel.route {
+                switch route.navigation {
+                    
+                case .present:
+                    if let msg = viewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .popup:
+                    if let msg = viewModel.message {
+                        delegate?.showMessage(message: msg)
+                    }
+                case .push: do {}
+                }
+            }
+            else {
+                if let msg = viewModel.message {
+                    delegate?.showMessage(message: msg)
+                }
+            }
+        }
+    }
+    func push(route: Route) {
+        print("router: route: ", route.path)
+        //push viewcontroller
+    }
+    func push(viewModel: ProfileModel.PresentionModel) {
+        if let route = viewModel.route {
+            print("router: route: ", route.path)
+            //push viewcontroller
+            
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: route.path) as! DeviceVerificationVC
+            self.navigateToVC(destination: vc)
+        }
+    }
+    func present(message: String) {
+        delegate?.showMessage(message: message)
+    }
+    func pop() {
+        //pop viewcontroller
+        delegate?.popCurrent()
+    }
+    // MARK: Navigation
+    func navigateToVC(destination: UIViewController) {
+        if let viewController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+            viewController.pushViewController(destination, animated: true)
+        }
+        else {
+            UIApplication.shared.keyWindow?.rootViewController?.show(destination, sender: nil)
+        }
+    }
+}

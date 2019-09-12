@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NJEZPass/Presentation/Modules/Edit Profile/EditProfileViewController.swift"
-            timestampString = "588672451.378152"
+            timestampString = "589974376.4729331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "EditProfileViewController"
-            landmarkType = "3">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NJEZPass/Presentation/Modules/Transcations/FilterViewController.swift"
-            timestampString = "589892151.547039"
+            timestampString = "589974376.47311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "resetFiltersClicked()"
+            landmarkName = "backClicked()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
