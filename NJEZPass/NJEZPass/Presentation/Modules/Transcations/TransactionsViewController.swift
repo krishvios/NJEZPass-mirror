@@ -68,17 +68,17 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
             cellIdentifier = "TransactionsHeaderCell"
         }
         
-        /*
-                switch indexPath.row {
         
-                case 0:
-                    cellIdentifier = "TransactionsHeaderCell"
-//                case 1:
-//                    cellIdentifier = "ReplenishmentMethod"
-                default:
-                    cellIdentifier = "TransactionCell"
-                }
-        */
+        switch indexPath.row {
+
+            case 0:
+                cellIdentifier = "TransactionsHeaderCell"
+    //        case 1:
+    //            cellIdentifier = "ReplenishmentMethod"
+            default:
+                cellIdentifier = "TransactionCell"
+        }
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if let transCell = cell as? TransactionsHeaderCell {
