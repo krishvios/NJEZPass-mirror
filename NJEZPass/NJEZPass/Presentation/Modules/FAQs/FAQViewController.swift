@@ -15,6 +15,10 @@ struct ViewTags {
     static let ansCoantinerT = 14
 }
 
+protocol IFAQViewable {
+//    func getFAQ(viewModel: ProfileModel.PresentionModel)
+}
+
 class FAQViewController: UITableViewController, UISearchResultsUpdating {
 
     var filteredTableData = [[AppKey.quesKey : "" , AppKey.ansKey : ""]]
@@ -26,7 +30,7 @@ class FAQViewController: UITableViewController, UISearchResultsUpdating {
         [
             // [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
             
-            [AppKey.quesKey : "ABCDE" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
+            [AppKey.quesKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
 
             [AppKey.quesKey : "FGHIJ" , AppKey.ansKey : "Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare?Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit mauris lobortis ornare."],
 
