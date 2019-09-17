@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class TransactionsViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource {
     
     @IBOutlet weak var tbleView: UITableView!
     
@@ -73,8 +73,8 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
 //            
 //        case 0:
 //            cellIdentifier = "TransactionsHeaderCell"
-//            //        case 1:
-//        //            cellIdentifier = "ReplenishmentMethod"
+//        case 1:
+//            cellIdentifier = "ReplenishmentMethod"
 //        default:
 //            cellIdentifier = "TransactionCell"
 //        }
