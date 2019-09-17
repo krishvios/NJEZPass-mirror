@@ -37,37 +37,56 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 63
+        if indexPath.section == 0 && indexPath.row == 0 {
+            return 304
+        }
+        return 88
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cellIdentifier = "SectionHeader"
         let headerView = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if headerView == nil {
-//            [NSException raise:@"headerView == nil.." format:@"No cells with matching CellIdentifier loaded from your storyboard"];
-//            NSException.raise(NSExceptionName(rawValue: "headerView == nil.."), format: "No cells with matching CellIdentifier", arguments: ...)
+        
+        switch section {
+        case 0:
+            return UIView(frame: .zero)
+        default:
+            if headerView == nil {
+                //            [NSException raise:@"headerView == nil.." format:@"No cells with matching CellIdentifier loaded from your storyboard"];
+                //            NSException.raise(NSExceptionName(rawValue: "headerView == nil.."), format: "No cells with matching CellIdentifier", arguments: ...)
+            }
+            return headerView
         }
-        return headerView
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "TransactionCell"
+        var cellIdentifier = "TransactionCell"
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            cellIdentifier = "TransactionsHeaderCell"
+        }
+        
         
 //        switch indexPath.row {
-//
+//            
 //        case 0:
-//            cellIdentifier = "PaymentInformation"
-//        case 1:
-//            cellIdentifier = "ReplenishmentMethod"
+//            cellIdentifier = "TransactionsHeaderCell"
+//            //        case 1:
+//        //            cellIdentifier = "ReplenishmentMethod"
 //        default:
-//            cellIdentifier = "ReplenishmentOption"
+//            cellIdentifier = "TransactionCell"
 //        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        if let transCell = cell as? TransactionsHeaderCell {
+            transCell.transactionsHeaderDelegate = self
+        }
         return cell!
     }
+}
 
 extension TransactionsViewController:TransactionsHeaderDelegate {
     
@@ -79,6 +98,9 @@ extension TransactionsViewController:TransactionsHeaderDelegate {
     }
     
     func filtersClicked() {
-        
+        if let storyboard = self.storyboard {
+            let filtersVC = storyboard.instantiateViewController(withIdentifier: "FilterViewController")
+            self.present(filtersVC, animated: true, completion: nil)
+        }
     }
 }
