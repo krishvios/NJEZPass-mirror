@@ -46,7 +46,7 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cellIdentifier = "SectionHeader"
         let headerView = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-
+        
         switch section {
         case 0:
             return UIView(frame: .zero)
@@ -69,16 +69,16 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
         }
         
         /*
-                switch indexPath.row {
-        
-                case 0:
-                    cellIdentifier = "TransactionsHeaderCell"
-//                case 1:
-//                    cellIdentifier = "ReplenishmentMethod"
-                default:
-                    cellIdentifier = "TransactionCell"
-                }
-        */
+         switch indexPath.row {
+         
+         case 0:
+         cellIdentifier = "TransactionsHeaderCell"
+         //                case 1:
+         //                    cellIdentifier = "ReplenishmentMethod"
+         default:
+         cellIdentifier = "TransactionCell"
+         }
+         */
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if let transCell = cell as? TransactionsHeaderCell {
