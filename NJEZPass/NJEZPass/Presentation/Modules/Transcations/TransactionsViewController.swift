@@ -22,6 +22,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate,  UITabl
     func setupTableView(){
         //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
         //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
+        self.tbleView.register(TransactionsHeaderCell.self, forCellReuseIdentifier: "TransactionsHeaderCell")
+
         tbleView.estimatedRowHeight = 100
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
@@ -63,28 +65,26 @@ class TransactionsViewController: UIViewController, UITableViewDelegate,  UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cellIdentifier = "TransactionCell"
-        
+
         if indexPath.section == 0 && indexPath.row == 0 {
             cellIdentifier = "TransactionsHeaderCell"
         }
         
         
-//        switch indexPath.row {
-//            
+//        switch indexPath.section {
 //        case 0:
 //            cellIdentifier = "TransactionsHeaderCell"
-//        case 1:
-//            cellIdentifier = "ReplenishmentMethod"
 //        default:
 //            cellIdentifier = "TransactionCell"
 //        }
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if let transCell = cell as? TransactionsHeaderCell {
-            transCell.transactionsHeaderDelegate = self
-        }
-        return cell!
+//        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+//        cell.transactionsHeaderDelegate = self
+        
+        
+        return cell
     }
 }
 
