@@ -13,6 +13,7 @@ enum AppStringKeys {
     static let loginSuccess = "LOGIN_SUCCESS"
     static let loginFailure = "LOGIN_FAILURE"
     static let invalidUserDetails = "INVALID_USER_DETAILS"
+    static let invalidEmailDetails = "INVALID_EMAIL_DETAILS"
     static let ok = "OK"
     static let versionString = "VERSION_STRING_VALUE"
     static let accessToken = "AccessToken"

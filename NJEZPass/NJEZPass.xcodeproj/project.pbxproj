@@ -16,9 +16,9 @@
 		2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */; };
 		2A4F46EC2334EDE100A31806 /* TabWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */; };
 		2A4F46ED2334EDE100A31806 /* NewsRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */; };
-		2A4F46EE2334EDE100A31806 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E92334EDE100A31806 /* LandingVC.swift */; };
 		2A4F46EF2334EDE100A31806 /* MoreContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */; };
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
+		2A4F46F62334FF3B00A31806 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F52334FF3B00A31806 /* LandingVC.swift */; };
 		429BAD0123008BC60087DBAD /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF023008BC60087DBAD /* IRouter.swift */; };
 		429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF123008BC60087DBAD /* IRoutable.swift */; };
 		429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF323008BC60087DBAD /* LoginInteractor.swift */; };
@@ -306,11 +306,11 @@
 		2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginMethodsTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabWidgetTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsRoomTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/NewsRoomTableViewCell.swift; sourceTree = "<group>"; };
-		2A4F46E92334EDE100A31806 /* LandingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingVC.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/LandingVC.swift; sourceTree = "<group>"; };
 		2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreContentTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46F12334EFBF00A31806 /* NJEZPass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NJEZPass-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A4F46F22334EFC000A31806 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		2A4F46F32334EFC000A31806 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		2A4F46F52334FF3B00A31806 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		335C1D1951DC6B717592C408 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		429BACF023008BC60087DBAD /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
@@ -1319,10 +1319,10 @@
 			children = (
 				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
 				2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */,
-				2A4F46E92334EDE100A31806 /* LandingVC.swift */,
 				2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */,
 				2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */,
 				2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */,
+				2A4F46F52334FF3B00A31806 /* LandingVC.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -1942,7 +1942,6 @@
 				9BF5B067232A312D00D4F5B7 /* CMStackView.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				9BF5B066232A312D00D4F5B7 /* CMPickerView.swift in Sources */,
-				2A4F46EE2334EDE100A31806 /* LandingVC.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
 				2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */,
@@ -1997,6 +1996,7 @@
 				2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
+				2A4F46F62334FF3B00A31806 /* LandingVC.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				429BAD0523008BC60087DBAD /* LoginViewController.swift in Sources */,
 				9BF5B063232A312D00D4F5B7 /* CMTextField.swift in Sources */,

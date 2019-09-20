@@ -1,8 +1,8 @@
 //
-//  LoginTableViewDesignViewController.swift
+//  LandingVC.swift
 //  NJEZPass
 //
-//  Created by Muddika, Ramesh yadav on 09/09/19.
+//  Created by Muddika, Ramesh yadav on 20/09/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
@@ -15,47 +15,30 @@ import MBProgressHUD
 import KeychainAccess
 
 
-class LoginTableViewDesignViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource,LoginMethodsCellDelegate,NewsRoomTableCellDelegate {
+class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,LoginMethodsCellDelegate,MoreContentCellDelegate,TabWidgetCelldelegate {
     
-    
-   
     @IBOutlet weak var tbleView: UITableView!
-    
     var interactor: ILoginInteractable?
     var router: IRouter?
     private var loginMethodcell:LoginMethodsTableViewCell?
-    private var newsRoomMethodcell:NewsRoomTableViewCell?
+    private var moreContentcell:MoreContentTableViewCell?
+    private var tabWidgetCell:TabWidgetTableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setupTableView()
     }
     
     func setupTableView(){
-        //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
-        //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
-        tbleView.estimatedRowHeight = 100
+        tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
-        
-       
-        
+        tbleView.bounces = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewDidLayoutSubviews() {
-      //  self.tbleView.contentInset = UIEdgeInsets(top: -UIApplication.shared.statusBarFrame.size.height, left: 0, bottom: 0, right: 0)
-    }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -69,13 +52,15 @@ class LoginTableViewDesignViewController:  UIViewController, UITableViewDelegate
         if indexPath.row == 0 {
             return 172
         }
-        
+        if indexPath.row == 1{
+            return 347
+        }
         if indexPath.row == 2 {
-            return 205
+            return 222
         }
         
         if indexPath.row == 3 {
-            return 248
+            return 230
         }
         if indexPath.row == 4{
             return 85
@@ -100,13 +85,17 @@ class LoginTableViewDesignViewController:  UIViewController, UITableViewDelegate
             
         case 2:
             cellIdentifier = "MoreContents"
+            moreContentcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MoreContentTableViewCell
+            moreContentcell?.moreContentsDelegate = self
+            return moreContentcell!
         case 4:
             cellIdentifier = "Widget"
+            tabWidgetCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TabWidgetTableViewCell
+            tabWidgetCell?.tabWidgetDelegate = self
+            return tabWidgetCell!
         default:
             cellIdentifier = "NewsRoom"
-            newsRoomMethodcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? NewsRoomTableViewCell
-            newsRoomMethodcell?.newsRoomDelegate = self
-            return newsRoomMethodcell!
+            
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
@@ -132,18 +121,22 @@ class LoginTableViewDesignViewController:  UIViewController, UITableViewDelegate
     }
     
     func forgotPasswordClicked(_ sender: Any) {
-        guard let url = URL(string: "http://www.google.com") else {
-            return
-        }
-        
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
+        //        let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+        //        let forgotPasswordVC = storyBoard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+        //        self.navigationController?.pushViewController(forgotPasswordVC, animated: true)
     }
     
     func forgotUserNameCllicked(_ sender: Any) {
+        
+    }
+    func fingerPrintCllicked(_ sender: Any) {
+        
+    }
+    //MoreContents delegate methods
+    func payViolationorTollBillClicked(_ sender: Any) {
+        
+    }
+    func registerAccountClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
         }
@@ -155,34 +148,39 @@ class LoginTableViewDesignViewController:  UIViewController, UITableViewDelegate
         }
     }
     
-    //Newsroom delegate methods
-    var newsRoomDelegateVar: NewsRoomViewController? {
-        didSet {
-            newsRoomDelegateVar?.newsRoomDelegate = self as? NewsRoomViewControllerDelegate
+    //TabWidget Delegate methods
+    func tollFacilitesClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-        if (sender as? UITableViewCell) != nil {
-               
-                if segue.identifier == "NewsRoom" {
-                    if let newsRoomVC = segue.destination as? NewsRoomViewController {
-                        self.newsRoomDelegateVar = newsRoomVC
-                    }
-                }
-            }
+    func travelToolsClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
         
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
-    
-    func newsRoomView() {
-        print("hi")
-        let vc = NewsRoomViewController() //your view controller
-        self.newsRoomDelegateVar = vc
+    func websiteClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
-    func didChangePageControlValue(pageControl: UIPageControl) {
-       newsRoomDelegateVar?.scrollToViewController(index: pageControl.currentPage)
-    }
-    
-
 }
 

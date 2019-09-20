@@ -130,7 +130,7 @@ class ForgotUserNameVC: UIViewController {
     }
 }
 
-extension ForgotUserNameViewController: ApolloTextInputFieldDelegate {
+extension ForgotUserNameVC: ApolloTextInputFieldDelegate {
    
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let accountNO = accountNumberInputField.text, textField == zipCodeInputField && accountNO.count > 0 {
