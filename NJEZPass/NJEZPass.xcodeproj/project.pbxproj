@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */; };
+		2A4F46E12334ED9C00A31806 /* EmailConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */; };
+		2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */; };
+		2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */; };
+		2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */; };
+		2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */; };
+		2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */; };
+		2A4F46EC2334EDE100A31806 /* TabWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */; };
+		2A4F46ED2334EDE100A31806 /* NewsRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */; };
+		2A4F46EE2334EDE100A31806 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E92334EDE100A31806 /* LandingVC.swift */; };
+		2A4F46EF2334EDE100A31806 /* MoreContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */; };
+		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
 		429BAD0123008BC60087DBAD /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF023008BC60087DBAD /* IRouter.swift */; };
 		429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF123008BC60087DBAD /* IRoutable.swift */; };
 		429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF323008BC60087DBAD /* LoginInteractor.swift */; };
@@ -18,7 +30,6 @@
 		429BAD1B23008D9F0087DBAD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD1A23008D9F0087DBAD /* AccountViewController.swift */; };
 		429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD1C23008DD20087DBAD /* DashboardViewController.swift */; };
 		429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD1E23008E1E0087DBAD /* TagsViewController.swift */; };
-		429BAD2123008E330087DBAD /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD2023008E330087DBAD /* SideMenuTableViewController.swift */; };
 		429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD2923008EE60087DBAD /* TransactionsViewController.swift */; };
 		429BAD2D23008EE60087DBAD /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD2B23008EE60087DBAD /* VehiclesViewController.swift */; };
 		429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BAD312300907B0087DBAD /* UITextField+Extension.swift */; };
@@ -142,7 +153,6 @@
 		9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */; };
 		9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */; };
 		9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */; };
-		9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83F69D22F98207006DDB4C /* LandingViewController.swift */; };
 		9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */; };
 		9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */; };
 		9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */; };
@@ -173,8 +183,6 @@
 		A0B50E19E26756025795D269 /* Pods_NJEZPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */; };
 		B30D15F649A4E4B242139659 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */; };
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
-		F900F2B823029B290020132A /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900F2B723029B290020132A /* SideMenuCell.swift */; };
-		F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F900F2B923029B980020132A /* SideMenuViewModel.swift */; };
 		F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559622FC15950070257E /* DeviceVerificationVC.swift */; };
 		F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559722FC15950070257E /* VerificationCodeVC.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
@@ -289,6 +297,20 @@
 		0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D71748B6717B0DF1A321A6 /* Pods-Platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.debug.xcconfig"; sourceTree = "<group>"; };
 		254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityQuestionsVC.swift; sourceTree = "<group>"; };
+		2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfirmationVC.swift; sourceTree = "<group>"; };
+		2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordVC.swift; sourceTree = "<group>"; };
+		2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUserNameVC.swift; sourceTree = "<group>"; };
+		2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginMethodsTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
+		2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabWidgetTableViewCell.swift; sourceTree = "<group>"; };
+		2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsRoomTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/NewsRoomTableViewCell.swift; sourceTree = "<group>"; };
+		2A4F46E92334EDE100A31806 /* LandingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LandingVC.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/LandingVC.swift; sourceTree = "<group>"; };
+		2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreContentTableViewCell.swift; sourceTree = "<group>"; };
+		2A4F46F12334EFBF00A31806 /* NJEZPass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NJEZPass-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A4F46F22334EFC000A31806 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		2A4F46F32334EFC000A31806 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		335C1D1951DC6B717592C408 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		429BACF023008BC60087DBAD /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
@@ -302,7 +324,6 @@
 		429BAD1A23008D9F0087DBAD /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "NJEZPass/Presentation/Modules/My Account/AccountViewController.swift"; sourceTree = SOURCE_ROOT; };
 		429BAD1C23008DD20087DBAD /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		429BAD1E23008E1E0087DBAD /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
-		429BAD2023008E330087DBAD /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		429BAD2923008EE60087DBAD /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		429BAD2B23008EE60087DBAD /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		429BAD312300907B0087DBAD /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -434,7 +455,6 @@
 		9B5C6D9022F2CF6700DA6151 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		9B5C6D9222F2D26600DA6151 /* ViolationsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViolationsDetailsTableViewController.swift; sourceTree = "<group>"; };
 		9B67913A22EEF88D00522E63 /* PaymentInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInformationViewController.swift; sourceTree = "<group>"; };
-		9B83F69D22F98207006DDB4C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		9BAA51F223222A4F00D2E56E /* TransactionsPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPaymentViewController.swift; sourceTree = "<group>"; };
 		9BAA563522F2D8F50037036F /* DisplayLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLabelCell.swift; sourceTree = "<group>"; };
 		9BAA563722F2DADB0037036F /* AmountDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDisplayCell.swift; sourceTree = "<group>"; };
@@ -477,8 +497,6 @@
 		F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntitiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7244879ECE35B1661ED22AA /* Pods-PlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlatformTests/Pods-PlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		F73218C84906851A219D2046 /* Pods_Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F900F2B723029B290020132A /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
-		F900F2B923029B980020132A /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		F904559622FC15950070257E /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
 		F904559722FC15950070257E /* VerificationCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
@@ -575,6 +593,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A4F46D92334ED7900A31806 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */,
+				2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */,
+				2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */,
+				2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */,
+				2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */,
+				2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		2A4F46F02334EFB100A31806 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				2A4F46F22334EFC000A31806 /* iCarousel.h */,
+				2A4F46F32334EFC000A31806 /* iCarousel.m */,
+				2A4F46F12334EFBF00A31806 /* NJEZPass-Bridging-Header.h */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		429BACEF23008BC60087DBAD /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,9 +662,6 @@
 			isa = PBXGroup;
 			children = (
 				42B493952317E13900E9B1A0 /* TabBarViewController.swift */,
-				429BAD2023008E330087DBAD /* SideMenuTableViewController.swift */,
-				F900F2B723029B290020132A /* SideMenuCell.swift */,
-				F900F2B923029B980020132A /* SideMenuViewModel.swift */,
 				429BAD1C23008DD20087DBAD /* DashboardViewController.swift */,
 				9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */,
 			);
@@ -874,6 +912,7 @@
 		42BE356022FBF7DE00AAF8E3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				2A4F46F02334EFB100A31806 /* Carousel */,
 				42B4937B2317DB9C00E9B1A0 /* GradientView.swift */,
 				42BE356122FBF7DE00AAF8E3 /* CustomButton.swift */,
 				42BE356222FBF7DE00AAF8E3 /* BorderedTextField.swift */,
@@ -1139,6 +1178,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2A4F46D92334ED7900A31806 /* ForgotPassword */,
 				429BAD582306A0D50087DBAD /* Account Balance */,
 				429BACEF23008BC60087DBAD /* Common */,
 				429BACF223008BC60087DBAD /* Login */,
@@ -1151,20 +1191,11 @@
 				9B008B3A22F320AD0098BCDC /* Tags */,
 				9B5C6D8D22F2BC0400DA6151 /* Violations */,
 				9B67913722EEE5E500522E63 /* Payment Methods */,
-				5EE3E06522E73061007EDCC7 /* TwoFactorAuth */,
 				F904559522FC15950070257E /* Verification */,
 				429BAD2823008EE60087DBAD /* Transcations */,
 				429BAD2A23008EE60087DBAD /* Vehicles */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		5EE3E06522E73061007EDCC7 /* TwoFactorAuth */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TwoFactorAuth;
-			path = ../../Scenes/TwoFactorAuth;
 			sourceTree = "<group>";
 		};
 		9B008B3A22F320AD0098BCDC /* Tags */ = {
@@ -1286,8 +1317,12 @@
 		F9CAC7B922F8008800F15F10 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
-				9B83F69D22F98207006DDB4C /* LandingViewController.swift */,
 				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
+				2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */,
+				2A4F46E92334EDE100A31806 /* LandingVC.swift */,
+				2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */,
+				2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */,
+				2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -1528,6 +1563,7 @@
 				TargetAttributes = {
 					5EE3DFB222DEFCAC007EDCC7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					5EE3DFC622DEFCAD007EDCC7 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -1865,11 +1901,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
-				429BAD2123008E330087DBAD /* SideMenuTableViewController.swift in Sources */,
+				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
+				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
 				429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
+				2A4F46E12334ED9C00A31806 /* EmailConfirmationVC.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				429BAD8B230C58B80087DBAD /* AppDelegate.swift in Sources */,
 				429BAD1B23008D9F0087DBAD /* AccountViewController.swift in Sources */,
@@ -1877,7 +1915,7 @@
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BF5B061232A312D00D4F5B7 /* CMToolbar.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
-				9B83F69E22F98207006DDB4C /* LandingViewController.swift in Sources */,
+				2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */,
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
@@ -1897,14 +1935,17 @@
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
 				F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */,
+				2A4F46EC2334EDE100A31806 /* TabWidgetTableViewCell.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				9BF5B067232A312D00D4F5B7 /* CMStackView.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				9BF5B066232A312D00D4F5B7 /* CMPickerView.swift in Sources */,
+				2A4F46EE2334EDE100A31806 /* LandingVC.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
+				2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
@@ -1918,8 +1959,10 @@
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
+				2A4F46ED2334EDE100A31806 /* NewsRoomTableViewCell.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
+				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				429BAD0E23008BC60087DBAD /* LoginRouter.swift in Sources */,
@@ -1934,9 +1977,8 @@
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
 				9BF5B060232A312D00D4F5B7 /* CMNavigationController.swift in Sources */,
 				9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */,
-				F900F2B823029B290020132A /* SideMenuCell.swift in Sources */,
+				2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
-				F900F2BA23029B980020132A /* SideMenuViewModel.swift in Sources */,
 				42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */,
 				42B4937C2317DB9C00E9B1A0 /* GradientView.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
@@ -1951,6 +1993,8 @@
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */,
+				2A4F46EF2334EDE100A31806 /* MoreContentTableViewCell.swift in Sources */,
+				2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
@@ -2274,6 +2318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJEZPass/Presentation/CustomViews/Carousel/NJEZPass-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2297,6 +2342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.conduent.EZPassNJ23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NJEZPass/Presentation/CustomViews/Carousel/NJEZPass-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

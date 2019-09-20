@@ -23,6 +23,7 @@ enum AppGraphicKeys {
 }
 enum AppRegExKeys {
     static let password = "^[0-9a-zA-Z\\_@]{6,16}$"
+    static let accountNo = "^[a-zA-Z]$"
 }
 enum AppUIElementKeys {
     static let login = "LoginViewController"
