@@ -106,25 +106,23 @@ class NewPasswordVC: UIViewController {
         self.navigationItem.leftBarButtonItem = barButton
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }*/
+    @objc func backButtonClick(sender : UIButton) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+  
      @IBAction func saveButtonClicked(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
         let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
         self.navigationController?.pushViewController(loginVC, animated: true)
      }
+    
     @IBAction func backTapped(_ sender: Any) {
         navigationController?.popViewController(animated: false)
         
        dismiss(animated: false, completion: nil)
     }
+    
     private func validateInput() {
         //loginButton.isEnabled = false
         
