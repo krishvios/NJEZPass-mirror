@@ -2270,6 +2270,9 @@
                                                         <constraint firstAttribute="height" constant="71" id="6l8-mW-GBY"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="QN6-eB-sec"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="questionClicked:" destination="xzO-6e-sTB" eventType="touchUpInside" id="UXZ-R0-kjU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

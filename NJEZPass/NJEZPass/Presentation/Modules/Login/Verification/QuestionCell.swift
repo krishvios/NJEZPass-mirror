@@ -9,9 +9,14 @@
 import UIKit
 import Apollo_iOS
 
+protocol QuestionCellDelegate:class {
+    func questionClicked(textField: ApolloTextInputField, cell:QuestionCell)
+}
+
 class QuestionCell: UITableViewCell, ApolloTextInputFieldDelegate {
 
     @IBOutlet weak var textField: ApolloTextInputField!
+    weak var delegate:QuestionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,4 +40,7 @@ class QuestionCell: UITableViewCell, ApolloTextInputFieldDelegate {
         return true
     }
     
+    @IBAction func questionClicked(_ sender : UIButton) {
+        delegate?.questionClicked(textField: textField, cell: self)
+    }
 }
