@@ -186,6 +186,10 @@
 		D3AE916FF6F1886D30E4C6EA /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */; };
 		F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559622FC15950070257E /* DeviceVerificationVC.swift */; };
 		F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904559722FC15950070257E /* VerificationCodeVC.swift */; };
+		F908290D2338AEC400C6C37E /* SelectPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829092338AEC400C6C37E /* SelectPaymentVC.swift */; };
+		F908290E2338AEC400C6C37E /* SignupAndSaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */; };
+		F908290F2338AEC400C6C37E /* DisputedSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */; };
+		F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290C2338AEC400C6C37E /* PayViolationVC.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
@@ -501,6 +505,10 @@
 		F73218C84906851A219D2046 /* Pods_Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F904559622FC15950070257E /* DeviceVerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVC.swift; sourceTree = "<group>"; };
 		F904559722FC15950070257E /* VerificationCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
+		F90829092338AEC400C6C37E /* SelectPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentVC.swift; sourceTree = "<group>"; };
+		F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupAndSaveVC.swift; sourceTree = "<group>"; };
+		F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisputedSelectedVC.swift; sourceTree = "<group>"; };
+		F908290C2338AEC400C6C37E /* PayViolationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViolationVC.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
@@ -1180,6 +1188,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F90829082338AEC400C6C37E /* PayViolation */,
 				2A4F46D92334ED7900A31806 /* ForgotPassword */,
 				429BAD582306A0D50087DBAD /* Account Balance */,
 				429BACEF23008BC60087DBAD /* Common */,
@@ -1314,6 +1323,17 @@
 				F904559722FC15950070257E /* VerificationCodeVC.swift */,
 			);
 			path = Verification;
+			sourceTree = "<group>";
+		};
+		F90829082338AEC400C6C37E /* PayViolation */ = {
+			isa = PBXGroup;
+			children = (
+				F90829092338AEC400C6C37E /* SelectPaymentVC.swift */,
+				F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */,
+				F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */,
+				F908290C2338AEC400C6C37E /* PayViolationVC.swift */,
+			);
+			path = PayViolation;
 			sourceTree = "<group>";
 		};
 		F9CAC7B922F8008800F15F10 /* Landing */ = {
@@ -1918,6 +1938,7 @@
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BF5B061232A312D00D4F5B7 /* CMToolbar.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
+				F908290F2338AEC400C6C37E /* DisputedSelectedVC.swift in Sources */,
 				2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */,
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
@@ -1932,6 +1953,7 @@
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
+				F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */,
 				42B493942317E0D200E9B1A0 /* CityStateTableViewCell.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
@@ -1956,6 +1978,7 @@
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
 				429BAD342300907B0087DBAD /* UINavigationItem+Extension.swift in Sources */,
+				F908290E2338AEC400C6C37E /* SignupAndSaveVC.swift in Sources */,
 				9BF5B065232A312D00D4F5B7 /* CMButton.swift in Sources */,
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
@@ -1996,6 +2019,7 @@
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */,
+				F908290D2338AEC400C6C37E /* SelectPaymentVC.swift in Sources */,
 				2A4F46EF2334EDE100A31806 /* MoreContentTableViewCell.swift in Sources */,
 				2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
