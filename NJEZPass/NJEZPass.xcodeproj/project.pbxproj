@@ -13,9 +13,7 @@
 		2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */; };
 		2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */; };
 		2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */; };
-		2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */; };
 		2A4F46EC2334EDE100A31806 /* TabWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */; };
-		2A4F46ED2334EDE100A31806 /* NewsRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */; };
 		2A4F46EF2334EDE100A31806 /* MoreContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */; };
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
 		2A4F46F62334FF3B00A31806 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F52334FF3B00A31806 /* LandingVC.swift */; };
@@ -303,9 +301,7 @@
 		2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUserNameVC.swift; sourceTree = "<group>"; };
 		2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
-		2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginMethodsTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabWidgetTableViewCell.swift; sourceTree = "<group>"; };
-		2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsRoomTableViewCell.swift; path = ../../../../../../Documents/NJEZPass/NJEZPass/Presentation/Modules/Landing/NewsRoomTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreContentTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46F12334EFBF00A31806 /* NJEZPass-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NJEZPass-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A4F46F22334EFC000A31806 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -1318,8 +1314,6 @@
 			isa = PBXGroup;
 			children = (
 				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
-				2A4F46E62334EDE100A31806 /* LoginMethodsTableViewCell.swift */,
-				2A4F46E82334EDE100A31806 /* NewsRoomTableViewCell.swift */,
 				2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */,
 				2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */,
 				2A4F46F52334FF3B00A31806 /* LandingVC.swift */,
@@ -1944,7 +1938,6 @@
 				9BF5B066232A312D00D4F5B7 /* CMPickerView.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
-				2A4F46EB2334EDE100A31806 /* LoginMethodsTableViewCell.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
@@ -1958,7 +1951,6 @@
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
-				2A4F46ED2334EDE100A31806 /* NewsRoomTableViewCell.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
 				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
