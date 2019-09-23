@@ -190,6 +190,7 @@
 		F908290E2338AEC400C6C37E /* SignupAndSaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */; };
 		F908290F2338AEC400C6C37E /* DisputedSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */; };
 		F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290C2338AEC400C6C37E /* PayViolationVC.swift */; };
+		F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
@@ -509,6 +510,7 @@
 		F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupAndSaveVC.swift; sourceTree = "<group>"; };
 		F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisputedSelectedVC.swift; sourceTree = "<group>"; };
 		F908290C2338AEC400C6C37E /* PayViolationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViolationVC.swift; sourceTree = "<group>"; };
+		F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputeSelectedCell.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
@@ -1332,6 +1334,7 @@
 				F908290A2338AEC400C6C37E /* SignupAndSaveVC.swift */,
 				F908290B2338AEC400C6C37E /* DisputedSelectedVC.swift */,
 				F908290C2338AEC400C6C37E /* PayViolationVC.swift */,
+				F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */,
 			);
 			path = PayViolation;
 			sourceTree = "<group>";
@@ -1954,6 +1957,7 @@
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */,
+				F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */,
 				42B493942317E0D200E9B1A0 /* CityStateTableViewCell.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
