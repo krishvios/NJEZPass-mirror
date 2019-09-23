@@ -9,11 +9,49 @@
 import UIKit
 
 class DisputedSelectedVC: UIViewController {
-
+    
+    @IBOutlet weak var disputeTableView: UITableView!
+    @IBOutlet weak var pickerOverlay: UIView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    var isPickerVisible = false
+    var nonResSelected = true
+    var index = 0
+    
+    let disputeTypes = ["Select Dispute Type", "Section A1: Non-Responsibility", "Section A2: Rental Car or Leasing", "Section B: Inadvertent Toll Violation", "Section C: E-ZPass Customer"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        pickerOverlay.isHidden = true
+        pickerView.isHidden = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        pickerOverlay.addGestureRecognizer(tap)
+        
+        let viewTap = UITapGestureRecognizer(target: self, action: #selector(self.handleViewTap(_:)))
+        view.addGestureRecognizer(viewTap)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        pickerOverlay.isHidden = true
+        pickerView.isHidden = true
+        isPickerVisible = false
+        disputeTableView.reloadData()
+    }
+    
+    @objc func handleViewTap(_ sender: UITapGestureRecognizer? = nil) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func disputeTapped(_ sender: Any) {
+        pickerOverlay.isHidden = false
+        pickerView.isHidden = false
+        isPickerVisible = true
+        disputeTableView.reloadData()
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -36,9 +74,9 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
         case 0:
             height = 189
         case 1:
-            height = 79
+            height = (isPickerVisible || nonResSelected) ? 0 : 79
         case 2:
-            height = 634
+            height = isPickerVisible ? 0 : 634
         default:()
         }
         
@@ -51,13 +89,45 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")
+            if let disputeCell = tableView.dequeueReusableCell(withIdentifier: "DisputeSelectedCell") as? DisputeSelectedCell {
+                disputeCell.disputeField.text = index == 0 ? "" : disputeTypes[index]
+                cell = disputeCell
+            }
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell2")
         case 2:
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell3")
         default:()
         }
-        return cell!
+        return cell ?? UITableViewCell()
+    }
+}
+
+extension DisputedSelectedVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return disputeTypes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return disputeTypes[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        index = row
+        if row == 1 {
+            nonResSelected = false
+        } else {
+            nonResSelected = true
+        }
+        if index != 0 {
+            pickerOverlay.isHidden = true
+            pickerView.isHidden = true
+            isPickerVisible = false
+        }
+        disputeTableView.reloadData()
     }
 }

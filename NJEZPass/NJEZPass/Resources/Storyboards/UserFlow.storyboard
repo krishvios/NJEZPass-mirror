@@ -3950,12 +3950,15 @@
                                     <constraint firstAttribute="width" constant="66" id="Yz2-lT-ePB"/>
                                 </constraints>
                                 <state key="normal" image="purpleArrow"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="QEG-tt-vcy" eventType="touchUpInside" id="gb0-A2-C0O"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zbC-ah-3E6">
                                 <rect key="frame" x="0.0" y="68" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="189" id="x2u-Y7-ExL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DisputeSelectedCell" rowHeight="189" id="x2u-Y7-ExL" customClass="DisputeSelectedCell" customModule="NJEZPass" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x2u-Y7-ExL" id="Lby-pU-dga">
@@ -3987,10 +3990,6 @@
                                                     <color key="textColor" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lw-LV-Gc6">
-                                                    <rect key="frame" x="15" y="123" width="340" height="37"/>
-                                                    <state key="normal" image="dropDownBlack"/>
-                                                </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Dispute Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibO-8k-XHq">
                                                     <rect key="frame" x="15" y="123" width="345" height="37"/>
                                                     <constraints>
@@ -4009,7 +4008,6 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8Lw-LV-Gc6" firstAttribute="leading" secondItem="ibO-8k-XHq" secondAttribute="leading" id="0QR-mP-xml"/>
                                                 <constraint firstItem="ibO-8k-XHq" firstAttribute="top" secondItem="z5c-qg-oiK" secondAttribute="bottom" constant="10" id="1i1-s9-dzn"/>
                                                 <constraint firstItem="z5c-qg-oiK" firstAttribute="top" secondItem="fFr-GL-7Hv" secondAttribute="bottom" constant="8" id="2QU-Hc-ZUm"/>
                                                 <constraint firstItem="Z0j-26-s6d" firstAttribute="bottom" secondItem="ibO-8k-XHq" secondAttribute="bottom" id="5GR-8q-px9"/>
@@ -4019,16 +4017,16 @@
                                                 <constraint firstItem="fFr-GL-7Hv" firstAttribute="top" secondItem="8I9-bc-lXH" secondAttribute="bottom" constant="10" id="IH5-2F-lyu"/>
                                                 <constraint firstItem="8I9-bc-lXH" firstAttribute="top" secondItem="Lby-pU-dga" secondAttribute="topMargin" id="LMo-0K-ib4"/>
                                                 <constraint firstItem="ibO-8k-XHq" firstAttribute="leading" secondItem="Lby-pU-dga" secondAttribute="leadingMargin" id="LbS-wI-GOP"/>
-                                                <constraint firstItem="8Lw-LV-Gc6" firstAttribute="bottom" secondItem="ibO-8k-XHq" secondAttribute="bottom" id="TnJ-8O-mdJ"/>
                                                 <constraint firstItem="Z0j-26-s6d" firstAttribute="trailing" secondItem="Lby-pU-dga" secondAttribute="trailingMargin" id="WH0-0q-pke"/>
                                                 <constraint firstItem="ibO-8k-XHq" firstAttribute="trailing" secondItem="Lby-pU-dga" secondAttribute="trailingMargin" id="XT2-AS-tI3"/>
-                                                <constraint firstItem="8Lw-LV-Gc6" firstAttribute="top" secondItem="ibO-8k-XHq" secondAttribute="top" id="ar3-rq-dr2"/>
                                                 <constraint firstItem="z5c-qg-oiK" firstAttribute="top" secondItem="fFr-GL-7Hv" secondAttribute="bottom" constant="8" id="cK7-BI-b1W"/>
-                                                <constraint firstItem="8Lw-LV-Gc6" firstAttribute="trailing" secondItem="ibO-8k-XHq" secondAttribute="trailing" constant="-5" id="gz7-fP-seJ"/>
                                                 <constraint firstItem="8I9-bc-lXH" firstAttribute="leading" secondItem="Lby-pU-dga" secondAttribute="leadingMargin" id="kia-3H-ik7"/>
                                                 <constraint firstItem="Z0j-26-s6d" firstAttribute="leading" secondItem="Lby-pU-dga" secondAttribute="leadingMargin" id="rx1-Tb-eCH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="disputeField" destination="ibO-8k-XHq" id="Fmw-ht-zU1"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="79" id="6Oo-Vt-Emt">
                                         <rect key="frame" x="0.0" y="217" width="375" height="79"/>
@@ -4241,21 +4239,35 @@
                                     <outlet property="delegate" destination="QEG-tt-vcy" id="nqH-D2-5KZ"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.34999999403953552" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DwH-4a-aLC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuz-z7-lEx">
+                                <rect key="frame" x="16" y="184" width="343" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Nr7-we-MkP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="disputeTapped:" destination="QEG-tt-vcy" eventType="touchUpInside" id="Tuw-x8-CBR"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.34999999403953552" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwH-4a-aLC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-GJ-u6C">
-                                        <rect key="frame" x="0.0" y="473" width="375" height="194"/>
+                                        <rect key="frame" x="0.0" y="452" width="375" height="215"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="194" id="Fe0-cA-gYA"/>
+                                            <constraint firstAttribute="height" constant="215" id="O4D-3g-heq"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="QEG-tt-vcy" id="J1B-lx-9xU"/>
+                                            <outlet property="delegate" destination="QEG-tt-vcy" id="Ysx-LZ-bvM"/>
+                                        </connections>
                                     </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="bKc-GJ-u6C" secondAttribute="bottom" id="9Dv-qa-nmk"/>
-                                    <constraint firstAttribute="trailing" secondItem="bKc-GJ-u6C" secondAttribute="trailing" id="Nz7-eu-SRh"/>
-                                    <constraint firstItem="bKc-GJ-u6C" firstAttribute="leading" secondItem="DwH-4a-aLC" secondAttribute="leading" id="qnE-pw-AF8"/>
+                                    <constraint firstAttribute="bottom" secondItem="bKc-GJ-u6C" secondAttribute="bottom" id="e90-0c-ri4"/>
+                                    <constraint firstAttribute="trailing" secondItem="bKc-GJ-u6C" secondAttribute="trailing" id="mnc-SX-xTD"/>
+                                    <constraint firstItem="bKc-GJ-u6C" firstAttribute="leading" secondItem="DwH-4a-aLC" secondAttribute="leading" id="sxu-nb-ueV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -4268,21 +4280,30 @@
                             <constraint firstItem="zbC-ah-3E6" firstAttribute="trailing" secondItem="g3X-fF-Gty" secondAttribute="trailing" id="FkO-J9-HQL"/>
                             <constraint firstItem="eOT-Sr-ltN" firstAttribute="centerX" secondItem="g3X-fF-Gty" secondAttribute="centerX" id="Ndb-XJ-D8e"/>
                             <constraint firstItem="31y-aY-BFl" firstAttribute="leading" secondItem="g3X-fF-Gty" secondAttribute="leading" id="PiP-1A-HgK"/>
+                            <constraint firstItem="g3X-fF-Gty" firstAttribute="trailing" secondItem="xuz-z7-lEx" secondAttribute="trailing" constant="16" id="T6E-HS-AyJ"/>
+                            <constraint firstItem="xuz-z7-lEx" firstAttribute="top" secondItem="31y-aY-BFl" secondAttribute="bottom" constant="116.5" id="TJ4-CT-FX8"/>
                             <constraint firstItem="DwH-4a-aLC" firstAttribute="top" secondItem="mPt-OV-5On" secondAttribute="top" id="YFB-Bp-Aij"/>
                             <constraint firstItem="zbC-ah-3E6" firstAttribute="bottom" secondItem="g3X-fF-Gty" secondAttribute="bottom" constant="2" id="bWG-Yj-7Sj"/>
                             <constraint firstItem="vfq-TF-2ON" firstAttribute="trailing" secondItem="g3X-fF-Gty" secondAttribute="trailing" id="kPH-6a-360"/>
                             <constraint firstItem="vfq-TF-2ON" firstAttribute="top" secondItem="g3X-fF-Gty" secondAttribute="top" id="oDn-Nj-5kN"/>
+                            <constraint firstAttribute="bottom" secondItem="DwH-4a-aLC" secondAttribute="bottom" id="rDd-Cv-YRm"/>
                             <constraint firstItem="DwH-4a-aLC" firstAttribute="leading" secondItem="g3X-fF-Gty" secondAttribute="leading" id="s6j-ax-8Jj"/>
                             <constraint firstItem="31y-aY-BFl" firstAttribute="centerY" secondItem="eOT-Sr-ltN" secondAttribute="centerY" id="uih-hr-c0E"/>
                             <constraint firstItem="eOT-Sr-ltN" firstAttribute="top" secondItem="g3X-fF-Gty" secondAttribute="top" constant="13" id="unw-gB-FJg"/>
-                            <constraint firstItem="DwH-4a-aLC" firstAttribute="bottom" secondItem="g3X-fF-Gty" secondAttribute="bottom" id="xzQ-9M-t3A"/>
+                            <constraint firstItem="DwH-4a-aLC" firstAttribute="bottom" secondItem="mPt-OV-5On" secondAttribute="bottom" id="xzQ-9M-t3A"/>
+                            <constraint firstItem="xuz-z7-lEx" firstAttribute="leading" secondItem="g3X-fF-Gty" secondAttribute="leading" constant="16" id="yeQ-WE-9He"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3X-fF-Gty"/>
                     </view>
+                    <connections>
+                        <outlet property="disputeTableView" destination="zbC-ah-3E6" id="cO2-ya-092"/>
+                        <outlet property="pickerOverlay" destination="DwH-4a-aLC" id="LiW-kr-ISQ"/>
+                        <outlet property="pickerView" destination="bKc-GJ-u6C" id="KFv-if-bDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bme-j2-aqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="297"/>
+            <point key="canvasLocation" x="-434.39999999999998" y="296.40179910044981"/>
         </scene>
         <!--Signup And SaveVC-->
         <scene sceneID="BFH-ad-rxN">
