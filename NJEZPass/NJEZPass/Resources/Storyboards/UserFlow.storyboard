@@ -4199,6 +4199,9 @@
                                                     <state key="normal" title="SUBMIT">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="fnf-WB-ytC" kind="show" identifier="showConfirmation" id="7Ed-dR-fUT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -4339,6 +4342,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Rxl-sC-jjT" kind="show" id="eXR-nP-1O2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bke-qk-zil">
                                 <rect key="frame" x="112.5" y="458" width="150" height="43"/>
@@ -4393,10 +4399,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R9Z-Ps-b8V"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="dMx-T9-ukM" id="X5Y-g4-2B0"/>
+                        <outlet property="button" destination="15h-G7-U06" id="sRz-1U-FSI"/>
+                        <outlet property="confirmationDesc" destination="AfC-gX-fC5" id="k4M-Mj-Ixm"/>
+                        <outlet property="confirmationImage" destination="Kib-QW-08n" id="QuS-gZ-eLs"/>
+                        <outlet property="confirmationTitle" destination="y0G-i8-9B6" id="1lE-5P-9Z1"/>
+                        <outlet property="skipButton" destination="bke-qk-zil" id="e8G-no-Vsp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WdA-b4-dzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-513" y="-445"/>
+            <point key="canvasLocation" x="-417" y="-436"/>
         </scene>
     </scenes>
     <resources>
@@ -4424,4 +4438,8 @@
         <image name="unselectedRadioButton" width="24" height="24"/>
         <image name="whiteArrow" width="58" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vOz-to-GJP"/>
+        <segue reference="eXR-nP-1O2"/>
+    </inferredMetricsTieBreakers>
 </document>
