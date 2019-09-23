@@ -101,6 +101,13 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
         }
         return cell ?? UITableViewCell()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showConfirmation" {
+            let vc = segue.destination as! SignupAndSaveVC
+            vc.flowString = "disputeFlow"
+        }
+    }
 }
 
 extension DisputedSelectedVC: UIPickerViewDelegate, UIPickerViewDataSource {
