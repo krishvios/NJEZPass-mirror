@@ -116,8 +116,8 @@ class LoginViewController: UIViewController {
             
 //            direct login flow in case of api error
             var viewModel = ProfileModel.PresentionModel()
-            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
-
+//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.securityQuestions, nextURL: "", navigation: NavigationInfo.push)
             router?.perform(viewModel: viewModel)
             saveCredentials()
             
