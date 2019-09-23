@@ -2208,7 +2208,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="carouselView" destination="rEI-Xu-bFz" id="W9A-no-CyJ"/>
+                                            <outlet property="carouselView" destination="rEI-Xu-bFz" id="yrB-He-5EZ"/>
                                             <outlet property="pageControl" destination="Ofk-O1-kYC" id="xwg-iC-vAQ"/>
                                         </connections>
                                     </tableViewCell>
