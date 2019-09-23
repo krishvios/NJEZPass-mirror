@@ -91,24 +91,33 @@ class NewPasswordVC: UIViewController {
         
         //image in nav bar
         self.navigationController?.navigationBar.isHidden = false
-        let navImageView = UIImageView(frame: CGRect(x: 2, y: 0, width: 256, height: 16))
-        navImageView.contentMode = .scaleAspectFit
-        let navImage = UIImage(named: "navHeaderImage")
-        navImageView.image = navImage
-        navigationItem.titleView = navImageView
+        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
+        //        navImageView.contentMode = .scaleAspectFit
+        //        let navImage = UIImage(named: "navHeaderImage")
+        //        navImageView.image = navImage
+        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
         
         //Back buttion
-        let btnLeftMenu: UIButton = UIButton()
-        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
-        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
-        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-        self.navigationItem.leftBarButtonItem = barButton
+         self.navigationController?.navigationBar.tintColor = .purple
+        
+        navigationController?.viewControllers.removeAll(where :{
+            (vc) -> Bool in if  vc.isKind(of: SecurityQuestionsVC.self){
+                return true
+            }
+            return false
+        })
+
+//        let btnLeftMenu: UIButton = UIButton()
+//        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
+//        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
+//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
+//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
+//        self.navigationItem.setLeftBarButton(barButton, animated: true)
     }
     
     @objc func backButtonClick(sender : UIButton) {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+//        navigationController?.popToRootViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
     }
   
      @IBAction func saveButtonClicked(_ sender: Any) {
