@@ -69,18 +69,18 @@ class ResetPasswordVC: UIViewController {
     
     func setNavBar() {
         self.navigationController?.navigationBar.isHidden = false
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "navHeaderImage")
-        imageView.image = image
+        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
+        //        navImageView.contentMode = .scaleAspectFit
+        //        let navImage = UIImage(named: "navHeaderImage")
+        //        navImageView.image = navImage
+        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
         
-        navigationItem.titleView = imageView
-        
-        let btn = UIButton(type: .custom)
-        btn.setImage(UIImage(named: "purpleArrow"), for: .normal)
-        btn.addTarget(self, action: #selector (backButtonClick(sender:)), for: .touchUpInside)
-        let item1 = UIBarButtonItem(customView: btn)
-        self.navigationItem.setLeftBarButton(item1, animated: true)
+         self.navigationController?.navigationBar.tintColor = .purple
+//        let btn = UIButton(type: .custom)
+//        btn.setImage(UIImage(named: "purpleArrow"), for: .normal)
+//        btn.addTarget(self, action: #selector (backButtonClick(sender:)), for: .touchUpInside)
+//        let item1 = UIBarButtonItem(customView: btn)
+//        self.navigationItem.setLeftBarButton(item1, animated: true)
     }
     
     @objc func backButtonClick(sender : UIButton) {
@@ -117,7 +117,6 @@ class ResetPasswordVC: UIViewController {
             continueButtonText.backgroundColor = #colorLiteral(red: 0.4489307404, green: 0.09403731674, blue: 0.5118483901, alpha: 0.5)
         }
     }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }

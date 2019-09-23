@@ -28,15 +28,16 @@ class TabWidgetTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     @IBAction func tollFacilitesClicked(_ sender: Any) {
         tabWidgetDelegate?.tollFacilitesClicked(sender)
     }
+    
     @IBAction func travelToolsClicked(_ sender: Any) {
         tabWidgetDelegate?.travelToolsClicked(sender)
     }
+    
     @IBAction func websiteClicked(_ sender: Any) {
         tabWidgetDelegate?.websiteClicked(sender)
     }

@@ -15,7 +15,7 @@ import MBProgressHUD
 import KeychainAccess
 
 
-class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,LoginMethodsCellDelegate,MoreContentCellDelegate,TabWidgetCelldelegate {
+class LandingVC:  UIViewController {
     
     @IBOutlet weak var tbleView: UITableView!
     var interactor: ILoginInteractable?
@@ -27,6 +27,7 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+       
     }
     
     func setupTableView(){
@@ -35,10 +36,13 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
         tbleView.keyboardDismissMode = .onDrag
         tbleView.bounces = true
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
-    
+}
+
+extension LandingVC: UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -102,9 +106,15 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
         
         return cell!
     }
+}
+
+extension LandingVC: LoginMethodsCellDelegate {
     
-    //Login delegate methods
     func loginClicked(_ sender: Any) {
+        
+    }
+    
+    @IBAction func languageSelectionClick(_ sender: Any) {
         
     }
     
@@ -121,18 +131,19 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
     }
     
     func forgotPasswordClicked(_ sender: Any) {
-        //        let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-        //        let forgotPasswordVC = storyBoard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
-        //        self.navigationController?.pushViewController(forgotPasswordVC, animated: true)
+       
     }
     
     func forgotUserNameCllicked(_ sender: Any) {
         
     }
+    
     func fingerPrintCllicked(_ sender: Any) {
         
     }
-    //MoreContents delegate methods
+}
+
+extension LandingVC: MoreContentCellDelegate {
     func payViolationorTollBillClicked(_ sender: Any) {
         
     }
@@ -147,8 +158,10 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
             UIApplication.shared.openURL(url)
         }
     }
-    
-    //TabWidget Delegate methods
+}
+
+extension LandingVC: TabWidgetCelldelegate {
+  
     func tollFacilitesClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -183,4 +196,3 @@ class LandingVC:  UIViewController, UITableViewDelegate, UITableViewDataSource,L
         }
     }
 }
-

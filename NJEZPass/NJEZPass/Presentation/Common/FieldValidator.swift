@@ -32,7 +32,7 @@ class FieldValidator: NSObject {
 
     public func isValidUserID (userIDString: String) -> Bool {
         do {
-            let regex = try NSRegularExpression(pattern: "^[0-9a-zA-Z\\_]{8,16}$", options: .caseInsensitive)
+            let regex = try NSRegularExpression(pattern: "^[0-9a-zA-Z\\_]{5,16}$", options: .caseInsensitive)
             if regex.matches(in: userIDString, options: [], range: NSRange(location: 0, length: userIDString.count)).count > 0 {
                 if !(userIDString.hasPrefix("UP")) {
                 return true
