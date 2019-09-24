@@ -145,9 +145,7 @@ class ForgotPasswordVC: UIViewController {
 
 extension ForgotPasswordVC: ApolloTextInputFieldDelegate {
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == zipCodeinputField {
             validateInput()
-        }
         return true
     }
     

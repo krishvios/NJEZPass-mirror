@@ -29,4 +29,10 @@ class DashboardViewController: UIViewController {
         alert.addAction(updateAddressActionButton)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }
+
+
