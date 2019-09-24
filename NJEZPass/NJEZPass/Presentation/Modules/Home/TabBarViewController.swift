@@ -30,11 +30,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate,
-            let detailInfoData = delegate.detailInfo  else {
-                return
-        }
-        print(detailInfoData)
         self.navigationController?.navigationBar.isHidden = true
     }
 }
