@@ -29,7 +29,7 @@ class ForgotUserNameVC: UIViewController {
         accountNumberInputField.delegate = self
         zipCodeInputField.delegate = self
         toggleLoginButtonColor()
-        setNavBar()
+        //setNavBar()
         setKeyBoardforText()
     }
     
@@ -94,6 +94,10 @@ class ForgotUserNameVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func countinueButtonClicked(_ sender: Any) {
         if  let tag = tagInputField.text,
             let accountNo = accountNumberInputField.text,

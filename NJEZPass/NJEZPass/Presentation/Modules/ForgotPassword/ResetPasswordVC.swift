@@ -23,10 +23,11 @@ class ResetPasswordVC: UIViewController {
         emailidInputField.delegate = self
         continueButtonText.isEnabled = false
         toggleLoginButtonColor()
-        setNavBar()
         setKeyBoardforText()
     }
-    
+    @IBAction func backTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     func setKeyBoardforText() {
         NotificationCenter.default.addObserver(
             self,
@@ -65,28 +66,6 @@ class ResetPasswordVC: UIViewController {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
         scrollView.isScrollEnabled = false
-    }
-    
-    func setNavBar() {
-        self.navigationController?.navigationBar.isHidden = false
-        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        //        navImageView.contentMode = .scaleAspectFit
-        //        let navImage = UIImage(named: "navHeaderImage")
-        //        navImageView.image = navImage
-        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
-        
-         self.navigationController?.navigationBar.tintColor = .purple
-//        let btn = UIButton(type: .custom)
-//        btn.setImage(UIImage(named: "purpleArrow"), for: .normal)
-//        btn.addTarget(self, action: #selector (backButtonClick(sender:)), for: .touchUpInside)
-//        let item1 = UIBarButtonItem(customView: btn)
-//        self.navigationItem.setLeftBarButton(item1, animated: true)
-    }
-    
-    @objc func backButtonClick(sender : UIButton) {
-        navigationController?.popViewController(animated: true)
-        
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func continueButtonClicked(_ sender: Any) {

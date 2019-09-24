@@ -41,9 +41,18 @@ class NewPasswordVC: UIViewController {
         newPasswordInputField.delegate = self
         confirmPasswordInputField.delegate = self
         saveButtonLbl.isEnabled = false
-        setNavBar()
+        //setNavBar()
         setKeyBoardforText()
         toggleLoginButtonColor()
+        
+        self.navigationController?.navigationBar.tintColor = .purple
+        
+        navigationController?.viewControllers.removeAll(where :{
+            (vc) -> Bool in if  vc.isKind(of: SecurityQuestionsVC.self){
+                return true
+            }
+            return false
+        })
     }
     
     func setKeyBoardforText() {

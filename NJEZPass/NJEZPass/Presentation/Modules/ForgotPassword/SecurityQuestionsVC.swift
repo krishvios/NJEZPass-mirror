@@ -24,7 +24,7 @@ class SecurityQuestionsVC: UIViewController {
         
         firstSecurityQuestionAnswerInputField.delegate = self
         continueBtnLbl.isEnabled = false
-        setNavBar()
+      //  setNavBar()
         setKeyBoardforText()
         toggleLoginButtonColor()
     }
@@ -100,6 +100,7 @@ class SecurityQuestionsVC: UIViewController {
     
     @IBAction func backTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     private func validateInput() {

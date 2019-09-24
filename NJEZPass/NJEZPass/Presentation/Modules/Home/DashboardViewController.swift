@@ -8,10 +8,14 @@
 
 import UIKit
 
+
+
 class DashboardViewController: UIViewController {
-   
-    @IBOutlet weak var prepaidBalanceView: CMView!
-    @IBOutlet weak var violationsBalanceView: CMView!
+    
+    @IBOutlet weak var tbleView: UITableView!
+    private var tabWidgetCell:TabWidgetTableViewCell?
+    private var headerCell:headerTableViewCell?
+    private var paymentInfoCell:PaymentInfoTableViewCell?
     
     var nixieFlag = true
     var firstTimeUser = true
@@ -35,8 +39,6 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepaidBalanceView.configure(with: 4.0, borderColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.1))
-        violationsBalanceView.configure(with: 4.0, borderColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.1))
         
         if firstTimeUser == true {
             if let storyboard = self.storyboard {
@@ -70,11 +72,111 @@ class DashboardViewController: UIViewController {
                 nixieFlag = false
             }
         }
+        setupTableView()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+        
+    func setupTableView(){
+        //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
+        //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
+        tbleView.estimatedRowHeight = 100
+        tbleView.rowHeight = UITableView.automaticDimension
+        tbleView.keyboardDismissMode = .onDrag
+        
     }
 }
 
+extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 2 {
+            return 88
+        }
+        if indexPath.row == 1 {
+            return 295
+        }
+        if indexPath.row == 3 {
+            return 230
+        }
+        if indexPath.row == 4{
+            return 85
+        }
+        return 295
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cellIdentifier = ""
+        
+        switch indexPath.row {
+            
+        case 0:
+            cellIdentifier = "HomeHeaderCell"
+            headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
+            return headerCell!
+            
+        case 1:
+            cellIdentifier = "paymentSummaryCell"
+            paymentInfoCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PaymentInfoTableViewCell
+            return paymentInfoCell!
+            
+        case 4:
+            cellIdentifier = "Widget"
+            tabWidgetCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TabWidgetTableViewCell
+            tabWidgetCell?.tabWidgetDelegate = self
+            return tabWidgetCell!
+        case 3:
+            cellIdentifier = "NewsRoom"
+        default:
+            cellIdentifier = "TransactionCell"
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        
+        return cell!
+    }
+    
+}
 
+extension DashboardViewController: TabWidgetCelldelegate {
+    
+    func tollFacilitesClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    func travelToolsClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    func websiteClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+}

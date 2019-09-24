@@ -139,13 +139,14 @@ extension LoginMethodsTableViewCell: ApolloTextInputFieldDelegate {
     }
     
     func lawTextFieldDidEndEditing(textField: ApolloTextInputField) {
-        validateInput()
+        
     }
     
     func lawTextFieldDidChange(textField: ApolloTextInputField) {
     }
     
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        validateInput()
         return true
     }
     

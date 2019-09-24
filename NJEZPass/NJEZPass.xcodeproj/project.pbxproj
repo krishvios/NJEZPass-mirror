@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A02ABDD233A219C000D0B67 /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */; };
+		2A02ABDF233A21AE000D0B67 /* PaymentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */; };
 		2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */; };
 		2A4F46E12334ED9C00A31806 /* EmailConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */; };
 		2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */; };
@@ -319,6 +321,8 @@
 		0F9D9F0C5404090149E1AD62 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D71748B6717B0DF1A321A6 /* Pods-Platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Platform/Pods-Platform.debug.xcconfig"; sourceTree = "<group>"; };
 		254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
+		2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityQuestionsVC.swift; sourceTree = "<group>"; };
 		2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfirmationVC.swift; sourceTree = "<group>"; };
 		2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordVC.swift; sourceTree = "<group>"; };
@@ -709,6 +713,8 @@
 				9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */,
 				9BC321DF2334F021006B42DB /* UpdateAddressViewController.swift */,
 				9BC321E12334F4CF006B42DB /* CountryCell.swift */,
+				2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */,
+				2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2040,6 +2046,7 @@
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				F90829172339B82600C6C37E /* PayNowVC.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
+				2A02ABDD233A219C000D0B67 /* headerTableViewCell.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				9BC321E22334F4CF006B42DB /* CountryCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
@@ -2076,6 +2083,7 @@
 				42B493882317DBAC00E9B1A0 /* CMLabel.swift in Sources */,
 				429BAD0123008BC60087DBAD /* IRouter.swift in Sources */,
 				429BAD2D23008EE60087DBAD /* VehiclesViewController.swift in Sources */,
+				2A02ABDF233A21AE000D0B67 /* PaymentInfoTableViewCell.swift in Sources */,
 				42B493862317DBAC00E9B1A0 /* CMNavigationController.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
 				9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */,
