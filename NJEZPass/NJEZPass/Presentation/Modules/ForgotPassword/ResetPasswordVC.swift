@@ -124,9 +124,7 @@ class ResetPasswordVC: UIViewController {
 
 extension ResetPasswordVC: ApolloTextInputFieldDelegate {
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == emailidInputField {
-            validateInput()
-        }
+        validateInput()
         return true
     }
     

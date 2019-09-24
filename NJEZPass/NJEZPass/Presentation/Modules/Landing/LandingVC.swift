@@ -30,6 +30,14 @@ class LandingVC:  UIViewController {
     private var loginMethodcell:LoginMethodsTableViewCell?
     private var moreContentcell:MoreContentTableViewCell?
     private var tabWidgetCell:TabWidgetTableViewCell?
+    private var gradientCell:GradientViewTableViewCell?
+    
+    lazy fileprivate var languageSelection: CMPickerView! = {
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tbleView.frame.size.height-150, width: self.view.frame.size.width, height: 150))
+        pickerView.pickerArray = ["English","Spanish"]
+        pickerView.viewDelegate = self
+        return pickerView
+    }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -104,6 +112,9 @@ extension LandingVC: UITableViewDelegate,UITableViewDataSource {
             
         case 0:
             cellIdentifier = "LoginBackGround"
+            gradientCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? GradientViewTableViewCell
+            gradientCell?.gradientDelegate = self
+            return gradientCell!
         case 1:
             cellIdentifier = "LoginMethods"
             
@@ -149,8 +160,12 @@ extension LandingVC: LoginMethodsCellDelegate {
         //
         //            router?.perform(viewModel: viewModel)
         
-//        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
-        
+        //        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
+    }
+    
+    
+    func loginClicked(_ sender: Any) {
+        self.performSegue(withIdentifier: "showDashboard", sender: self)
     }
     
     @IBAction func languageSelectionClick(_ sender: Any) {
@@ -170,7 +185,7 @@ extension LandingVC: LoginMethodsCellDelegate {
     }
     
     func forgotPasswordClicked(_ sender: Any) {
-       
+        
     }
     
     func forgotUserNameCllicked(_ sender: Any) {
@@ -200,7 +215,7 @@ extension LandingVC: MoreContentCellDelegate {
 }
 
 extension LandingVC: TabWidgetCelldelegate {
-  
+    
     func tollFacilitesClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -246,6 +261,7 @@ extension LandingVC: ILoginViewable {
         interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
         //        router?.perform(viewModel: viewModel)
     }
+    
     func loginFailed(viewModel: AuthorizeModel.PresentionModel) {
         //        progressActivity.stopAnimating()
         MBProgressHUD.hide(for: self.view, animated: true)
@@ -253,11 +269,13 @@ extension LandingVC: ILoginViewable {
         viewModel.route = Route(id: AppStringKeys.loginFailure, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.present)
         router?.perform(viewModel: viewModel)
     }
+    
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
         
         router?.perform(viewModel: viewModel)
     }
+    
     func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
         router?.perform(viewModel: viewModel)
@@ -271,5 +289,28 @@ extension LandingVC: IRoutable {
     
     func popCurrent() {
         // dismiss current viewcontroller like back action
+    }
+}
+
+extension LandingVC:GradientDelegateCell {
+    func localizationSelect(_sender: Any) {
+        //   self.view.addSubview(languageSelection)
+        if view.subviews.contains(self.languageSelection){
+            self.languageSelection.isHidden = false
+        } else {
+            self.view.addSubview(languageSelection)
+        }
+    }
+}
+
+extension LandingVC:CMPickerViewDelegate {
+    func doneClicked(selectedString: String) {
+        print("selectedString = \(selectedString)")
+        
+        self.languageSelection.isHidden = true
+    }
+    
+    func cancelClicked() {
+        self.languageSelection.isHidden = true
     }
 }
