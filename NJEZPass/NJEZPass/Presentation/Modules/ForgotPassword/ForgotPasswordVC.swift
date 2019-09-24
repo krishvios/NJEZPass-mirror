@@ -29,7 +29,7 @@ class ForgotPasswordVC: UIViewController {
         zipCodeinputField.delegate = self
         
         toggleLoginButtonColor()
-        setNavBar()
+      //  setNavBar()
         setKeyBoardforText()
     }
     

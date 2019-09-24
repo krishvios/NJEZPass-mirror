@@ -18,7 +18,7 @@ class EmailConfirmationVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = false
-        setNavBar()
+       // setNavBar()
     }
     
     func setNavBar() {
