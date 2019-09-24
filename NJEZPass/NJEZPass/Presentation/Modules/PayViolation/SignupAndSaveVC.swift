@@ -11,6 +11,7 @@ import UIKit
 enum FlowKeys: String {
     case disputeFlow
     case payNowFlow
+    case forgotUsernameFlow
 }
 
 class SignupAndSaveVC: UIViewController {
@@ -42,6 +43,13 @@ class SignupAndSaveVC: UIViewController {
             confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
             skipButton.isHidden = true
             backButton.isHidden = true
+        case FlowKeys.forgotUsernameFlow.rawValue:
+            button.setTitle("OK", for: .normal)
+            confirmationDesc.text = "We’ve sent your username to the email address on file."
+            confirmationTitle.text = "Username Sent"
+            confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
+            skipButton.isHidden = true
+            backButton.isHidden = true
         default:
             button.setTitle("SIGN UP", for: .normal)
             confirmationDesc.text = "Sign up with E-ZPass today, and save 20% on your bill."
@@ -51,13 +59,26 @@ class SignupAndSaveVC: UIViewController {
             backButton.isHidden = false
         }
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        switch flowString {
+        case FlowKeys.forgotUsernameFlow.rawValue:
+            self.navigationController?.navigationBar.isHidden = true
+        case FlowKeys.payNowFlow.rawValue:
+            self.navigationController?.navigationBar.isHidden = true
+        default:
+             self.navigationController?.navigationBar.isHidden = false
+        }
+    }
     @IBAction func signUpTapped(_ sender: Any) {
         
         switch flowString {
         case FlowKeys.disputeFlow.rawValue: 
             self.performSegue(withIdentifier: "showSelectPayment", sender: nil)
         case FlowKeys.payNowFlow.rawValue:
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        case FlowKeys.forgotUsernameFlow.rawValue:
             let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
             let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
             self.navigationController?.pushViewController(loginVC, animated: true)
