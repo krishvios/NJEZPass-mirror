@@ -30,6 +30,7 @@ enum AppUIElementKeys {
     static let login = "LoginViewController"
     static let home = "TabBarViewController"
     static let deviceVerification = "DeviceVerificationVC"
+    static let securityQuestions = "QuestionsViewController"
 }
 
 enum AppKey{
