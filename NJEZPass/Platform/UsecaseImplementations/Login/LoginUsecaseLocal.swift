@@ -11,6 +11,9 @@ import Entities
 import Domain
 
 class LoginUsecaseLocal: ILoginUsecase {
+    func loadDynamicData(request: DynamicCacheModel.Request) {
+    }
+    
     func authorizeUser(request: AuthorizeModel.Request) {
         
     }

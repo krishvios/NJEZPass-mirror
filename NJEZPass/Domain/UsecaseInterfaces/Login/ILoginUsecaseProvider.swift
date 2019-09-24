@@ -9,4 +9,5 @@
 import Foundation
 public protocol ILoginUsecaseProvider {
     func provideLoginUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> ILoginUsecase
+    func provideLoadDynamicDataUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> ILoginUsecase
 }

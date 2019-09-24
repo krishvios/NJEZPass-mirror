@@ -28,6 +28,9 @@ public enum AuthorizeModel {
     public struct Response: Codable {
         public var authorizeUser: AuthorizeUser?
         public var failureMessage: String?
+        public var nixieFlag: String?
+        public var suggestedAmount: String?
+        public var firstTimeLogin: String?
         public var route: Route?
     }
     
@@ -38,6 +41,9 @@ public enum AuthorizeModel {
     public struct PresentionModel {
         public var message: String?
         public var serviceId: String?
+        public var nixieFlag: String?
+        public var suggestedAmount: String?
+        public var firstTimeLogin: String?
         public var route: Route?
         public init() {
             

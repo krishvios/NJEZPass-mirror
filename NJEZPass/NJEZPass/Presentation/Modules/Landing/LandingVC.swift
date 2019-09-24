@@ -19,6 +19,8 @@ protocol ILoginViewable {
     func loginFailed(viewModel: AuthorizeModel.PresentionModel)
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel)
     func userProfileFailed(viewModel: ProfileModel.PresentionModel)
+    func loadDynamicDataSuccess()
+    func loadDynamicDataFailed()
 }
 
 class LandingVC:  UIViewController {
@@ -51,6 +53,9 @@ class LandingVC:  UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        //online login flow
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
     }
     
     func setupTableView(){
@@ -261,6 +266,13 @@ extension LandingVC: ILoginViewable {
     func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
         router?.perform(viewModel: viewModel)
+    }
+    
+    func loadDynamicDataSuccess() {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    func loadDynamicDataFailed() {
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 }
 
