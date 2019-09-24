@@ -23,6 +23,8 @@
 		4216D9232339F88A00B3488F /* CMDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9212339F88900B3488F /* CMDevice.swift */; };
 		4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
 		4216D9252339F88D00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
+		4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D928233A007B00B3488F /* DynamicCacheModel.swift */; };
+		4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D92A233A0F4A00B3488F /* CMUtility.swift */; };
 		429BAD0123008BC60087DBAD /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF023008BC60087DBAD /* IRouter.swift */; };
 		429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF123008BC60087DBAD /* IRoutable.swift */; };
 		429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BACF323008BC60087DBAD /* LoginInteractor.swift */; };
@@ -336,6 +338,8 @@
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		4216D9212339F88900B3488F /* CMDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMDevice.swift; sourceTree = "<group>"; };
 		4216D9222339F88900B3488F /* CMSHAHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSHAHash.swift; sourceTree = "<group>"; };
+		4216D928233A007B00B3488F /* DynamicCacheModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCacheModel.swift; sourceTree = "<group>"; };
+		4216D92A233A0F4A00B3488F /* CMUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMUtility.swift; sourceTree = "<group>"; };
 		429BACF023008BC60087DBAD /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
 		429BACF123008BC60087DBAD /* IRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRoutable.swift; sourceTree = "<group>"; };
 		429BACF323008BC60087DBAD /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -963,6 +967,7 @@
 				42BE355D22FBF7DE00AAF8E3 /* Localizer.swift */,
 				42BE355E22FBF7DE00AAF8E3 /* FieldValidator.swift */,
 				42BE355F22FBF7DE00AAF8E3 /* AppStringKeys.swift */,
+				4216D92A233A0F4A00B3488F /* CMUtility.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 		42BE357722FBF94400AAF8E3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				4216D928233A007B00B3488F /* DynamicCacheModel.swift */,
 				42B2D7552338C4C40081C948 /* AuthorizeModel.swift */,
 				42BE357822FBF94400AAF8E3 /* LoginModel.swift */,
 			);
@@ -2058,6 +2064,7 @@
 				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				42B4938D2317DBAC00E9B1A0 /* CMStackView.swift in Sources */,
+				4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				429BAD0E23008BC60087DBAD /* LoginRouter.swift in Sources */,
 				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
@@ -2134,6 +2141,7 @@
 				429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */,
 				42BE358822FBF94400AAF8E3 /* APIRequest.swift in Sources */,
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
+				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
 				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,
 				429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */,
 				429C6A15230FCD240055CFBD /* EditProfileModel.swift in Sources */,

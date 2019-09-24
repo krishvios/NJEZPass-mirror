@@ -29,6 +29,10 @@ extension LoginPresenter: IResponseHandler {
                 viewController?.loginFailed(viewModel: viewModel)
             } else {
                 
+                CMUtility.firstTimeLogin = responseModel.firstTimeLogin
+                CMUtility.suggestedAmount = responseModel.suggestedAmount
+                CMUtility.nixieFlag = responseModel.nixieFlag
+                
                 viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
                 viewController?.loginSuccess(viewModel: viewModel)
             }
@@ -49,6 +53,11 @@ extension LoginPresenter: IResponseHandler {
                 viewController?.userProfileFailed(viewModel: viewModel)
             }
             print(responseModel)
+        }
+        else if let responseModel = response as? DynamicCacheModel.Response {
+            
+            CMUtility.dynamicPageLoad = responseModel.dynamicPageLoad
+            viewController?.loadDynamicDataSuccess()
         }
     }
     

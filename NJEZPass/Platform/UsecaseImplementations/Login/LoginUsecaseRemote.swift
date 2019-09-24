@@ -11,7 +11,12 @@ import Entities
 import Domain
 
 internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
+    
     var responseHandler: IResponseHandler
+    var nixieFlag: String?
+    var suggestedAmount: String?
+    var firstTimeLogin: String?
+    
     init(handler: IResponseHandler) {
         self.responseHandler = handler
     }
@@ -25,6 +30,11 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
                 
                 let responseModel = jsonData as? LoginModel.Response
                 let accessId = responseModel?.loginUser!.accessId
+                
+                self.nixieFlag = responseModel?.loginUser?.nixieFlag
+                self.suggestedAmount = responseModel?.loginUser?.suggestedAmount
+                self.firstTimeLogin = responseModel?.loginUser?.firstTimeLogin
+                
                 let token: String = APIConstants.DefaultParams.vendorID + "|" + accessId! + "|" + APIConstants.DefaultParams.token
                 
                 let verificationToken: String = token.sha256().lowercased()
@@ -48,11 +58,31 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
             switch response {
             case .onSuccess(let jsonData):
                 PlatformUtility.serviceId = jsonData.authorizeUser?.serviceId
+                var responseModel = jsonData
+                responseModel.suggestedAmount = self.suggestedAmount
+                responseModel.nixieFlag = self.nixieFlag
+                responseModel.firstTimeLogin = self.firstTimeLogin
+
+                self.responseHandler.onSuccess(response: responseModel)
+            case .onFailure(let err):
+                self.responseHandler.onError(err: err)
+            }
+        })
+    }
+    
+    func loadDynamicData(request: DynamicCacheModel.Request) {
+        
+        let requestAPI = APIRequest<DynamicCacheModel.Request>(method: .post, url: APIConstants.ServiceNames.loadDynamicCache, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        
+        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
+            switch response {
+            case .onSuccess(let jsonData):
                 self.responseHandler.onSuccess(response: jsonData)
             case .onFailure(let err):
                 self.responseHandler.onError(err: err)
             }
         })
+        
     }
 
 }

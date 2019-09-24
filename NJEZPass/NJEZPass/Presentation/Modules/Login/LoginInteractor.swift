@@ -16,6 +16,7 @@ import Domain
 import Platform
 
 protocol ILoginInteractable {
+    func loadDynamicData(action:String, requestType: Constants.RequestCategory)
     func login(username: String, password: String, requestType: Constants.RequestCategory)
     func getProfileOverview(action: String, requestType: Constants.RequestCategory)
 }
@@ -27,6 +28,7 @@ class LoginInteractor {
 }
 
 extension LoginInteractor: ILoginInteractable {
+    
     func login(username: String, password: String, requestType: Constants.RequestCategory) {
         
 //        verificationToken=TEST123|1.0|TEST|1.0|ACSInrixTrafficApp
@@ -51,5 +53,16 @@ extension LoginInteractor: ILoginInteractable {
             interfaceObj.getProfileOverview(action: action)
         }
     }
+    
+    func loadDynamicData(action:String, requestType: Constants.RequestCategory) {
+        
+        let request = DynamicCacheModel.Request(action: action)
+        
+        if let responseHandler = presenter {
+            let interfaceObj = loginUsecaseProvider.provideLoadDynamicDataUsecase(requestType: requestType, handler: responseHandler)
+            interfaceObj.loadDynamicData(request: request)
+        }
+    }
+
     
 }

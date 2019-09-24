@@ -11,6 +11,13 @@ import Entities
 import Domain
 
 open class LoginUsecaseProvider: ILoginUsecaseProvider {
+    public func provideLoadDynamicDataUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> ILoginUsecase {
+        switch requestType {
+        case .remote:
+            return LoginUsecaseRemote<DynamicCacheModel.Response>(handler: handler)
+        }
+    }
+    
     public init() {
 
     }
