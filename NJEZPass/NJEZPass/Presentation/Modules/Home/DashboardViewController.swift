@@ -133,7 +133,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             cellIdentifier = "HomeHeaderCell"
             headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
             headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
-            headerCell?.amountLbl.text = detailInfo?.currentBalance
+            headerCell?.amountLbl.text = "$ \(detailInfo?.currentBalance ?? "")"
             return headerCell!
             
         case 1:
