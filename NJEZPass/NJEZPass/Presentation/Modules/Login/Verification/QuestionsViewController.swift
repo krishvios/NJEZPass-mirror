@@ -118,11 +118,7 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     @IBAction func backClicked(_ sender:UIButton) {
-        if (self.navigationController != nil) {
-            self.navigationController?.popViewController(animated: true)
-        } else {
-            self.dismiss(animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     func toggleAnswers(_ tableView:UITableView, indexPath: IndexPath) {

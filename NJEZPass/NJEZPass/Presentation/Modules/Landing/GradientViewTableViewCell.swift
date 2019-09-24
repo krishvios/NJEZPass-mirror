@@ -8,17 +8,27 @@
 
 import UIKit
 
-class GradientViewTableViewCell: UITableViewCell {
+protocol GradientDelegateCell:class {
+    func localizationSelect(_sender: Any)
+}
 
+class GradientViewTableViewCell: UITableViewCell {
+    
+    weak  var gradientDelegate : GradientDelegateCell?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    @IBAction func localizationSelect(_ sender: Any) {
+        gradientDelegate?.localizationSelect(_sender: sender)
+    }
+    
 }
