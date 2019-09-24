@@ -348,7 +348,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="uAe-hr-oLN">
             <objects>
-                <tabBarController storyboardIdentifier="MyAccountView" id="lyI-Pf-jTF" customClass="TabBarViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="lyI-Pf-jTF" customClass="TabBarViewController" customModule="NJEZPass" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byJ-0E-wHH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
