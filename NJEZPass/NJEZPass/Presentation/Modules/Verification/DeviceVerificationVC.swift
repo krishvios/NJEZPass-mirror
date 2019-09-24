@@ -19,15 +19,15 @@ class DeviceVerificationVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.addNavBarImage()
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate,
-            let personalInfo = delegate.detailInfo?.personalInformation,
-            let email = personalInfo.emailAddress,
-            let mobile = personalInfo.cellPhone else {
-                return
-        }
+//        guard let delegate = UIApplication.shared.delegate as? AppDelegate,
+//            let personalInfo = delegate.detailInfo?.personalInformation,
+//            let email = personalInfo.emailAddress,
+//            let mobile = personalInfo.cellPhone else {
+//                return
+//        }
         
-        handleEmailProtection(with: email)
-        handleMobileNumberProtection(with: mobile)
+//        handleEmailProtection(with: email)
+//        handleMobileNumberProtection(with: mobile)
     }
     
     override func viewWillAppear(_ animated: Bool) {

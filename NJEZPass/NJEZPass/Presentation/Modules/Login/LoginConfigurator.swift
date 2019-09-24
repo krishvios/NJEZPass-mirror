@@ -11,7 +11,7 @@ class LoginConfigurator {
     var interactor: LoginInteractor?
     var presenter: LoginPresenter?
     var router: LoginRouter?
-    func build(viewController: LoginViewController) {
+    func build(viewController: LandingVC) {
         interactor = LoginInteractor()
         presenter = LoginPresenter()
         router = LoginRouter(delegate: viewController)

@@ -19,7 +19,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func getPaymentMethods(request: PaymentMethodsModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<PaymentMethodsModel.Request>(method: .get, url: APIConstants.ServiceNames.getPaymentMethods, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -34,7 +34,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func addBankAccount(request: BankAccountModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<BankAccountModel.Request>(method: .post, url: APIConstants.ServiceNames.modifyBankAccount, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -49,7 +49,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func editBankAccount(request: BankAccountModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<BankAccountModel.Request>(method: .put, url: APIConstants.ServiceNames.modifyBankAccount, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -65,7 +65,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func deleteBankAccount(request: BankAccountModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<BankAccountModel.Request>(method: .delete, url: APIConstants.ServiceNames.modifyBankAccount, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -80,7 +80,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func addCreditCard(request: CreditCardModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<CreditCardModel.Request>(method: .post, url: APIConstants.ServiceNames.modifyCreditCard, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -96,7 +96,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func editCreditCard(request: CreditCardModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<CreditCardModel.Request>(method: .put, url: APIConstants.ServiceNames.modifyCreditCard, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
@@ -111,7 +111,7 @@ internal class PaymentMethodsUsecaseRemote<T: Codable>: IPaymentMethodsUsecase {
     
     func deleteCreditCard(request: CreditCardModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<CreditCardModel.Request>(method: .delete, url: APIConstants.ServiceNames.modifyCreditCard, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in

@@ -9,27 +9,30 @@
 import UIKit
 public enum ProfileModel {
     public struct Request: Codable {
+        
+        public var action: String?
+        public var serviceId: String?
+        
+        public init(action: String,serviceId: String) {
+            self.action = action
+            self.serviceId = serviceId
+        }
+        
         public init() {
         }
     }
-
-    public struct Response: Codable {
-        
-        public var accountInformation: AccountInformation?
-        public var financialInformation: FinancialInformation?
-        public var replenishmentInformation: ReplenishmentInformation?
-        public var personalInformation: PersonalInformation?
-        public var failureMessage: String?
-        
+    
+    // MARK: - Response
+   public struct Response: Codable {
+        public var accountDetail: AccountDetail?
+        public var statusCode, message: String?
         public var route: Route?
-       
-        public init(accountInformation: AccountInformation?, financialInformation: FinancialInformation?, replenishmentInformation: ReplenishmentInformation?, personalInformation: PersonalInformation?, failureMessage: String?, route: Route?) {
+        
+        public init(accountDetail: AccountDetail, statusCode: String, message: String, route: Route) {
             
-            self.accountInformation = accountInformation
-            self.financialInformation = financialInformation
-            self.replenishmentInformation = replenishmentInformation
-            self.personalInformation = personalInformation
-            self.failureMessage = failureMessage
+            self.accountDetail = accountDetail
+            self.statusCode = statusCode
+            self.message = message
             self.route = route
         }
         
@@ -37,74 +40,47 @@ public enum ProfileModel {
         }
     }
     
-    // MARK: - AccountInformation
-    public struct AccountInformation: Codable {
-        public var status, number, type: String?
-        public var openViolationCount: Int?
-        public var challengeQuestion, challengeAnswer, password: String?
-        
-        public init(status: String?, number: String?, type: String?, openViolationCount: Int?, challengeQuestion: String?, challengeAnswer: String?, password: String?) {
-           
-            self.status = status
-            self.number = number
-            self.type = type
-            self.openViolationCount = openViolationCount
-            self.challengeQuestion = challengeQuestion
-            self.challengeAnswer = challengeAnswer
-            self.password = password
-        }
+    // MARK: - AccountDetail
+    public struct AccountDetail: Codable {
+        public var currentBalance, openViolCount, accountClosingDate, accountOpeningDate: String?
+        public var username: String?
+        public var messageCount: Int?
+        public var accountNumber, addressLine1, addressLine2, city: String?
+        public var state, zipCode, emailAddress, balancePPTL: String?
+        public var lastReplenishedDate, replenishedAmount, replenishedThreshold, fullName: String?
+        public var prepaidTools, volationsBalance: String?
+        public var emailTemp: Bool?
+        public var noOfTags, noOfVehicles, rebillPayType, currentMax: String?
+        public var postpaidBalance, phoneNumberCell: String?
+        public var tollTxList: [TollTxList]?
+        public var commuterTripList: [CommuterTripList]?
         
         public init() {
+            
         }
-        
     }
     
-    // MARK: - FinancialInformation
-    public struct FinancialInformation: Codable {
-        public var financialStatus, statementDeliveryInterval, statementDeliveryMethod: String?
-        public var tollBalance, violationBalance, currentBalance: Int?
+    // MARK: - CommuterTripList
+    public struct CommuterTripList: Codable {
+        public var accountTag, planType, tripsUsed, tripsLeft: String?
+        public var startDate, endDate: String?
     }
     
-    // MARK: - PersonalInformation
-    public struct PersonalInformation: Codable {
-        public var userName, title, firstName, middleInitial: String?
-        public var lastName, suffix, addressLine1, addressLine2: String?
-        public var city, state, zipCode, zipCodePlus: String?
-        public var country, daytimePhone, cellPhone, eveningPhone: String?
-        public var fax, emailAddress, mobileAlerts, surveyOptIn: String?
-    }
-    
-    // MARK: - ReplenishmentInformation
-    public struct ReplenishmentInformation: Codable {
-        public var type: String?
-        public var automaticReplenishmentThreshold: Int?
-        public var lastReplenishedDate: String?
-        public var lastReplenishedAmount: Int?
+    // MARK: - TollTxList
+    public struct TollTxList: Codable {
+        public var transactionDate, transponder, entryPlaza, entryLane: String?
+        public var exitPlaza, exitLane, tollTxListDescription, amount: String?
+        public var transactionTime, cscLookupKey, exitPlazaName, tagorplate: String?
+        public var agencyShortName: String?
     }
     
     public struct PresentionModel {
         public var message: String?
-        public var detailInfo: DetailInfo?
-        
-        public struct DetailInfo {
-            public var personalInformation: PersonalInformation?
-            public var financialInformation: FinancialInformation?
-            
-            public init(personalInfo: PersonalInformation, financialInfo: FinancialInformation) {
-                self.personalInformation = personalInfo
-                self.financialInformation = financialInfo
-            }
-        }
+        public var accountDetail: AccountDetail?
         public var route: Route?
         public init() {
             
         }
         
-        public init(message: String?, detailInfo: DetailInfo?, route: Route?) {
-            
-            self.message = message
-            self.detailInfo = detailInfo
-            self.route = route
-        }
     }
 }

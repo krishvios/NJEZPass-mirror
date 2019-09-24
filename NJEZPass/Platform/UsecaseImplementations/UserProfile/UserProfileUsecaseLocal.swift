@@ -16,7 +16,7 @@ class UserProfileUsecaseLocal: IUserProfileUsecase {
         self.responseHandler = handler
     }
     
-    func getProfileOverview(accessToken: String) {
+    func getProfileOverview(action: String) {
         
     }
 }

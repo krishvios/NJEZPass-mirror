@@ -10,7 +10,7 @@ import UIKit
 import Entities
 
 public protocol IUserProfileUsecase {
-    func getProfileOverview(accessToken: String)
+    func getProfileOverview(action: String)
     //digital envelop
     //forgot pwd
 }

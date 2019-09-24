@@ -11,6 +11,10 @@ import Entities
 import Domain
 
 class LoginUsecaseLocal: ILoginUsecase {
+    func authorizeUser(request: AuthorizeModel.Request) {
+        
+    }
+    
     var responseHandler: IResponseHandler
     init(handler: IResponseHandler) {
         self.responseHandler = handler

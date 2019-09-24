@@ -14,20 +14,43 @@ import Apollo_iOS
 import MBProgressHUD
 import KeychainAccess
 
+protocol ILoginViewable {
+    func loginSuccess(viewModel: AuthorizeModel.PresentionModel)
+    func loginFailed(viewModel: AuthorizeModel.PresentionModel)
+    func userProfileSuccess(viewModel: ProfileModel.PresentionModel)
+    func userProfileFailed(viewModel: ProfileModel.PresentionModel)
+}
 
 class LandingVC:  UIViewController {
     
     @IBOutlet weak var tbleView: UITableView!
     var interactor: ILoginInteractable?
     var router: IRouter?
+    
     private var loginMethodcell:LoginMethodsTableViewCell?
     private var moreContentcell:MoreContentTableViewCell?
     private var tabWidgetCell:TabWidgetTableViewCell?
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        let configurator = LoginConfigurator()
+        configurator.build(viewController: self)
+        interactor = configurator.interactor
+        router = configurator.router
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-       
     }
     
     func setupTableView(){
@@ -39,6 +62,7 @@ class LandingVC:  UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        
     }
 }
 
@@ -110,7 +134,22 @@ extension LandingVC: UITableViewDelegate,UITableViewDataSource {
 
 extension LandingVC: LoginMethodsCellDelegate {
     
-    func loginClicked(_ sender: Any) {
+    func loginClicked(username: String?, password: String?) {
+        
+        self.view.endEditing(true)
+        self.resignFirstResponder()
+        
+        //online login flow
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        interactor?.login(username: username!, password: password!, requestType: .remote)
+        
+        //            direct login flow in case of api error
+        //            var viewModel = ProfileModel.PresentionModel()
+        //            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+        //
+        //            router?.perform(viewModel: viewModel)
+        
+//        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
         
     }
     
@@ -194,5 +233,43 @@ extension LandingVC: TabWidgetCelldelegate {
         } else {
             UIApplication.shared.openURL(url)
         }
+    }
+}
+
+
+
+extension LandingVC: ILoginViewable {
+    func loginSuccess(viewModel: AuthorizeModel.PresentionModel) {
+        //        progressActivity.stopAnimating()
+        
+        //        MBProgressHUD.hide(for: self.view, animated: true)
+        interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
+        //        router?.perform(viewModel: viewModel)
+    }
+    func loginFailed(viewModel: AuthorizeModel.PresentionModel) {
+        //        progressActivity.stopAnimating()
+        MBProgressHUD.hide(for: self.view, animated: true)
+        var viewModel = viewModel
+        viewModel.route = Route(id: AppStringKeys.loginFailure, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.present)
+        router?.perform(viewModel: viewModel)
+    }
+    func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        
+        router?.perform(viewModel: viewModel)
+    }
+    func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        router?.perform(viewModel: viewModel)
+    }
+}
+
+extension LandingVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }

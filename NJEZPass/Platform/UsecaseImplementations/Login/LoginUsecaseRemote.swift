@@ -17,36 +17,42 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
     }
     func login(request: LoginModel.Request) {
         
-        let param = [
-            "grant_type": "password",
-            "client_id": "NJ_EZ_Pass",
-            "client_secret":"N4pBHuCUgw8D2BdZtSMX2jexxw3tp7",
-            "agencyID":"1",
-            "loginType":"username",
-            "value":request.userName!,
-            "password":request.password!
-            ] as [String : String]
+        let requestAPI = APIRequest<LoginModel.Request>(method: .post, url: APIConstants.ServiceNames.loginUser, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
-        let requestAPI = APIRequest<LoginModel.Request>(method: .post, url: APIConstants.ServiceNames.loginUser, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: param)
-        
-//        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
-//            switch response {
-//            case .onSuccess(let jsonData):
-//                self.responseHandler.onSuccess(response: jsonData)
-//            case .onFailure(let err):
-//                self.responseHandler.onError(err: err)
-//            }
-//        })
-        
-        APIService.shared.requestMuliPartAPI(request: requestAPI, decodingType: T.self, completion: { response in
+        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
             switch response {
             case .onSuccess(let jsonData):
+                
                 let responseModel = jsonData as? LoginModel.Response
-                PlatformUtility.accessToken = "Bearer" + (responseModel?.access_token)!
+                let accessId = responseModel?.loginUser!.accessId
+                let token: String = APIConstants.DefaultParams.vendorID + "|" + accessId! + "|" + APIConstants.DefaultParams.token
+                
+                let verificationToken: String = token.sha256().lowercased()
+                
+                let request = AuthorizeModel.Request(action: APIConstants.ServiceNames.authorizeUser, vendorId: APIConstants.DefaultParams.vendorID, verificationToken: verificationToken, accessId: accessId!)
+                
+                self.authorizeUser(request:request)
+                
+            case .onFailure(let err):
+                self.responseHandler.onError(err: err)
+            }
+        })
+        
+    }
+    
+    func authorizeUser(request: AuthorizeModel.Request) {
+        
+        let authorizeAPI = APIRequest<AuthorizeModel.Request>(method: .post, url: APIConstants.ServiceNames.authorizeUser, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        
+        APIService.shared.requestAPI(request: authorizeAPI, decodingType: AuthorizeModel.Response.self, completion: { response in
+            switch response {
+            case .onSuccess(let jsonData):
+                PlatformUtility.serviceId = jsonData.authorizeUser?.serviceId
                 self.responseHandler.onSuccess(response: jsonData)
             case .onFailure(let err):
                 self.responseHandler.onError(err: err)
             }
         })
     }
+
 }
