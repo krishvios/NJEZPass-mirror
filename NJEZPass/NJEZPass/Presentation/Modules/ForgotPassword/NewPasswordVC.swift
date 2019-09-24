@@ -158,10 +158,7 @@ class NewPasswordVC: UIViewController {
 extension NewPasswordVC: ApolloTextInputFieldDelegate {
     
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let newPassword = newPasswordInputField.text,let confirmPassword = confirmPasswordInputField.text, newPassword.count > 0  && confirmPassword.count > 0
-        {
-            validateInput()
-        }
+        validateInput()
         return true
     }
     

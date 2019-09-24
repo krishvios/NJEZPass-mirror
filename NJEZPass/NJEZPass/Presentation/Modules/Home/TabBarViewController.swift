@@ -29,4 +29,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
             }
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 }

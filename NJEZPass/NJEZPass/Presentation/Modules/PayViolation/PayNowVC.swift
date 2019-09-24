@@ -74,6 +74,10 @@ extension PayNowVC: PayNowTableViewCellDelegate {
 
 extension PayNowVC: CancelButtonTableViewCellDelegate {
     func cancelButtonClicked() {
-        self.navigationController?.popViewController(animated: true)
+        if let payViolationVC = navigationController!.viewControllers.filter({ $0 is PayViolationVC }).first {
+            navigationController?.popToViewController(payViolationVC, animated: true)
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
