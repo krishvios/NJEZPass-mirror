@@ -51,13 +51,13 @@ class ProfileNavigationCell: UITableViewCell {
     }
     
     public func setAvailableBalance() {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        self.availableBalance.text = "$ \(String(describing: appDelegate!.detailInfo?.financialInformation?.currentBalance))"
+//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        self.availableBalance.text = "$ \(String(describing: appDelegate!.detailInfo?.financialInformation?.currentBalance))"
     }
     
     public func setViolationsBalance() {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        self.violationsBalance.text = "$ \(String(describing: appDelegate!.detailInfo?.financialInformation?.violationBalance))"
+//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        self.violationsBalance.text = "$ \(String(describing: appDelegate!.detailInfo?.financialInformation?.violationBalance))"
     }
 
     /*

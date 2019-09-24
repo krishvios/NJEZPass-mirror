@@ -34,7 +34,7 @@ class LoginAPITests: XCTestCase {
         let usecase = provider.provideLoginUsecase(requestType: .remote, handler: self)
         
         var requestModal = LoginModel.Request ()
-        requestModal.userName = "peapods"
+        requestModal.loginType = "peapods"
         requestModal.password = "Welcome1"
         usecase.login(request: requestModal)
         waitForExpectations(timeout: 10) { (_) in
@@ -48,7 +48,7 @@ class LoginAPITests: XCTestCase {
         let usecase = provider.provideLoginUsecase(requestType: .remote, handler: self)
         
         var requestModal = LoginModel.Request ()
-        requestModal.userName = "peapods"
+        requestModal.loginType = "peapods"
         requestModal.password = "welcome"
         usecase.login(request: requestModal)
         waitForExpectations(timeout: 10) { (_) in
@@ -60,7 +60,7 @@ class LoginAPITests: XCTestCase {
 extension LoginAPITests : IResponseHandler {
     func onSuccess<T>(response: T) {
         if let res = response as? LoginModel.Response {
-            PlatformUtility.accessToken = res.access_token
+            PlatformUtility.serviceId = res.loginUser?.accessId
             self.loginResponse = res
         }
         responseExpectation?.fulfill()

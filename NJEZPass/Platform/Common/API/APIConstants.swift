@@ -11,16 +11,17 @@ import UIKit
 public struct APIConstants {
 
     public enum  HostUrl {
-        public static let prodUrl = "https://maas-test.services.conduent.com/"
-        public static let qaUrl = "https://maas-test.services.conduent.com/"
-        public static let devURL = "https://maas-test.services.conduent.com/"
-        public static let demoUrl = "https://maas-test.services.conduent.com/"
-        public static let local = "https://maas-test.services.conduent.com/"
+        public static let prodUrl = "http://10.36.20.45:9084/vectorwsweb/account/home/viewController.do?json=true"
+        public static let qaUrl = "http://10.36.20.45:9084/vectorwsweb/account/home/viewController.do?json=true"
+        public static let devURL = "http://10.36.20.45:9084/vectorwsweb/account/home/viewController.do?json=true"
+        public static let demoUrl = "http://10.36.20.45:9084/vectorwsweb/account/home/viewController.do?json=true"
+        public static let local = "http://10.36.20.45:9084/vectorwsweb/account/home/viewController.do?json=true"
     }
 
     public enum ServiceNames {
-        public static let profileOverview = "bosuser/api/account/overview"
-        public static let loginUser = "oauth/token"
+        public static let loginUser = "loginUser"
+        public static let authorizeUser = "authorizeUser"
+        public static let accountOverview = "getAccountDetails"
         public static let profileUpdate = "api/account/holderinfo"
         public static let getPaymentMethods = "api/account/paymentmethods"
         public static let modifyBankAccount = "api/account/paymentmethod/primary"
@@ -30,7 +31,10 @@ public struct APIConstants {
 
     public enum DefaultParams {
         public static let UUID: String = UIDevice.current.identifierForVendor!.uuidString
-        public static let electronicTransfer = "ELECTRONIC_TRANSFER"
+        public static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        public static let vendorID = "TEST123"
+        public static let systemVersion = UIDevice.current.systemVersion
+        public static let token = "ACSInrixTrafficApp"
         public static let deviceType = "IOS"
         public static let paymentTypeAll = "ALL"
         public static let mobile = "MOBILE"

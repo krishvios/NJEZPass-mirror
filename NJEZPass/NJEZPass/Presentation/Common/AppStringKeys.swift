@@ -28,7 +28,7 @@ enum AppRegExKeys {
 }
 enum AppUIElementKeys {
     static let login = "LoginViewController"
-    static let home = "HomeViewController"
+    static let home = "TabBarViewController"
     static let deviceVerification = "DeviceVerificationVC"
 }
 

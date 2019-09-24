@@ -114,7 +114,7 @@ class APIService: IAPIServicable {
             requestMuliPartAPI(request: request, decodingType: decodingType, completion: completion)
             return
         }
-        let baseUrl: String = self.baseURL + "/\(request.url)"
+        let baseUrl: String = self.baseURL
         guard HTTPMethod(rawValue: request.method.rawValue) != nil else {
             completion?(APIResponse.onFailure(error: APIError.general(error: nil)))
             return

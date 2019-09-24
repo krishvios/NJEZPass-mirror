@@ -19,7 +19,7 @@ internal class EditProfileUsecaseRemote<T: Codable>: IEditProfileUsecase {
     
     func editProfile(request: EditProfileModel.Request) {
         
-        let accessToken:String = PlatformUtility.accessToken!
+        let accessToken:String = PlatformUtility.serviceId!
         let requestAPI = APIRequest<EditProfileModel.Request>(method: .put, url: APIConstants.ServiceNames.profileUpdate, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in

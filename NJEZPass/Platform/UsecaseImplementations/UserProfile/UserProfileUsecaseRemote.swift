@@ -15,26 +15,19 @@ internal class UserProfileUsecaseRemote<T: Codable>: IUserProfileUsecase {
     init(handler: IResponseHandler) {
         self.responseHandler = handler
     }
-    func getProfileOverview(accessToken: String) {
+    func getProfileOverview(action: String) {
         
-        let requestAPI = APIRequest<ProfileModel.Request>(method: .get, url: APIConstants.ServiceNames.profileOverview, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        let request = ProfileModel.Request(action: action, serviceId: PlatformUtility.getserviceId()!)
         
-                APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
-                    switch response {
-                    case .onSuccess(let jsonData):
-                        self.responseHandler.onSuccess(response: jsonData)
-                    case .onFailure(let err):
-                        self.responseHandler.onError(err: err)
-                    }
-                })
+        let requestAPI = APIRequest<ProfileModel.Request>(method: .post, url: APIConstants.ServiceNames.accountOverview, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: action], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
-//        APIService.shared.requestMuliPartAPI(request: requestAPI, decodingType: T.self, completion: { response in
-//            switch response {
-//            case .onSuccess(let jsonData):
-//                self.responseHandler.onSuccess(response: jsonData)
-//            case .onFailure(let err):
-//                self.responseHandler.onError(err: err)
-//            }
-//        })
+        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
+            switch response {
+            case .onSuccess(let jsonData):
+                self.responseHandler.onSuccess(response: jsonData)
+            case .onFailure(let err):
+                self.responseHandler.onError(err: err)
+            }
+        })
     }
 }

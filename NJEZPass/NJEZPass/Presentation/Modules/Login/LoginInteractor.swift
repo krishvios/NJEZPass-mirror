@@ -17,7 +17,7 @@ import Platform
 
 protocol ILoginInteractable {
     func login(username: String, password: String, requestType: Constants.RequestCategory)
-    func getProfileOverview(accessToken: String, requestType: Constants.RequestCategory)
+    func getProfileOverview(action: String, requestType: Constants.RequestCategory)
 }
 
 class LoginInteractor {
@@ -28,7 +28,15 @@ class LoginInteractor {
 
 extension LoginInteractor: ILoginInteractable {
     func login(username: String, password: String, requestType: Constants.RequestCategory) {
-        let request = LoginModel.Request(userName:username, password:password)
+        
+//        verificationToken=TEST123|1.0|TEST|1.0|ACSInrixTrafficApp
+        
+        let token: String = APIConstants.DefaultParams.vendorID + "|" + APIConstants.DefaultParams.appVersion + "|" + UIDevice.modelName + "|" + APIConstants.DefaultParams.systemVersion + "|" + APIConstants.DefaultParams.token
+        
+        let verificationToken: String = token.sha256().lowercased()
+        
+        
+        let request = LoginModel.Request(action: APIConstants.ServiceNames.loginUser, loginType: username, password: password, vendorId: APIConstants.DefaultParams.vendorID, model: UIDevice.modelName, systemVersion: UIDevice.current.systemVersion, appVersion: APIConstants.DefaultParams.appVersion, verificationToken: verificationToken)
         
         if let responseHandler = presenter {
             let interfaceObj = loginUsecaseProvider.provideLoginUsecase(requestType: requestType, handler: responseHandler)
@@ -36,11 +44,11 @@ extension LoginInteractor: ILoginInteractable {
         }
     }
     
-    func getProfileOverview(accessToken: String, requestType: Constants.RequestCategory) {
+    func getProfileOverview(action: String, requestType: Constants.RequestCategory) {
         
         if let responseHandler = presenter {
             let interfaceObj = userProfileUsecaseProvider.provideProfileOverviewUsecase(requestType: requestType, handler: responseHandler)
-            interfaceObj.getProfileOverview(accessToken: accessToken)
+            interfaceObj.getProfileOverview(action: action)
         }
     }
     
