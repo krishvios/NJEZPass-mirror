@@ -2,4 +2,86 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NJEZPass/Presentation/Modules/Login/Verification/QuestionsViewController.swift"
+            timestampString = "591019624.815141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "questionClicked(textField:cell:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NJEZPass.QuestionsViewController.questionClicked(textField: Apollo_iOS.ApolloTextInputField, cell: NJEZPass.QuestionCell) -&gt; ()"
+                  moduleName = "NJEZPass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/52127617/Cti.Mobility.NJ-EZ-Pass-iOS/NJEZPass/NJEZPass/Presentation/Modules/Login/Verification/QuestionsViewController.swift"
+                  timestampString = "591019625.130319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "719">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NJEZPass.QuestionsViewController.questionClicked(textField: Apollo_iOS.ApolloTextInputField, cell: NJEZPass.QuestionCell) -&gt; ()"
+                  moduleName = "NJEZPass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/52127617/Cti.Mobility.NJ-EZ-Pass-iOS/NJEZPass/NJEZPass/Presentation/Modules/Login/Verification/QuestionsViewController.swift"
+                  timestampString = "591019625.1317739"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "4554">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NJEZPass/Presentation/Modules/Login/Verification/QuestionsViewController.swift"
+            timestampString = "591019624.81548"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "questionClicked(textField:cell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NJEZPass/Presentation/Modules/Login/Verification/QuestionsViewController.swift"
+            timestampString = "591019624.815712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "questionClicked(textField:cell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
