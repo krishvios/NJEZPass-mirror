@@ -2411,18 +2411,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-ZM-Idy">
-                                                    <rect key="frame" x="0.0" y="52" width="375" height="158"/>
+                                                    <rect key="frame" x="0.0" y="62" width="375" height="148"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e21-OX-hGU" userLabel="Pay Violation/Toll Bill  View" customClass="CMView" customModule="NJEZPass" customModuleProvider="target">
-                                                            <rect key="frame" x="22" y="0.0" width="161" height="155"/>
+                                                            <rect key="frame" x="22" y="0.0" width="161" height="145"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="payBill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5z-I2-LEH">
-                                                                    <rect key="frame" x="49" y="22" width="63" height="58"/>
+                                                                    <rect key="frame" x="49" y="20" width="63" height="55"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb9-gS-v2D">
-                                                                    <rect key="frame" x="2" y="1" width="162" height="154"/>
+                                                                    <rect key="frame" x="2" y="1" width="162" height="144"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <connections>
                                                                         <action selector="payViolationorTollBillClicked:" destination="aPE-p7-vC0" eventType="touchUpInside" id="RAr-l7-de9"/>
@@ -2430,7 +2430,7 @@
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay Violation or Toll Bill" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX7-Fx-A0v">
-                                                                    <rect key="frame" x="17" y="78" width="126" height="55"/>
+                                                                    <rect key="frame" x="17" y="73" width="126" height="51"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2445,22 +2445,22 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-b2-c1E" customClass="CMView" customModule="NJEZPass" customModuleProvider="target">
-                                                            <rect key="frame" x="201" y="0.0" width="161" height="155"/>
+                                                            <rect key="frame" x="201" y="0.0" width="161" height="145"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lii-07-5ND">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="155"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="145"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <connections>
                                                                         <action selector="registerAccountClicked:" destination="aPE-p7-vC0" eventType="touchUpInside" id="ZT0-NS-gmy"/>
                                                                     </connections>
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Signup" translatesAutoresizingMaskIntoConstraints="NO" id="1w6-SB-iZB">
-                                                                    <rect key="frame" x="18" y="20" width="126" height="57"/>
+                                                                    <rect key="frame" x="18" y="19" width="126" height="53"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Your Account" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx7-Nd-k2Y">
-                                                                    <rect key="frame" x="28" y="77" width="107" height="58"/>
+                                                                    <rect key="frame" x="28" y="72" width="107" height="54"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2478,27 +2478,27 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkB-N7-FPJ">
-                                                    <rect key="frame" x="3" y="7" width="369" height="34"/>
+                                                    <rect key="frame" x="3" y="7" width="369" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" fixedFrame="YES" placeholderIntrinsicWidth="131" placeholderIntrinsicHeight="1" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-OE-In2">
-                                                            <rect key="frame" x="17" y="18" width="134" height="1"/>
+                                                            <rect key="frame" x="17" y="23" width="134" height="2"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" fixedFrame="YES" placeholderIntrinsicWidth="131" placeholderIntrinsicHeight="1" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-5P-UJs">
-                                                            <rect key="frame" x="223" y="18" width="133" height="1"/>
+                                                            <rect key="frame" x="223" y="23" width="133" height="2"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OU-mS-IFr">
-                                                            <rect key="frame" x="146" y="-3" width="74" height="34"/>
+                                                            <rect key="frame" x="144" y="-3" width="78" height="44"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7m-2P-agF">
-                                                                    <rect key="frame" x="10" y="10" width="40" height="22"/>
+                                                                    <rect key="frame" x="10" y="10" width="40" height="32"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="wdO-8y-tZw"/>
                                                                     </constraints>
@@ -2507,7 +2507,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDownBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Ofj-oO-sdx">
-                                                                    <rect key="frame" x="56" y="18" width="12" height="6"/>
+                                                                    <rect key="frame" x="56" y="18" width="16" height="16"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </imageView>
@@ -4257,7 +4257,7 @@
                                             </state>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedRadioButton" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-9t-UDy">
-                                            <rect key="frame" x="20" y="600" width="24" height="29"/>
+                                            <rect key="frame" x="20" y="600" width="16" height="29"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4836,7 +4836,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbT-cU-J9T" customClass="ApolloTextInputField" customModule="Apollo_iOS">
-                                                    <rect key="frame" x="16" y="0.0" width="288" height="85"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="85"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="WXc-CJ-63w"/>
@@ -4890,7 +4890,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgf-Vg-ctX">
-                                                    <rect key="frame" x="288" y="0.0" width="12" height="71"/>
+                                                    <rect key="frame" x="284" y="0.0" width="16" height="71"/>
                                                     <state key="normal" image="dropDownBlack"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jes-Zz-Pol">
@@ -4934,7 +4934,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDX-kw-rUE" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                                    <rect key="frame" x="21" y="23" width="278" height="38"/>
+                                                    <rect key="frame" x="21" y="23" width="333" height="38"/>
                                                     <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="276" id="dln-mf-hgs"/>
@@ -4986,7 +4986,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" backgroundImage="purpleArrow"/>
                                 <connections>
-                                    <action selector="backClicked" destination="8Qz-xY-WXX" eventType="touchUpInside" id="BsE-JG-S7d"/>
+                                    <action selector="backClicked:" destination="8Qz-xY-WXX" eventType="touchUpInside" id="kjW-qc-j81"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rug-l3-4ek">
@@ -5045,7 +5045,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5f-2w-yzP" customClass="ApolloTextInputField" customModule="Apollo_iOS">
-                                                    <rect key="frame" x="16" y="0.0" width="288" height="85"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="85"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="RV7-oc-NFb"/>
@@ -5099,7 +5099,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkJ-Ma-V1h">
-                                                    <rect key="frame" x="288" y="0.0" width="12" height="71"/>
+                                                    <rect key="frame" x="284" y="0.0" width="16" height="71"/>
                                                     <state key="normal" image="dropDownBlack"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-WV-lyC">
@@ -5143,7 +5143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-AK-2Dp" customClass="ApolloTextInputField" customModule="Apollo_iOS">
-                                                    <rect key="frame" x="16" y="0.0" width="142" height="71"/>
+                                                    <rect key="frame" x="16" y="0.0" width="169.5" height="71"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="XVP-PX-1LV"/>
@@ -5163,7 +5163,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVW-iZ-FEx" customClass="ApolloTextInputField" customModule="Apollo_iOS">
-                                                    <rect key="frame" x="162" y="0.0" width="142" height="71"/>
+                                                    <rect key="frame" x="189.5" y="0.0" width="169.5" height="71"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="State"/>
@@ -5179,7 +5179,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVY-k2-qJZ">
-                                                    <rect key="frame" x="284" y="0.0" width="12" height="71"/>
+                                                    <rect key="frame" x="339" y="0.0" width="12" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="12" id="MiU-DT-A59"/>
                                                         <constraint firstAttribute="height" constant="71" id="VlB-36-WvQ"/>
@@ -5187,7 +5187,7 @@
                                                     <state key="normal" image="dropDownBlack"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6w-NJ-B3J">
-                                                    <rect key="frame" x="162" y="0.0" width="142" height="71"/>
+                                                    <rect key="frame" x="189.5" y="0.0" width="169.5" height="71"/>
                                                     <connections>
                                                         <action selector="stateClicked:" destination="DN5-hf-rjr" eventType="touchUpInside" id="GTw-9y-tiA"/>
                                                     </connections>
@@ -5229,7 +5229,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56w-G0-d4K" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                                    <rect key="frame" x="21" y="23" width="278" height="38"/>
+                                                    <rect key="frame" x="21" y="23" width="333" height="38"/>
                                                     <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="276" id="2CK-yi-vK1"/>
