@@ -81,12 +81,12 @@ class ForgotUserNameVC: UIViewController {
         
         //Back buttion
         self.navigationController?.navigationBar.tintColor = .purple
-//        let btnLeftMenu: UIButton = UIButton()
-//        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
-//        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
-//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-//        self.navigationItem.leftBarButtonItem = barButton
+        //        let btnLeftMenu: UIButton = UIButton()
+        //        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
+        //        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
+        //        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
+        //        let barButton = UIBarButtonItem(customView: btnLeftMenu)
+        //        self.navigationItem.leftBarButtonItem = barButton
     }
     
     @objc func backButtonClick(sender : UIButton) {
@@ -99,13 +99,18 @@ class ForgotUserNameVC: UIViewController {
             let accountNo = accountNumberInputField.text,
             let zipcode = zipCodeInputField.text,
             (FieldValidator.shared.isValidUserID(userIDString: tag) || FieldValidator.shared.isValidUserID(userIDString: accountNo)),FieldValidator.shared.isValidZipCode(value: zipcode){
-            
+            self.performSegue(withIdentifier: "forgotUserName", sender: self)
         }
         else{
             DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
         }
     }
-   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextScene =  segue.destination as! SignupAndSaveVC
+        nextScene.flowString = "forgotUsernameFlow"
+    }
+    
     private func validateInput() {
         //loginButton.isEnabled = false
         if let accountNO = accountNumberInputField.text,let zipCode = zipCodeInputField.text, accountNO.count > 0 && zipCode.count>0 {
@@ -132,13 +137,11 @@ class ForgotUserNameVC: UIViewController {
 }
 
 extension ForgotUserNameVC: ApolloTextInputFieldDelegate {
-   
+    
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let accountNO = accountNumberInputField.text, textField == zipCodeInputField && accountNO.count > 0 {
-            validateInput()
-        } else if let tagNo = tagInputField.text, textField == zipCodeInputField && tagNo.count > 0 {
-            validateInput()
-        }
+        
+        validateInput()
+        
         return true
     }
     

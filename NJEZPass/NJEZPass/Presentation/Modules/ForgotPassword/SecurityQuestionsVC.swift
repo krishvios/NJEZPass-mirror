@@ -126,9 +126,7 @@ class SecurityQuestionsVC: UIViewController {
 extension SecurityQuestionsVC: ApolloTextInputFieldDelegate {
     
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == firstSecurityQuestionAnswerInputField{
-            validateInput()
-        }
+        validateInput()
         return true
     }
     

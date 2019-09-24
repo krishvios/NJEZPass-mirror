@@ -7,7 +7,7 @@
 */
 "APP_NAME" = "NJ EZPass";
 "INVALID_USER_DETAILS" = "Invalid User details";
-"INVALID_USER_DETAILS" = "Inavlid Email-id";
+"INVALID_EMAIL_DETAILS" = "Invalid Email-id";
 "OK" = "OK";
 "LOGIN_SUCCESS" = "login success";
 "LOGIN_FAILURE" = "login failure";
