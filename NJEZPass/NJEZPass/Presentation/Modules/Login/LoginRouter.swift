@@ -76,7 +76,8 @@ extension LoginRouter: IRouter {
             //push viewcontroller
             
             let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-            let vc = storyBoard.instantiateViewController(withIdentifier: route.path) as! TabBarViewController
+//            let vc = storyBoard.instantiateViewController(withIdentifier: route.path) as! TabBarViewController
+            let vc = storyBoard.instantiateViewController(withIdentifier: route.path) as! QuestionsViewController
             self.navigateToVC(destination: vc)
         }
     }
