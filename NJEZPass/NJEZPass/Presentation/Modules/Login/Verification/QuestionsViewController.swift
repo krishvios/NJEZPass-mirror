@@ -18,10 +18,14 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
     var selectedQuestionCell:QuestionCell?
     
     fileprivate var selectedField:ApolloTextInputField?
+    
+    var arr = ["",""]
+    
     lazy fileprivate var questionPicker: CMPickerView! = {
         
         let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tbleView.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
-        pickerView.pickerArray = ["USA","Canada"]
+//        pickerView.pickerArray = ["USA","Canada"]
+        pickerView.pickerArray = arr
         pickerView.viewDelegate = self
         return pickerView
     }()
@@ -33,6 +37,10 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationItem.title = "Security Questions"
         self.tbleView.estimatedRowHeight = 44.0;
         self.tbleView.rowHeight = UITableView.automaticDimension;
+        
+        
+        
+        print("CMUtility.dynamicPageLoad?.challangeQuestionList = \(String(describing: CMUtility.dynamicPageLoad?.challangeQuestionList))")
         
         // Reload the table
         self.tbleView.reloadData()
@@ -185,7 +193,16 @@ extension QuestionsViewController:QuestionCellDelegate {
     func questionClicked(textField: ApolloTextInputField, cell: QuestionCell) {
         print("\(#function)")
 
-        self.questionPicker.pickerArray = ["Omaha", "California"]
+//        self.questionPicker.pickerArray = ["Omaha", "California"]
+//        self.questionPicker.pickerArray = (CMUtility.dynamicPageLoad?.challangeQuestionList!)!
+        let z = (CMUtility.dynamicPageLoad?.challangeQuestionList!)!.map { $0.copy() } as? [String]
+        arr.removeAll()
+        for question in z! {
+            var array  = question.components(separatedBy: "~")
+            self.questionPicker.pickerArray.append(array[0])
+            arr.append(array[0])
+        }
+        
         selectedQuestionCell = cell
         
         if view.subviews.contains(self.questionPicker) {
