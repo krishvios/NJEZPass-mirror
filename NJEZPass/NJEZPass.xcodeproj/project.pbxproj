@@ -192,6 +192,7 @@
 		F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F908290C2338AEC400C6C37E /* PayViolationVC.swift */; };
 		F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */; };
 		F90829142338DBE200C6C37E /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829132338DBE200C6C37E /* ContactInfoCell.swift */; };
+		F90829172339B82600C6C37E /* PayNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829162339B82600C6C37E /* PayNowVC.swift */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
@@ -513,6 +514,7 @@
 		F908290C2338AEC400C6C37E /* PayViolationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViolationVC.swift; sourceTree = "<group>"; };
 		F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputeSelectedCell.swift; sourceTree = "<group>"; };
 		F90829132338DBE200C6C37E /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
+		F90829162339B82600C6C37E /* PayNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowVC.swift; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
@@ -1338,6 +1340,7 @@
 				F908290C2338AEC400C6C37E /* PayViolationVC.swift */,
 				F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */,
 				F90829132338DBE200C6C37E /* ContactInfoCell.swift */,
+				F90829162339B82600C6C37E /* PayNowVC.swift */,
 			);
 			path = PayViolation;
 			sourceTree = "<group>";
@@ -1973,6 +1976,7 @@
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				9BF5B067232A312D00D4F5B7 /* CMStackView.swift in Sources */,
+				F90829172339B82600C6C37E /* PayNowVC.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				9BF5B066232A312D00D4F5B7 /* CMPickerView.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
