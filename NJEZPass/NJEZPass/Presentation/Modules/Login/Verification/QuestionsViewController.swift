@@ -78,18 +78,8 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
                 cell = answerCell
 //                answerCell.delegate = self
                 answerCell.textField.placeholder = securityQAnswers[(indexPath.row-1)/2]
-                let indexPath = NSIndexPath(row: (indexPath.row-1), section: 0)
-                if let questionCell = tbleView.cellForRow(at: indexPath as IndexPath) as? QuestionCell {
-                    
-                    print("questionCell.textField.text?.count = \(String(describing: questionCell.textField.text?.count))")
-                    print("questionCell.textField.text = \(questionCell.textField.text!)")
-
-                    if questionCell.textField.text?.count == 0 {
-                        answerCell.isUserInteractionEnabled = false
-                    } else {
-                        answerCell.isUserInteractionEnabled = true
-                    }
-                }
+//                answerCell.isUserInteractionEnabled = false
+                toggleAnswers(tbleView,indexPath: indexPath)
             }
             /*
         case 3:
@@ -127,9 +117,33 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
         return 85
     }
 
-    @IBAction func backClicked(){
-        
+    @IBAction func backClicked(_ sender:UIButton) {
+        if (self.navigationController != nil) {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    func toggleAnswers(_ tableView:UITableView, indexPath: IndexPath) {
+        print("\(#function)")
+        let indexPathh = IndexPath(row: (indexPath.row-1), section: 0)
+        if let answerCell = tableView.cellForRow(at: indexPathh) {
+            
+            if selectedQuestionCell == nil {
+                selectedQuestionCell = tbleView.cellForRow(at: IndexPath(row: (indexPath.row-1), section: 0)) as? QuestionCell
+            }
+            print("selectedQuestionCell.textField.text?.count = \(String(describing: selectedQuestionCell!.textField.text?.count))")
+            print("selectedQuestionCell.textField.text = \(selectedQuestionCell!.textField.text!)")
+            
+            if selectedQuestionCell!.textField.text?.count == 0 {
+                answerCell.isUserInteractionEnabled = false
+            } else {
+                answerCell.isUserInteractionEnabled = true
+            }
+        }
+    }
+    
 }
 
 extension QuestionsViewController: SaveSkipCellDelegate {
@@ -162,6 +176,8 @@ extension QuestionsViewController: CMPickerViewDelegate {
         selectedField?.text = selectedString
         selectedField?.resignFirstResponder()
         self.questionPicker.isHidden = true
+        self.tbleView.reloadData()
+//        self.toggleAnswers(tbleView, indexPath: tbleView.indexPath(for: selectedQuestionCell!)!)
     }
     
     func cancelClicked() {
@@ -171,7 +187,8 @@ extension QuestionsViewController: CMPickerViewDelegate {
 
 extension QuestionsViewController:QuestionCellDelegate {
     func questionClicked(textField: ApolloTextInputField, cell: QuestionCell) {
-        
+        print("\(#function)")
+
         self.questionPicker.pickerArray = ["Omaha", "California"]
         selectedQuestionCell = cell
         
@@ -181,6 +198,6 @@ extension QuestionsViewController:QuestionCellDelegate {
             self.view.addSubview(questionPicker)
         }
         selectedField = selectedQuestionCell?.textField
-        self.tbleView.reloadData()
+//        self.tbleView.reloadData()
     }
 }
