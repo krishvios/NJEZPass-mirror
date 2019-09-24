@@ -235,48 +235,291 @@
                                     <action selector="backButtonTapped:" destination="QEG-tt-vcy" eventType="touchUpInside" id="UUk-B7-Omb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lW-wO-fMB">
-                                <rect key="frame" x="16" y="79" width="343" height="65"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyProgress1" translatesAutoresizingMaskIntoConstraints="NO" id="3SI-Hh-tqe">
-                                        <rect key="frame" x="20" y="0.0" width="303" height="65"/>
-                                    </imageView>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qxj-Mr-sLi">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="3SI-Hh-tqe" firstAttribute="leading" secondItem="8lW-wO-fMB" secondAttribute="leading" constant="20" id="1Nd-Nv-zPX"/>
-                                    <constraint firstItem="3SI-Hh-tqe" firstAttribute="top" secondItem="8lW-wO-fMB" secondAttribute="top" id="3Jl-pa-lYl"/>
-                                    <constraint firstAttribute="trailing" secondItem="3SI-Hh-tqe" secondAttribute="trailing" constant="20" id="OKj-dk-AMW"/>
-                                    <constraint firstAttribute="bottom" secondItem="3SI-Hh-tqe" secondAttribute="bottom" id="YiS-VP-Tjy"/>
-                                    <constraint firstAttribute="height" constant="65" id="isJ-Kb-KDq"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-BG-UsM">
-                                <rect key="frame" x="151" y="519" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="W8q-iG-LQX" kind="show" id="ute-O5-6St"/>
-                                </connections>
-                            </button>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="4XH-KT-HRv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7lS-9G-YgB">
+                                            <rect key="frame" x="16" y="8" width="343" height="65"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyProgress2" translatesAutoresizingMaskIntoConstraints="NO" id="YNr-Z6-aOa">
+                                                    <rect key="frame" x="20" y="0.0" width="303" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="cFu-w9-yDu"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="YNr-Z6-aOa" firstAttribute="leading" secondItem="7lS-9G-YgB" secondAttribute="leading" constant="20" id="7En-ms-tew"/>
+                                                <constraint firstAttribute="trailing" secondItem="YNr-Z6-aOa" secondAttribute="trailing" constant="20" id="E7p-ut-pWQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="YNr-Z6-aOa" secondAttribute="bottom" id="WEv-Gx-TcA"/>
+                                                <constraint firstAttribute="height" constant="65" id="d9I-6Q-mr9"/>
+                                                <constraint firstItem="YNr-Z6-aOa" firstAttribute="top" secondItem="7lS-9G-YgB" secondAttribute="top" id="kjM-Df-opv"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qc4-BP-u8w" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="96" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="fzp-hn-tt0"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="First Name"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXg-8F-rgd" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="185" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="Zq6-yz-7fb"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Last Name"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vox-Of-anN" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="280" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="41c-hb-2iB"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Address Line 1"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-IE-kuV" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="373" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="Xwi-Ib-rFw"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Address Line 2"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXb-kM-e88" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="466" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="hP2-Vo-V5F"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Country"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-br-zVD" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="558" width="160" height="52"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Yg2-br-zVD" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="JNe-nb-DQY"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="MM/YY"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCE-Br-13J" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="199" y="555" width="160" height="52"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QCE-Br-13J" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="ZFo-qe-9ir"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="State"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPW-DV-emB" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="625" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="ERD-YV-fIO"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Zip Code"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-Zj-rpo" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                            <rect key="frame" x="16" y="716" width="343" height="51"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="51" id="Yod-Cz-kSz"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email Address (optional)"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5J-Px-KGC" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="806" width="343" height="44"/>
+                                            <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Ole-SV-kFs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                            <state key="normal" title="CONTINUE">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="W8q-iG-LQX" kind="show" id="WkD-Vc-XzF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="Yg2-br-zVD" secondAttribute="leading" id="3UI-Ib-BQp"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="7lS-9G-YgB" secondAttribute="trailing" id="7Ma-Nt-bCi"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="EXg-8F-rgd" secondAttribute="trailing" id="DFj-qR-GQX"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="Vox-Of-anN" secondAttribute="leading" id="FT7-I4-j1H"/>
+                                        <constraint firstItem="Vox-Of-anN" firstAttribute="top" secondItem="EXg-8F-rgd" secondAttribute="bottom" constant="44" id="GID-ms-Vjv"/>
+                                        <constraint firstItem="QPW-DV-emB" firstAttribute="top" secondItem="QCE-Br-13J" secondAttribute="bottom" constant="18" id="GVs-lU-qNJ"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="width" secondItem="Yg2-br-zVD" secondAttribute="width" id="HUP-Q2-sZ9"/>
+                                        <constraint firstItem="Yg2-br-zVD" firstAttribute="width" secondItem="Yg2-br-zVD" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="Iwr-zF-Sj7"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="D5J-Px-KGC" secondAttribute="trailing" id="Iz2-SU-mvv"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="top" secondItem="Yg2-br-zVD" secondAttribute="top" constant="-3" id="Izi-4f-gtc"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="D5J-Px-KGC" secondAttribute="leading" id="J9P-Is-Xne"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="QPW-DV-emB" secondAttribute="leading" id="JPl-PX-EE5"/>
+                                        <constraint firstItem="7lS-9G-YgB" firstAttribute="leading" secondItem="4XH-KT-HRv" secondAttribute="leading" constant="16" id="Jwp-VQ-Eui"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="width" secondItem="QCE-Br-13J" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="KHg-hu-DSu"/>
+                                        <constraint firstItem="EXg-8F-rgd" firstAttribute="top" secondItem="Qc4-BP-u8w" secondAttribute="bottom" constant="38" id="Ml5-mE-yeL"/>
+                                        <constraint firstItem="bXb-kM-e88" firstAttribute="top" secondItem="xOv-IE-kuV" secondAttribute="bottom" constant="42" id="OiK-Oh-oNZ"/>
+                                        <constraint firstItem="xOv-IE-kuV" firstAttribute="top" secondItem="Vox-Of-anN" secondAttribute="bottom" constant="42" id="PPN-Tf-Cja"/>
+                                        <constraint firstItem="7lS-9G-YgB" firstAttribute="top" secondItem="4XH-KT-HRv" secondAttribute="top" constant="8" id="RRN-Er-0GQ"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="2d5-Zj-rpo" secondAttribute="trailing" id="TrU-jl-ana"/>
+                                        <constraint firstItem="Yg2-br-zVD" firstAttribute="width" secondItem="Yg2-br-zVD" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="VqU-Xl-ifB"/>
+                                        <constraint firstItem="2d5-Zj-rpo" firstAttribute="top" secondItem="QPW-DV-emB" secondAttribute="bottom" constant="40" id="WsO-Bf-Dwe"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="bXb-kM-e88" secondAttribute="leading" id="Xjc-do-Bco"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="xOv-IE-kuV" secondAttribute="leading" id="ZR4-0f-VxI"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="7lS-9G-YgB" secondAttribute="leading" id="Zew-6a-r4g"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="EXg-8F-rgd" secondAttribute="leading" id="aOd-aa-rqr"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="top" secondItem="7lS-9G-YgB" secondAttribute="bottom" constant="23" id="aQG-5g-R1y"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="leading" secondItem="2d5-Zj-rpo" secondAttribute="leading" id="cHt-iq-Lm0"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="QCE-Br-13J" secondAttribute="trailing" id="cj6-tN-jZd"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="xOv-IE-kuV" secondAttribute="trailing" id="eWy-mU-Dwb"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="bXb-kM-e88" secondAttribute="trailing" id="edz-E0-Z4g"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="Vox-Of-anN" secondAttribute="trailing" id="f3K-Lv-IFC"/>
+                                        <constraint firstItem="Yg2-br-zVD" firstAttribute="top" secondItem="bXb-kM-e88" secondAttribute="bottom" constant="41" id="fi5-MG-h8z"/>
+                                        <constraint firstItem="D5J-Px-KGC" firstAttribute="top" secondItem="2d5-Zj-rpo" secondAttribute="bottom" constant="39" id="g2c-Lt-tzf"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="width" secondItem="QCE-Br-13J" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="pXF-6j-lGe"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="leading" secondItem="Yg2-br-zVD" secondAttribute="trailing" constant="23" id="uqW-fn-UVH"/>
+                                        <constraint firstAttribute="trailing" secondItem="7lS-9G-YgB" secondAttribute="trailing" constant="16" id="xlF-Co-U3n"/>
+                                        <constraint firstItem="Qc4-BP-u8w" firstAttribute="trailing" secondItem="QPW-DV-emB" secondAttribute="trailing" id="y1b-Ve-WwR"/>
+                                        <constraint firstItem="QCE-Br-13J" firstAttribute="height" secondItem="Yg2-br-zVD" secondAttribute="height" id="yua-uN-KHs"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8lW-wO-fMB" firstAttribute="top" secondItem="QFQ-30-Rhc" secondAttribute="bottom" constant="8" id="Awq-ww-CnZ"/>
-                            <constraint firstItem="TRr-C8-Z8L" firstAttribute="trailing" secondItem="8lW-wO-fMB" secondAttribute="trailing" constant="16" id="BH2-N8-4tG"/>
                             <constraint firstAttribute="trailing" secondItem="yJ3-7w-BMR" secondAttribute="trailing" id="IJj-H3-xD7"/>
                             <constraint firstItem="QFQ-30-Rhc" firstAttribute="top" secondItem="TRr-C8-Z8L" secondAttribute="top" id="NFE-4n-2bz"/>
+                            <constraint firstItem="Qxj-Mr-sLi" firstAttribute="leading" secondItem="TRr-C8-Z8L" secondAttribute="leading" id="NgJ-R5-0lm"/>
                             <constraint firstItem="yJ3-7w-BMR" firstAttribute="centerY" secondItem="QFQ-30-Rhc" secondAttribute="centerY" id="PQK-MU-dY0"/>
+                            <constraint firstItem="Qxj-Mr-sLi" firstAttribute="bottom" secondItem="TRr-C8-Z8L" secondAttribute="bottom" id="Vn9-wn-nc4"/>
+                            <constraint firstItem="Qxj-Mr-sLi" firstAttribute="trailing" secondItem="TRr-C8-Z8L" secondAttribute="trailing" id="kU9-iG-Ast"/>
+                            <constraint firstItem="Qxj-Mr-sLi" firstAttribute="top" secondItem="yJ3-7w-BMR" secondAttribute="bottom" constant="0.5" id="sdr-I6-I7H"/>
                             <constraint firstItem="QFQ-30-Rhc" firstAttribute="leading" secondItem="yJ3-7w-BMR" secondAttribute="leading" id="tKJ-tq-Coc"/>
                             <constraint firstItem="QFQ-30-Rhc" firstAttribute="leading" secondItem="SaQ-AE-LEr" secondAttribute="leading" id="wjE-xo-0ZU"/>
-                            <constraint firstItem="8lW-wO-fMB" firstAttribute="leading" secondItem="TRr-C8-Z8L" secondAttribute="leading" constant="16" id="xr4-45-wBZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TRr-C8-Z8L"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4S-zm-t9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="-1553"/>
+            <point key="canvasLocation" x="957.60000000000002" y="-1553.9730134932536"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6pB-lx-5Gj">
@@ -323,25 +566,136 @@
                                     <constraint firstItem="nOh-aQ-726" firstAttribute="leading" secondItem="Shg-er-R2e" secondAttribute="leading" constant="20" id="fAB-Mw-Y0a"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="696-Yh-C64">
-                                <rect key="frame" x="123" y="459" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0t-G5-OzE" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                <rect key="frame" x="16" y="185" width="343" height="51"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="1Nv-qM-pI6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Card Holder Name"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-3n-TGI" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                <rect key="frame" x="16" y="276" width="343" height="51"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="OvN-HW-GAf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Card Number"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dd-Yp-y1j" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                <rect key="frame" x="16" y="367" width="160" height="52"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6dd-Yp-y1j" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="BHN-J1-s9N"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="MM/YY"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2X-L0-brH" customClass="ApolloTextInputField" customModule="Apollo_iOS">
+                                <rect key="frame" x="199" y="367" width="160" height="52"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r2X-L0-brH" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="hNf-RT-3l4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="CVV"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.33333333329999998" green="0.35686274509999999" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzM-MD-qaf" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                <rect key="frame" x="16" y="472" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oZq-Um-IIJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="S2B-8u-1dR" kind="show" id="DaB-ca-Lx0"/>
+                                    <segue destination="S2B-8u-1dR" kind="show" id="yKa-aK-GmP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="b71-da-KYq" firstAttribute="leading" secondItem="e1E-tW-vWF" secondAttribute="leading" id="0qI-2d-cM2"/>
+                            <constraint firstItem="d0t-G5-OzE" firstAttribute="trailing" secondItem="Shg-er-R2e" secondAttribute="trailing" id="2Wr-Ku-ESL"/>
                             <constraint firstItem="sBa-Ii-rTn" firstAttribute="trailing" secondItem="Shg-er-R2e" secondAttribute="trailing" constant="16" id="6bv-Xj-HvV"/>
                             <constraint firstItem="jZY-X9-eVk" firstAttribute="centerY" secondItem="b71-da-KYq" secondAttribute="centerY" id="8qI-4g-R3a"/>
+                            <constraint firstItem="d0t-G5-OzE" firstAttribute="trailing" secondItem="qZg-3n-TGI" secondAttribute="trailing" id="E5R-DO-OFl"/>
+                            <constraint firstItem="UzM-MD-qaf" firstAttribute="top" secondItem="6dd-Yp-y1j" secondAttribute="bottom" constant="53" id="EEk-98-u0s"/>
+                            <constraint firstItem="qZg-3n-TGI" firstAttribute="leading" secondItem="6dd-Yp-y1j" secondAttribute="leading" id="Icu-GE-nDO"/>
+                            <constraint firstItem="d0t-G5-OzE" firstAttribute="leading" secondItem="qZg-3n-TGI" secondAttribute="leading" id="Kpn-Lp-gmM"/>
                             <constraint firstItem="Shg-er-R2e" firstAttribute="top" secondItem="b71-da-KYq" secondAttribute="bottom" constant="8" id="Mav-LH-V4j"/>
+                            <constraint firstItem="r2X-L0-brH" firstAttribute="top" secondItem="qZg-3n-TGI" secondAttribute="bottom" constant="40" id="RXw-i9-7Do"/>
+                            <constraint firstItem="d0t-G5-OzE" firstAttribute="top" secondItem="Shg-er-R2e" secondAttribute="bottom" constant="41" id="RgA-l4-TX6"/>
+                            <constraint firstItem="r2X-L0-brH" firstAttribute="width" secondItem="6dd-Yp-y1j" secondAttribute="width" id="Un4-6H-oin"/>
+                            <constraint firstItem="r2X-L0-brH" firstAttribute="height" secondItem="6dd-Yp-y1j" secondAttribute="height" id="ZYb-m0-g5k"/>
+                            <constraint firstItem="d0t-G5-OzE" firstAttribute="leading" secondItem="Shg-er-R2e" secondAttribute="leading" id="cn0-3U-uP6"/>
+                            <constraint firstItem="qZg-3n-TGI" firstAttribute="top" secondItem="d0t-G5-OzE" secondAttribute="bottom" constant="40" id="eaB-bF-fBA"/>
+                            <constraint firstItem="r2X-L0-brH" firstAttribute="width" secondItem="r2X-L0-brH" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="fIY-8y-Ff0"/>
                             <constraint firstItem="b71-da-KYq" firstAttribute="top" secondItem="sBa-Ii-rTn" secondAttribute="top" id="fLt-2O-beV"/>
                             <constraint firstAttribute="trailing" secondItem="jZY-X9-eVk" secondAttribute="trailing" id="gcq-be-4zk"/>
+                            <constraint firstItem="r2X-L0-brH" firstAttribute="leading" secondItem="6dd-Yp-y1j" secondAttribute="trailing" constant="23" id="hst-Lr-GKx"/>
                             <constraint firstItem="b71-da-KYq" firstAttribute="leading" secondItem="jZY-X9-eVk" secondAttribute="leading" id="iki-Ut-5Es"/>
+                            <constraint firstItem="6dd-Yp-y1j" firstAttribute="top" secondItem="qZg-3n-TGI" secondAttribute="bottom" constant="40" id="ol2-w9-eNZ"/>
+                            <constraint firstItem="6dd-Yp-y1j" firstAttribute="width" secondItem="6dd-Yp-y1j" secondAttribute="height" multiplier="141:50" constant="13.360000000000014" id="pdH-WS-LaG"/>
                             <constraint firstItem="Shg-er-R2e" firstAttribute="leading" secondItem="e1E-tW-vWF" secondAttribute="leading" constant="16" id="qpc-zQ-ree"/>
+                            <constraint firstItem="qZg-3n-TGI" firstAttribute="trailing" secondItem="r2X-L0-brH" secondAttribute="trailing" id="rZO-Sx-8XI"/>
+                            <constraint firstItem="qZg-3n-TGI" firstAttribute="centerX" secondItem="UzM-MD-qaf" secondAttribute="centerX" id="vY0-JR-Scg"/>
+                            <constraint firstItem="UzM-MD-qaf" firstAttribute="leading" secondItem="sBa-Ii-rTn" secondAttribute="leading" constant="16" id="wrQ-et-BKs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sBa-Ii-rTn"/>
                     </view>
@@ -614,7 +968,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-CQ-Dvj">
-                                <rect key="frame" x="24" y="62" width="327" height="35"/>
+                                <rect key="frame" x="24" y="62" width="326" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="mWv-GO-yk1"/>
                                 </constraints>
@@ -623,7 +977,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-Pl-e5O">
-                                <rect key="frame" x="24" y="265" width="326" height="44"/>
+                                <rect key="frame" x="24" y="265" width="325" height="44"/>
                                 <color key="backgroundColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="SJ3-Id-3Ot"/>
@@ -637,10 +991,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-Wz-VCI">
-                                <rect key="frame" x="24" y="180" width="327" height="50"/>
+                                <rect key="frame" x="24" y="180" width="326" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-EB-4MG">
-                                        <rect key="frame" x="0.0" y="10" width="327" height="30"/>
+                                        <rect key="frame" x="0.0" y="10" width="326" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Bi-qhE" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -652,7 +1006,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="dXM-gu-mME" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="69" y="0.0" width="50.5" height="30"/>
+                                                <rect key="frame" x="69" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="sT1-ST-aj7"/>
@@ -661,13 +1015,13 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-lU-ozT" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="138.5" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="138" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-tO-G5o" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="207.5" y="0.0" width="50.5" height="30"/>
+                                                <rect key="frame" x="207" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="xB5-3K-u28"/>
@@ -676,7 +1030,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Guq-Ov-J17" customClass="CMTextField" customModule="NJEZPass" customModuleProvider="target">
-                                                <rect key="frame" x="277" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="276" y="0.0" width="50" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
@@ -698,7 +1052,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the verification code that was sent to your device." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUX-tn-s5M">
-                                <rect key="frame" x="24" y="121" width="327" height="43"/>
+                                <rect key="frame" x="24" y="121" width="326" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="EyR-Xn-Kkt"/>
                                 </constraints>
@@ -1989,10 +2343,9 @@
         <!--Navigation Controller-->
         <scene sceneID="y0I-xA-Txw">
             <objects>
-                <navigationController storyboardIdentifier="LoginView" id="pDE-Cz-2mU" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                <navigationController storyboardIdentifier="LoginView" navigationBarHidden="YES" id="pDE-Cz-2mU" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="purpleArrow" id="V1F-8W-9Jl">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -5389,7 +5742,6 @@
         <image name="bankWallet" width="158" height="127"/>
         <image name="dropDownBlack" width="12" height="6"/>
         <image name="dropDownIcon" width="12" height="6"/>
-        <image name="dummyProgress1" width="976" height="213"/>
         <image name="dummyProgress2" width="559" height="123"/>
         <image name="dummyProgress3" width="564" height="119"/>
         <image name="gPay" width="50" height="20"/>
@@ -5408,8 +5760,8 @@
         <image name="whiteArrow" width="58" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Ed-dR-fUT"/>
+        <segue reference="vOz-to-GJP"/>
         <segue reference="01i-3V-oRA"/>
-        <segue reference="lyt-Mu-S7x"/>
+        <segue reference="n2g-Vi-dfe"/>
     </inferredMetricsTieBreakers>
 </document>
