@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Entities
 
 
 
@@ -16,6 +17,8 @@ class DashboardViewController: UIViewController {
     private var tabWidgetCell:TabWidgetTableViewCell?
     private var headerCell:headerTableViewCell?
     private var paymentInfoCell:PaymentInfoTableViewCell?
+    
+    var detailInfo: ProfileModel.AccountDetail?
     
     var nixieFlag = true
     var firstTimeUser = true
@@ -40,6 +43,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if firstTimeUser == true {
             if let storyboard = self.storyboard {
                 let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
@@ -52,6 +56,14 @@ class DashboardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate,
+            let detailInfoData = delegate.detailInfo  else {
+                return
+        }
+        
+        detailInfo = detailInfoData
+        tbleView.reloadData()
         
         if firstTimeUser == false {
             if nixieFlag == true {
@@ -114,16 +126,22 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         
         var cellIdentifier = ""
         
+        
         switch indexPath.row {
             
         case 0:
             cellIdentifier = "HomeHeaderCell"
             headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
+            headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
+            headerCell?.amountLbl.text = detailInfo?.currentBalance
             return headerCell!
             
         case 1:
             cellIdentifier = "paymentSummaryCell"
             paymentInfoCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PaymentInfoTableViewCell
+            paymentInfoCell?.lastRepleshAmt.text = detailInfo?.lastReplenishedDate
+            paymentInfoCell?.rplsAmt.text = detailInfo?.replenishedAmount
+            paymentInfoCell?.rplshThreshold.text = detailInfo?.replenishedThreshold
             return paymentInfoCell!
             
         case 4:
