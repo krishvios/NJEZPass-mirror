@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import Entities
+import MBProgressHUD
+
+protocol IUpdateAddressViewable {
+    func updateSuccess(viewModel: UpdateAddressModel.PresentionModel)
+    func updateFailed(viewModel: UpdateAddressModel.PresentionModel)
+}
 
 class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
         
         @IBOutlet weak var tbleView: UITableView!
+    
+    var interactor: IUpdateAddressInteractable?
+    var router: IRouter?
+    
         var securityQuestions = ["Security Question 1","Security Question 2","Security Question 3"]
         var securityQAnswers = ["Security Answer 1","Security Answer 2","Security Answer 3"]
         
@@ -25,6 +36,22 @@ class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UIT
             // Reload the table
             self.tbleView.reloadData()
         }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        let configurator = UpdateAddressConfigurator()
+        configurator.build(viewController: self)
+        interactor = configurator.interactor
+        router = configurator.router
+    }
         
         // MARK: - Table view data source
         
@@ -113,3 +140,23 @@ class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UIT
         
 }
 
+extension UpdateAddressViewController: IUpdateAddressViewable {
+    
+    func updateSuccess(viewModel: UpdateAddressModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func updateFailed(viewModel: UpdateAddressModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension UpdateAddressViewController: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
+    }
+}

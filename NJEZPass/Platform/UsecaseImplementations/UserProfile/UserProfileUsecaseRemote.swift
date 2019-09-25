@@ -11,6 +11,7 @@ import Entities
 import Domain
 
 internal class UserProfileUsecaseRemote<T: Codable>: IUserProfileUsecase {
+    
     var responseHandler: IResponseHandler
     init(handler: IResponseHandler) {
         self.responseHandler = handler
@@ -19,7 +20,35 @@ internal class UserProfileUsecaseRemote<T: Codable>: IUserProfileUsecase {
         
         let request = ProfileModel.Request(action: action, serviceId: PlatformUtility.getserviceId()!)
         
-        let requestAPI = APIRequest<ProfileModel.Request>(method: .post, url: APIConstants.ServiceNames.accountOverview, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: action], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        let requestAPI = APIRequest<ProfileModel.Request>(method: .post, url: APIConstants.ServiceNames.accountOverview, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        
+        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
+            switch response {
+            case .onSuccess(let jsonData):
+                self.responseHandler.onSuccess(response: jsonData)
+            case .onFailure(let err):
+                self.responseHandler.onError(err: err)
+            }
+        })
+    }
+    
+    func updateAddress(request: UpdateAddressModel.Request) {
+        
+        let requestAPI = APIRequest<UpdateAddressModel.Request>(method: .post, url: APIConstants.ServiceNames.updateAddress, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        
+        APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
+            switch response {
+            case .onSuccess(let jsonData):
+                self.responseHandler.onSuccess(response: jsonData)
+            case .onFailure(let err):
+                self.responseHandler.onError(err: err)
+            }
+        })
+    }
+    
+    func updateSecurityQuestions(request: SecurityQuestionsModel.Request) {
+                
+        let requestAPI = APIRequest<SecurityQuestionsModel.Request>(method: .post, url: APIConstants.ServiceNames.updateSecurityQuestions, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: request, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
         
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
             switch response {

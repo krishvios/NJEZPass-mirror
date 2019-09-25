@@ -21,4 +21,18 @@ open class UserProfileUsecaseProvider: IUserProfileUsecaseProvider {
             return UserProfileUsecaseRemote<ProfileModel.Response>(handler: handler)
         }
     }
+    
+    public func provideUpdateSecurityQuestionsUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase {
+        switch requestType {
+        case .remote:
+            return UserProfileUsecaseRemote<SecurityQuestionsModel.Response>(handler: handler)
+        }
+    }
+    
+    public func provideUpdateAddressUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase {
+        switch requestType {
+        case .remote:
+            return UserProfileUsecaseRemote<UpdateAddressModel.Response>(handler: handler)
+        }
+    }
 }
