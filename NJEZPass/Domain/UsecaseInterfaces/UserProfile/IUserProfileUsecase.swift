@@ -11,6 +11,8 @@ import Entities
 
 public protocol IUserProfileUsecase {
     func getProfileOverview(action: String)
+    func updateSecurityQuestions(request: SecurityQuestionsModel.Request)
+    func updateAddress(request: UpdateAddressModel.Request)
     //digital envelop
     //forgot pwd
 }

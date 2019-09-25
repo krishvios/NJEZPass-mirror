@@ -8,10 +8,20 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+
+protocol IQuestionsViewable {
+    func updateSuccess(viewModel: SecurityQuestionsModel.PresentionModel)
+    func updateFailed(viewModel: SecurityQuestionsModel.PresentionModel)
+}
 
 class QuestionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tbleView: UITableView!
+    
+    var interactor: IQuestionsInteractable?
+    var router: IRouter?
     
     var securityQuestions = ["Security Question 1","Security Question 2","Security Question 3"]
     var securityQAnswers = ["Security Answer 1","Security Answer 2","Security Answer 3"]
@@ -29,6 +39,22 @@ class QuestionsViewController: UIViewController, UITableViewDataSource, UITableV
         pickerView.viewDelegate = self
         return pickerView
     }()
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        let configurator = QuestionsConfigurator()
+        configurator.build(viewController: self)
+        interactor = configurator.interactor
+        router = configurator.router
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,6 +182,10 @@ extension QuestionsViewController: SaveSkipCellDelegate {
         
         print("\(#function)")
         
+        //online login flow
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        interactor?.updateSecurityQuestions(question: "", answer: "", requestType: .remote)
+        
         if let storyboard = self.storyboard {
             let homeVC = storyboard.instantiateViewController(withIdentifier: "TabBarViewController")
             self.navigationController?.pushViewController(homeVC, animated: true)
@@ -212,5 +242,25 @@ extension QuestionsViewController:QuestionCellDelegate {
         }
         selectedField = selectedQuestionCell?.textField
 //        self.tbleView.reloadData()
+    }
+}
+
+extension QuestionsViewController: IQuestionsViewable {
+    func updateSuccess(viewModel: SecurityQuestionsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func updateFailed(viewModel: SecurityQuestionsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension QuestionsViewController: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }

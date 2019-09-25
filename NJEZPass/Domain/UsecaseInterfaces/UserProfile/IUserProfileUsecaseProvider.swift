@@ -11,4 +11,9 @@ import Foundation
 public protocol IUserProfileUsecaseProvider {
     
     func provideProfileOverviewUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase
+    
+    func provideUpdateSecurityQuestionsUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase
+    
+    func provideUpdateAddressUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IUserProfileUsecase
+
 }

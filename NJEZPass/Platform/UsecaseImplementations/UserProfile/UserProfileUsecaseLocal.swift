@@ -11,6 +11,14 @@ import Entities
 import Domain
 
 class UserProfileUsecaseLocal: IUserProfileUsecase {
+    func updateAddress(request: UpdateAddressModel.Request) {
+        
+    }
+    
+    func updateSecurityQuestions(request: SecurityQuestionsModel.Request) {
+        
+    }
+    
     var responseHandler: IResponseHandler
     init(handler: IResponseHandler) {
         self.responseHandler = handler

@@ -22,6 +22,8 @@ public struct APIConstants {
         public static let loginUser = "loginUser"
         public static let authorizeUser = "authorizeUser"
         public static let accountOverview = "getAccountDetails"
+        public static let updateSecurityQuestions = "firstTimeUser"
+        public static let updateAddress = "nixieUser"
         public static let loadDynamicCache = "loadDynamicCache"
         public static let profileUpdate = "api/account/holderinfo"
         public static let getPaymentMethods = "api/account/paymentmethods"

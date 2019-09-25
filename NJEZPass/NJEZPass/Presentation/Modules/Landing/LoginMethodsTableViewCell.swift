@@ -37,7 +37,7 @@ class LoginMethodsTableViewCell: UITableViewCell {
         // Initialization code
         
         txtUserID.delegate = self
-        txtUserID.text = "WHESS4"
+        txtUserID.text = "FAROOQ18"
         txtPassword.delegate = self
         loginButton.isEnabled = false
         signUPButton.backgroundColor = .clear
@@ -66,7 +66,7 @@ class LoginMethodsTableViewCell: UITableViewCell {
     }
     
     private func validateInput() {
-        //loginButton.isEnabled = false
+        loginButton.isEnabled = false
         if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
             loginButton.isEnabled = true
         }
