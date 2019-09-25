@@ -61,9 +61,15 @@ class LandingVC:  UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        //online login flow
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
+        
+        guard let _ = CMUtility.dynamicPageLoad else {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
+            return
+        }
+       
+        
+        
     }
     
     func setupTableView(){
