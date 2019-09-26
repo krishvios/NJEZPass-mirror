@@ -45,18 +45,20 @@ class DashboardViewController: UIViewController {
         
         
         if firstTimeUser == true {
+            
             if let storyboard = self.storyboard {
                 let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
                 self.present(vc, animated: true, completion: nil)
             }
             
-            firstTimeUser = false
-        }        
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print("\(#function)")
+        print("firstTimeUser = \(firstTimeUser)")
+
         guard let delegate = UIApplication.shared.delegate as? AppDelegate,
             let detailInfoData = delegate.detailInfo  else {
                 return
@@ -65,6 +67,22 @@ class DashboardViewController: UIViewController {
         detailInfo = detailInfoData
         tbleView.reloadData()
         
+//        if firstTimeUser == false {
+//            if nixieFlag == true {
+//                updateAddressAlert.addAction(updateAddressActionButton)
+//                self.present(updateAddressAlert, animated: true, completion: nil)
+//                nixieFlag = false
+//            }
+//        }
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("\(#function)")
+        print("firstTimeUser = \(firstTimeUser)")
+
         if firstTimeUser == false {
             if nixieFlag == true {
                 updateAddressAlert.addAction(updateAddressActionButton)
@@ -72,17 +90,8 @@ class DashboardViewController: UIViewController {
                 nixieFlag = false
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if firstTimeUser == false {
-            if nixieFlag == true {
-                updateAddressAlert.addAction(updateAddressActionButton)
-                self.present(updateAddressAlert, animated: true, completion: nil)
-                nixieFlag = false
-            }
+        if firstTimeUser == true {
+            firstTimeUser = false
         }
         setupTableView()
     }
