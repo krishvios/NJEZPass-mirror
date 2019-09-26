@@ -10,7 +10,7 @@ import UIKit
 import Apollo_iOS
 
 protocol CountryCellDelegate:class {
-    func stateSelected(stateField:ApolloTextInputField?)
+    func countrySelected(countryField:ApolloTextInputField?)
 }
 
 class CountryCell: UITableViewCell, ApolloTextInputFieldDelegate {
@@ -41,7 +41,7 @@ class CountryCell: UITableViewCell, ApolloTextInputFieldDelegate {
     }
     
     @IBAction func countryClicked(_ sender: Any) {
-        delegate?.stateSelected(stateField: countryTextField)
+        delegate?.countrySelected(countryField: countryTextField)
     }
     
 }
