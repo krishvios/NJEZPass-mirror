@@ -10,7 +10,9 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-    let rowItems = ["Edit Profile","Payment Methods","Vehicles","Tags"]
+    private var myAccountCell:MyAccountCell? = nil
+    
+    let rowItems = ["Edit Profile","Payment Methods","Vehicles","Tags","Account Activity"]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -34,11 +36,29 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let item = self.rowItems[indexPath.row]
-        cell.textLabel?.text = item
-        cell.textLabel?.font = UIFont(name: "OpenSans", size: 14)
-        return cell
+        let cellIdentifier = "cell"
+        myAccountCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MyAccountCell
+        myAccountCell?.cellLabel.text = rowItems[indexPath.row]
+        switch indexPath.row {
+        case 0:
+           myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "editProfile")
+            break;
+        case 1:
+            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "paymentMethods")
+            break;
+        case 2:
+            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "vehicles-1")
+            break;
+        case 3:
+            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "tags2")
+            break;
+        case 4:
+            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "accountActivity")
+            break;
+        default:
+            break;
+        }
+        return myAccountCell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,5 +73,8 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             break;
         }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(50)
     }
 }

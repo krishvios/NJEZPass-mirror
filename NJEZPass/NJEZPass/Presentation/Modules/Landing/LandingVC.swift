@@ -67,9 +67,6 @@ class LandingVC:  UIViewController {
             interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
             return
         }
-       
-        
-        
     }
     
     func setupTableView(){
@@ -162,21 +159,18 @@ extension LandingVC: LoginMethodsCellDelegate {
         self.resignFirstResponder()
         
         //online login flow
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        interactor?.login(username: username!, password: password!, requestType: .remote)
+//        MBProgressHUD.showAdded(to: self.view, animated: true)
+//        interactor?.login(username: username!, password: password!, requestType: .remote)
         
 //        direct login flow in case of api error
-//        var viewModel = ProfileModel.PresentionModel()
-//        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
-
-//        router?.perform(viewModel: viewModel)
-    
+        var viewModel = ProfileModel.PresentionModel()
+        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
+        router?.perform(viewModel: viewModel)
     }
     
-    
-    func loginClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "showDashboard", sender: self)
-    }
+//    func loginClicked(_ sender: Any) {
+//        self.performSegue(withIdentifier: "showDashboard", sender: self)
+//    }
     
     @IBAction func languageSelectionClick(_ sender: Any) {
         
@@ -237,6 +231,7 @@ extension LandingVC: TabWidgetCelldelegate {
             UIApplication.shared.openURL(url)
         }
     }
+    
     func travelToolsClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -248,6 +243,7 @@ extension LandingVC: TabWidgetCelldelegate {
             UIApplication.shared.openURL(url)
         }
     }
+    
     func websiteClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -294,6 +290,7 @@ extension LandingVC: ILoginViewable {
     func loadDynamicDataSuccess() {
         MBProgressHUD.hide(for: self.view, animated: true)
     }
+    
     func loadDynamicDataFailed() {
         MBProgressHUD.hide(for: self.view, animated: true)
     }

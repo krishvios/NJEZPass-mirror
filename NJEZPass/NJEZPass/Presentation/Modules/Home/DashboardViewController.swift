@@ -17,8 +17,9 @@ class DashboardViewController: UIViewController {
     private var tabWidgetCell:TabWidgetTableViewCell?
     private var headerCell:headerTableViewCell?
     private var paymentInfoCell:PaymentInfoTableViewCell?
-    
+    private var transactionCell:RecentTransactionsCell?
     var detailInfo: ProfileModel.AccountDetail?
+    
     
     var nixieFlag = true
     var firstTimeUser = true
@@ -42,8 +43,6 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         if firstTimeUser == true {
             
             if let storyboard = self.storyboard {
@@ -63,7 +62,7 @@ class DashboardViewController: UIViewController {
             let detailInfoData = delegate.detailInfo  else {
                 return
         }
-        
+       
         detailInfo = detailInfoData
         tbleView.reloadData()
         
@@ -97,12 +96,12 @@ class DashboardViewController: UIViewController {
     }
         
     func setupTableView(){
-        //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
-        //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
         tbleView.estimatedRowHeight = 100
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
         
+        tbleView.dataSource = self
+        tbleView.delegate = self
     }
 }
 
@@ -112,23 +111,25 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 2 {
-            return 88
-        }
-        if indexPath.row == 1 {
-            return 295
-        }
-        if indexPath.row == 3 {
-            return 230
-        }
-        if indexPath.row == 4{
+        
+        switch indexPath.row {
+        case 1:
+            return 208
+        case 2:
+            return 58
+        case 3,4,5:
+            return 82
+        case 6:
+            return 193
+        case 7:
             return 85
+        default:
+             return 270
         }
-        return 295
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -141,25 +142,31 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             cellIdentifier = "HomeHeaderCell"
             headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
+            headerCell?.headerCellDelegate = self
             headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
             headerCell?.amountLbl.text = "$\(detailInfo?.currentBalance ?? "")"
             return headerCell!
-            
         case 1:
             cellIdentifier = "paymentSummaryCell"
             paymentInfoCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PaymentInfoTableViewCell
-            paymentInfoCell?.lastRepleshAmt.text = detailInfo?.lastReplenishedDate
-            paymentInfoCell?.rplsAmt.text = detailInfo?.replenishedAmount
-            paymentInfoCell?.rplshThreshold.text = detailInfo?.replenishedThreshold
+            paymentInfoCell?.lastReplenismentDateLbl.text = detailInfo?.lastReplenishedDate
+            paymentInfoCell?.replenishmentAmtLbl.text = detailInfo?.replenishedAmount
+            paymentInfoCell?.replenishmentThersholdLbl.text = detailInfo?.replenishedThreshold
             return paymentInfoCell!
-            
-        case 4:
+        case 2:
+            cellIdentifier = "TransactionCell"
+            transactionCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? RecentTransactionsCell
+            transactionCell?.recentTransactionDelegate = self
+            return transactionCell!
+        case 3,4,5:
+           cellIdentifier = "RecentTransactionCell"
+        case 6:
+            cellIdentifier = "NewsRoom"
+        case 7:
             cellIdentifier = "Widget"
             tabWidgetCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TabWidgetTableViewCell
             tabWidgetCell?.tabWidgetDelegate = self
             return tabWidgetCell!
-        case 3:
-            cellIdentifier = "NewsRoom"
         default:
             cellIdentifier = "TransactionCell"
         }
@@ -169,6 +176,12 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 {
+            self.performSegue(withIdentifier: "showRecentDetails", sender: self)
+        }
+    }
 }
 
 extension DashboardViewController: TabWidgetCelldelegate {
@@ -184,6 +197,7 @@ extension DashboardViewController: TabWidgetCelldelegate {
             UIApplication.shared.openURL(url)
         }
     }
+    
     func travelToolsClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -195,6 +209,7 @@ extension DashboardViewController: TabWidgetCelldelegate {
             UIApplication.shared.openURL(url)
         }
     }
+    
     func websiteClicked(_ sender: Any) {
         guard let url = URL(string: "http://www.google.com") else {
             return
@@ -205,5 +220,16 @@ extension DashboardViewController: TabWidgetCelldelegate {
         } else {
             UIApplication.shared.openURL(url)
         }
+    }
+}
+
+extension DashboardViewController: RecentTransactionsCellDelegate {
+    func viewAllTapped(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 1
+    }
+}
+extension DashboardViewController:headerCellDelegate {
+    func increaseBalanceTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "showIncreaseBalance", sender: nil)
     }
 }

@@ -8,10 +8,31 @@
 
 import UIKit
 
-class PayNowVC: UIViewController {
+enum balanceIncreaseFlow: String {
+    case balanceIncrease
+}
 
+class PayNowVC: UIViewController {
+    
+    
+    @IBOutlet weak var progressImage: UIImageView!
+    var flowString = " "
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        switch flowString {
+        case balanceIncreaseFlow.balanceIncrease.rawValue:
+            progressImage.isHidden = true
+            self.title = "Payment Summary"
+        default:
+            progressImage.isHidden = false
+        }
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+             self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -65,19 +86,40 @@ extension PayNowVC: UITableViewDelegate, UITableViewDataSource {
 
 extension PayNowVC: PayNowTableViewCellDelegate {
     func payNowButtonClicked() {
-        let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-        let confirmVC = storyBoard.instantiateViewController(withIdentifier: "SignupAndSaveVC") as! SignupAndSaveVC
-        confirmVC.flowString = "payNowFlow"
-        self.navigationController?.pushViewController(confirmVC, animated: true)
+        switch flowString {
+        case balanceIncreaseFlow.balanceIncrease.rawValue:
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let confirmVC = storyBoard.instantiateViewController(withIdentifier: "SignupAndSaveVC") as! SignupAndSaveVC
+            confirmVC.flowString = "balanceIncreaseFlow"
+            self.navigationController?.pushViewController(confirmVC, animated: true)
+        default:
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let confirmVC = storyBoard.instantiateViewController(withIdentifier: "SignupAndSaveVC") as! SignupAndSaveVC
+            confirmVC.flowString = "payNowFlow"
+            self.navigationController?.pushViewController(confirmVC, animated: true)
+        }
     }
 }
 
 extension PayNowVC: CancelButtonTableViewCellDelegate {
     func cancelButtonClicked() {
-        if let payViolationVC = navigationController!.viewControllers.filter({ $0 is PayViolationVC }).first {
-            navigationController?.popToViewController(payViolationVC, animated: true)
-        } else {
-            navigationController?.popToRootViewController(animated: true)
+        
+        switch flowString {
+        case balanceIncreaseFlow.balanceIncrease.rawValue:
+            navigationController?.viewControllers.removeAll(where :{
+                (vc) -> Bool in if  vc.isKind(of: PayNowVC.self) || vc.isKind(of: PaymentAmountVC.self){
+                    return true
+                }
+                return false
+            })
+        default:
+            if let payViolationVC = navigationController!.viewControllers.filter({ $0 is PayViolationVC }).first {
+                navigationController?.popToViewController(payViolationVC, animated: true)
+            } else {
+                navigationController?.popToRootViewController(animated: true)
+            }
         }
+        
+        
     }
 }

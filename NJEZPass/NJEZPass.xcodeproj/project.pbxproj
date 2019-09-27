@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A02ABDD233A219C000D0B67 /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */; };
 		2A02ABDF233A21AE000D0B67 /* PaymentInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */; };
+		2A0CAB6F233DAACE00B63B73 /* MyAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CAB6E233DAACE00B63B73 /* MyAccountCell.swift */; };
+		2A299D78233DE123006A2DD8 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A299D77233DE123006A2DD8 /* CountryTableViewCell.swift */; };
+		2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A299D79233E187C006A2DD8 /* SaveTableViewCell.swift */; };
 		2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */; };
 		2A4F46E12334ED9C00A31806 /* EmailConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */; };
 		2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */; };
@@ -22,6 +25,10 @@
 		2A5358842338A613002848EA /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5358822338A613002848EA /* LoginMethodsTableViewCell.swift */; };
 		2A5358852338A613002848EA /* NewsRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5358832338A613002848EA /* NewsRoomTableViewCell.swift */; };
 		2A56178E2335EEBE00B38C8E /* GradientViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56178D2335EEBE00B38C8E /* GradientViewTableViewCell.swift */; };
+		2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
+		2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */; };
+		2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */; };
+		2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */; };
 		4216D9232339F88A00B3488F /* CMDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9212339F88900B3488F /* CMDevice.swift */; };
 		4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
 		4216D9252339F88D00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
@@ -333,6 +340,9 @@
 		254FDC4F2B1C8C9D86E31931 /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
 		2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfoTableViewCell.swift; sourceTree = "<group>"; };
+		2A0CAB6E233DAACE00B63B73 /* MyAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCell.swift; sourceTree = "<group>"; };
+		2A299D77233DE123006A2DD8 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		2A299D79233E187C006A2DD8 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
 		2A4F46DA2334ED9B00A31806 /* SecurityQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityQuestionsVC.swift; sourceTree = "<group>"; };
 		2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailConfirmationVC.swift; sourceTree = "<group>"; };
 		2A4F46DC2334ED9C00A31806 /* NewPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordVC.swift; sourceTree = "<group>"; };
@@ -348,6 +358,10 @@
 		2A5358822338A613002848EA /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
 		2A5358832338A613002848EA /* NewsRoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRoomTableViewCell.swift; sourceTree = "<group>"; };
 		2A56178D2335EEBE00B38C8E /* GradientViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewTableViewCell.swift; sourceTree = "<group>"; };
+		2A6A55EA233C995C000CBED9 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailsVC.swift; sourceTree = "<group>"; };
+		2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
+		2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		335C1D1951DC6B717592C408 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		4216D9212339F88900B3488F /* CMDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMDevice.swift; sourceTree = "<group>"; };
@@ -683,6 +697,40 @@
 			path = Carousel;
 			sourceTree = "<group>";
 		};
+		2A6A55EC233C9984000CBED9 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A55EA233C995C000CBED9 /* WebViewVC.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		2AD2468B233BD222009F64D1 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */,
+				9BC321E12334F4CF006B42DB /* CountryCell.swift */,
+				2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */,
+				2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */,
+				2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */,
+				2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		2AD2468C233BD293009F64D1 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A56178D2335EEBE00B38C8E /* GradientViewTableViewCell.swift */,
+				2A5358822338A613002848EA /* LoginMethodsTableViewCell.swift */,
+				2A5358832338A613002848EA /* NewsRoomTableViewCell.swift */,
+				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
+				2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */,
+				2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
 		4216D934233B618F00B3488F /* UpdateSecurityQuestions */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				429BAD1A23008D9F0087DBAD /* AccountViewController.swift */,
+				2A0CAB6E233DAACE00B63B73 /* MyAccountCell.swift */,
 			);
 			path = "My Account";
 			sourceTree = "<group>";
@@ -753,12 +802,10 @@
 		429BAD1723008D380087DBAD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2AD2468B233BD222009F64D1 /* ViewCells */,
 				42B493952317E13900E9B1A0 /* TabBarViewController.swift */,
 				429BAD1C23008DD20087DBAD /* DashboardViewController.swift */,
-				9BE6792E2302D07B008A5BAE /* ProfileNavigationCell.swift */,
-				9BC321E12334F4CF006B42DB /* CountryCell.swift */,
-				2A02ABDC233A219C000D0B67 /* headerTableViewCell.swift */,
-				2A02ABDE233A21AE000D0B67 /* PaymentInfoTableViewCell.swift */,
+				2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1006,6 +1053,8 @@
 				42B4938F2317E0D200E9B1A0 /* CountryZipcodeTableViewCell.swift */,
 				42B493902317E0D200E9B1A0 /* InputFieldTableViewCell.swift */,
 				42B493912317E0D200E9B1A0 /* CityStateTableViewCell.swift */,
+				2A299D77233DE123006A2DD8 /* CountryTableViewCell.swift */,
+				2A299D79233E187C006A2DD8 /* SaveTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1296,6 +1345,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A55EC233C9984000CBED9 /* WebView */,
 				4216D935233B618F00B3488F /* UpdateAddress */,
 				4216D934233B618F00B3488F /* UpdateSecurityQuestions */,
 				F90829082338AEC400C6C37E /* PayViolation */,
@@ -1448,13 +1498,8 @@
 		F9CAC7B922F8008800F15F10 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
-				2A5358822338A613002848EA /* LoginMethodsTableViewCell.swift */,
-				2A5358832338A613002848EA /* NewsRoomTableViewCell.swift */,
-				9B06373622FADC620093FABA /* UserNavigationCell.swift */,
-				2A4F46EA2334EDE100A31806 /* MoreContentTableViewCell.swift */,
-				2A4F46E72334EDE100A31806 /* TabWidgetTableViewCell.swift */,
+				2AD2468C233BD293009F64D1 /* ViewCells */,
 				2A4F46F52334FF3B00A31806 /* LandingVC.swift */,
-				2A56178D2335EEBE00B38C8E /* GradientViewTableViewCell.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -2045,6 +2090,7 @@
 				429BAD8B230C58B80087DBAD /* AppDelegate.swift in Sources */,
 				4216D948233B628600B3488F /* QuestionsInteractor.swift in Sources */,
 				429BAD1B23008D9F0087DBAD /* AccountViewController.swift in Sources */,
+				2A0CAB6F233DAACE00B63B73 /* MyAccountCell.swift in Sources */,
 				9B54491A23278F5A00DC8AAE /* TransactionTypeCell.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
@@ -2073,10 +2119,12 @@
 				F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */,
 				4216D93D233B61E500B3488F /* UpdateAddressViewController.swift in Sources */,
 				42B493942317E0D200E9B1A0 /* CityStateTableViewCell.swift in Sources */,
+				2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
+				2A299D78233DE123006A2DD8 /* CountryTableViewCell.swift in Sources */,
 				2A5358842338A613002848EA /* LoginMethodsTableViewCell.swift in Sources */,
 				4216D94A233B628600B3488F /* QuestionsRouter.swift in Sources */,
 				42B493872317DBAC00E9B1A0 /* CMToolbar.swift in Sources */,
@@ -2117,6 +2165,7 @@
 				9B06373722FADC620093FABA /* UserNavigationCell.swift in Sources */,
 				42B4938D2317DBAC00E9B1A0 /* CMStackView.swift in Sources */,
 				4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */,
+				2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				429BAD0E23008BC60087DBAD /* LoginRouter.swift in Sources */,
 				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
@@ -2147,6 +2196,8 @@
 				42BE357222FBF7DE00AAF8E3 /* DropDownPickerView.swift in Sources */,
 				42B493962317E13A00E9B1A0 /* TabBarViewController.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
+				2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */,
+				2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
 				42B4938C2317DBAC00E9B1A0 /* CMPickerView.swift in Sources */,
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
@@ -2196,6 +2247,7 @@
 				429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */,
 				42BE358822FBF94400AAF8E3 /* APIRequest.swift in Sources */,
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
+				2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
 				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,

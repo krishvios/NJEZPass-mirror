@@ -43,8 +43,16 @@ class PaymentAmountVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func continueTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "showPaymentScreen", sender: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! PayNowVC
+        nextVC.flowString = "balanceIncrease"
     }
 }
 
