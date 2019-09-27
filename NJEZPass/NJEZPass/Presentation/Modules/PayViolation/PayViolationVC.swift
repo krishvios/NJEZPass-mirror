@@ -12,7 +12,7 @@ class PayViolationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {

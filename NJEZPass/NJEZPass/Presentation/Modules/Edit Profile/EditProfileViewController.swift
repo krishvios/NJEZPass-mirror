@@ -25,8 +25,8 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var personalInfoPlaceholderArr = ["First Name", "Last Name", "Address Line 1", "Address Line 2"]
-    var contactInfoPlaceholderArr = ["Email", "Daytime Phone", "Evening Phone", "Cell Phone"]
+    var personalInfoPlaceholderArr = ["Full Name", "Username", "Address Line 1", "Address Line 2"]
+    var contactInfoPlaceholderArr = ["Zip Code", "Primary Email Address", "Secondary Email Address(optional)", "Primary Phone Number","Secondary Phone Number(Optional)"]
     fileprivate var selectedState = ""
     fileprivate var selectedField:ApolloTextInputField?
 //    var retrivalEnum:RetrivalEnum = .abbreviation
@@ -75,7 +75,7 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 12
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -83,12 +83,10 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
         var height = 72
         switch indexPath.row
         {
-        case 0,7:
-            height = 42
-        case 12:
+        case 11:
             height = 84
         default:
-            height = 72
+            height = 85
         }
         
         return CGFloat(height)
@@ -100,36 +98,30 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
         var cell:UITableViewCell?
 
         switch indexPath.row {
-        case 0:
-            cellIdentifier = "personalInfoCell"
-            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         case 5:
             cellIdentifier = "cityStateCell"
             let cityStateCell:CityStateTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? CityStateTableViewCell)!
             cityStateCell.delegate = self
             return cityStateCell
-        case 6:
-            cellIdentifier = "countryZipCodeCell"
-            let countryZipcodeCell:CountryZipcodeTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? CountryZipcodeTableViewCell)!
-            countryZipcodeCell.delegate = self
-            return countryZipcodeCell
-        case 7:
-            cellIdentifier = "contactInfoCell"
-            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        case 12:
+        case 4:
+            cellIdentifier = "countries"
+            let countryCell:CountryTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? CountryTableViewCell)!
+            countryCell.countryDelegate = self
+            return countryCell
+        case 11:
             cellIdentifier = "SaveButtonCell"
-            cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+            let saveCell:SaveTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? SaveTableViewCell)!
+            saveCell.delegate = self
+            return saveCell
         default:
             cellIdentifier = "InputFieldTableViewCell"
             print("indexPath.row = \(indexPath.row)")
             let ifCell:InputFieldTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? InputFieldTableViewCell)!
-            if indexPath.row>=1 && indexPath.row<=4
-            {
-                ifCell.setPlaceHolder(with: personalInfoPlaceholderArr[indexPath.row-1])
+            if indexPath.row>=0 && indexPath.row<=3 {
+                ifCell.setPlaceHolder(with: personalInfoPlaceholderArr[indexPath.row])
             }
-            else if indexPath.row>=8 && indexPath.row<=11
-            {
-                ifCell.setPlaceHolder(with: contactInfoPlaceholderArr[indexPath.row-8])
+            else{
+                ifCell.setPlaceHolder(with: contactInfoPlaceholderArr[indexPath.row-6])
             }
             return ifCell
         }
@@ -158,8 +150,7 @@ extension EditProfileViewController: CMPickerViewDelegate {
     }
 }
 
-extension EditProfileViewController: CountryZipcodeDelegate {
-    
+extension EditProfileViewController:CountryTableViewCellDelegate{
     func countrySelected(countryField: ApolloTextInputField?) {
         self.countrySelectionPicker.pickerArray = ["NJ", "NY"]
         selectedField = countryField
@@ -181,6 +172,11 @@ extension EditProfileViewController: CityStateDelegate {
         } else {
             self.view.addSubview(stateSelectionPicker)
         }
+    }
+}
+extension EditProfileViewController:saveButtonDelegate {
+    func saveTapped(_sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

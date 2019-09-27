@@ -13,11 +13,14 @@ protocol CityStateDelegate:class {
     func stateSelected(stateField:ApolloTextInputField?)
 }
 
-class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
+class CityStateTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityTextField: ApolloTextInputField!
-    @IBOutlet weak var stateTextField: ApolloTextInputField!
-    
+    @IBOutlet weak var stateTextField: ApolloTextInputField!{
+        didSet{
+            stateTextField.validationType = .dropdown
+        }
+    }
     @IBOutlet weak var stateSelectButton: UIButton!
 
     weak var delegate:CityStateDelegate?
@@ -25,8 +28,8 @@ class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         stateTextField.delegate = self
+        stateTextField.clearButton.isHidden = true
 //        stateTextField.inputAccessoryView = CMPickerView(frame: .zero)
     }
 
@@ -40,18 +43,15 @@ class CityStateTableViewCell: UITableViewCell, ApolloTextInputFieldDelegate {
         
     }
     
-    func lawTextFieldDidBeginEditing(textField: ApolloTextInputField) {
-//        textField.inputAccessoryView = CMPickerView(frame: CGRect.zero)
-        
-    }
+  
     
-    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
-        self.endEditing(true)
-        return true
-    }
-    
-    @IBAction func stateClicked(_ sender: Any) {
+}
+extension CityStateTableViewCell: ApolloTextInputFieldDelegate {
+    func lawTextFieldTapped(_ textField: ApolloTextInputField) {
         delegate?.stateSelected(stateField: stateTextField)
     }
-    
+    func lawTextFieldDidBeginEditing(textField: ApolloTextInputField) {
+        self.stateTextField.clearButton.isHidden = true
+        delegate?.stateSelected(stateField: stateTextField)
+    }
 }

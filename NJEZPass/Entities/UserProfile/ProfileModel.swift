@@ -29,7 +29,6 @@ public enum ProfileModel {
         public var route: Route?
         
         public init(accountDetail: AccountDetail, statusCode: String, message: String, route: Route) {
-            
             self.accountDetail = accountDetail
             self.statusCode = statusCode
             self.message = message

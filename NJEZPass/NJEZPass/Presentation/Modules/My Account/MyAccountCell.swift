@@ -1,18 +1,17 @@
 //
-//  headerTableViewCell.swift
+//  MyAccountCell.swift
 //  NJEZPass
 //
-//  Created by Muddika, Ramesh yadav on 24/09/19.
+//  Created by Muddika, Ramesh yadav on 27/09/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
 
-class headerTableViewCell: UITableViewCell {
+class MyAccountCell: UITableViewCell {
 
-    @IBOutlet weak var welocmeMsg: UILabel!
-    @IBOutlet weak var amountLbl: UILabel!
-    
+    @IBOutlet weak var cellTypeImage: UIImageView!
+    @IBOutlet weak var cellLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

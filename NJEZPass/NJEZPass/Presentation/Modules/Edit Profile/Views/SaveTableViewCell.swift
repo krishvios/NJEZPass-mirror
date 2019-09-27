@@ -1,25 +1,22 @@
 //
-//  PaymentInfoTableViewCell.swift
+//  SaveTableViewCell.swift
 //  NJEZPass
 //
-//  Created by Muddika, Ramesh yadav on 24/09/19.
+//  Created by Muddika, Ramesh yadav on 27/09/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
+protocol saveButtonDelegate:class {
+    func saveTapped(_sender:Any)
+}
+class SaveTableViewCell: UITableViewCell {
 
-class PaymentInfoTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var lastRepleshAmt: UILabel!
-    @IBOutlet weak var rplsAmt: UILabel!
-    @IBOutlet weak var rplshThreshold: UILabel!
-    
-    @IBOutlet weak var autoPayonoff: UILabel!
+    weak var delegate:saveButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,4 +25,7 @@ class PaymentInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func saveTapped(_ sender: Any) {
+        delegate!.saveTapped(_sender: sender)
+    }
 }
