@@ -13,8 +13,9 @@ class DisputedSelectedVC: UIViewController {
     @IBOutlet weak var disputeTableView: UITableView!
     @IBOutlet weak var pickerOverlay: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
-    var isPickerVisible = false
-    var nonResSelected = true
+    var cell1Bool = false
+    var cell2Bool = false
+    var cell3Bool = false
     var index = 0
     
     let disputeTypes = ["Select Dispute Type", "Section A1: Non-Responsibility", "Section A2: Rental Car or Leasing", "Section B: Inadvertent Toll Violation", "Section C: E-ZPass Customer"]
@@ -24,6 +25,8 @@ class DisputedSelectedVC: UIViewController {
         
         pickerOverlay.isHidden = true
         pickerView.isHidden = true
+        cell1Bool = true; cell2Bool = true; cell3Bool = true;
+        disputeTableView.reloadData()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         pickerOverlay.addGestureRecognizer(tap)
@@ -35,7 +38,6 @@ class DisputedSelectedVC: UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         pickerOverlay.isHidden = true
         pickerView.isHidden = true
-        isPickerVisible = false
         disputeTableView.reloadData()
     }
     
@@ -46,7 +48,7 @@ class DisputedSelectedVC: UIViewController {
     @IBAction func disputeTapped(_ sender: Any) {
         pickerOverlay.isHidden = false
         pickerView.isHidden = false
-        isPickerVisible = true
+        cell1Bool = true; cell2Bool = true; cell3Bool = true;
         disputeTableView.reloadData()
     }
     
@@ -63,7 +65,7 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,9 +76,11 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
         case 0:
             height = 189
         case 1:
-            height = (isPickerVisible || nonResSelected) ? 0 : 79
+            height = cell1Bool ? 0 : 725
         case 2:
-            height = isPickerVisible ? 0 : 634
+            height = cell2Bool ? 0 : 79
+        case 3:
+            height = cell3Bool ? 0 : 634
         default:()
         }
         
@@ -94,8 +98,10 @@ extension DisputedSelectedVC: UITableViewDataSource, UITableViewDelegate {
                 cell = disputeCell
             }
         case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: "Cell2")
+            cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")
         case 2:
+            cell = tableView.dequeueReusableCell(withIdentifier: "Cell2")
+        case 3:
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell3")
         default:()
         }
@@ -125,16 +131,20 @@ extension DisputedSelectedVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         index = row
-        if row == 1 {
-            nonResSelected = false
-        } else {
-            nonResSelected = true
+        
+        switch row {
+        case 0:
+            cell1Bool = true; cell2Bool = true; cell3Bool = true;
+        case 1:
+            cell1Bool = true; cell2Bool = false; cell3Bool = false;
+        case 2, 3:
+            cell1Bool = true; cell2Bool = true; cell3Bool = false;
+        case 4:
+            cell1Bool = false; cell2Bool = true; cell3Bool = true;
+        default:()
         }
-        if index != 0 {
-            pickerOverlay.isHidden = true
-            pickerView.isHidden = true
-            isPickerVisible = false
-        }
+        pickerOverlay.isHidden = true
+        pickerView.isHidden = true
         disputeTableView.reloadData()
     }
 }

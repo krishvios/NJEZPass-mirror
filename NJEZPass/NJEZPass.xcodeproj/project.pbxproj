@@ -234,6 +234,9 @@
 		F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */; };
 		F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCEF230BF57E002D2845 /* AccountViolationVC.swift */; };
 		F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */; };
+		F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C40C8D233B4C41006B609F /* ExpyAbstractions.swift */; };
+		F9C40C90233B4C41006B609F /* ExpyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C40C8E233B4C41006B609F /* ExpyTableView.swift */; };
+		F9C40CAF233C90A1006B609F /* CMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B493822317DBAC00E9B1A0 /* CMView.swift */; };
 		FA6F95321BEC2D9DBCE17554 /* Pods_PlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B205657880100376A070A2BA /* Pods_PlatformTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -588,6 +591,8 @@
 		F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReplenishAccountVC.swift; path = "NJEZPass/Presentation/Modules/Account Balance/ReplenishAccountVC.swift"; sourceTree = SOURCE_ROOT; };
 		F9BECCEF230BF57E002D2845 /* AccountViolationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViolationVC.swift; sourceTree = "<group>"; };
 		F9BECCF1230BFBFA002D2845 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		F9C40C8D233B4C41006B609F /* ExpyAbstractions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpyAbstractions.swift; sourceTree = "<group>"; };
+		F9C40C8E233B4C41006B609F /* ExpyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpyTableView.swift; sourceTree = "<group>"; };
 		F9C624E79E6DE8EF682086DC /* Pods-Entities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.release.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.release.xcconfig"; sourceTree = "<group>"; };
 		FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1491,8 +1496,18 @@
 				F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */,
 				F90829132338DBE200C6C37E /* ContactInfoCell.swift */,
 				F90829162339B82600C6C37E /* PayNowVC.swift */,
+				F9C40C88233B4BA3006B609F /* CollapsiblePayList */,
 			);
 			path = PayViolation;
+			sourceTree = "<group>";
+		};
+		F9C40C88233B4BA3006B609F /* CollapsiblePayList */ = {
+			isa = PBXGroup;
+			children = (
+				F9C40C8D233B4C41006B609F /* ExpyAbstractions.swift */,
+				F9C40C8E233B4C41006B609F /* ExpyTableView.swift */,
+			);
+			path = CollapsiblePayList;
 			sourceTree = "<group>";
 		};
 		F9CAC7B922F8008800F15F10 /* Landing */ = {
@@ -2077,6 +2092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
 				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
@@ -2147,6 +2163,7 @@
 				9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */,
 				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
+				F9C40C90233B4C41006B609F /* ExpyTableView.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
 				429BAD342300907B0087DBAD /* UINavigationItem+Extension.swift in Sources */,
 				F908290E2338AEC400C6C37E /* SignupAndSaveVC.swift in Sources */,
@@ -2226,6 +2243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C40CAF233C90A1006B609F /* CMView.swift in Sources */,
 				5EE3DFD722DEFCAD007EDCC7 /* NJEZPassUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
