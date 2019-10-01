@@ -17,6 +17,12 @@ class TransactionsHeaderCell: UITableViewCell {
 
     weak var transactionsHeaderDelegate:TransactionsHeaderDelegate!
     
+    @IBOutlet weak var transactionLbl: UILabel!
+    @IBOutlet weak var filterLbl: UILabel!
+    @IBOutlet weak var increaseBtnLbl: CMButton!
+    @IBOutlet weak var perpaidBalanceLbl: UILabel!
+    @IBOutlet weak var amountLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

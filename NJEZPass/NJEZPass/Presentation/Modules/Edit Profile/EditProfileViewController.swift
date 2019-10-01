@@ -31,7 +31,6 @@ class EditProfileViewController: UIViewController {
     fileprivate var selectedField:ApolloTextInputField?
 //    var retrivalEnum:RetrivalEnum = .abbreviation
     lazy fileprivate var countrySelectionPicker: CMPickerView! = {
-        
         let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tableView.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
         pickerView.pickerArray = ["USA","Canada"]
         pickerView.viewDelegate = self
@@ -39,7 +38,6 @@ class EditProfileViewController: UIViewController {
     }()
     
     lazy fileprivate var stateSelectionPicker: CMPickerView! = {
-        
         let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tableView.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
         pickerView.pickerArray = ["Oklahoma","Georgia"]
         pickerView.viewDelegate = self
@@ -50,22 +48,11 @@ class EditProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }
 
 extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate {
@@ -95,8 +82,6 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cellIdentifier = ""
-        var cell:UITableViewCell?
-
         switch indexPath.row {
         case 5:
             cellIdentifier = "cityStateCell"
@@ -115,7 +100,6 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
             return saveCell
         default:
             cellIdentifier = "InputFieldTableViewCell"
-            print("indexPath.row = \(indexPath.row)")
             let ifCell:InputFieldTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? InputFieldTableViewCell)!
             if indexPath.row>=0 && indexPath.row<=3 {
                 ifCell.setPlaceHolder(with: personalInfoPlaceholderArr[indexPath.row])
@@ -125,9 +109,7 @@ extension EditProfileViewController: UITableViewDataSource, UITableViewDelegate 
             }
             return ifCell
         }
-        return cell!
     }
-    
 }
 
 extension EditProfileViewController: CMPickerViewDelegate {
@@ -135,8 +117,6 @@ extension EditProfileViewController: CMPickerViewDelegate {
     // MARK: - CMPickerView Delegate methods
     
     func doneClicked(selectedString:String) {
-        print("selectedString = \(selectedString)")
-        print("selectedField?.placeholder = \(String(describing: selectedField?.placeholder))")
         selectedField?.becomeFirstResponder()
         selectedField?.text = selectedString
         selectedField?.resignFirstResponder()
