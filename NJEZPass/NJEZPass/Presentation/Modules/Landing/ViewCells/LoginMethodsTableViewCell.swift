@@ -15,6 +15,7 @@ protocol LoginMethodsCellDelegate:class {
     func signinClicked(_ sender: Any)
     func forgotPasswordClicked(_ sender: Any)
     func forgotUserNameCllicked(_ sender: Any)
+    func fingerPrintClicked(_ sender: Any)
 }
 
 class LoginMethodsTableViewCell: UITableViewCell {
@@ -63,6 +64,9 @@ class LoginMethodsTableViewCell: UITableViewCell {
     }
     @IBAction func forgotUserNameCllicked(_ sender: Any) {
         loginDelegate?.forgotUserNameCllicked(sender)
+    }
+    @IBAction func fingerPrintClicked(_ sender: Any) {
+        loginDelegate?.fingerPrintClicked(sender)
     }
     
     private func validateInput() {

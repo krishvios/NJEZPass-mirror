@@ -81,7 +81,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func backClicked(){
-        self.dismiss(animated: true, completion: nil)
+      self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func resetFiltersClicked(){

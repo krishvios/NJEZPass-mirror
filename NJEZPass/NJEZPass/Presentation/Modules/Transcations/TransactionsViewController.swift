@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class TransactionsViewController: UIViewController {
     
     @IBOutlet weak var tbleView: UITableView!
     
@@ -17,15 +17,50 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
         
         // Do any additional setup after loading the view.
         setupTableView()
+        self.navigationController?.navigationBar.isHidden = true
+        
     }
     
     func setupTableView(){
         //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
         //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
-        tbleView.estimatedRowHeight = 100
+        tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
-        
+    }
+}
+extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cellIdentifier = "SectionHeader"
+        let headerView = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        switch section {
+        case 0:
+            return UIView(frame: .zero)
+        default:
+            headerView?.backgroundColor = UIColor.white
+            return headerView
+        }
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 0
+        default:
+            return 40
+        }
+    }
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cellIdentifier = "TransactionCell"
+        if indexPath.section == 0 {
+            cellIdentifier = "TransactionsHeaderCell"
+            let cell: TransactionsHeaderCell =  tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TransactionsHeaderCell
+            cell.transactionsHeaderDelegate = self
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        return cell!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,74 +68,41 @@ class TransactionsViewController: UIViewController,UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        switch section {
+        case 0:
+             return 1
+        default:
+            return 5
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            return 304
-        }
-        return 88
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cellIdentifier = "SectionHeader"
-        let headerView = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         
-        switch section {
+        switch indexPath.section {
         case 0:
-            return UIView(frame: .zero)
+            return 291
         default:
-            if headerView == nil {
-                //            [NSException raise:@"headerView == nil.." format:@"No cells with matching CellIdentifier loaded from your storyboard"];
-                //            NSException.raise(NSExceptionName(rawValue: "headerView == nil.."), format: "No cells with matching CellIdentifier", arguments: ...)
-            }
-            return headerView
+            return 82
         }
-        
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var cellIdentifier = "TransactionCell"
-        
-        if indexPath.section == 0 && indexPath.row == 0 {
-            cellIdentifier = "TransactionsHeaderCell"
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section > 0 {
+            let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
+            let transactionDetails = storyBoard.instantiateViewController(withIdentifier: "TransactionsDetailsVC") as! TransactionsDetailsVC
+            self.navigationController?.pushViewController(transactionDetails, animated: true)
         }
-        
-        /*
-         switch indexPath.row {
-         
-         case 0:
-         cellIdentifier = "TransactionsHeaderCell"
-         //                case 1:
-         //                    cellIdentifier = "ReplenishmentMethod"
-         default:
-         cellIdentifier = "TransactionCell"
-         }
-         */
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if let transCell = cell as? TransactionsHeaderCell {
-            transCell.transactionsHeaderDelegate = self
-        }
-        return cell!
     }
 }
 
-extension TransactionsViewController:TransactionsHeaderDelegate {
+extension TransactionsViewController: TransactionsHeaderDelegate {
+    func filtersClicked() {
+         performSegue(withIdentifier: "showFilter", sender: nil)
+    }
     
     func increaseBalanceClicked() {
-        if let storyboard = self.storyboard {
-            let paymentVC = storyboard.instantiateViewController(withIdentifier: "TransactionsPaymentViewController")
-            self.navigationController?.pushViewController(paymentVC, animated: true)
-        }
+        performSegue(withIdentifier: "showIncreaseBalance", sender: nil)
     }
     
-    func filtersClicked() {
-        if let storyboard = self.storyboard {
-            let filtersVC = storyboard.instantiateViewController(withIdentifier: "FilterViewController")
-            self.present(filtersVC, animated: true, completion: nil)
-        }
-    }
+    
 }
