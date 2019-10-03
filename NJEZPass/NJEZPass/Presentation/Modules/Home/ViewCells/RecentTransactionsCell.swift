@@ -16,8 +16,12 @@ class RecentTransactionsCell: UITableViewCell {
     
     @IBOutlet weak var recentTrasanctionTxt: UILabel!
     @IBOutlet weak var viewAllBtnTxt: UIButton!
-    @IBOutlet weak var statusColorLbl: CMView!
-    @IBOutlet weak var paymentType: UILabel!
+    
+    @IBOutlet weak var transactionExitPlaza: UILabel!
+    @IBOutlet weak var transactionAmount: UILabel!
+    @IBOutlet weak var transactionTime: UILabel!
+    @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var statusColorView: UIView!
     
     weak var recentTransactionDelegate:RecentTransactionsCellDelegate?
     

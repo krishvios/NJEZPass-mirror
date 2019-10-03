@@ -26,6 +26,11 @@ class AccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = .white
     }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
@@ -69,6 +74,12 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
             break;
         case 1:
             self.performSegue(withIdentifier: "PaymentMethods", sender: nil)
+            break;
+        case 3:
+            self.performSegue(withIdentifier: "showTags", sender: nil)
+            break;
+        case 4:
+            self.performSegue(withIdentifier: "showAccountActivity", sender: nil)
             break;
         default:
             break;

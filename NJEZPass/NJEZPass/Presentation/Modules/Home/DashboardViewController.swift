@@ -19,8 +19,8 @@ class DashboardViewController: UIViewController {
     private var paymentInfoCell:PaymentInfoTableViewCell?
     private var transactionCell:RecentTransactionsCell?
     var detailInfo: ProfileModel.AccountDetail?
-    
-    
+    var transactionDetails:[Any] = []
+    var selectedRow = 0
     var nixieFlag = true
     var firstTimeUser = true
     
@@ -64,6 +64,7 @@ class DashboardViewController: UIViewController {
         }
        
         detailInfo = detailInfoData
+        transactionDetails = detailInfo!.tollTxList!
         tbleView.reloadData()
         
 //        if firstTimeUser == false {
@@ -160,6 +161,17 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             return transactionCell!
         case 3,4,5:
            cellIdentifier = "RecentTransactionCell"
+           transactionCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? RecentTransactionsCell
+           if transactionDetails.count > 0
+           {
+            let transactionDic = transactionDetails[indexPath.row - 3] as? ProfileModel.TollTxList
+            transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
+            transactionCell?.transactionAmount.text = transactionDic?.amount
+            transactionCell?.transactionTime.text = transactionDic?.transactionTime
+            transactionCell?.amount.text = ""
+            return transactionCell!
+            }
+            
         case 6:
             cellIdentifier = "NewsRoom"
         case 7:
@@ -177,9 +189,17 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 {
+            selectedRow = indexPath.row
             self.performSegue(withIdentifier: "showRecentDetails", sender: self)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.identifier == "showRecentDetails" {
+            if(selectedRow-3 <= transactionDetails.count && transactionDetails.count>0) {
+                let nextScene =  segue.destination as! TransactionsDetailsVC
+                nextScene.transactionDetails = (transactionDetails[selectedRow-3] as? ProfileModel.TollTxList)
+            }
         }
     }
 }

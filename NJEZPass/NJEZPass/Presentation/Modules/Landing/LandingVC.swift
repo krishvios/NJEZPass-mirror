@@ -25,9 +25,12 @@ protocol ILoginViewable {
 
 class LandingVC:  UIViewController {
     
+    @IBOutlet weak var touchIdDescriptionLbl: UILabel!
+    @IBOutlet weak var fingerPrintSigninLbl: UILabel!
     @IBOutlet weak var tbleView: UITableView!
     var interactor: ILoginInteractable?
     var router: IRouter?
+    @IBOutlet weak var fingerPrintOverlay: UIView!
     
     private var loginMethodcell:LoginMethodsTableViewCell?
     private var moreContentcell:MoreContentTableViewCell?
@@ -62,6 +65,8 @@ class LandingVC:  UIViewController {
         super.viewDidLoad()
         setupTableView()
         
+        fingerPrintOverlay.isHidden = true
+        
         guard let _ = CMUtility.dynamicPageLoad else {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
@@ -73,12 +78,16 @@ class LandingVC:  UIViewController {
         tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
-        tbleView.bounces = true
+        tbleView.bounces = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         
+    }
+    
+    @IBAction func cancelFingerPrint(_ sender: Any) {
+        fingerPrintOverlay.isHidden = true
     }
 }
 
@@ -104,10 +113,10 @@ extension LandingVC: UITableViewDelegate,UITableViewDataSource {
         }
         
         if indexPath.row == 3 {
-            return 230
+            return 198
         }
-        if indexPath.row == 4{
-            return 85
+        if indexPath.row == 4 {
+            return 70
         }
         return 355
     }
@@ -196,8 +205,9 @@ extension LandingVC: LoginMethodsCellDelegate {
         
     }
     
-    func fingerPrintCllicked(_ sender: Any) {
-        
+    func fingerPrintClicked(_ sender: Any) {
+       
+        fingerPrintOverlay.isHidden = false
     }
 }
 
@@ -206,15 +216,17 @@ extension LandingVC: MoreContentCellDelegate {
         
     }
     func registerAccountClicked(_ sender: Any) {
-        guard let url = URL(string: "http://www.google.com") else {
-            return
-        }
         
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            UIApplication.shared.openURL(url)
-        }
+        
+//        guard let url = URL(string: "http://www.google.com") else {
+//            return
+//        }
+//
+//        if #available(iOS 10.0, *) {
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        } else {
+//            UIApplication.shared.openURL(url)
+//        }
     }
 }
 
