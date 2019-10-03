@@ -78,7 +78,6 @@ extension LoginPresenter: IResponseHandler {
         print("onError: ", err)
         var viewModel = AuthorizeModel.PresentionModel()
         viewModel.message = Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginFailure)
-        viewModel.serviceId = ""
         viewController?.loginFailed(viewModel: viewModel)
     }
 }

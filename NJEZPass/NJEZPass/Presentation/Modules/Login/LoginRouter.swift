@@ -44,7 +44,7 @@ extension LoginRouter: IRouter {
                     delegate?.showMessage(message: msg)
                 }
             }
-        } else if let viewModel = viewModel as? LoginModel.PresentionModel {
+        } else if let viewModel = viewModel as? AuthorizeModel.PresentionModel {
             if let route = viewModel.route {
                 switch route.navigation {
                     
