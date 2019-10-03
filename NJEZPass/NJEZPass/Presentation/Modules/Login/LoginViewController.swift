@@ -2,9 +2,9 @@
 //  LoginViewController.swift
 //  NJEZPass
 //
-//  Created by N, Narasimhulu on 21/08/19.
+//  Created by Muddika, Ramesh yadav on 20/09/19.
 //  Copyright © 2019 Conduent. All rights reserved.
-
+//
 
 import UIKit
 import Entities
@@ -15,26 +15,36 @@ import MBProgressHUD
 import KeychainAccess
 
 protocol ILoginViewable {
-    func loginSuccess(viewModel: LoginModel.PresentionModel)
-    func loginFailed(viewModel: LoginModel.PresentionModel)
+    func loginSuccess(viewModel: AuthorizeModel.PresentionModel)
+    func loginFailed(viewModel: AuthorizeModel.PresentionModel)
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel)
     func userProfileFailed(viewModel: ProfileModel.PresentionModel)
+    func registerPushSuccess(viewModel: PushModel.PresentionModel)
+    func registerPushFailed(viewModel: PushModel.PresentionModel)
+    func loadDynamicDataSuccess()
+    func loadDynamicDataFailed()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController:  UIViewController {
     
+    @IBOutlet weak var touchIdDescriptionLbl: UILabel!
+    @IBOutlet weak var fingerPrintSigninLbl: UILabel!
+    @IBOutlet weak var tbleView: UITableView!
     var interactor: ILoginInteractable?
     var router: IRouter?
+    @IBOutlet weak var fingerPrintOverlay: UIView!
     
-    @IBOutlet weak var txtUserID: ApolloTextInputField!
-    @IBOutlet weak var txtPassword: ApolloTextInputField! {
-        didSet {
-            txtPassword.validationType = .password
-        }
-    }
+    private var loginMethodcell:LoginMethodsTableViewCell?
+    private var moreContentcell:MoreContentTableViewCell?
+    private var tabWidgetCell:TabWidgetTableViewCell?
+    private var gradientCell:GradientViewTableViewCell?
     
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var rememberMe: UISwitch!
+    lazy fileprivate var languageSelection: CMPickerView! = {
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.tbleView.frame.size.height-150, width: self.view.frame.size.width, height: 150))
+        pickerView.pickerArray = ["English","Spanish"]
+        pickerView.viewDelegate = self
+        return pickerView
+    }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -52,184 +62,257 @@ class LoginViewController: UIViewController {
         router = configurator.router
     }
     
-    private func fillCredentials() {
-        print(#function)
-        let keychain = Keychain(service: "com.conduent.NJEZPass")
-        
-        DispatchQueue.global().async {
-            do {
-                if let userId = try keychain.authenticationPrompt("Authenticate to login to server").get("userId") {
-                    self.txtUserID.text = userId
-                }
-            }
-            catch let error {
-                print(error)
-            }
-            do {
-                if let password = try keychain.authenticationPrompt("Authenticate to login to server").get("password") {
-                    self.txtPassword.text = password
-                }
-            }
-            catch let error {
-                print(error)
-            }
-        }
-        validateInput()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Hide the navigation bar on the this view controller
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        fillCredentials()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtUserID.delegate = self
-        txtPassword.delegate = self
-        loginButton.isEnabled = false
-        hideKeyboardWhenTap()
-        toggleLoginButtonColor()
+        setupTableView()
+        
+        fingerPrintOverlay.isHidden = true
+        
+        guard let _ = CMUtility.dynamicPageLoad else {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
+            return
+        }
     }
     
-    @IBAction func backTapped(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+    func setupTableView(){
+        tbleView.estimatedRowHeight = 2
+        tbleView.rowHeight = UITableView.automaticDimension
+        tbleView.keyboardDismissMode = .onDrag
+        tbleView.bounces = false
     }
     
-    @IBOutlet weak var biometricAuthBtn: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        
+    }
     
-    // MARK: IBActions
-    @IBAction func loginClicked(_ sender: Any) {
+    @IBAction func cancelFingerPrint(_ sender: Any) {
+        fingerPrintOverlay.isHidden = true
+    }
+}
+
+extension LoginViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 172
+        }
+        if indexPath.row == 1{
+            return 347
+        }
+        if indexPath.row == 2 {
+            return 222
+        }
+        
+        if indexPath.row == 3 {
+            return 198
+        }
+        if indexPath.row == 4 {
+            return 70
+        }
+        return 355
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cellIdentifier = ""
+        
+        switch indexPath.row {
+            
+        case 0:
+            cellIdentifier = "LoginBackGround"
+            gradientCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? GradientViewTableViewCell
+            gradientCell?.gradientDelegate = self
+            return gradientCell!
+        case 1:
+            cellIdentifier = "LoginMethods"
+            
+            loginMethodcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? LoginMethodsTableViewCell
+            loginMethodcell?.loginDelegate = self
+            return loginMethodcell!
+            
+        case 2:
+            cellIdentifier = "MoreContents"
+            moreContentcell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? MoreContentTableViewCell
+            moreContentcell?.moreContentsDelegate = self
+            return moreContentcell!
+        case 4:
+            cellIdentifier = "Widget"
+            tabWidgetCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TabWidgetTableViewCell
+            tabWidgetCell?.tabWidgetDelegate = self
+            return tabWidgetCell!
+        default:
+            cellIdentifier = "NewsRoom"
+            
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        
+        return cell!
+    }
+}
+
+extension LoginViewController: LoginMethodsCellDelegate {
+    
+    func loginClicked(username: String?, password: String?) {
+        
         self.view.endEditing(true)
         self.resignFirstResponder()
-        doLogin()
+        
+        //online login flow
+//        MBProgressHUD.showAdded(to: self.view, animated: true)
+//        interactor?.login(username: username!, password: password!, requestType: .remote)
+        
+//        direct login flow in case of api error
+        var viewModel = ProfileModel.PresentionModel()
+        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
+        router?.perform(viewModel: viewModel)
     }
     
-    func doLogin() {
-        if let username = txtUserID.text, let password = txtPassword.text {
-            
-            //online login flow
-//            MBProgressHUD.showAdded(to: self.view, animated: true)
-//            interactor?.login(username: username, password: password, requestType: .remote)
-            
-//            direct login flow in case of api error
-//            var viewModel = ProfileModel.PresentionModel()
-//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
+//    func loginClicked(_ sender: Any) {
+//        self.performSegue(withIdentifier: "showDashboard", sender: self)
+//    }
+    
+    @IBAction func languageSelectionClick(_ sender: Any) {
+        
+    }
+    
+    func signinClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    func forgotPasswordClicked(_ sender: Any) {
+        
+    }
+    
+    func forgotUserNameCllicked(_ sender: Any) {
+        
+    }
+    
+    func fingerPrintClicked(_ sender: Any) {
+       
+        fingerPrintOverlay.isHidden = false
+    }
+}
+
+extension LoginViewController: MoreContentCellDelegate {
+    func payViolationorTollBillClicked(_ sender: Any) {
+        
+    }
+    func registerAccountClicked(_ sender: Any) {
+        
+        
+//        guard let url = URL(string: "http://www.google.com") else {
+//            return
+//        }
 //
-//            router?.perform(viewModel: viewModel)
-            var viewModel = ProfileModel.PresentionModel()
-//            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.deviceVerification, nextURL: "", navigation: NavigationInfo.push)
-            viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.securityQuestions, nextURL: "", navigation: NavigationInfo.push)
-            router?.perform(viewModel: viewModel)
-            saveCredentials()
-            
-        } else {
-            DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
-        }
+//        if #available(iOS 10.0, *) {
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        } else {
+//            UIApplication.shared.openURL(url)
+//        }
     }
+}
+
+extension LoginViewController: TabWidgetCelldelegate {
     
-    @IBAction func forgotPassClicked(_ sender: Any) {
+    func tollFacilitesClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
         
-    }
-    
-    @IBAction func biometricAuthBtnClicked(_ sender: Any) {
-        
-    }
-    
-    private func validateInput() {
-        //loginButton.isEnabled = false
-        if let userName = txtUserID.text, let password = txtPassword.text, userName.count > 0, password.count > 0 {
-            loginButton.isEnabled = true
-        }
-        toggleLoginButtonColor()
-    }
-    
-    func toggleLoginButtonColor() {
-        if loginButton.isEnabled {
-            loginButton.backgroundColor = #colorLiteral(red: 0.4641762972, green: 0.2112366259, blue: 0.5424402356, alpha: 1)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
-            loginButton.backgroundColor = #colorLiteral(red: 0.4489307404, green: 0.09403731674, blue: 0.5118483901, alpha: 0.5)
+            UIApplication.shared.openURL(url)
         }
     }
     
-    func hideKeyboardWhenTap() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+    func travelToolsClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    public func saveCredentials() {
-        let keychain = Keychain(service: "com.conduent.NJEZPass")
-        do {
-            try keychain.set(txtUserID.text!, key: "userId")
+    func websiteClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
         }
-        catch let error {
-            print(error)
-        }
-        do {
-            try keychain.set(txtPassword.text!, key: "password")
-        }
-        catch let error {
-            print(error)
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
         }
     }
 }
 
-extension LoginViewController: ApolloTextInputFieldDelegate {
-    func lawTextFieldDidBeginEditing(textField: ApolloTextInputField) {
-    }
-    
-    func lawTextFieldDidEndEditing(textField: ApolloTextInputField) {
-        validateInput()
-    }
-    
-    func lawTextFieldDidChange(textField: ApolloTextInputField) {
-    }
-    
-    func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return true
-    }
-    
-    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
-        return true
-    }
-}
+
 
 extension LoginViewController: ILoginViewable {
-    func loginSuccess(viewModel: LoginModel.PresentionModel) {
-        //        progressActivity.stopAnimating()
+    func registerPushSuccess(viewModel: PushModel.PresentionModel) {
         
-        if rememberMe.isOn {
-            
-            self.saveCredentials()
-        }
-        
-        //        MBProgressHUD.hide(for: self.view, animated: true)
-        let token:String = UserDefaults.standard.value(forKey: AppStringKeys.accessToken) as! String
-        interactor?.getProfileOverview(accessToken: token, requestType: .remote)
-        //        router?.perform(viewModel: viewModel)
+         interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
     }
-    func loginFailed(viewModel: LoginModel.PresentionModel) {
+    
+    func registerPushFailed(viewModel: PushModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func loginSuccess(viewModel: AuthorizeModel.PresentionModel) {
+       
+        interactor?.registerForPushService(action: APIConstants.ServiceNames.pushService, requestType: .remote)
+    }
+    
+    func loginFailed(viewModel: AuthorizeModel.PresentionModel) {
         //        progressActivity.stopAnimating()
         MBProgressHUD.hide(for: self.view, animated: true)
         var viewModel = viewModel
         viewModel.route = Route(id: AppStringKeys.loginFailure, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.present)
         router?.perform(viewModel: viewModel)
     }
+    
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
         
         router?.perform(viewModel: viewModel)
     }
+    
     func userProfileFailed(viewModel: ProfileModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
         router?.perform(viewModel: viewModel)
+    }
+    
+    func loadDynamicDataSuccess() {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func loadDynamicDataFailed() {
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
 }
 
@@ -240,5 +323,28 @@ extension LoginViewController: IRoutable {
     
     func popCurrent() {
         // dismiss current viewcontroller like back action
+    }
+}
+
+extension LoginViewController:GradientDelegateCell {
+    func localizationSelect(_sender: Any) {
+        //   self.view.addSubview(languageSelection)
+        if view.subviews.contains(self.languageSelection){
+            self.languageSelection.isHidden = false
+        } else {
+            self.view.addSubview(languageSelection)
+        }
+    }
+}
+
+extension LoginViewController:CMPickerViewDelegate {
+    func doneClicked(selectedString: String) {
+        print("selectedString = \(selectedString)")
+        
+        self.languageSelection.isHidden = true
+    }
+    
+    func cancelClicked() {
+        self.languageSelection.isHidden = true
     }
 }
