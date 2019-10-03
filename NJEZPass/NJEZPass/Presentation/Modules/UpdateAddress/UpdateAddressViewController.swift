@@ -26,8 +26,8 @@ class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UIT
     var securityQuestions = ["Security Question 1","Security Question 2","Security Question 3"]
     var securityQAnswers = ["Security Answer 1","Security Answer 2","Security Answer 3"]
     
-    fileprivate var selectedCountry = CMUtility.dynamicPageLoad!.defaultCountry
-    fileprivate var selectedState = CMUtility.dynamicPageLoad!.defaultState
+    fileprivate var selectedCountry:String?
+    fileprivate var selectedState:String?
     fileprivate var selectedField:ApolloTextInputField?
     
     var stateArr=[String]()
@@ -57,8 +57,24 @@ class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UIT
         self.tbleView.estimatedRowHeight = 44.0;
         self.tbleView.rowHeight = UITableView.automaticDimension;
         
-        print("CMUtility.dynamicPageLoad!.countryList! = \(CMUtility.dynamicPageLoad!.countryList!)")
-        print("CMUtility.dynamicPageLoad!.stateList! = \(CMUtility.dynamicPageLoad!.stateList!)")
+        
+        
+        if let country = CMUtility.dynamicPageLoad?.defaultCountry {
+            selectedCountry = country
+        }else{
+           selectedCountry = "asd"
+        }
+        
+        if let state = CMUtility.dynamicPageLoad?.defaultState {
+            selectedState = state
+        }else{
+            selectedState = "asd"
+        }
+        
+       // print("CMUtility.dynamicPageLoad!.countryList! = \(CMUtility.dynamicPageLoad!.countryList!)")
+      //  print("CMUtility.dynamicPageLoad!.stateList! = \(CMUtility.dynamicPageLoad!.stateList!)")
+        
+        
         
         // Reload the table
         self.tbleView.reloadData()

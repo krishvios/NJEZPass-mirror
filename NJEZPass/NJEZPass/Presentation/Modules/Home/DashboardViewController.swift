@@ -43,14 +43,14 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if firstTimeUser == true {
-            
-            if let storyboard = self.storyboard {
-                let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
-                self.present(vc, animated: true, completion: nil)
-            }
-            
-        }
+//        if firstTimeUser == true {
+//            
+//            if let storyboard = self.storyboard {
+//                let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
+//                self.present(vc, animated: true, completion: nil)
+//            }
+//            
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,16 +82,16 @@ class DashboardViewController: UIViewController {
         print("\(#function)")
         print("firstTimeUser = \(firstTimeUser)")
 
-        if firstTimeUser == false {
-            if nixieFlag == true {
-                updateAddressAlert.addAction(updateAddressActionButton)
-                self.present(updateAddressAlert, animated: true, completion: nil)
-                nixieFlag = false
-            }
-        }
-        if firstTimeUser == true {
-            firstTimeUser = false
-        }
+//        if firstTimeUser == false {
+//            if nixieFlag == true {
+//                updateAddressAlert.addAction(updateAddressActionButton)
+//                self.present(updateAddressAlert, animated: true, completion: nil)
+//                nixieFlag = false
+//            }
+//        }
+//        if firstTimeUser == true {
+//            firstTimeUser = false
+//        }
         setupTableView()
     }
         
