@@ -75,9 +75,6 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             self.performSegue(withIdentifier: "PaymentMethods", sender: nil)
             break;
-        case 3:
-            self.performSegue(withIdentifier: "showTags", sender: nil)
-            break;
         case 4:
             self.performSegue(withIdentifier: "showAccountActivity", sender: nil)
             break;
