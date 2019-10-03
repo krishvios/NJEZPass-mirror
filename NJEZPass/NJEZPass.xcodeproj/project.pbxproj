@@ -175,6 +175,13 @@
 		5EE3E04322DEFD1E007EDCC7 /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; };
 		5EE3E04422DEFD1E007EDCC7 /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61C2F8C4FE280F097C7ABF4D /* Pods_NJEZPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0CB4424A13DB6BB912679 /* Pods_NJEZPass.framework */; };
+		623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */; };
+		623535BE2345BFDB00B736E4 /* EZYPassNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */; };
+		623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */; };
+		62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */; };
+		62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */; };
+		62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */; };
+		62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */; };
 		7BDDA510FB4D829E192A0FF0 /* Pods_NJEZPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE51622DBC685C9AFF3432DE /* Pods_NJEZPassUITests.framework */; };
 		9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */; };
 		9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */; };
@@ -515,6 +522,13 @@
 		5EE3E03622DEFD1E007EDCC7 /* PlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3E03D22DEFD1E007EDCC7 /* PlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformTests.swift; sourceTree = "<group>"; };
 		5EE3E03F22DEFD1E007EDCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZYPassNavView.swift; sourceTree = "<group>"; };
+		623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EZYPassNavView.xib; sourceTree = "<group>"; };
+		623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtention.swift; sourceTree = "<group>"; };
+		62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
+		62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		6B1B4FF9766E16A7A1382D9D /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJEZPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94716BDE53C161C5DB9FE59B /* Pods-EntitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EntitiesTests/Pods-EntitiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1074,6 +1088,7 @@
 		42BE356022FBF7DE00AAF8E3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				623535BA2345BF9700B736E4 /* NavigationBar */,
 				2A4F46F02334EFB100A31806 /* Carousel */,
 				42B4937B2317DB9C00E9B1A0 /* GradientView.swift */,
 				42BE356122FBF7DE00AAF8E3 /* CustomButton.swift */,
@@ -1345,6 +1360,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				62A7BDA62342122F00FE66FB /* More */,
 				2A6A55EC233C9984000CBED9 /* WebView */,
 				4216D935233B618F00B3488F /* UpdateAddress */,
 				4216D934233B618F00B3488F /* UpdateSecurityQuestions */,
@@ -1367,6 +1383,35 @@
 				429BAD2A23008EE60087DBAD /* Vehicles */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		623535BA2345BF9700B736E4 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */,
+				623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */,
+				623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		62A7BDA62342122F00FE66FB /* More */ = {
+			isa = PBXGroup;
+			children = (
+				62A7BDA923430EA000FE66FB /* Cells */,
+				62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */,
+				62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		62A7BDA923430EA000FE66FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */,
+				62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9B008B3A22F320AD0098BCDC /* Tags */ = {
@@ -1805,6 +1850,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				429BAD83230C58B80087DBAD /* Violations.storyboard in Resources */,
+				623535BE2345BFDB00B736E4 /* EZYPassNavView.xib in Resources */,
 				429BAD8F230C58B80087DBAD /* Apache License.txt in Resources */,
 				429BAD84230C58B80087DBAD /* UserFlow.storyboard in Resources */,
 				429BAD7D230C58B80087DBAD /* PaymentMethods.storyboard in Resources */,
@@ -1822,6 +1868,7 @@
 				429BAD80230C58B80087DBAD /* FAQ.storyboard in Resources */,
 				9BED144E230D778300C59899 /* country_states.json in Resources */,
 				429BAD91230C58B80087DBAD /* OpenSans-LightItalic.ttf in Resources */,
+				62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */,
 				429BAD82230C58B80087DBAD /* TagsFlow.storyboard in Resources */,
 				429BAD8E230C58B80087DBAD /* OpenSans-Italic.ttf in Resources */,
 				429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */,
@@ -2141,7 +2188,9 @@
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				9BC321E22334F4CF006B42DB /* CountryCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
+				62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
+				623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
 				9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */,
@@ -2153,7 +2202,9 @@
 				9BAA563822F2DADB0037036F /* AmountDisplayCell.swift in Sources */,
 				4216D951233B6CA100B3488F /* UpdateAddressPresenter.swift in Sources */,
 				4216D943233B61F100B3488F /* SaveSkipCell.swift in Sources */,
+				62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */,
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
+				62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */,
 				2A56178E2335EEBE00B38C8E /* GradientViewTableViewCell.swift in Sources */,
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
@@ -2172,6 +2223,7 @@
 				42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */,
 				42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */,
 				429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */,
+				623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */,
 				429BAD362300910A0087DBAD /* UINavigationBar+Extensions.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				42B493882317DBAC00E9B1A0 /* CMLabel.swift in Sources */,
