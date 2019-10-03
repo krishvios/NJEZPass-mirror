@@ -84,11 +84,11 @@ class SignupAndSaveVC: UIViewController {
             self.performSegue(withIdentifier: "showSelectPayment", sender: nil)
         case FlowKeys.payNowFlow.rawValue:
             let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.navigationController?.pushViewController(loginVC, animated: true)
         case FlowKeys.forgotUsernameFlow.rawValue:
             let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.navigationController?.pushViewController(loginVC, animated: true)
         case FlowKeys.balanceIncreaseFlow.rawValue:
             navigationController?.viewControllers.removeAll(where :{

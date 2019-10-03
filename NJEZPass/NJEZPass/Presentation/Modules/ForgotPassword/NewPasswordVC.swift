@@ -131,7 +131,7 @@ class NewPasswordVC: UIViewController {
   
      @IBAction func saveButtonClicked(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LandingVC") as! LandingVC
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(loginVC, animated: true)
      }
     
