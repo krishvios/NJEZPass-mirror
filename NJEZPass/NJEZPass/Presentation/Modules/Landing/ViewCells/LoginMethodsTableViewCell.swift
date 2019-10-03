@@ -38,7 +38,7 @@ class LoginMethodsTableViewCell: UITableViewCell {
         // Initialization code
         
         txtUserID.delegate = self
-        txtUserID.text = "FAROOQ18"
+        txtUserID.text = "WHESS4"
         txtPassword.delegate = self
         loginButton.isEnabled = false
         signUPButton.backgroundColor = .clear
