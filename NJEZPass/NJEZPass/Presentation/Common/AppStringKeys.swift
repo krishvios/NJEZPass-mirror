@@ -18,6 +18,9 @@ enum AppStringKeys {
     static let ok = "OK"
     static let versionString = "VERSION_STRING_VALUE"
     static let accessToken = "AccessToken"
+    static let register = "REGISTER"
+    static let mobileOS = "iOS"
+    static let badgeCount = "0"
 }
 enum AppGraphicKeys {
     static let checkboxChecked = "checkbox-checked"

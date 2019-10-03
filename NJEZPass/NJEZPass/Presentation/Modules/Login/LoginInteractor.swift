@@ -19,6 +19,7 @@ protocol ILoginInteractable {
     func loadDynamicData(action:String, requestType: Constants.RequestCategory)
     func login(username: String, password: String, requestType: Constants.RequestCategory)
     func getProfileOverview(action: String, requestType: Constants.RequestCategory)
+    func registerForPushService(action:String, requestType: Constants.RequestCategory )
 }
 
 class LoginInteractor {
@@ -28,6 +29,18 @@ class LoginInteractor {
 }
 
 extension LoginInteractor: ILoginInteractable {
+    
+    func registerForPushService(action: String, requestType: Constants.RequestCategory) {
+        
+        let pushRequest = PushModel.Request(action:action, operationType: AppStringKeys.register, mobileOSType: AppStringKeys.mobileOS, systemVersion: APIConstants.DefaultParams.systemVersion, appVersion: APIConstants.DefaultParams.appVersion, deviceToken: "", badgeCount: AppStringKeys.badgeCount)
+               
+       
+       if let responseHandler = presenter {
+           let interfaceObj = loginUsecaseProvider.provideLoginUsecase(requestType: requestType, handler: responseHandler)
+           interfaceObj.registerPushService(request: pushRequest)
+       }
+    }
+    
     
     func login(username: String, password: String, requestType: Constants.RequestCategory) {
         

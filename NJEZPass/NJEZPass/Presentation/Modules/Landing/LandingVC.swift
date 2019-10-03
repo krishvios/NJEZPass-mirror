@@ -19,6 +19,8 @@ protocol ILoginViewable {
     func loginFailed(viewModel: AuthorizeModel.PresentionModel)
     func userProfileSuccess(viewModel: ProfileModel.PresentionModel)
     func userProfileFailed(viewModel: ProfileModel.PresentionModel)
+    func registerPushSuccess(viewModel: PushModel.PresentionModel)
+    func registerPushFailed(viewModel: PushModel.PresentionModel)
     func loadDynamicDataSuccess()
     func loadDynamicDataFailed()
 }
@@ -168,13 +170,13 @@ extension LandingVC: LoginMethodsCellDelegate {
         self.resignFirstResponder()
         
         //online login flow
-//        MBProgressHUD.showAdded(to: self.view, animated: true)
-//        interactor?.login(username: username!, password: password!, requestType: .remote)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        interactor?.login(username: username!, password: password!, requestType: .remote)
         
 //        direct login flow in case of api error
-        var viewModel = ProfileModel.PresentionModel()
-        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
-        router?.perform(viewModel: viewModel)
+//        var viewModel = ProfileModel.PresentionModel()
+//        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
+//        router?.perform(viewModel: viewModel)
     }
     
 //    func loginClicked(_ sender: Any) {
@@ -270,12 +272,18 @@ extension LandingVC: TabWidgetCelldelegate {
 
 
 extension LandingVC: ILoginViewable {
-    func loginSuccess(viewModel: AuthorizeModel.PresentionModel) {
-        //        progressActivity.stopAnimating()
+    func registerPushSuccess(viewModel: PushModel.PresentionModel) {
         
-        //        MBProgressHUD.hide(for: self.view, animated: true)
-        interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
-        //        router?.perform(viewModel: viewModel)
+         interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
+    }
+    
+    func registerPushFailed(viewModel: PushModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func loginSuccess(viewModel: AuthorizeModel.PresentionModel) {
+       
+        interactor?.registerForPushService(action: APIConstants.ServiceNames.pushService, requestType: .remote)
     }
     
     func loginFailed(viewModel: AuthorizeModel.PresentionModel) {
