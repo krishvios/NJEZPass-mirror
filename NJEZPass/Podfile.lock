@@ -8,14 +8,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
-  - "Apollo_iOS/ApolloTextInputField (from `https://ramesh@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS`)"
+  - "Apollo_iOS/ApolloTextInputField (from `https://anskvivek@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS`)"
   - KeychainAccess
   - MBProgressHUD (~> 1.1.0)
   - SideMenu
   - SJSegmentedScrollView
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - KeychainAccess
     - MBProgressHUD
@@ -24,12 +24,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Apollo_iOS:
-    :git: "https://ramesh@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS"
+    :git: "https://anskvivek@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS"
 
 CHECKOUT OPTIONS:
   Apollo_iOS:
     :commit: 673c8817fabbce70d85ec7a60cbb5e8de999ece3
-    :git: "https://ramesh@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS"
+    :git: "https://anskvivek@dev.azure.com/ConduentDevOps/Innovation/_git/Cti.Mobility.Apollo-iOS"
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -39,6 +39,6 @@ SPEC CHECKSUMS:
   SideMenu: 179bd1df915e51458da659573c6cb84826321041
   SJSegmentedScrollView: 67ca97389a9c3a409d3b54c88781f031f5091c61
 
-PODFILE CHECKSUM: 993a6f197280a3bec51589d33f4bfe0390221557
+PODFILE CHECKSUM: f9f518341877d268b2b10544b0da6a6fffa36ca3
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.0

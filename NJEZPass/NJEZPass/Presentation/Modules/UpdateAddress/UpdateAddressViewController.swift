@@ -26,8 +26,8 @@ class UpdateAddressViewController: UIViewController, UITableViewDataSource,  UIT
     var securityQuestions = ["Security Question 1","Security Question 2","Security Question 3"]
     var securityQAnswers = ["Security Answer 1","Security Answer 2","Security Answer 3"]
     
-    fileprivate var selectedCountry = CMUtility.dynamicPageLoad?.defaultCountry
-    fileprivate var selectedState = CMUtility.dynamicPageLoad?.defaultState
+    fileprivate var selectedCountry = CMUtility.dynamicPageLoad!.defaultCountry
+    fileprivate var selectedState = CMUtility.dynamicPageLoad!.defaultState
     fileprivate var selectedField:ApolloTextInputField?
     
     var stateArr=[String]()

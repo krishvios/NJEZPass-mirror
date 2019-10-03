@@ -78,7 +78,7 @@ class LandingVC:  UIViewController {
         tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
-        tbleView.bounces = false
+        tbleView.bounces = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,10 +113,10 @@ extension LandingVC: UITableViewDelegate,UITableViewDataSource {
         }
         
         if indexPath.row == 3 {
-            return 198
+            return 230
         }
-        if indexPath.row == 4 {
-            return 70
+        if indexPath.row == 4{
+            return 85
         }
         return 355
     }
@@ -216,17 +216,15 @@ extension LandingVC: MoreContentCellDelegate {
         
     }
     func registerAccountClicked(_ sender: Any) {
+        guard let url = URL(string: "http://www.google.com") else {
+            return
+        }
         
-        
-//        guard let url = URL(string: "http://www.google.com") else {
-//            return
-//        }
-//
-//        if #available(iOS 10.0, *) {
-//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//        } else {
-//            UIApplication.shared.openURL(url)
-//        }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 }
 
