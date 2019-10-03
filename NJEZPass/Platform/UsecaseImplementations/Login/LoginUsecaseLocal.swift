@@ -11,6 +11,10 @@ import Entities
 import Domain
 
 class LoginUsecaseLocal: ILoginUsecase {
+    func registerPushService(request: PushModel.Request) {
+        
+    }
+    
     func loadDynamicData(request: DynamicCacheModel.Request) {
     }
     

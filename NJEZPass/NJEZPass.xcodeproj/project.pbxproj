@@ -154,6 +154,7 @@
 		42BE35B322FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B222FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift */; };
 		42BE35B522FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B422FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift */; };
 		42BE35B722FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE35B622FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift */; };
+		42E4999B2345C650009466F9 /* PushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E4999A2345C650009466F9 /* PushModel.swift */; };
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
@@ -492,6 +493,7 @@
 		42BE35B222FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseRemote.swift; sourceTree = "<group>"; };
 		42BE35B422FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseLocal.swift; sourceTree = "<group>"; };
 		42BE35B622FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseProvider.swift; sourceTree = "<group>"; };
+		42E4999A2345C650009466F9 /* PushModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushModel.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFC722DEFCAD007EDCC7 /* NJEZPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJEZPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1108,6 +1110,7 @@
 				4216D928233A007B00B3488F /* DynamicCacheModel.swift */,
 				42B2D7552338C4C40081C948 /* AuthorizeModel.swift */,
 				42BE357822FBF94400AAF8E3 /* LoginModel.swift */,
+				42E4999A2345C650009466F9 /* PushModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2267,6 +2270,7 @@
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
 				2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
+				42E4999B2345C650009466F9 /* PushModel.swift in Sources */,
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
 				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,
 				429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */,
