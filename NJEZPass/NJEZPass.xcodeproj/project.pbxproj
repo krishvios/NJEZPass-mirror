@@ -22,11 +22,12 @@
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
 		2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */; };
-		2A9084FB2343BFF0007BD1A5 /* searchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9084FA2343BFF0007BD1A5 /* searchTextField.xib */; };
-		2A9084FD2343C139007BD1A5 /* searchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9084FC2343C139007BD1A5 /* searchTextField.swift */; };
 		2A987EB52345C16B0057C37D /* RequestTagsorTagSupplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */; };
+		2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB6234613E80057C37D /* SearchBarCustom.swift */; };
+		2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */; };
 		2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */; };
 		2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */; };
+		2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */; };
 		2AED1084233F6F850082F4F9 /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */; };
 		2AEFECC423407AED00133EA3 /* AccountActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC323407AED00133EA3 /* AccountActivityVC.swift */; };
 		2AEFECC623407B7F00133EA3 /* AccountActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC523407B7F00133EA3 /* AccountActivityCell.swift */; };
@@ -375,11 +376,12 @@
 		2A4F46F32334EFC000A31806 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		2A6A55EA233C995C000CBED9 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailsVC.swift; sourceTree = "<group>"; };
-		2A9084FA2343BFF0007BD1A5 /* searchTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchTextField.xib; sourceTree = "<group>"; };
-		2A9084FC2343C139007BD1A5 /* searchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTextField.swift; sourceTree = "<group>"; };
 		2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagsorTagSupplies.swift; sourceTree = "<group>"; };
+		2A987EB6234613E80057C37D /* SearchBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCustom.swift; sourceTree = "<group>"; };
+		2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
 		2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
 		2AEFECC323407AED00133EA3 /* AccountActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityVC.swift; sourceTree = "<group>"; };
 		2AEFECC523407B7F00133EA3 /* AccountActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityCell.swift; sourceTree = "<group>"; };
@@ -755,8 +757,7 @@
 		2A9084F92343BFC8007BD1A5 /* SearchTextField */ = {
 			isa = PBXGroup;
 			children = (
-				2A9084FC2343C139007BD1A5 /* searchTextField.swift */,
-				2A9084FA2343BFF0007BD1A5 /* searchTextField.xib */,
+				2A987EB6234613E80057C37D /* SearchBarCustom.swift */,
 			);
 			path = SearchTextField;
 			sourceTree = "<group>";
@@ -1489,6 +1490,8 @@
 				9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */,
 				9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */,
 				2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */,
+				2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */,
+				2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */,
 			);
 			path = Tags;
 			sourceTree = "<group>";
@@ -1934,7 +1937,6 @@
 				429BAD90230C58B80087DBAD /* OpenSans-ExtraBold.ttf in Resources */,
 				429BAD8C230C58B80087DBAD /* OpenSans-Semibold.ttf in Resources */,
 				429BAD8D230C58B80087DBAD /* OpenSans-Light.ttf in Resources */,
-				2A9084FB2343BFF0007BD1A5 /* searchTextField.xib in Resources */,
 				429BAD80230C58B80087DBAD /* FAQ.storyboard in Resources */,
 				9BED144E230D778300C59899 /* country_states.json in Resources */,
 				429BAD91230C58B80087DBAD /* OpenSans-LightItalic.ttf in Resources */,
@@ -2237,6 +2239,8 @@
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
+				2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */,
+				2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */,
 				F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */,
 				F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */,
 				4216D93D233B61E500B3488F /* UpdateAddressViewController.swift in Sources */,
@@ -2247,7 +2251,6 @@
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
 				2A299D78233DE123006A2DD8 /* CountryTableViewCell.swift in Sources */,
-				2A9084FD2343C139007BD1A5 /* searchTextField.swift in Sources */,
 				4216D94A233B628600B3488F /* QuestionsRouter.swift in Sources */,
 				4238950D23462D0A00F7A7DD /* GradientViewTableViewCell.swift in Sources */,
 				42B493872317DBAC00E9B1A0 /* CMToolbar.swift in Sources */,
@@ -2269,6 +2272,7 @@
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
+				2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */,
 				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
 				2AEFECC82340986800133EA3 /* FilterTableViewCell.swift in Sources */,
 				9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */,
