@@ -169,6 +169,12 @@
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
+		5A7E599F234760FA001F1234 /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E5999234760F9001F1234 /* CameraImageViewCell.swift */; };
+		5A7E59A0234760FA001F1234 /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E599A234760F9001F1234 /* ContinueCell.swift */; };
+		5A7E59A1234760FA001F1234 /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E599B234760FA001F1234 /* SkipCell.swift */; };
+		5A7E59A2234760FA001F1234 /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E599C234760FA001F1234 /* LicensePlateViewController.swift */; };
+		5A7E59A3234760FA001F1234 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E599D234760FA001F1234 /* VehicleCell.swift */; };
+		5A7E59A4234760FA001F1234 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E599E234760FA001F1234 /* AddVehicleViewController.swift */; };
 		5EE3DFCC22DEFCAD007EDCC7 /* NJEZPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3DFCB22DEFCAD007EDCC7 /* NJEZPassTests.swift */; };
 		5EE3DFD722DEFCAD007EDCC7 /* NJEZPassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE3DFD622DEFCAD007EDCC7 /* NJEZPassUITests.swift */; };
 		5EE3DFF222DEFCE3007EDCC7 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3DFE922DEFCE3007EDCC7 /* Entities.framework */; };
@@ -523,6 +529,12 @@
 		42BE35B622FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUsecaseProvider.swift; sourceTree = "<group>"; };
 		42E4999A2345C650009466F9 /* PushModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushModel.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
+		5A7E5999234760F9001F1234 /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewCell.swift; sourceTree = "<group>"; };
+		5A7E599A234760F9001F1234 /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueCell.swift; sourceTree = "<group>"; };
+		5A7E599B234760FA001F1234 /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipCell.swift; sourceTree = "<group>"; };
+		5A7E599C234760FA001F1234 /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateViewController.swift; sourceTree = "<group>"; };
+		5A7E599D234760FA001F1234 /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		5A7E599E234760FA001F1234 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFC722DEFCAD007EDCC7 /* NJEZPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJEZPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFCB22DEFCAD007EDCC7 /* NJEZPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJEZPassTests.swift; sourceTree = "<group>"; };
@@ -910,6 +922,12 @@
 		429BAD2A23008EE60087DBAD /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
+				5A7E599E234760FA001F1234 /* AddVehicleViewController.swift */,
+				5A7E5999234760F9001F1234 /* CameraImageViewCell.swift */,
+				5A7E599A234760F9001F1234 /* ContinueCell.swift */,
+				5A7E599C234760FA001F1234 /* LicensePlateViewController.swift */,
+				5A7E599B234760FA001F1234 /* SkipCell.swift */,
+				5A7E599D234760FA001F1234 /* VehicleCell.swift */,
 				429BAD2B23008EE60087DBAD /* VehiclesViewController.swift */,
 			);
 			path = Vehicles;
@@ -1941,7 +1959,7 @@
 				9BED144E230D778300C59899 /* country_states.json in Resources */,
 				429BAD91230C58B80087DBAD /* OpenSans-LightItalic.ttf in Resources */,
 				62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */,
-				429BAD82230C58B80087DBAD /* TagsFlow.storyboard in Resources */,
+				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				429BAD8E230C58B80087DBAD /* OpenSans-Italic.ttf in Resources */,
 				429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */,
@@ -2197,6 +2215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7E59A3234760FA001F1234 /* VehicleCell.swift in Sources */,
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
@@ -2267,6 +2286,7 @@
 				2A02ABDD233A219C000D0B67 /* headerTableViewCell.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				9BC321E22334F4CF006B42DB /* CountryCell.swift in Sources */,
+				5A7E59A4234760FA001F1234 /* AddVehicleViewController.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
 				62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
@@ -2289,7 +2309,6 @@
 				62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */,
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */,
-				2A56178E2335EEBE00B38C8E /* GradientViewTableViewCell.swift in Sources */,
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
@@ -2306,6 +2325,7 @@
 				42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */,
 				42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */,
 				429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */,
+				5A7E59A0234760FA001F1234 /* ContinueCell.swift in Sources */,
 				623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */,
 				429BAD362300910A0087DBAD /* UINavigationBar+Extensions.swift in Sources */,
 				4238950A23462D0A00F7A7DD /* NewsRoomTableViewCell.swift in Sources */,
@@ -2329,11 +2349,13 @@
 				4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */,
 				42B4937C2317DB9C00E9B1A0 /* GradientView.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
+				5A7E599F234760FA001F1234 /* CameraImageViewCell.swift in Sources */,
 				F90829142338DBE200C6C37E /* ContactInfoCell.swift in Sources */,
 				4238950823462D0A00F7A7DD /* TabWidgetTableViewCell.swift in Sources */,
 				F9BECCF2230BFBFA002D2845 /* UIViewController+Extension.swift in Sources */,
 				42BE356F22FBF7DE00AAF8E3 /* DropDownViewWithTableView.swift in Sources */,
 				42BE357222FBF7DE00AAF8E3 /* DropDownPickerView.swift in Sources */,
+				5A7E59A2234760FA001F1234 /* LicensePlateViewController.swift in Sources */,
 				42B493962317E13A00E9B1A0 /* TabBarViewController.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
 				2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */,
@@ -2348,6 +2370,7 @@
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
 				9BAC0F22232A7ECE00FD0ED5 /* FAQPresenter.swift in Sources */,
+				5A7E59A1234760FA001F1234 /* SkipCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
