@@ -168,7 +168,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
             transactionCell?.transactionAmount.text = transactionDic?.amount
             transactionCell?.transactionTime.text = transactionDic?.transactionTime
-            transactionCell?.amount.text = ""
+            transactionCell?.amount.text = "-"
             return transactionCell!
             }
             

@@ -1963,13 +1963,13 @@
                                                         <action selector="loginClicked:" destination="gFT-Qx-7hM" eventType="touchUpInside" id="d8e-u0-bwM"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyE-Za-CA2">
-                                                    <rect key="frame" x="326" y="18" width="28" height="28"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyE-Za-CA2">
+                                                    <rect key="frame" x="314" y="10" width="40" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" priority="999" constant="28" id="E5n-Vp-mwi"/>
-                                                        <constraint firstAttribute="height" priority="999" constant="28" id="z0J-X7-AQ7"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="40" id="E5n-Vp-mwi"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="42" id="z0J-X7-AQ7"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button" image="fingerPrint"/>
+                                                    <state key="normal" title="Button" image="fingerPrint1"/>
                                                     <connections>
                                                         <action selector="fingerPrintClicked:" destination="gFT-Qx-7hM" eventType="touchUpInside" id="1xu-N7-VkQ"/>
                                                     </connections>
@@ -1993,7 +1993,7 @@
                                                 <constraint firstItem="Xvb-sL-mcQ" firstAttribute="centerX" secondItem="Pll-Ic-oIn" secondAttribute="centerX" constant="-1" id="a0R-V4-sd1"/>
                                                 <constraint firstItem="x3m-yC-DZJ" firstAttribute="top" secondItem="g7U-sA-1j9" secondAttribute="top" id="aUG-60-1J3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GyE-Za-CA2" secondAttribute="trailing" constant="6" id="ay2-Ay-oQM"/>
-                                                <constraint firstItem="Xvb-sL-mcQ" firstAttribute="top" secondItem="GyE-Za-CA2" secondAttribute="bottom" constant="17" id="bLk-m8-eeR"/>
+                                                <constraint firstItem="Xvb-sL-mcQ" firstAttribute="top" secondItem="GyE-Za-CA2" secondAttribute="bottom" constant="11" id="bLk-m8-eeR"/>
                                                 <constraint firstItem="Ab8-vi-c07" firstAttribute="top" secondItem="Q1w-fF-iK6" secondAttribute="topMargin" constant="-5" id="bZ4-Mi-Tjy"/>
                                                 <constraint firstItem="jTh-KV-6BR" firstAttribute="leading" secondItem="g7U-sA-1j9" secondAttribute="trailing" constant="46" id="cFL-cc-Agk"/>
                                                 <constraint firstAttribute="bottom" secondItem="K0d-tJ-ICL" secondAttribute="bottom" constant="24" id="cU1-hL-e4a"/>
@@ -2003,7 +2003,7 @@
                                                 <constraint firstItem="Xvb-sL-mcQ" firstAttribute="leading" secondItem="Q1w-fF-iK6" secondAttribute="leadingMargin" constant="-1" id="lnA-wr-a5M"/>
                                                 <constraint firstItem="Pll-Ic-oIn" firstAttribute="top" secondItem="jTh-KV-6BR" secondAttribute="bottom" constant="42" id="seg-7p-VAr"/>
                                                 <constraint firstItem="Ab8-vi-c07" firstAttribute="centerX" secondItem="Q1w-fF-iK6" secondAttribute="centerX" id="tOv-0A-FB7"/>
-                                                <constraint firstItem="GyE-Za-CA2" firstAttribute="top" secondItem="Q1w-fF-iK6" secondAttribute="topMargin" constant="7" id="var-cO-Cud"/>
+                                                <constraint firstItem="GyE-Za-CA2" firstAttribute="top" secondItem="Q1w-fF-iK6" secondAttribute="topMargin" constant="-1" id="var-cO-Cud"/>
                                                 <constraint firstItem="jTh-KV-6BR" firstAttribute="top" secondItem="Xvb-sL-mcQ" secondAttribute="bottom" constant="8" id="vzX-lA-uzc"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2407,7 +2407,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.16811144409726023" alpha="0.16820954623287676" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.16811144409726023" alpha="0.30995826198630144" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6482,6 +6482,7 @@
         <image name="dummyProgress2" width="559" height="123"/>
         <image name="dummyProgress3" width="564" height="119"/>
         <image name="fingerPrint" width="224" height="224"/>
+        <image name="fingerPrint1" width="44" height="44"/>
         <image name="gPay" width="50" height="20"/>
         <image name="navHeaderImage" width="125" height="16"/>
         <image name="payBill" width="60" height="60"/>

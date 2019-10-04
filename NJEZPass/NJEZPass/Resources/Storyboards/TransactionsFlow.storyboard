@@ -1111,10 +1111,11 @@ We’ve successfully processed your payment! Confirmation details of this transa
                                     <outlet property="delegate" destination="eit-BR-efW" id="GGl-om-RXF"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQw-vy-vCW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQw-vy-vCW">
                                 <rect key="frame" x="6" y="22" width="56" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="C4N-JO-15c"/>
+                                    <constraint firstAttribute="height" constant="45" id="HGo-TN-54W"/>
                                     <constraint firstAttribute="width" constant="56" id="muB-z5-URa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
