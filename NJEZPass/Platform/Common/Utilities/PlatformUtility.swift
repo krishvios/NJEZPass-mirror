@@ -11,6 +11,10 @@ import Foundation
 public struct PlatformUtility {
     
     public static var serviceId : String? = nil
+    public static var accessId : String? = nil
+    public static func getaccessId() ->String?{
+           return accessId
+    }
     public static func getserviceId() ->String?{
         return serviceId
     }
