@@ -25,6 +25,7 @@ public struct APIConstants {
         public static let updateSecurityQuestions = "firstTimeUser"
         public static let updateAddress = "nixieUser"
         public static let loadDynamicCache = "loadDynamicCache"
+        public static let pushService = "pushService"
         public static let profileUpdate = "api/account/holderinfo"
         public static let getPaymentMethods = "api/account/paymentmethods"
         public static let modifyBankAccount = "api/account/paymentmethod/primary"

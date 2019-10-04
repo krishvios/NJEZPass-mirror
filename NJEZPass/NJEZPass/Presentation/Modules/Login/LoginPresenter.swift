@@ -59,13 +59,25 @@ extension LoginPresenter: IResponseHandler {
             CMUtility.dynamicPageLoad = responseModel.dynamicPageLoad
             viewController?.loadDynamicDataSuccess()
         }
+        else if let responseModel = response as? PushModel.Response {
+            
+            var viewModel = PushModel.PresentionModel()
+            
+            if responseModel.statusCode == "0" {
+                viewModel.message = responseModel.message
+                viewController?.registerPushSuccess(viewModel: viewModel)
+            } else {
+                viewModel.message = responseModel.message
+                viewController?.registerPushFailed(viewModel: viewModel)
+            }
+            
+        }
     }
     
     func onError(err: APIError) {
         print("onError: ", err)
         var viewModel = AuthorizeModel.PresentionModel()
         viewModel.message = Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.loginFailure)
-        viewModel.serviceId = ""
         viewController?.loginFailed(viewModel: viewModel)
     }
 }

@@ -11,11 +11,12 @@ import Entities
 import Domain
 
 internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
-    
+   
     var responseHandler: IResponseHandler
     var nixieFlag: String?
     var suggestedAmount: String?
     var firstTimeLogin: String?
+    var verificationToken: String?
     
     init(handler: IResponseHandler) {
         self.responseHandler = handler
@@ -36,15 +37,16 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
                     return
                 }
                 
+                PlatformUtility.accessId = accessId
                 self.nixieFlag = responseModel.loginUser?.nixieFlag
                 self.suggestedAmount = responseModel.loginUser?.suggestedAmount
                 self.firstTimeLogin = responseModel.loginUser?.firstTimeLogin
                 
                 let token: String = APIConstants.DefaultParams.vendorID + "|" + accessId + "|" + APIConstants.DefaultParams.token
                 
-                let verificationToken: String = token.sha256().lowercased()
+                self.verificationToken = token.sha256().lowercased()
                 
-                let request = AuthorizeModel.Request(action: APIConstants.ServiceNames.authorizeUser, vendorId: APIConstants.DefaultParams.vendorID, verificationToken: verificationToken, accessId: accessId)
+                let request = AuthorizeModel.Request(action: APIConstants.ServiceNames.authorizeUser, vendorId: APIConstants.DefaultParams.vendorID, verificationToken: self.verificationToken!, accessId: accessId)
                 
                 self.authorizeUser(request:request)
                 
@@ -73,6 +75,29 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
                 self.responseHandler.onError(err: err)
             }
         })
+    }
+    
+    func registerPushService(request: PushModel.Request) {
+        
+        var pushRequest = request
+        
+        let token: String = APIConstants.DefaultParams.vendorID + "|" +         PlatformUtility.getaccessId()!  + "|" + APIConstants.DefaultParams.token
+                       
+        let verificationToken:String = token.sha256().lowercased()
+        
+        pushRequest.deviceToken = verificationToken
+           
+        let pushAPI = APIRequest<PushModel.Request>(method: .post, url: APIConstants.ServiceNames.pushService, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: pushRequest, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+               
+       APIService.shared.requestAPI(request: pushAPI, decodingType: PushModel.Response.self, completion: { response in
+           switch response {
+           case .onSuccess(let jsonData):
+               self.responseHandler.onSuccess(response: jsonData)
+           case .onFailure(let err):
+               self.responseHandler.onError(err: err)
+           }
+       })
+        
     }
     
     func loadDynamicData(request: DynamicCacheModel.Request) {
