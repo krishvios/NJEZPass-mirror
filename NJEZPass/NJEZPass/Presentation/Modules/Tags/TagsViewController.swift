@@ -12,7 +12,6 @@ class TagsViewController: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var searchBar: SearchBarCustom!
-    @IBOutlet weak var reportLostorStolenOverlay: UIView!
     @IBOutlet weak var reportStolenBtnLbl: CMButton!
     @IBOutlet weak var reportLostBtnLbl: CMButton!
     
@@ -29,14 +28,9 @@ class TagsViewController: UIViewController {
         searchBar.preferredTextColor = UIColor.gray
         searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
         searchBar.delegate = self
-         reportLostorStolenOverlay.isHidden = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        reportLostorStolenOverlay.addGestureRecognizer(tap)
-       
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        reportLostorStolenOverlay.isHidden = true
         tblView.keyboardDismissMode = .onDrag
         tblView.reloadData()
     }
@@ -45,55 +39,62 @@ class TagsViewController: UIViewController {
         super.awakeFromNib()
     }
     
-    func setupTableView(){
+    func setupTableView() {
         tblView.estimatedRowHeight = 100
         tblView.rowHeight = UITableView.automaticDimension
         tblView.keyboardDismissMode = .onDrag
     }
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+        
     @IBAction func reportLostTapped(_ sender: Any) {
         buttontapped = 1
-        reportLostorStolenOverlay.isHidden = true
         self.performSegue(withIdentifier: "showReport", sender: self)
-        
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBAction func reportStolenTapped(_ sender: Any) {
         buttontapped = 2
-         reportLostorStolenOverlay.isHidden = true
         self.performSegue(withIdentifier: "showReport", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch buttontapped {
-        case 1:
-            let nextVC = segue.destination as! ReportLostorStolenVC
-            nextVC.reportFlow = 1
-        case 2:
-            let nextVC = segue.destination as! ReportLostorStolenVC
-            nextVC.reportFlow = 2
-        default:
-            break
+        if segue.identifier == "showReport" {
+            switch buttontapped {
+                case 1:
+                let nextVC = segue.destination as! ReportLostorStolenVC
+                nextVC.reportFlow = 1
+                case 2:
+                let nextVC = segue.destination as! ReportLostorStolenVC
+                nextVC.reportFlow = 2
+                default:
+                break
+            }
+        } else {
+            if segue.identifier == "showRequestTags" {
+                let nextVC = segue.destination as! RequestTagVC
+                nextVC.requestFlowStr = "requestTagFlow"
+            } else if segue.identifier == "showRequestSuppliesTags" {
+                let nextVC = segue.destination as! RequestTagVC
+                nextVC.requestFlowStr = "requestTagSuppliesFlow"
+            }
         }
     }
 }
+
 extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier = "ActivityCell"
         switch indexPath.row {
         case data.count :
             cellIdentifier = "RequestTagCell"
-            let cell: RequestTagsorTagSupplies = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSupplies
+            let cell: RequestTagsorTagSuppliesCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSuppliesCell
             cell.delegate = self
             return cell
         case data.count + 1 :
             cellIdentifier = "RequestTagSupplies"
-            let cell: RequestTagsorTagSupplies = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSupplies
+            let cell: RequestTagsorTagSuppliesCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSuppliesCell
             cell.delegate = self
             return cell
         default:
@@ -103,7 +104,6 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
             cell.moreButtonAction.isHidden = false
             cell.statusColor.isHidden = true
             cell.activityTime.isHidden = true
-        
             cell.accountDetailsorTagDetails.text = "Tag Type: Interior"
             cell.accountDetailsorTagDetails.textColor = #colorLiteral(red: 0.3333333333, green: 0.3568627451, blue: 0.3529411765, alpha: 1)
             cell.activityType.text = filtered[indexPath.row]
@@ -155,6 +155,7 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive) {
             return filtered.count
@@ -165,11 +166,11 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
 
 extension TagsViewController : RequesTagorSuppliesdelegate {
     func requestTagsTapped(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "showRequestTags", sender: self)
     }
     
     func requestSuppliesTapped(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "showRequestSuppliesTags", sender: self)
     }
     
     
@@ -177,16 +178,12 @@ extension TagsViewController : RequesTagorSuppliesdelegate {
 
 extension TagsViewController: ActivityDelegate {
     func moreButtonActionTapped(_ sender: Any) {
-        reportLostorStolenOverlay.isHidden = true
-        
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let reportLost = UIAlertAction(title: "Report Lost", style: .default)
-        {_ in
+        let reportLost = UIAlertAction(title: "Report Lost", style: .default) {_ in
             self.buttontapped = 1
              self.performSegue(withIdentifier: "showReport", sender: self)
         }
-        let reportStolen = UIAlertAction(title: "Report Stolen", style: .default)
-        {_ in
+        let reportStolen = UIAlertAction(title: "Report Stolen", style: .default) {_ in
             self.buttontapped = 2
             self.performSegue(withIdentifier: "showReport", sender: self)
         }
@@ -199,7 +196,6 @@ extension TagsViewController: ActivityDelegate {
 }
 
 extension TagsViewController : UISearchBarDelegate {
-    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
@@ -221,10 +217,7 @@ extension TagsViewController : UISearchBarDelegate {
         
         filtered = data.filter({ (text) -> Bool in
             let tmp: String = text
-           // let range = tmp.range(of: searchText, options: String.CompareOptions.caseInsensitive)
-            //rangeOfString(searchText, options: NSString.CompareOptions.CaseInsensitiveSearch)
             return tmp.contains(searchText)
-                //range.location != NSNotFound
         })
         if(filtered.count == 0){
             searchActive = false;

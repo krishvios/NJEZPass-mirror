@@ -12,7 +12,7 @@ protocol RequesTagorSuppliesdelegate:class {
    func requestSuppliesTapped(_ sender: Any)
 }
 
-class RequestTagsorTagSupplies: UITableViewCell {
+class RequestTagsorTagSuppliesCell: UITableViewCell {
 
     weak var delegate : RequesTagorSuppliesdelegate?
     
@@ -21,13 +21,10 @@ class RequestTagsorTagSupplies: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     @IBAction func requestTagsTapped(_ sender: Any) {

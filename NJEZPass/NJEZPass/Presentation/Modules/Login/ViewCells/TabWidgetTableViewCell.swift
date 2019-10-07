@@ -23,7 +23,6 @@ class TabWidgetTableViewCell: UITableViewCell {
     weak var tabWidgetDelegate : TabWidgetCelldelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

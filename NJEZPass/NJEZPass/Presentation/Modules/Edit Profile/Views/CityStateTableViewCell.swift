@@ -16,7 +16,7 @@ protocol CityStateDelegate:class {
 class CityStateTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityTextField: ApolloTextInputField!
-    @IBOutlet weak var stateTextField: ApolloTextInputField!{
+    @IBOutlet weak var stateTextField: ApolloTextInputField! {
         didSet{
             stateTextField.validationType = .dropdown
         }

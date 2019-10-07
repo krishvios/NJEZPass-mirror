@@ -21,9 +21,7 @@ class TransactionsViewController: UIViewController {
         
     }
     
-    func setupTableView(){
-        //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
-        //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
+    func setupTableView() {
         tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag

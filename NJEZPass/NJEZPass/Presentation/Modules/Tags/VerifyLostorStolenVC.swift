@@ -13,10 +13,18 @@ class VerifyLostorStolenVC: UIViewController {
     var reportFlow  = 0
 
     @IBOutlet weak var navBar: UINavigationBar!
-    
     @IBOutlet weak var continueButtonLbl: CMButton!
     @IBOutlet weak var acknowledgeSwitch: UISwitch!
     @IBOutlet weak var acknowlwdgwSwitchLbl: UILabel!
+    @IBOutlet weak var lostorStolenDescriptionLbl: UILabel!
+    @IBOutlet weak var tagNumberTxt: UILabel!
+    @IBOutlet weak var tagNumberLbl: UILabel!
+    @IBOutlet weak var statusTxt: UILabel!
+    @IBOutlet weak var statusLbl: UILabel!
+    @IBOutlet weak var newStatusTxt: UILabel!
+    @IBOutlet weak var newStatusLbl: UILabel!
+    @IBOutlet weak var feeTxt: UILabel!
+    @IBOutlet weak var feeLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +64,12 @@ class VerifyLostorStolenVC: UIViewController {
             continueButtonLbl.isEnabled = false
             toggleLoginButtonColor()
         }
-        // Do something
     }
     
     @IBAction func continueTapped(_ sender: Any) {
         performSegue(withIdentifier: "showSignup", sender: self)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch reportFlow {

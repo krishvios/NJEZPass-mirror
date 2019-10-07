@@ -24,7 +24,6 @@ class CountryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         countryTextField.delegate = self
         countryTextField.clearButton.isHidden = true
     }
