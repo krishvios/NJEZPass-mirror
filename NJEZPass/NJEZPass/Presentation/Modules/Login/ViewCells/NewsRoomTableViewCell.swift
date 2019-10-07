@@ -18,7 +18,6 @@ class NewsRoomTableViewCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var carouselView: iCarousel!
     
-    
     weak var newsRoomDelegate: NewsRoomTableCellDelegate?
     var items: [String] = []
     

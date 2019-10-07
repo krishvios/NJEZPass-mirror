@@ -24,7 +24,6 @@ class SecurityQuestionsVC: UIViewController {
         
         firstSecurityQuestionAnswerInputField.delegate = self
         continueBtnLbl.isEnabled = false
-      //  setNavBar()
         setKeyBoardforText()
         toggleLoginButtonColor()
     }
@@ -67,26 +66,6 @@ class SecurityQuestionsVC: UIViewController {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
         scrollView.isScrollEnabled = false
-    }
-    
-    func setNavBar() {
-       
-        //image in nav bar
-        self.navigationController?.navigationBar.isHidden = false
-        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        //        navImageView.contentMode = .scaleAspectFit
-        //        let navImage = UIImage(named: "navHeaderImage")
-        //        navImageView.image = navImage
-        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
-        
-        //Back buttion
-         self.navigationController?.navigationBar.tintColor = .purple
-//        let btnLeftMenu: UIButton = UIButton()
-//        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
-//        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
-//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-//        self.navigationItem.leftBarButtonItem = barButton
     }
     
     @objc func backButtonClick(sender : UIButton) {
