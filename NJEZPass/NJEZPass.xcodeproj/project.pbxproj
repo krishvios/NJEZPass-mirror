@@ -22,18 +22,25 @@
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
 		2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */; };
-		2A987EB52345C16B0057C37D /* RequestTagsorTagSupplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */; };
+		2A987EB52345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB42345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift */; };
 		2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB6234613E80057C37D /* SearchBarCustom.swift */; };
 		2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */; };
 		2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */; };
 		2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */; };
 		2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */; };
 		2AED1084233F6F850082F4F9 /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */; };
+		2AEE8E1C23490577009C0686 /* TagSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */; };
+		2AEE8E1E2349059D009C0686 /* TagSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE8E1D2349059D009C0686 /* TagSummaryVC.swift */; };
+		2AEE8E2023490EA6009C0686 /* RequestSuppliesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE8E1F23490EA6009C0686 /* RequestSuppliesCell.swift */; };
 		2AEFECC423407AED00133EA3 /* AccountActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC323407AED00133EA3 /* AccountActivityVC.swift */; };
 		2AEFECC623407B7F00133EA3 /* AccountActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC523407B7F00133EA3 /* AccountActivityCell.swift */; };
 		2AEFECC82340986800133EA3 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */; };
 		2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */; };
 		2AEFECCC234099AD00133EA3 /* ActivityFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */; };
+		2AF92FA5234A0B29002AEA73 /* CorrespondenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */; };
+		2AF92FA7234A0B49002AEA73 /* CorrespondenceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92FA6234A0B49002AEA73 /* CorrespondenceVC.swift */; };
+		2AF92FA9234A39A0002AEA73 /* CorrespondenceSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92FA8234A39A0002AEA73 /* CorrespondenceSummaryVC.swift */; };
+		2AF95D7923479162000A3887 /* RequestTagsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF95D7823479162000A3887 /* RequestTagsCell.swift */; };
 		4216D9232339F88A00B3488F /* CMDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9212339F88900B3488F /* CMDevice.swift */; };
 		4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
 		4216D9252339F88D00B3488F /* CMSHAHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4216D9222339F88900B3488F /* CMSHAHash.swift */; };
@@ -211,7 +218,7 @@
 		62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */; };
 		62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */; };
 		7BDDA510FB4D829E192A0FF0 /* Pods_NJEZPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE51622DBC685C9AFF3432DE /* Pods_NJEZPassUITests.framework */; };
-		9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */; };
+		9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B008B3B22F320BE0098BCDC /* RequestTagVC.swift */; };
 		9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */; };
 		9B0436E8232281AA00418268 /* PaymentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E7232281AA00418268 /* PaymentStatusViewController.swift */; };
 		9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54491123265DC500DC8AAE /* PayNowTableViewCell.swift */; };
@@ -236,7 +243,7 @@
 		9BAC0F25232B8CCC00FD0ED5 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAC0F24232B8CCC00FD0ED5 /* FAQModel.swift */; };
 		9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */; };
 		9BC321E22334F4CF006B42DB /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC321E12334F4CF006B42DB /* CountryCell.swift */; };
-		9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */; };
+		9BCA992F22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA992E22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift */; };
 		9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */; };
 		9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */; };
 		9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA993A22F466E600C3BB7D /* FAQViewController.swift */; };
@@ -392,18 +399,25 @@
 		2A4F46F32334EFC000A31806 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		2A6A55EA233C995C000CBED9 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDetailsVC.swift; sourceTree = "<group>"; };
-		2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagsorTagSupplies.swift; sourceTree = "<group>"; };
+		2A987EB42345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagsorTagSuppliesCell.swift; sourceTree = "<group>"; };
 		2A987EB6234613E80057C37D /* SearchBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCustom.swift; sourceTree = "<group>"; };
 		2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
 		2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
+		2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSummaryCell.swift; sourceTree = "<group>"; };
+		2AEE8E1D2349059D009C0686 /* TagSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSummaryVC.swift; sourceTree = "<group>"; };
+		2AEE8E1F23490EA6009C0686 /* RequestSuppliesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSuppliesCell.swift; sourceTree = "<group>"; };
 		2AEFECC323407AED00133EA3 /* AccountActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityVC.swift; sourceTree = "<group>"; };
 		2AEFECC523407B7F00133EA3 /* AccountActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActivityCell.swift; sourceTree = "<group>"; };
 		2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDateTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFilterVC.swift; sourceTree = "<group>"; };
+		2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceCell.swift; sourceTree = "<group>"; };
+		2AF92FA6234A0B49002AEA73 /* CorrespondenceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceVC.swift; sourceTree = "<group>"; };
+		2AF92FA8234A39A0002AEA73 /* CorrespondenceSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceSummaryVC.swift; sourceTree = "<group>"; };
+		2AF95D7823479162000A3887 /* RequestTagsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagsCell.swift; sourceTree = "<group>"; };
 		335C1D1951DC6B717592C408 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4191CA8E175F68295C6E7183 /* Pods-NJEZPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJEZPassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJEZPassTests/Pods-NJEZPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		4216D9212339F88900B3488F /* CMDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMDevice.swift; sourceTree = "<group>"; };
@@ -590,7 +604,7 @@
 		6B1B4FF9766E16A7A1382D9D /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJEZPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94716BDE53C161C5DB9FE59B /* Pods-EntitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EntitiesTests/Pods-EntitiesTests.release.xcconfig"; sourceTree = "<group>"; };
-		9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
+		9B008B3B22F320BE0098BCDC /* RequestTagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagVC.swift; sourceTree = "<group>"; };
 		9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSummaryViewController.swift; sourceTree = "<group>"; };
 		9B0436E7232281AA00418268 /* PaymentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStatusViewController.swift; sourceTree = "<group>"; };
 		9B54491123265DC500DC8AAE /* PayNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowTableViewCell.swift; sourceTree = "<group>"; };
@@ -615,7 +629,7 @@
 		9BAC0F24232B8CCC00FD0ED5 /* FAQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
 		9BB0889A232116AA004F06A6 /* TransactionsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeaderCell.swift; sourceTree = "<group>"; };
 		9BC321E12334F4CF006B42DB /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
-		9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagViewController.swift; sourceTree = "<group>"; };
+		9BCA992E22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTagSuppliesVC.swift; sourceTree = "<group>"; };
 		9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsSubmissionStatusViewController.swift; sourceTree = "<group>"; };
 		9BCA993522F450BB00C3BB7D /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		9BCA993A22F466E600C3BB7D /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
@@ -1537,6 +1551,8 @@
 				62A7BDA923430EA000FE66FB /* Cells */,
 				62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */,
 				62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */,
+				2AF92FA6234A0B49002AEA73 /* CorrespondenceVC.swift */,
+				2AF92FA8234A39A0002AEA73 /* CorrespondenceSummaryVC.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -1544,6 +1560,7 @@
 		62A7BDA923430EA000FE66FB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */,
 				62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */,
 				62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */,
 			);
@@ -1560,8 +1577,14 @@
 				42DA6FE0234CD761007D5581 /* TagsRouter.swift */,
 				9B008B3B22F320BE0098BCDC /* TagsTableViewController.swift */,
 				9BCA992E22F44CAB00C3BB7D /* RequestTagViewController.swift */,
+				9B008B3B22F320BE0098BCDC /* RequestTagVC.swift */,
+				2AF95D7823479162000A3887 /* RequestTagsCell.swift */,
+				2AEE8E1F23490EA6009C0686 /* RequestSuppliesCell.swift */,
+				2A987EB42345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift */,
+				9BCA992E22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift */,
+				2AEE8E1D2349059D009C0686 /* TagSummaryVC.swift */,
+				2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */,
 				9BCA993022F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift */,
-				2A987EB42345C16B0057C37D /* RequestTagsorTagSupplies.swift */,
 				2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */,
 				2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */,
 			);
@@ -2271,12 +2294,12 @@
 			files = (
 				5A7E59A3234760FA001F1234 /* VehicleCell.swift in Sources */,
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
-				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
+				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
 				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
 				4216D9232339F88A00B3488F /* CMDevice.swift in Sources */,
-				9BCA992F22F44CAB00C3BB7D /* RequestTagViewController.swift in Sources */,
+				9BCA992F22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift in Sources */,
 				429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
@@ -2311,6 +2334,7 @@
 				429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
+				2AEE8E1E2349059D009C0686 /* TagSummaryVC.swift in Sources */,
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */,
@@ -2332,7 +2356,7 @@
 				4216D941233B61F100B3488F /* QuestionCell.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
-				2A987EB52345C16B0057C37D /* RequestTagsorTagSupplies.swift in Sources */,
+				2A987EB52345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift in Sources */,
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
 				4238950B23462D0A00F7A7DD /* MoreContentTableViewCell.swift in Sources */,
 				4216D942233B61F100B3488F /* QuestionsViewController.swift in Sources */,
@@ -2348,10 +2372,13 @@
 				623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */,
+				2AEE8E1C23490577009C0686 /* TagSummaryCell.swift in Sources */,
 				9B54491223265DC500DC8AAE /* PayNowTableViewCell.swift in Sources */,
 				2AEFECC82340986800133EA3 /* FilterTableViewCell.swift in Sources */,
 				9B544914232667BA00DC8AAE /* CancelButtonTableViewCell.swift in Sources */,
 				4238950723462D0A00F7A7DD /* LoginViewController.swift in Sources */,
+				2AF95D7923479162000A3887 /* RequestTagsCell.swift in Sources */,
+				2AF92FA9234A39A0002AEA73 /* CorrespondenceSummaryVC.swift in Sources */,
 				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				42DA6FDF234CD753007D5581 /* TagsPresenter.swift in Sources */,
@@ -2374,6 +2401,7 @@
 				2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */,
 				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
 				42B4938D2317DBAC00E9B1A0 /* CMStackView.swift in Sources */,
+				2AF92FA7234A0B49002AEA73 /* CorrespondenceVC.swift in Sources */,
 				4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */,
 				2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
@@ -2420,11 +2448,13 @@
 				2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
 				42B4938C2317DBAC00E9B1A0 /* CMPickerView.swift in Sources */,
+				2AF92FA5234A0B29002AEA73 /* CorrespondenceCell.swift in Sources */,
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */,
 				F908290D2338AEC400C6C37E /* SelectPaymentVC.swift in Sources */,
 				2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */,
+				2AEE8E2023490EA6009C0686 /* RequestSuppliesCell.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
 				9BAC0F22232A7ECE00FD0ED5 /* FAQPresenter.swift in Sources */,

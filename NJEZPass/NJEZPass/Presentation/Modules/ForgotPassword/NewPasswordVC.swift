@@ -41,12 +41,11 @@ class NewPasswordVC: UIViewController {
         newPasswordInputField.delegate = self
         confirmPasswordInputField.delegate = self
         saveButtonLbl.isEnabled = false
-        //setNavBar()
+        
         setKeyBoardforText()
         toggleLoginButtonColor()
         
         self.navigationController?.navigationBar.tintColor = .purple
-        
         navigationController?.viewControllers.removeAll(where :{
             (vc) -> Bool in if  vc.isKind(of: SecurityQuestionsVC.self){
                 return true
@@ -94,41 +93,7 @@ class NewPasswordVC: UIViewController {
         scrollView.contentInset = contentInset
         scrollView.isScrollEnabled = false
     }
-    func setNavBar()
-    {
-        
-        
-        //image in nav bar
-        self.navigationController?.navigationBar.isHidden = false
-        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        //        navImageView.contentMode = .scaleAspectFit
-        //        let navImage = UIImage(named: "navHeaderImage")
-        //        navImageView.image = navImage
-        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
-        
-        //Back buttion
-         self.navigationController?.navigationBar.tintColor = .purple
-        
-        navigationController?.viewControllers.removeAll(where :{
-            (vc) -> Bool in if  vc.isKind(of: SecurityQuestionsVC.self){
-                return true
-            }
-            return false
-        })
-
-//        let btnLeftMenu: UIButton = UIButton()
-//        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
-//        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
-//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-//        self.navigationItem.setLeftBarButton(barButton, animated: true)
-    }
     
-    @objc func backButtonClick(sender : UIButton) {
-//        navigationController?.popToRootViewController(animated: true)
-//        dismiss(animated: true, completion: nil)
-    }
-  
      @IBAction func saveButtonClicked(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
         let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
@@ -137,12 +102,10 @@ class NewPasswordVC: UIViewController {
     
     @IBAction func backTapped(_ sender: Any) {
         navigationController?.popViewController(animated: false)
-        
-       dismiss(animated: false, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     private func validateInput() {
-        //loginButton.isEnabled = false
         
         if let newPassword = newPasswordInputField.text,let confirmPassword = confirmPasswordInputField.text, newPassword.count > 0  && confirmPassword.count > 0 {
             saveButtonLbl.isEnabled = true

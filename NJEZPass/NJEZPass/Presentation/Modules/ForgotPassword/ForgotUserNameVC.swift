@@ -29,7 +29,6 @@ class ForgotUserNameVC: UIViewController {
         accountNumberInputField.delegate = self
         zipCodeInputField.delegate = self
         toggleLoginButtonColor()
-        //setNavBar()
         setKeyBoardforText()
     }
     
@@ -70,25 +69,6 @@ class ForgotUserNameVC: UIViewController {
         scrollView.isScrollEnabled = false
     }
     
-    func setNavBar() {
-        //image in nav bar
-        self.navigationController?.navigationBar.isHidden = false
-        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        //        navImageView.contentMode = .scaleAspectFit
-        //        let navImage = UIImage(named: "navHeaderImage")
-        //        navImageView.image = navImage
-        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
-        
-        //Back buttion
-        self.navigationController?.navigationBar.tintColor = .purple
-        //        let btnLeftMenu: UIButton = UIButton()
-        //        btnLeftMenu.setImage(UIImage(named: "purpleArrow"), for: UIControl.State())
-        //        btnLeftMenu.addTarget(self, action: #selector (backButtonClick(sender:)), for: UIControl.Event.touchUpInside)
-        //        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
-        //        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-        //        self.navigationItem.leftBarButtonItem = barButton
-    }
-    
     @objc func backButtonClick(sender : UIButton) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
@@ -116,7 +96,6 @@ class ForgotUserNameVC: UIViewController {
     }
     
     private func validateInput() {
-        //loginButton.isEnabled = false
         if let accountNO = accountNumberInputField.text,let zipCode = zipCodeInputField.text, accountNO.count > 0 && zipCode.count>0 {
             countinueButtonLbl.isEnabled = true
         }else if let tagNo = tagInputField.text,let zipCode = zipCodeInputField.text, tagNo.count > 0 && zipCode.count>0 {

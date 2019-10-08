@@ -17,19 +17,37 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 //        var arrayOfImageNameForSelectedState = ["tabHome","tabBalances","tabTransactions","tabMyAccount", "tabMore"]
         var arrayOfImageNameForSelectedState = ["tabHome","tabTransactions","tabMyAccount","tabNotifications", "tabMore"]
         var arrayOfImageNameForUnselectedState = ["tabSelectedHome","tabSelectedTransactions", "tabSelectedMyAccount","tabSelectedNotifications", "tabSelectedMore"]
-        
+    //    self.delegate = self
         if let count = self.tabBar.items?.count {
             for i in 0...(count - 1) {
                 
                 let imageNameForSelectedState   = arrayOfImageNameForSelectedState[i]
                 let imageNameForUnselectedState = arrayOfImageNameForUnselectedState[i]
-                
                 self.tabBar.items?[i].selectedImage = UIImage(named: imageNameForSelectedState)?.withRenderingMode(.alwaysTemplate)
                 self.tabBar.items?[i].image = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysTemplate)
+                
+//                if i == 3 {
+//                    tabBar.items?[i].badgeValue  = ""
+//                }
+                
+                
             }
         }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        if item.tag == 3
+//        {
+//            tabBar.items?[3].badgeValue = nil
+//           //tabBarItem.badgeValue = nil
+//        }
+//        else{
+//            tabBar.items?[3].badgeValue  = ""
+//        }
     }
 }

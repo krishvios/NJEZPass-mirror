@@ -35,8 +35,7 @@ class LoginMethodsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
+      
         txtUserID.delegate = self
         txtUserID.text = "WHESS4"
         txtPassword.delegate = self
@@ -48,8 +47,6 @@ class LoginMethodsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     @IBAction func loginClicked(_ sender: Any) {
