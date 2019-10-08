@@ -48,10 +48,6 @@ class LicensePlateCell: UITableViewCell {
         stateInputField.delegate = self
         plateTypeInputField.delegate = self
         
-        countryInputField.clearButton.isHidden = true
-        stateInputField.clearButton.isHidden = true
-        plateTypeInputField.clearButton.isHidden = true
-        
         countryLbl.isHidden = true
         stateLbl.isHidden = true
         plateTypeLbl.isHidden = true
