@@ -58,6 +58,12 @@ class VehicleMakeCell: UITableViewCell {
         modelInputField.delegate = self
         vehicleTypeInputField.delegate = self
         
+        makeInputField.clearButton.isHidden = true
+        yearTypeInputField.clearButton.isHidden = true
+        modelInputField.clearButton.isHidden = true
+        vehicleTypeInputField.clearButton.isHidden = true
+        
+        
         makeLbl.isHidden = true
         yearLbl.isHidden = true
         vehicleTypeLbl.isHidden = true
