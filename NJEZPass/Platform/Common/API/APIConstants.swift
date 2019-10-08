@@ -27,6 +27,8 @@ public struct APIConstants {
         public static let loadDynamicCache = "loadDynamicCache"
         public static let pushService = "pushService"
         public static let tagsService = "getTransponderList"
+        public static let getVechiclesService = "getVehicleList"
+        public static let addVechicleService = "addVehicleList"
         public static let profileUpdate = "api/account/holderinfo"
         public static let getPaymentMethods = "api/account/paymentmethods"
         public static let modifyBankAccount = "api/account/paymentmethod/primary"

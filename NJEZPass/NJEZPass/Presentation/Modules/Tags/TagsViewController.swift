@@ -238,6 +238,7 @@ extension TagsViewController : UISearchBarDelegate {
 }
 
 extension TagsViewController: ITagsViewable {
+    
     func getTagsSuccess(viewModel: TagsModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
     }
