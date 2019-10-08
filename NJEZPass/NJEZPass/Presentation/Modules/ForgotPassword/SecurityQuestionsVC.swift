@@ -9,7 +9,6 @@
 import UIKit
 import Apollo_iOS
 
-
 class SecurityQuestionsVC: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -19,8 +18,6 @@ class SecurityQuestionsVC: UIViewController {
     @IBOutlet weak var firstSecurityQuestionlnl: UILabel!
     @IBOutlet weak var firstSecurityQuestionAnswerInputField: ApolloTextInputField!
     @IBOutlet weak var continueBtnLbl: UIButton!
-    
-    var flowKey = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,12 +74,7 @@ class SecurityQuestionsVC: UIViewController {
     }
     
     @IBAction func continueClicked(_ sender: Any) {
-        switch flowKey {
-        case RegisterYourAccountFLow.registerAccount.rawValue:
-            break
-        default:
-               self.performSegue(withIdentifier: "showNewPassword", sender: nil)
-        }
+        self.performSegue(withIdentifier: "showNewPassword", sender: nil)
     }
     
     @IBAction func backTapped(_ sender: Any) {
