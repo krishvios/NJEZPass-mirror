@@ -9,6 +9,11 @@
 import UIKit
 import Apollo_iOS
 
+enum RegisterYourAccountFLow: String {
+    case registerAccount
+    case forgotUsername
+}
+
 class ForgotUserNameVC: UIViewController {
     
     @IBOutlet weak var forgotUsernameLbl: UILabel!
@@ -20,6 +25,8 @@ class ForgotUserNameVC: UIViewController {
     @IBOutlet weak var zipCodeInputField: ApolloTextInputField!
     @IBOutlet weak var countinueButtonLbl: UIButton!
     
+    var flowKey = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +37,17 @@ class ForgotUserNameVC: UIViewController {
         zipCodeInputField.delegate = self
         toggleLoginButtonColor()
         setKeyBoardforText()
+        
+        switch flowKey {
+        case RegisterYourAccountFLow.forgotUsername.rawValue:
+             forgotUsernameText.text = "Enter your account or tag number, along with your account’s mailing zip code below."
+        case RegisterYourAccountFLow.registerAccount.rawValue:
+            forgotUsernameLbl.text = "Register Your Account"
+             forgotUsernameText.text = "If you did not set up a username and password during your account enrollment, you can create them now using your account number or tag number, and zip code."
+            accountNumberInputField.placeholder = "Username"
+        default:
+            forgotUsernameText.text = "Enter your account or tag number, along with your account’s mailing zip code below."
+        }
     }
     
     func setKeyBoardforText() {
@@ -66,6 +84,7 @@ class ForgotUserNameVC: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
+        scrollView.contentOffset = .zero
         scrollView.isScrollEnabled = false
     }
     
@@ -78,12 +97,21 @@ class ForgotUserNameVC: UIViewController {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func countinueButtonClicked(_ sender: Any) {
         if  let tag = tagInputField.text,
             let accountNo = accountNumberInputField.text,
             let zipcode = zipCodeInputField.text,
             (FieldValidator.shared.isValidUserID(userIDString: tag) || FieldValidator.shared.isValidUserID(userIDString: accountNo)),FieldValidator.shared.isValidZipCode(value: zipcode){
-            self.performSegue(withIdentifier: "forgotUserName", sender: self)
+            switch flowKey {
+            case RegisterYourAccountFLow.forgotUsername.rawValue:
+                self.performSegue(withIdentifier: "forgotUserName", sender: self)
+            case RegisterYourAccountFLow.registerAccount.rawValue:
+                 self.performSegue(withIdentifier: "showSecurityQuestions", sender: nil)
+            default:
+                self.performSegue(withIdentifier: "forgotUserName", sender: self)
+            }
+            
         }
         else{
             DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
@@ -91,8 +119,13 @@ class ForgotUserNameVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "forgotUserName" {
         let nextScene =  segue.destination as! SignupAndSaveVC
         nextScene.flowString = "forgotUsernameFlow"
+        } else if segue.identifier == "showSecurityQuestions" {
+            let nextScene =  segue.destination as! SecurityQuestionsVC
+            nextScene.flowKey = "registerAccount"
+        }
     }
     
     private func validateInput() {

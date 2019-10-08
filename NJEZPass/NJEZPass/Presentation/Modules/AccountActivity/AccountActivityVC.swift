@@ -27,7 +27,6 @@ class AccountActivityVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
-
 extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
