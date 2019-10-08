@@ -99,13 +99,6 @@ class LoginViewController:  UIViewController {
     @IBAction func cancelFingerPrint(_ sender: Any) {
         fingerPrintOverlay.isHidden = true
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowRegisterAccount" {
-            let nextVC = segue.destination as! ForgotUserNameVC
-            nextVC.flowKey = "registerAccount"
-        }
-    }
 }
 
 extension LoginViewController: UITableViewDelegate,UITableViewDataSource {
@@ -229,7 +222,6 @@ extension LoginViewController: MoreContentCellDelegate {
     }
     func registerAccountClicked(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "ShowRegisterAccount", sender: self)
         
 //        guard let url = URL(string: "http://www.google.com") else {
 //            return

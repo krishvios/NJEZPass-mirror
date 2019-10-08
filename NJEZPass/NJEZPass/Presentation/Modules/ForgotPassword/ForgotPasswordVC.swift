@@ -69,7 +69,6 @@ class ForgotPasswordVC: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
-        scrollView.contentOffset = .zero
         scrollView.isScrollEnabled = false
     }
     
