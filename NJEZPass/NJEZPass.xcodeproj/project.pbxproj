@@ -27,6 +27,14 @@
 		2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */; };
 		2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */; };
 		2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */; };
+		2AD76068234D023F007A8E73 /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76061234D023F007A8E73 /* ContinueCell.swift */; };
+		2AD76069234D023F007A8E73 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76062234D023F007A8E73 /* VehicleCell.swift */; };
+		2AD7606A234D023F007A8E73 /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76063234D023F007A8E73 /* SkipCell.swift */; };
+		2AD7606B234D023F007A8E73 /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */; };
+		2AD7606C234D023F007A8E73 /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */; };
+		2AD7606D234D023F007A8E73 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76066234D023F007A8E73 /* VehiclesViewController.swift */; };
+		2AD7606E234D023F007A8E73 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */; };
+		2AD76070234D02F6007A8E73 /* LicensePlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */; };
 		2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */; };
 		2AED1084233F6F850082F4F9 /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */; };
 		2AEE8E1C23490577009C0686 /* TagSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */; };
@@ -37,16 +45,8 @@
 		2AEFECC82340986800133EA3 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */; };
 		2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */; };
 		2AEFECCC234099AD00133EA3 /* ActivityFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */; };
-		2AF7F0BF234CE22A0038B923 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B5234CE2020038B923 /* VehicleCell.swift */; };
-		2AF7F0C0234CE22A0038B923 /* LicensePlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B6234CE21C0038B923 /* LicensePlateCell.swift */; };
-		2AF7F0C1234CE22A0038B923 /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B7234CE21E0038B923 /* LicensePlateViewController.swift */; };
-		2AF7F0C2234CE22A0038B923 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B8234CE2220038B923 /* AddVehicleViewController.swift */; };
-		2AF7F0C3234CE22A0038B923 /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B9234CE2230038B923 /* CameraImageViewCell.swift */; };
 		2AF7F0C4234CE22A0038B923 /* VehicleMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */; };
-		2AF7F0C5234CE22A0038B923 /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BB234CE2260038B923 /* SkipCell.swift */; };
 		2AF7F0C6234CE22A0038B923 /* VehicleMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */; };
-		2AF7F0C7234CE22A0038B923 /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BD234CE2290038B923 /* ContinueCell.swift */; };
-		2AF7F0C8234CE22A0038B923 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BE234CE2290038B923 /* VehiclesViewController.swift */; };
 		2AF7F0CA234CE2A00038B923 /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF7F0C9234CE2A00038B923 /* VehiclesFlow.storyboard */; };
 		2AF7F0CC234CE4590038B923 /* UserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF7F0CB234CE4590038B923 /* UserFlow.storyboard */; };
 		2AF92FA5234A0B29002AEA73 /* CorrespondenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */; };
@@ -407,6 +407,14 @@
 		2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
 		2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		2AD76061234D023F007A8E73 /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueCell.swift; sourceTree = "<group>"; };
+		2AD76062234D023F007A8E73 /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		2AD76063234D023F007A8E73 /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipCell.swift; sourceTree = "<group>"; };
+		2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewCell.swift; sourceTree = "<group>"; };
+		2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateViewController.swift; sourceTree = "<group>"; };
+		2AD76066234D023F007A8E73 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateCell.swift; sourceTree = "<group>"; };
 		2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
 		2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSummaryCell.swift; sourceTree = "<group>"; };
@@ -417,16 +425,8 @@
 		2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDateTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFilterVC.swift; sourceTree = "<group>"; };
-		2AF7F0B5234CE2020038B923 /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleCell.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/VehicleCell.swift"; sourceTree = "<group>"; };
-		2AF7F0B6234CE21C0038B923 /* LicensePlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateCell.swift; sourceTree = "<group>"; };
-		2AF7F0B7234CE21E0038B923 /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicensePlateViewController.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/LicensePlateViewController.swift"; sourceTree = "<group>"; };
-		2AF7F0B8234CE2220038B923 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddVehicleViewController.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/AddVehicleViewController.swift"; sourceTree = "<group>"; };
-		2AF7F0B9234CE2230038B923 /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraImageViewCell.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/CameraImageViewCell.swift"; sourceTree = "<group>"; };
 		2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeVC.swift; sourceTree = "<group>"; };
-		2AF7F0BB234CE2260038B923 /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkipCell.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/SkipCell.swift"; sourceTree = "<group>"; };
 		2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeCell.swift; sourceTree = "<group>"; };
-		2AF7F0BD234CE2290038B923 /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContinueCell.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/ContinueCell.swift"; sourceTree = "<group>"; };
-		2AF7F0BE234CE2290038B923 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehiclesViewController.swift; path = "../../../../../../Desktop/Temp -files/backup 8th oct 2019/NJEZPass/NJEZPass/Presentation/Modules/Vehicles/VehiclesViewController.swift"; sourceTree = "<group>"; };
 		2AF7F0C9234CE2A00038B923 /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
 		2AF7F0CB234CE4590038B923 /* UserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFlow.storyboard; sourceTree = "<group>"; };
 		2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceCell.swift; sourceTree = "<group>"; };
@@ -980,14 +980,14 @@
 		429BAD2A23008EE60087DBAD /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
-				2AF7F0B8234CE2220038B923 /* AddVehicleViewController.swift */,
-				2AF7F0B9234CE2230038B923 /* CameraImageViewCell.swift */,
-				2AF7F0BD234CE2290038B923 /* ContinueCell.swift */,
-				2AF7F0BB234CE2260038B923 /* SkipCell.swift */,
-				2AF7F0B5234CE2020038B923 /* VehicleCell.swift */,
-				2AF7F0BE234CE2290038B923 /* VehiclesViewController.swift */,
-				2AF7F0B7234CE21E0038B923 /* LicensePlateViewController.swift */,
-				2AF7F0B6234CE21C0038B923 /* LicensePlateCell.swift */,
+				2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */,
+				2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */,
+				2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */,
+				2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */,
+				2AD76063234D023F007A8E73 /* SkipCell.swift */,
+				2AD76061234D023F007A8E73 /* ContinueCell.swift */,
+				2AD76062234D023F007A8E73 /* VehicleCell.swift */,
+				2AD76066234D023F007A8E73 /* VehiclesViewController.swift */,
 				2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */,
 				2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */,
 			);
@@ -2303,7 +2303,6 @@
 				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
-				2AF7F0C2234CE22A0038B923 /* AddVehicleViewController.swift in Sources */,
 				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
 				4216D9232339F88A00B3488F /* CMDevice.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift in Sources */,
@@ -2328,6 +2327,7 @@
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				42B4938B2317DBAC00E9B1A0 /* CMButton.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
+				2AD7606A234D023F007A8E73 /* SkipCell.swift in Sources */,
 				2AF7F0C6234CE22A0038B923 /* VehicleMakeCell.swift in Sources */,
 				4216D950233B6CA100B3488F /* UpdateAddressInteractor.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
@@ -2336,9 +2336,11 @@
 				42B493892317DBAC00E9B1A0 /* CMTextField.swift in Sources */,
 				42B4938A2317DBAC00E9B1A0 /* CMView.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
+				2AD7606D234D023F007A8E73 /* VehiclesViewController.swift in Sources */,
 				42B493922317E0D200E9B1A0 /* CountryZipcodeTableViewCell.swift in Sources */,
 				4216D953233B6CA100B3488F /* UpdateAddressRouter.swift in Sources */,
 				F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */,
+				2AD7606E234D023F007A8E73 /* AddVehicleViewController.swift in Sources */,
 				429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
@@ -2346,7 +2348,6 @@
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */,
-				2AF7F0C0234CE22A0038B923 /* LicensePlateCell.swift in Sources */,
 				2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */,
 				2AF7F0C4234CE22A0038B923 /* VehicleMakeVC.swift in Sources */,
 				F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */,
@@ -2359,13 +2360,11 @@
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
 				2A299D78233DE123006A2DD8 /* CountryTableViewCell.swift in Sources */,
-				2AF7F0C8234CE22A0038B923 /* VehiclesViewController.swift in Sources */,
 				4216D94A233B628600B3488F /* QuestionsRouter.swift in Sources */,
 				4238950D23462D0A00F7A7DD /* GradientViewTableViewCell.swift in Sources */,
 				42B493872317DBAC00E9B1A0 /* CMToolbar.swift in Sources */,
 				F9BECCF0230BF57E002D2845 /* AccountViolationVC.swift in Sources */,
 				4216D941233B61F100B3488F /* QuestionCell.swift in Sources */,
-				2AF7F0C3234CE22A0038B923 /* CameraImageViewCell.swift in Sources */,
 				F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */,
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				2A987EB52345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift in Sources */,
@@ -2392,7 +2391,6 @@
 				2AF92FA9234A39A0002AEA73 /* CorrespondenceSummaryVC.swift in Sources */,
 				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
-				2AF7F0C1234CE22A0038B923 /* LicensePlateViewController.swift in Sources */,
 				42DA6FDF234CD753007D5581 /* TagsPresenter.swift in Sources */,
 				42DA6FDD234CD71C007D5581 /* TagsConfigurator.swift in Sources */,
 				F9C40C90233B4C41006B609F /* ExpyTableView.swift in Sources */,
@@ -2408,20 +2406,21 @@
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
-				2AF7F0BF234CE22A0038B923 /* VehicleCell.swift in Sources */,
 				4216D952233B6CA100B3488F /* UpdateAddressConfigurator.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
+				2AD76070234D02F6007A8E73 /* LicensePlateCell.swift in Sources */,
 				2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */,
 				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
 				42B4938D2317DBAC00E9B1A0 /* CMStackView.swift in Sources */,
 				2AF92FA7234A0B49002AEA73 /* CorrespondenceVC.swift in Sources */,
 				4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */,
-				2AF7F0C5234CE22A0038B923 /* SkipCell.swift in Sources */,
 				2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */,
+				2AD7606C234D023F007A8E73 /* LicensePlateViewController.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				42DA6FE1234CD761007D5581 /* TagsRouter.swift in Sources */,
 				429BAD0E23008BC60087DBAD /* LoginRouter.swift in Sources */,
 				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
+				2AD76069234D023F007A8E73 /* VehicleCell.swift in Sources */,
 				42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */,
 				42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */,
 				429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */,
@@ -2436,6 +2435,7 @@
 				4238950923462D0A00F7A7DD /* UserNavigationCell.swift in Sources */,
 				4216D949233B628600B3488F /* QuestionsPresenter.swift in Sources */,
 				42B493862317DBAC00E9B1A0 /* CMNavigationController.swift in Sources */,
+				2AD7606B234D023F007A8E73 /* CameraImageViewCell.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
 				9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */,
 				2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */,
@@ -2443,8 +2443,8 @@
 				9BAC0F20232A7E5C00FD0ED5 /* FAQInteractor.swift in Sources */,
 				2AEFECC423407AED00133EA3 /* AccountActivityVC.swift in Sources */,
 				4216D94B233B628600B3488F /* QuestionsConfigurator.swift in Sources */,
-				2AF7F0C7234CE22A0038B923 /* ContinueCell.swift in Sources */,
 				42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */,
+				2AD76068234D023F007A8E73 /* ContinueCell.swift in Sources */,
 				4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */,
 				42B4937C2317DB9C00E9B1A0 /* GradientView.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
