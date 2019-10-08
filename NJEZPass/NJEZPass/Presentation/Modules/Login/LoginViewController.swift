@@ -40,7 +40,7 @@ class LoginViewController:  UIViewController {
     private var gradientCell:GradientViewTableViewCell?
     
     lazy fileprivate var languageSelection: CMPickerView! = {
-         let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
         pickerView.pickerArray = ["English","Spanish"]
         pickerView.viewDelegate = self
         return pickerView
@@ -98,6 +98,13 @@ class LoginViewController:  UIViewController {
     
     @IBAction func cancelFingerPrint(_ sender: Any) {
         fingerPrintOverlay.isHidden = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowRegisterAccount" {
+            let nextVC = segue.destination as! ForgotUserNameVC
+            nextVC.flowKey = "registerAccount"
+        }
     }
 }
 
@@ -178,10 +185,10 @@ extension LoginViewController: LoginMethodsCellDelegate {
         self.resignFirstResponder()
         
         //online login flow
-//        MBProgressHUD.showAdded(to: self.view, animated: true)
-//        interactor?.login(username: username!, password: password!, requestType: .remote)
-//
-//        direct login flow in case of api error
+        //        MBProgressHUD.showAdded(to: self.view, animated: true)
+        //        interactor?.login(username: username!, password: password!, requestType: .remote)
+        //
+        //        direct login flow in case of api error
         var viewModel = ProfileModel.PresentionModel()
         viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
         router?.perform(viewModel: viewModel)
@@ -222,16 +229,17 @@ extension LoginViewController: MoreContentCellDelegate {
     }
     func registerAccountClicked(_ sender: Any) {
         
+        self.performSegue(withIdentifier: "ShowRegisterAccount", sender: self)
         
-//        guard let url = URL(string: "http://www.google.com") else {
-//            return
-//        }
-//
-//        if #available(iOS 10.0, *) {
-//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//        } else {
-//            UIApplication.shared.openURL(url)
-//        }
+        //        guard let url = URL(string: "http://www.google.com") else {
+        //            return
+        //        }
+        //
+        //        if #available(iOS 10.0, *) {
+        //            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        //        } else {
+        //            UIApplication.shared.openURL(url)
+        //        }
     }
 }
 
@@ -279,7 +287,7 @@ extension LoginViewController: TabWidgetCelldelegate {
 extension LoginViewController: ILoginViewable {
     func registerPushSuccess(viewModel: PushModel.PresentionModel) {
         
-         interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
+        interactor?.getProfileOverview(action: APIConstants.ServiceNames.accountOverview, requestType: .remote)
     }
     
     func registerPushFailed(viewModel: PushModel.PresentionModel) {
@@ -287,7 +295,7 @@ extension LoginViewController: ILoginViewable {
     }
     
     func loginSuccess(viewModel: AuthorizeModel.PresentionModel) {
-       
+        
         interactor?.registerForPushService(action: APIConstants.ServiceNames.pushService, requestType: .remote)
     }
     
