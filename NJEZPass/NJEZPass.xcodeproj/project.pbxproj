@@ -27,14 +27,6 @@
 		2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */; };
 		2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */; };
 		2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */; };
-		2AD76068234D023F007A8E73 /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76061234D023F007A8E73 /* ContinueCell.swift */; };
-		2AD76069234D023F007A8E73 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76062234D023F007A8E73 /* VehicleCell.swift */; };
-		2AD7606A234D023F007A8E73 /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76063234D023F007A8E73 /* SkipCell.swift */; };
-		2AD7606B234D023F007A8E73 /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */; };
-		2AD7606C234D023F007A8E73 /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */; };
-		2AD7606D234D023F007A8E73 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76066234D023F007A8E73 /* VehiclesViewController.swift */; };
-		2AD7606E234D023F007A8E73 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */; };
-		2AD76070234D02F6007A8E73 /* LicensePlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */; };
 		2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */; };
 		2AED1084233F6F850082F4F9 /* PaymentMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */; };
 		2AEE8E1C23490577009C0686 /* TagSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */; };
@@ -45,9 +37,6 @@
 		2AEFECC82340986800133EA3 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */; };
 		2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */; };
 		2AEFECCC234099AD00133EA3 /* ActivityFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */; };
-		2AF7F0C0234CE22A0038B923 /* LicensePlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0B6234CE21C0038B923 /* LicensePlateCell.swift */; };
-		2AF7F0C4234CE22A0038B923 /* VehicleMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */; };
-		2AF7F0C6234CE22A0038B923 /* VehicleMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */; };
 		2AF7F0CA234CE2A00038B923 /* VehiclesFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF7F0C9234CE2A00038B923 /* VehiclesFlow.storyboard */; };
 		2AF7F0CC234CE4590038B923 /* UserFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF7F0CB234CE4590038B923 /* UserFlow.storyboard */; };
 		2AF92FA5234A0B29002AEA73 /* CorrespondenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */; };
@@ -80,13 +69,6 @@
 		4238950B23462D0A00F7A7DD /* MoreContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238950423462D0A00F7A7DD /* MoreContentTableViewCell.swift */; };
 		4238950C23462D0A00F7A7DD /* LoginMethodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238950523462D0A00F7A7DD /* LoginMethodsTableViewCell.swift */; };
 		4238950D23462D0A00F7A7DD /* GradientViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238950623462D0A00F7A7DD /* GradientViewTableViewCell.swift */; };
-		4264BD89234CFF9700A88F0A /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD82234CFF9700A88F0A /* VehicleCell.swift */; };
-		4264BD8A234CFF9700A88F0A /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD83234CFF9700A88F0A /* LicensePlateViewController.swift */; };
-		4264BD8B234CFF9700A88F0A /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD84234CFF9700A88F0A /* SkipCell.swift */; };
-		4264BD8C234CFF9700A88F0A /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD85234CFF9700A88F0A /* VehiclesViewController.swift */; };
-		4264BD8D234CFF9700A88F0A /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD86234CFF9700A88F0A /* AddVehicleViewController.swift */; };
-		4264BD8E234CFF9700A88F0A /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD87234CFF9700A88F0A /* CameraImageViewCell.swift */; };
-		4264BD8F234CFF9700A88F0A /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD88234CFF9700A88F0A /* ContinueCell.swift */; };
 		4264BD92234D04B900A88F0A /* VehiclesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD91234D04B900A88F0A /* VehiclesListModel.swift */; };
 		4264BD94234D04CD00A88F0A /* SearchVehiclesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD93234D04CD00A88F0A /* SearchVehiclesModel.swift */; };
 		4264BD96234D04DD00A88F0A /* AddVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4264BD95234D04DD00A88F0A /* AddVehicleModel.swift */; };
@@ -207,6 +189,20 @@
 		42DA6FDF234CD753007D5581 /* TagsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DA6FDE234CD753007D5581 /* TagsPresenter.swift */; };
 		42DA6FE1234CD761007D5581 /* TagsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DA6FE0234CD761007D5581 /* TagsRouter.swift */; };
 		42E4999B2345C650009466F9 /* PushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E4999A2345C650009466F9 /* PushModel.swift */; };
+		42F1049B234D11CD00BF57C6 /* SkipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10491234D11CC00BF57C6 /* SkipCell.swift */; };
+		42F1049C234D11CD00BF57C6 /* VehicleMakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10492234D11CC00BF57C6 /* VehicleMakeCell.swift */; };
+		42F1049D234D11CD00BF57C6 /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10493234D11CC00BF57C6 /* AddVehicleViewController.swift */; };
+		42F1049E234D11CD00BF57C6 /* LicensePlateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10494234D11CC00BF57C6 /* LicensePlateCell.swift */; };
+		42F1049F234D11CD00BF57C6 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10495234D11CD00BF57C6 /* VehicleCell.swift */; };
+		42F104A0234D11CD00BF57C6 /* VehicleMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10496234D11CD00BF57C6 /* VehicleMakeVC.swift */; };
+		42F104A1234D11CD00BF57C6 /* LicensePlateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10497234D11CD00BF57C6 /* LicensePlateViewController.swift */; };
+		42F104A2234D11CD00BF57C6 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10498234D11CD00BF57C6 /* VehiclesViewController.swift */; };
+		42F104A3234D11CD00BF57C6 /* ContinueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F10499234D11CD00BF57C6 /* ContinueCell.swift */; };
+		42F104A4234D11CD00BF57C6 /* CameraImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1049A234D11CD00BF57C6 /* CameraImageViewCell.swift */; };
+		42F104A9234D133C00BF57C6 /* VehiclesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A5234D133C00BF57C6 /* VehiclesRouter.swift */; };
+		42F104AA234D133C00BF57C6 /* VehiclesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */; };
+		42F104AB234D133C00BF57C6 /* VehiclesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */; };
+		42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */; };
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
@@ -422,14 +418,6 @@
 		2A987EB8234676BF0057C37D /* ReportLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AD24687233BC444009F64D1 /* RecentTransactionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsCell.swift; sourceTree = "<group>"; };
 		2AD24689233BD026009F64D1 /* AllTransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsTableViewCell.swift; sourceTree = "<group>"; };
-		2AD76061234D023F007A8E73 /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueCell.swift; sourceTree = "<group>"; };
-		2AD76062234D023F007A8E73 /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
-		2AD76063234D023F007A8E73 /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipCell.swift; sourceTree = "<group>"; };
-		2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewCell.swift; sourceTree = "<group>"; };
-		2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateViewController.swift; sourceTree = "<group>"; };
-		2AD76066234D023F007A8E73 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
-		2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
-		2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateCell.swift; sourceTree = "<group>"; };
 		2AE9DFC52346FA75008D3F64 /* VerifyLostorStolenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLostorStolenVC.swift; sourceTree = "<group>"; };
 		2AED1083233F6F840082F4F9 /* PaymentMethods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentMethods.storyboard; sourceTree = "<group>"; };
 		2AEE8E1B23490577009C0686 /* TagSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSummaryCell.swift; sourceTree = "<group>"; };
@@ -440,9 +428,6 @@
 		2AEFECC72340986800133EA3 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECC9234098FF00133EA3 /* ActivityDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDateTableViewCell.swift; sourceTree = "<group>"; };
 		2AEFECCB234099AD00133EA3 /* ActivityFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFilterVC.swift; sourceTree = "<group>"; };
-		2AF7F0B6234CE21C0038B923 /* LicensePlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateCell.swift; sourceTree = "<group>"; };
-		2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeVC.swift; sourceTree = "<group>"; };
-		2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeCell.swift; sourceTree = "<group>"; };
 		2AF7F0C9234CE2A00038B923 /* VehiclesFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehiclesFlow.storyboard; sourceTree = "<group>"; };
 		2AF7F0CB234CE4590038B923 /* UserFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserFlow.storyboard; sourceTree = "<group>"; };
 		2AF92FA4234A0B29002AEA73 /* CorrespondenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceCell.swift; sourceTree = "<group>"; };
@@ -476,13 +461,6 @@
 		4238950423462D0A00F7A7DD /* MoreContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreContentTableViewCell.swift; sourceTree = "<group>"; };
 		4238950523462D0A00F7A7DD /* LoginMethodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMethodsTableViewCell.swift; sourceTree = "<group>"; };
 		4238950623462D0A00F7A7DD /* GradientViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewTableViewCell.swift; sourceTree = "<group>"; };
-		4264BD82234CFF9700A88F0A /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
-		4264BD83234CFF9700A88F0A /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateViewController.swift; sourceTree = "<group>"; };
-		4264BD84234CFF9700A88F0A /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipCell.swift; sourceTree = "<group>"; };
-		4264BD85234CFF9700A88F0A /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
-		4264BD86234CFF9700A88F0A /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
-		4264BD87234CFF9700A88F0A /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewCell.swift; sourceTree = "<group>"; };
-		4264BD88234CFF9700A88F0A /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueCell.swift; sourceTree = "<group>"; };
 		4264BD91234D04B900A88F0A /* VehiclesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesListModel.swift; sourceTree = "<group>"; };
 		4264BD93234D04CD00A88F0A /* SearchVehiclesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVehiclesModel.swift; sourceTree = "<group>"; };
 		4264BD95234D04DD00A88F0A /* AddVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleModel.swift; sourceTree = "<group>"; };
@@ -604,6 +582,20 @@
 		42DA6FDE234CD753007D5581 /* TagsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsPresenter.swift; sourceTree = "<group>"; };
 		42DA6FE0234CD761007D5581 /* TagsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsRouter.swift; sourceTree = "<group>"; };
 		42E4999A2345C650009466F9 /* PushModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushModel.swift; sourceTree = "<group>"; };
+		42F10491234D11CC00BF57C6 /* SkipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipCell.swift; sourceTree = "<group>"; };
+		42F10492234D11CC00BF57C6 /* VehicleMakeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeCell.swift; sourceTree = "<group>"; };
+		42F10493234D11CC00BF57C6 /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVehicleViewController.swift; sourceTree = "<group>"; };
+		42F10494234D11CC00BF57C6 /* LicensePlateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateCell.swift; sourceTree = "<group>"; };
+		42F10495234D11CD00BF57C6 /* VehicleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
+		42F10496234D11CD00BF57C6 /* VehicleMakeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeVC.swift; sourceTree = "<group>"; };
+		42F10497234D11CD00BF57C6 /* LicensePlateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensePlateViewController.swift; sourceTree = "<group>"; };
+		42F10498234D11CD00BF57C6 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		42F10499234D11CD00BF57C6 /* ContinueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueCell.swift; sourceTree = "<group>"; };
+		42F1049A234D11CD00BF57C6 /* CameraImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageViewCell.swift; sourceTree = "<group>"; };
+		42F104A5234D133C00BF57C6 /* VehiclesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesRouter.swift; sourceTree = "<group>"; };
+		42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesPresenter.swift; sourceTree = "<group>"; };
+		42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesConfigurator.swift; sourceTree = "<group>"; };
+		42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesInteractor.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFC722DEFCAD007EDCC7 /* NJEZPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJEZPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1038,16 +1030,20 @@
 		429BAD2A23008EE60087DBAD /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
-				2AD7606F234D02F6007A8E73 /* LicensePlateCell.swift */,
-				2AD76067234D023F007A8E73 /* AddVehicleViewController.swift */,
-				2AD76064234D023F007A8E73 /* CameraImageViewCell.swift */,
-				2AD76065234D023F007A8E73 /* LicensePlateViewController.swift */,
-				2AD76063234D023F007A8E73 /* SkipCell.swift */,
-				2AD76061234D023F007A8E73 /* ContinueCell.swift */,
-				2AD76062234D023F007A8E73 /* VehicleCell.swift */,
-				2AD76066234D023F007A8E73 /* VehiclesViewController.swift */,
-				2AF7F0BA234CE2250038B923 /* VehicleMakeVC.swift */,
-				2AF7F0BC234CE2280038B923 /* VehicleMakeCell.swift */,
+				42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */,
+				42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */,
+				42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */,
+				42F104A5234D133C00BF57C6 /* VehiclesRouter.swift */,
+				42F10493234D11CC00BF57C6 /* AddVehicleViewController.swift */,
+				42F1049A234D11CD00BF57C6 /* CameraImageViewCell.swift */,
+				42F10499234D11CD00BF57C6 /* ContinueCell.swift */,
+				42F10494234D11CC00BF57C6 /* LicensePlateCell.swift */,
+				42F10497234D11CD00BF57C6 /* LicensePlateViewController.swift */,
+				42F10491234D11CC00BF57C6 /* SkipCell.swift */,
+				42F10495234D11CD00BF57C6 /* VehicleCell.swift */,
+				42F10492234D11CC00BF57C6 /* VehicleMakeCell.swift */,
+				42F10496234D11CD00BF57C6 /* VehicleMakeVC.swift */,
+				42F10498234D11CD00BF57C6 /* VehiclesViewController.swift */,
 			);
 			path = Vehicles;
 			sourceTree = "<group>";
@@ -2361,7 +2357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
-				4264BD8D234CFF9700A88F0A /* AddVehicleViewController.swift in Sources */,
+				42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
@@ -2378,6 +2374,7 @@
 				429BAD1B23008D9F0087DBAD /* AccountViewController.swift in Sources */,
 				2A0CAB6F233DAACE00B63B73 /* MyAccountCell.swift in Sources */,
 				9B54491A23278F5A00DC8AAE /* TransactionTypeCell.swift in Sources */,
+				42F1049D234D11CD00BF57C6 /* AddVehicleViewController.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
 				F908290F2338AEC400C6C37E /* DisputedSelectedVC.swift in Sources */,
@@ -2389,38 +2386,34 @@
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				42B4938B2317DBAC00E9B1A0 /* CMButton.swift in Sources */,
 				9B5C6D9322F2D26600DA6151 /* ViolationsDetailsTableViewController.swift in Sources */,
-				2AD7606A234D023F007A8E73 /* SkipCell.swift in Sources */,
-				2AF7F0C6234CE22A0038B923 /* VehicleMakeCell.swift in Sources */,
-				4264BD8B234CFF9700A88F0A /* SkipCell.swift in Sources */,
 				4216D950233B6CA100B3488F /* UpdateAddressInteractor.swift in Sources */,
-				4264BD89234CFF9700A88F0A /* VehicleCell.swift in Sources */,
 				F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */,
 				9B0436E8232281AA00418268 /* PaymentStatusViewController.swift in Sources */,
+				42F1049C234D11CD00BF57C6 /* VehicleMakeCell.swift in Sources */,
 				9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */,
 				42B493892317DBAC00E9B1A0 /* CMTextField.swift in Sources */,
 				42B4938A2317DBAC00E9B1A0 /* CMView.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
-				2AD7606D234D023F007A8E73 /* VehiclesViewController.swift in Sources */,
 				42B493922317E0D200E9B1A0 /* CountryZipcodeTableViewCell.swift in Sources */,
 				4216D953233B6CA100B3488F /* UpdateAddressRouter.swift in Sources */,
+				42F104A9234D133C00BF57C6 /* VehiclesRouter.swift in Sources */,
 				F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */,
-				2AD7606E234D023F007A8E73 /* AddVehicleViewController.swift in Sources */,
 				429BAD1F23008E1E0087DBAD /* TagsViewController.swift in Sources */,
+				42F1049B234D11CD00BF57C6 /* SkipCell.swift in Sources */,
 				9BAA563622F2D8F50037036F /* DisplayLabelCell.swift in Sources */,
 				429BAD0B23008BC60087DBAD /* LoginPresenter.swift in Sources */,
 				2AEE8E1E2349059D009C0686 /* TagSummaryVC.swift in Sources */,
 				9BDB1F3C230ECB22006CE739 /* EditProfilePresenter.swift in Sources */,
+				42F104A0234D11CD00BF57C6 /* VehicleMakeVC.swift in Sources */,
 				F904559922FC15950070257E /* VerificationCodeVC.swift in Sources */,
 				2AE9DFC62346FA75008D3F64 /* VerifyLostorStolenVC.swift in Sources */,
 				2A987EB9234676BF0057C37D /* ReportLostorStolenVC.swift in Sources */,
-				2AF7F0C4234CE22A0038B923 /* VehicleMakeVC.swift in Sources */,
 				F90829102338AEC400C6C37E /* PayViolationVC.swift in Sources */,
 				F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */,
 				4216D93D233B61E500B3488F /* UpdateAddressViewController.swift in Sources */,
 				42B493942317E0D200E9B1A0 /* CityStateTableViewCell.swift in Sources */,
 				2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
-				4264BD8C234CFF9700A88F0A /* VehiclesViewController.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
@@ -2442,6 +2435,7 @@
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
 				9BC321E22334F4CF006B42DB /* CountryCell.swift in Sources */,
 				F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */,
+				42F104A4234D11CD00BF57C6 /* CameraImageViewCell.swift in Sources */,
 				62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */,
@@ -2472,20 +2466,20 @@
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
 				4216D952233B6CA100B3488F /* UpdateAddressConfigurator.swift in Sources */,
+				42F1049E234D11CD00BF57C6 /* LicensePlateCell.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
-				2AD76070234D02F6007A8E73 /* LicensePlateCell.swift in Sources */,
 				2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */,
 				2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */,
 				42B4938D2317DBAC00E9B1A0 /* CMStackView.swift in Sources */,
 				2AF92FA7234A0B49002AEA73 /* CorrespondenceVC.swift in Sources */,
 				4216D92B233A0F4A00B3488F /* CMUtility.swift in Sources */,
+				42F104A1234D11CD00BF57C6 /* LicensePlateViewController.swift in Sources */,
 				2AD2468A233BD026009F64D1 /* AllTransactionsTableViewCell.swift in Sources */,
-				2AD7606C234D023F007A8E73 /* LicensePlateViewController.swift in Sources */,
 				429BAD2C23008EE60087DBAD /* TransactionsViewController.swift in Sources */,
 				42DA6FE1234CD761007D5581 /* TagsRouter.swift in Sources */,
 				429BAD0E23008BC60087DBAD /* LoginRouter.swift in Sources */,
+				42F1049F234D11CD00BF57C6 /* VehicleCell.swift in Sources */,
 				9BCA993B22F466E600C3BB7D /* FAQViewController.swift in Sources */,
-				2AD76069234D023F007A8E73 /* VehicleCell.swift in Sources */,
 				42BE356B22FBF7DE00AAF8E3 /* AppStringKeys.swift in Sources */,
 				42BE356A22FBF7DE00AAF8E3 /* FieldValidator.swift in Sources */,
 				429BAD0323008BC60087DBAD /* LoginInteractor.swift in Sources */,
@@ -2500,16 +2494,16 @@
 				4238950923462D0A00F7A7DD /* UserNavigationCell.swift in Sources */,
 				4216D949233B628600B3488F /* QuestionsPresenter.swift in Sources */,
 				42B493862317DBAC00E9B1A0 /* CMNavigationController.swift in Sources */,
-				2AD7606B234D023F007A8E73 /* CameraImageViewCell.swift in Sources */,
 				42BE356D22FBF7DE00AAF8E3 /* BorderedTextField.swift in Sources */,
 				9B54491823278F4500DC8AAE /* DateSelectionCell.swift in Sources */,
 				2A4F46E22334ED9C00A31806 /* NewPasswordVC.swift in Sources */,
+				42F104AA234D133C00BF57C6 /* VehiclesPresenter.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 				9BAC0F20232A7E5C00FD0ED5 /* FAQInteractor.swift in Sources */,
 				2AEFECC423407AED00133EA3 /* AccountActivityVC.swift in Sources */,
 				4216D94B233B628600B3488F /* QuestionsConfigurator.swift in Sources */,
 				42BE356922FBF7DE00AAF8E3 /* Localizer.swift in Sources */,
-				2AD76068234D023F007A8E73 /* ContinueCell.swift in Sources */,
+				42F104A3234D11CD00BF57C6 /* ContinueCell.swift in Sources */,
 				4216D9242339F88A00B3488F /* CMSHAHash.swift in Sources */,
 				42B4937C2317DB9C00E9B1A0 /* GradientView.swift in Sources */,
 				42BE357122FBF7DE00AAF8E3 /* DialogUtils.swift in Sources */,
@@ -2520,7 +2514,6 @@
 				42BE357222FBF7DE00AAF8E3 /* DropDownPickerView.swift in Sources */,
 				42B493962317E13A00E9B1A0 /* TabBarViewController.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
-				4264BD8F234CFF9700A88F0A /* ContinueCell.swift in Sources */,
 				2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */,
 				2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
@@ -2532,12 +2525,12 @@
 				F908290D2338AEC400C6C37E /* SelectPaymentVC.swift in Sources */,
 				2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */,
 				2AEE8E2023490EA6009C0686 /* RequestSuppliesCell.swift in Sources */,
+				42F104A2234D11CD00BF57C6 /* VehiclesViewController.swift in Sources */,
 				429BAD332300907B0087DBAD /* UITextField+Extension.swift in Sources */,
-				4264BD8A234CFF9700A88F0A /* LicensePlateViewController.swift in Sources */,
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
+				42F104AB234D133C00BF57C6 /* VehiclesConfigurator.swift in Sources */,
 				9BAC0F22232A7ECE00FD0ED5 /* FAQPresenter.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
-				4264BD8E234CFF9700A88F0A /* CameraImageViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
