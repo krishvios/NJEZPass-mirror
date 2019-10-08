@@ -13,7 +13,6 @@ class SearchBarCustom: UISearchBar {
     var preferredTextColor: UIColor!
     
     override func draw(_ rect: CGRect) {
-       
         if let index = indexOfSearchFieldInSubviews() {
             let searchField: UITextField = (subviews[0] ).subviews[index] as! UITextField
             searchField.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
@@ -32,28 +31,13 @@ class SearchBarCustom: UISearchBar {
             shapeLayer.strokeColor = preferredTextColor.cgColor
             shapeLayer.lineWidth = 1
             searchField.layer.addSublayer(shapeLayer)
-           // layer.addSublayer(shapeLayer)
-            
-            
-            
-//
-//            let imageView = UIImageView()
-//            let image = UIImage(named: "checkbox")
-//
-//            imageView.image = image;
-//            imageView.frame = CGRect(x: -20, y: -20, width: 40, height: 40)
-//            searchField.leftView = imageView
-//            searchField.leftViewMode = UITextField.ViewMode.always
         }
-        
-       
         super.draw(rect)
     }
     
     
     init(frame: CGRect, font: UIFont, textColor: UIColor) {
         super.init(frame: frame)
-        
         self.frame = frame
         preferredFont = font
         preferredTextColor = textColor
@@ -68,19 +52,14 @@ class SearchBarCustom: UISearchBar {
     }
     
     func indexOfSearchFieldInSubviews() -> Int! {
-        // Uncomment the next line to see the search bar subviews.
-        // println(subviews[0].subviews)
-        
         var index: Int!
         let searchBarView = subviews[0]
-        
         for i in 0..<searchBarView.subviews.count {
             if searchBarView.subviews[i].isKind(of: UITextField.self) {
                 index = i
                 break
             }
         }
-        
         return index
     }
 }

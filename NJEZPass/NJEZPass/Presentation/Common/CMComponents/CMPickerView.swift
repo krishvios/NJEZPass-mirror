@@ -40,6 +40,7 @@ class CMPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource/*, CMTo
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.backgroundColor = UIColor.white
+        pickerView.selectRow(0, inComponent: 0, animated: true)
         return pickerView
     }()
 

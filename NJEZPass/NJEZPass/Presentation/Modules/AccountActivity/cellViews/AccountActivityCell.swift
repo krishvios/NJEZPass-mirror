@@ -19,7 +19,6 @@ class AccountActivityCell: UITableViewCell {
     @IBOutlet weak var Activity: UILabel!
     @IBOutlet weak var StatusView: CMView!
     @IBOutlet weak var moreButtonAction: UIButton!
-    
     @IBOutlet weak var activityTime: UILabel!
     @IBOutlet weak var accountDetailsorTagDetails: UILabel!
     
@@ -27,14 +26,11 @@ class AccountActivityCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         moreButtonAction.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     @IBAction func moreButtonActionTapped(_ sender: Any) {

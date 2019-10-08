@@ -81,7 +81,8 @@ class MoreTableViewController: UITableViewController {
         
         switch didSelectedIndex {
         case .Statements: break
-        case .Correspondence:break
+        case .Correspondence:
+        performSegue(withIdentifier: "showCorrespondence", sender: nil)
         case .FAQ:
         performSegue(withIdentifier: "faq", sender: nil)
 

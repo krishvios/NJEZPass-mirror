@@ -16,25 +16,7 @@ class EmailConfirmationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.isHidden = false
-       // setNavBar()
-    }
-    
-    func setNavBar() {
-        self.navigationController?.navigationBar.isHidden = false
-        //        let navImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 256, height: 16))
-        //        navImageView.contentMode = .scaleAspectFit
-        //        let navImage = UIImage(named: "navHeaderImage")
-        //        navImageView.image = navImage
-        navigationItem.titleView = UIImageView(image: UIImage(named: "navHeaderImage"))
-        
-         self.navigationController?.navigationBar.tintColor = .purple
-//        let btn = UIButton(type: .custom)
-//        btn.setImage(UIImage(named: "purpleArrow"), for: .normal)
-//        btn.addTarget(self, action: #selector (backButtonClick(sender:)), for: .touchUpInside)
-//        let item1 = UIBarButtonItem(customView: btn)
-//        self.navigationItem.setLeftBarButton(item1, animated: true)
     }
     
     @objc func backButtonClick(sender : UIButton) {

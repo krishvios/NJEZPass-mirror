@@ -1,15 +1,15 @@
 //
-//  AccountActivityVC.swift
+//  CorrespondenceVC.swift
 //  NJEZPass
 //
-//  Created by Muddika, Ramesh yadav on 29/09/19.
+//  Created by Muddika, Ramesh yadav on 06/10/19.
 //  Copyright © 2019 Conduent. All rights reserved.
 //
 
 import UIKit
 
-class AccountActivityVC: UIViewController {
-    
+class CorrespondenceVC: UIViewController {
+
     @IBOutlet weak var tbleView: UITableView!
     
     override func viewDidLoad() {
@@ -23,12 +23,20 @@ class AccountActivityVC: UIViewController {
         tbleView.keyboardDismissMode = .onDrag
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+        self.showNavBarWith(title: "Correspondence", backAction: nil)
+    }
+    
+    func backButtonClick(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func backbuttonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }
-
-extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
+extension CorrespondenceVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cellIdentifier = "SectionHeader"
@@ -43,11 +51,11 @@ extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cellIdentifier = "ActivityCell"
+        var cellIdentifier = "CorrespondenceCell"
         if indexPath.section == 0 {
             cellIdentifier = "FilterCell"
             let filtercell: FilterTableViewCell = (tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? FilterTableViewCell)!
-             filtercell.filterDelegate = self
+            filtercell.filterDelegate = self
             return filtercell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
@@ -66,16 +74,20 @@ extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
         return 4
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
+        
         if indexPath.section == 0 {
-          return 40
+            return 40
         }
-
-        return tableView.rowHeight
+        
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowSummary", sender: nil)
     }
 }
 
-extension AccountActivityVC :filterTappedDelegate {
+extension CorrespondenceVC :filterTappedDelegate {
     func filterTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "showFilter", sender: nil)
     }
