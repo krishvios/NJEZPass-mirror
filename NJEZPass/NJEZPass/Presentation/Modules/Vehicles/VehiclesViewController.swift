@@ -7,6 +7,15 @@
 //
 
 import UIKit
+import Entities
+import MBProgressHUD
+
+protocol IVehiclesViewable {
+    func getVehiclesSuccess(viewModel: VehiclesListModel.PresentionModel)
+    func getVehiclesFailed(viewModel: VehiclesListModel.PresentionModel)
+    func searchVehicleswithPlateNoSuccess(viewModel: SearchVehiclesModel.PresentionModel)
+    func searchVehicleswithPlateNoFailed(viewModel: SearchVehiclesModel.PresentionModel)
+}
 
 class VehiclesViewController: UIViewController {
     
@@ -69,4 +78,33 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource {
         self.performSegue(withIdentifier: "AddVehicle", sender: nil)
     }
     
+}
+
+extension VehiclesViewController: IVehiclesViewable {
+    func getVehiclesSuccess(viewModel: VehiclesListModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+
+    }
+    
+    func getVehiclesFailed(viewModel: VehiclesListModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func searchVehicleswithPlateNoSuccess(viewModel: SearchVehiclesModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func searchVehicleswithPlateNoFailed(viewModel: SearchVehiclesModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension VehiclesViewController: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
+    }
 }
