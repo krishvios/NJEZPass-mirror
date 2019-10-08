@@ -74,6 +74,10 @@ class AddVehicleViewController:  UIViewController {
         self.navigationController?.navigationBar.barTintColor = .white
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension AddVehicleViewController: UITableViewDelegate, UITableViewDataSource {
@@ -98,7 +102,7 @@ extension AddVehicleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 155
+            return 227
         }
         return 55
     }
@@ -141,20 +145,13 @@ extension AddVehicleViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension AddVehicleViewController: CameraImageViewCellDelegate {
     func cameraClicked() {
-        let cell = tbleView.cellForRow(at: IndexPath(row: 0, section: 0)) as? CameraImageViewCell
-        
-        if cell?.imageView?.isHidden == true  {
-            // Open Camera
             self.present(takeCameraAlert, animated: true, completion: nil)
-        } else {
-            
-        }
     }
 }
 
 extension AddVehicleViewController: ContinueCellDelegate {
     func continueClicked() {
-        
+        self.performSegue(withIdentifier: "LicensePlateFlow", sender: nil)
     }
 }
 

@@ -52,7 +52,7 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
             myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "paymentMethods")
             break;
         case 2:
-            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "vehicles-1")
+            myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "vehicles1")
             break;
         case 3:
             myAccountCell?.cellTypeImage.image = #imageLiteral(resourceName: "tags2")

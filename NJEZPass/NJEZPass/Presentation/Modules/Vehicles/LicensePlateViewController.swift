@@ -11,7 +11,34 @@ import Apollo_iOS
 
 class LicensePlateViewController: UIViewController {
     
+ 
     @IBOutlet weak var tbleView: UITableView!
+    
+    lazy fileprivate var countrySelection: CMPickerView! = {
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        pickerView.pickerArray = ["USA"]
+        pickerView.viewDelegate = self
+        return pickerView
+    }()
+    
+    lazy fileprivate var plateType: CMPickerView! = {
+        let pickerView1 = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        pickerView1.pickerArray = ["Standard"]
+        pickerView1.viewDelegate = self
+        return pickerView1
+    }()
+    
+    lazy fileprivate var stateSelection: CMPickerView! = {
+        let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
+        pickerView.pickerArray = ["NJ"]
+        pickerView.viewDelegate = self
+        return pickerView
+    }()
+    
+    fileprivate var selectedFieldText = ""
+    fileprivate var selectedField:ApolloTextInputField?
+    fileprivate var selectedLbl:UILabel?
+    fileprivate var selectedString:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,52 +64,34 @@ extension LicensePlateViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 63
+        switch indexPath.row {
+        case 0:
+            return 137
+        case 2:
+            return 180
+        default:
+            return 367
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-//        switch indexPath.row {
-//        case 0:
-//            if let addressCell = tableView.dequeueReusableCell(withIdentifier: "\(InputFieldTableViewCell.self)") as? InputFieldTableViewCell {
-//                cell = addressCell
-//                addressCell.textField.placeholder = "Plate Number"
-//            }
-//        case 1:
-//            if let countryCell = tableView.dequeueReusableCell(withIdentifier: "\(CountryCell.self)") as? CountryCell {
-//                countryCell.delegate = self
-//                cell = countryCell
-//                countryCell.countryTextField.placeholder = "Country"
-//                countryCell.countryTextField.text = selectedCountry
-//            }
-//        case 2:
-//            if let cityStateCell = tableView.dequeueReusableCell(withIdentifier: "\(CityStateTableViewCell.self)") as? CityStateTableViewCell {
-//                cityStateCell.delegate = self
-//                cell = cityStateCell
-//                cityStateCell.cityTextField.placeholder = "City"
-//                cityStateCell.stateTextField.placeholder = "State"
-//                cityStateCell.stateTextField.text = selectedState
-//            }
-//        default:
-//            if let saveSkipCell = tableView.dequeueReusableCell(withIdentifier: "\(SaveSkipCell.self)") as? SaveSkipCell {
-//                saveSkipCell.delegate = self
-//                cell = saveSkipCell
-//            }
-//        }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(VehicleCell.self)", for: indexPath) as! VehicleCell
-//        //set the cell display properties
-//        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-//        cell.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-//        cell.layer.shadowRadius = 3.0
-//        cell.layer.shadowOpacity = 1.0
-//        cell.layer.masksToBounds = false
-        return cell
+        switch  indexPath.row {
+        case 0:
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "ProgressCell", for: indexPath)
+            return cell
+        case 2:
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "Empty", for: indexPath)
+            return cell
+        default:
+            let cell: LicensePlateCell = tableView.dequeueReusableCell(withIdentifier: "\(LicensePlateCell.self)", for: indexPath) as! LicensePlateCell
+            cell.LicensePlateDelegate = self
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,65 +102,96 @@ extension LicensePlateViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 
+extension LicensePlateViewController : LicensePlateDelegate {
+    func countryInputTapped(_ textField: ApolloTextInputField, placeHolder: String, lable: UILabel) {
+        hidePicker()
+        selectedFieldText = self.countrySelection.pickerArray[0]
+        selectedField = textField
+        selectedLbl = lable
+        selectedString = placeHolder
+        if view.subviews.contains(self.countrySelection){
+            self.countrySelection.isHidden = false
+        } else {
+            self.view.addSubview(countrySelection)
+        }
+    }
+    
+    func stateInputTapped(_ textField: ApolloTextInputField, placeHolder: String, lable: UILabel) {
+        hidePicker()
+        selectedFieldText = self.stateSelection.pickerArray[0]
+        selectedField = textField
+        selectedLbl = lable
+        selectedString = placeHolder
+        if view.subviews.contains(self.stateSelection){
+            self.stateSelection.isHidden = false
+        } else {
+            self.view.addSubview(stateSelection)
+        }
+    }
+    
+    func plateTypeInputTapped(_ textField: ApolloTextInputField, placeHolder: String, lable: UILabel) {
+        hidePicker()
+        selectedFieldText = self.plateType.pickerArray[0]
+        selectedField = textField
+        selectedLbl = lable
+        selectedString = placeHolder
+        if view.subviews.contains(self.plateType){
+            self.plateType.isHidden = false
+        } else {
+            self.view.addSubview(plateType)
+        }
+    }
+    
+    
+    func continueButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "ShowVehicleMake", sender: nil)
+    }
+    
+    func hidePicker() {
+        self.stateSelection.isHidden = true
+        self.plateType.isHidden = true
+        self.countrySelection.isHidden = true
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+}
+    
+
 extension LicensePlateViewController: CMPickerViewDelegate {
     
-    // MARK: - CMPickerView Delegate methods
-    
     func doneClicked(selectedString:String) {
-//        print("selectedString = \(selectedString)")
-//        print("selectedField?.placeholder = \(String(describing: selectedField?.placeholder))")
-//        selectedField?.becomeFirstResponder()
-//        selectedField?.text = selectedString
-//        selectedField?.resignFirstResponder()
-//        self.stateSelectionPicker.isHidden = true
-//        self.countrySelectionPicker.isHidden = true
+        selectedField?.becomeFirstResponder()
+        selectedField?.text = selectedString
+        if selectedString.count == 0 {
+            selectedLbl?.isHidden = false
+            selectedField?.text = selectedFieldText
+        }
+        selectedField?.resignFirstResponder()
+        self.stateSelection.isHidden = true
+        self.plateType.isHidden = true
+        self.countrySelection.isHidden = true
     }
     
     func cancelClicked() {
-//        self.stateSelectionPicker.isHidden = true
-//        self.countrySelectionPicker.isHidden = true
+        if selectedField?.text?.count == 0 {
+            selectedLbl?.isHidden = true
+            selectedField?.placeholder = selectedString
+        }
+        self.stateSelection.isHidden = true
+        self.plateType.isHidden = true
+        self.countrySelection.isHidden = true
     }
 }
 
-extension LicensePlateViewController: CountryCellDelegate {
-    
-    func countrySelected(countryField: ApolloTextInputField?) {
-        
-    }
-    
-    
-//    func countrySelected(countryField: ApolloTextInputField?) {
-//        if self.countrySelectionPicker.pickerArray.count == 0 {
-//            self.countrySelectionPicker.pickerArray = formatDataArray(givenArray: CMUtility.dynamicPageLoad!.countryList!)
-//        }
-//        selectedField = countryField
-//        if view.subviews.contains(self.countrySelectionPicker){
-//            self.countrySelectionPicker.isHidden = false
-//        } else {
-//            self.view.addSubview(countrySelectionPicker)
-//        }
-//    }
-}
 
-extension LicensePlateViewController: CityStateDelegate {
-    
-    func stateSelected(stateField: ApolloTextInputField?) {
-        
-    }
     
     
-//    func stateSelected(stateField: ApolloTextInputField?) {
-//        if self.stateSelectionPicker.pickerArray.count == 0 {
-//            self.stateSelectionPicker.pickerArray = formatDataArray(givenArray: CMUtility.dynamicPageLoad!.stateList!)
-//        }
-//        selectedField = stateField
-//        if view.subviews.contains(self.stateSelectionPicker){
-//            self.stateSelectionPicker.isHidden = false
-//        } else {
-//            self.view.addSubview(stateSelectionPicker)
-//        }
-//    }
-}
+
+
+
 
 
 
