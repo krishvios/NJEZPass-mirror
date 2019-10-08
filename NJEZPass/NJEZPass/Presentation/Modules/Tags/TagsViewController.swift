@@ -7,6 +7,15 @@
 //
 
 import UIKit
+import Entities
+import MBProgressHUD
+
+protocol ITagsViewable {
+    func getTagsSuccess(viewModel: TagsModel.PresentionModel)
+    func getTagsFailed(viewModel: TagsModel.PresentionModel)
+    func searchTagwithNumberSuccess(viewModel: SearchTagsModel.PresentionModel)
+    func searchTagwithNumberFailed(viewModel: SearchTagsModel.PresentionModel)
+}
 
 class TagsViewController: UIViewController {
 
@@ -232,5 +241,33 @@ extension TagsViewController : UISearchBarDelegate {
             searchActive = true;
         }
         self.tblView.reloadData()
+    }
+}
+
+extension TagsViewController: ITagsViewable {
+    func getTagsSuccess(viewModel: TagsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func getTagsFailed(viewModel: TagsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func searchTagwithNumberSuccess(viewModel: SearchTagsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func searchTagwithNumberFailed(viewModel: SearchTagsModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension TagsViewController: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }
