@@ -28,10 +28,8 @@ class TransactionsDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        navBar.title = transactionDetails?.exitPlaza ?? "Exit Plaza Name"
+        navBar.title = transactionDetails?.exitPlazaName ?? "-"
         transactionAmount.text = transactionDetails?.amount ?? "-"
         transactionDateLbl.text = transactionDetails?.transactionDate ?? "-"
         plateNumberLbl.text = transactionDetails?.tagorplate ?? "-"
@@ -41,21 +39,9 @@ class TransactionsDetailsVC: UIViewController {
         exitTimeLbl.text = "-"
         exitPlazaLbl.text = transactionDetails?.exitPlazaName ?? "-"
         exitLaneLbl.text = transactionDetails?.exitLane ?? "-"
-        //"Scudder Falls Bridge"
     }
     
-
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

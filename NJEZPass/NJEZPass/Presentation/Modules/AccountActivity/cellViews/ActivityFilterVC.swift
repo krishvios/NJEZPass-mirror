@@ -26,8 +26,7 @@ class ActivityFilterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -43,6 +42,4 @@ class ActivityFilterVC: UIViewController {
         endDate.setText(text: "")
     }
 }
-extension ActivityFilterVC : ApolloTextInputFieldDelegate {
-    
-}
+

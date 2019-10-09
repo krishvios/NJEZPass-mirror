@@ -33,7 +33,7 @@ internal class LoginUsecaseRemote<T: Codable>: ILoginUsecase {
                 guard let responseModel = jsonData as? LoginModel.Response else {
                     return
                 }
-                guard let accessId = responseModel.loginUser!.accessId else {
+                guard let accessId = responseModel.loginUser?.accessId else {
                     return
                 }
                 

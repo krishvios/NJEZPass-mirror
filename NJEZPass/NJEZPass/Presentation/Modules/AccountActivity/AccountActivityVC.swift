@@ -17,7 +17,7 @@ class AccountActivityVC: UIViewController {
         setupTableView()
     }
     
-    func setupTableView(){
+    func setupTableView() {
         tbleView.estimatedRowHeight = 100
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
@@ -27,6 +27,7 @@ class AccountActivityVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
+
 extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -63,6 +64,14 @@ extension AccountActivityVC : UITableViewDelegate, UITableViewDataSource {
         }
         
         return 4
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        if indexPath.section == 0 {
+          return 40
+        }
+
+        return tableView.rowHeight
     }
 }
 

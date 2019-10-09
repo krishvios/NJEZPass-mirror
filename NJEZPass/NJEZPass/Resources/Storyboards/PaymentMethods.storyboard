@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-Mn-aHK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -155,50 +155,54 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-FP-rSc">
-                                                    <rect key="frame" x="24" y="0.0" width="314" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-FP-rSc">
+                                                    <rect key="frame" x="23" y="0.0" width="316" height="120"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bankAccount" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-sj-tWf">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bankAccount" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-sj-tWf">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="yAo-tq-ZDd"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chase Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-75-QVS">
-                                                            <rect key="frame" x="100" y="6" width="129" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chase Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-75-QVS">
+                                                            <rect key="frame" x="100" y="6" width="131" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="nhs-3U-Ooj"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Account ****7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-eL-LUx">
-                                                            <rect key="frame" x="100" y="29" width="129" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account ****7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-eL-LUx">
+                                                            <rect key="frame" x="100" y="29" width="131" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s65-fV-332">
-                                                            <rect key="frame" x="100" y="54" width="129" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s65-fV-332">
+                                                            <rect key="frame" x="100" y="55" width="131" height="20"/>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-gZ-U0h">
-                                                            <rect key="frame" x="240" y="0.0" width="20" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzj-gZ-U0h">
+                                                            <rect key="frame" x="242" y="0.0" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="kyL-GI-IuA"/>
+                                                            </constraints>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-q4-fpU" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-q4-fpU" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="80" width="136" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="136" id="y2R-EQ-IJK"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                                             <state key="normal" title="EDIT">
                                                                 <color key="titleColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                             </state>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-51-VIv" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                                            <rect key="frame" x="136" y="80" width="136" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-51-VIv" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                                            <rect key="frame" x="136" y="80" width="138" height="40"/>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                                             <state key="normal" title="DELETE">
                                                                 <color key="titleColor" red="0.41176470590000003" green="0.12549019610000001" blue="0.4941176471" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -206,8 +210,39 @@
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qci-75-QVS" firstAttribute="leading" secondItem="xAv-eL-LUx" secondAttribute="leading" id="218-d1-62t"/>
+                                                        <constraint firstItem="Be0-sj-tWf" firstAttribute="top" secondItem="mfl-FP-rSc" secondAttribute="top" id="2nG-t8-a3O"/>
+                                                        <constraint firstItem="xAv-eL-LUx" firstAttribute="trailing" secondItem="s65-fV-332" secondAttribute="trailing" id="Ew5-UF-dRv"/>
+                                                        <constraint firstItem="Jcm-q4-fpU" firstAttribute="top" secondItem="Tqi-51-VIv" secondAttribute="top" id="JoK-5v-tdS"/>
+                                                        <constraint firstItem="Be0-sj-tWf" firstAttribute="centerY" secondItem="xAv-eL-LUx" secondAttribute="centerY" id="KcS-DK-4pq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Gzj-gZ-U0h" secondAttribute="trailing" constant="54" id="LxC-wk-UFx"/>
+                                                        <constraint firstItem="Be0-sj-tWf" firstAttribute="leading" secondItem="Jcm-q4-fpU" secondAttribute="leading" id="OFT-5E-yn3"/>
+                                                        <constraint firstItem="Qci-75-QVS" firstAttribute="leading" secondItem="Be0-sj-tWf" secondAttribute="trailing" constant="20" id="OpV-Ym-c84"/>
+                                                        <constraint firstItem="Qci-75-QVS" firstAttribute="trailing" secondItem="xAv-eL-LUx" secondAttribute="trailing" id="W7W-jZ-Rny"/>
+                                                        <constraint firstItem="Be0-sj-tWf" firstAttribute="top" secondItem="Gzj-gZ-U0h" secondAttribute="top" id="Ww2-tB-EJf"/>
+                                                        <constraint firstItem="xAv-eL-LUx" firstAttribute="leading" secondItem="s65-fV-332" secondAttribute="leading" id="buz-Ns-Maz"/>
+                                                        <constraint firstItem="Tqi-51-VIv" firstAttribute="leading" secondItem="Jcm-q4-fpU" secondAttribute="trailing" id="ePN-0D-rOk"/>
+                                                        <constraint firstItem="Be0-sj-tWf" firstAttribute="leading" secondItem="mfl-FP-rSc" secondAttribute="leading" id="fYS-iK-29L"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xAv-eL-LUx" secondAttribute="trailing" constant="85" id="fjJ-3z-Uam"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Jcm-q4-fpU" secondAttribute="bottom" id="hDe-5B-nSU"/>
+                                                        <constraint firstItem="Tqi-51-VIv" firstAttribute="top" secondItem="Gzj-gZ-U0h" secondAttribute="bottom" constant="60" id="k1S-gZ-86f"/>
+                                                        <constraint firstItem="Jcm-q4-fpU" firstAttribute="top" secondItem="s65-fV-332" secondAttribute="bottom" constant="5" id="mu8-Zo-Nt0"/>
+                                                        <constraint firstItem="xAv-eL-LUx" firstAttribute="top" secondItem="Qci-75-QVS" secondAttribute="bottom" constant="2" id="n2m-cQ-NtE"/>
+                                                        <constraint firstItem="Qci-75-QVS" firstAttribute="top" secondItem="mfl-FP-rSc" secondAttribute="top" constant="6" id="ruh-W4-LTN"/>
+                                                        <constraint firstItem="Jcm-q4-fpU" firstAttribute="baseline" secondItem="Tqi-51-VIv" secondAttribute="firstBaseline" id="so5-sn-qSB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tqi-51-VIv" secondAttribute="trailing" constant="42" id="uA7-PC-rpM"/>
+                                                        <constraint firstItem="Gzj-gZ-U0h" firstAttribute="leading" secondItem="Qci-75-QVS" secondAttribute="trailing" constant="11" id="wg6-Cw-ozh"/>
+                                                        <constraint firstItem="s65-fV-332" firstAttribute="top" secondItem="xAv-eL-LUx" secondAttribute="bottom" constant="4" id="xeG-x0-oaq"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mfl-FP-rSc" secondAttribute="trailing" constant="21" id="GoM-FQ-0fs"/>
+                                                <constraint firstAttribute="bottom" secondItem="mfl-FP-rSc" secondAttribute="bottom" id="htl-cU-FkV"/>
+                                                <constraint firstItem="mfl-FP-rSc" firstAttribute="leading" secondItem="KS8-fR-9DH" secondAttribute="leadingMargin" constant="8" id="o1a-R8-Eub"/>
+                                                <constraint firstItem="mfl-FP-rSc" firstAttribute="top" secondItem="KS8-fR-9DH" secondAttribute="top" id="oJl-nL-kQU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReplenishmentOption" rowHeight="170" id="oae-N3-AjA">
@@ -415,18 +450,44 @@ If you wish to change your replenishment method, choose an option below and clic
                                     <outlet property="delegate" destination="q0d-zx-JOQ" id="b90-ov-nrb"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" backIndicatorImage="purpleArrow" translatesAutoresizingMaskIntoConstraints="NO" id="LTc-jT-snW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EOa-S6-b9H"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Payment Methods" id="Kff-82-K7b"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gju-qN-rPH">
+                                <rect key="frame" x="0.0" y="16.5" width="66" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="4qa-6g-srE"/>
+                                    <constraint firstAttribute="height" constant="51" id="XKZ-0X-ccA"/>
+                                </constraints>
+                                <state key="normal" image="purpleArrow"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="q0d-zx-JOQ" eventType="touchUpInside" id="fpD-4W-J16"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LTc-jT-snW" firstAttribute="centerY" secondItem="gju-qN-rPH" secondAttribute="centerY" id="9of-To-KoG"/>
                             <constraint firstAttribute="bottom" secondItem="R9b-Mn-aHK" secondAttribute="bottom" id="CJs-iH-ENe"/>
-                            <constraint firstItem="R9b-Mn-aHK" firstAttribute="top" secondItem="Bnu-hH-nyD" secondAttribute="top" id="HM1-GP-6aV"/>
                             <constraint firstItem="R9b-Mn-aHK" firstAttribute="leading" secondItem="Bnu-hH-nyD" secondAttribute="leading" id="HsI-mh-69t"/>
+                            <constraint firstItem="gju-qN-rPH" firstAttribute="leading" secondItem="LTc-jT-snW" secondAttribute="leading" id="I45-kv-6DN"/>
+                            <constraint firstItem="LTc-jT-snW" firstAttribute="trailing" secondItem="R9b-Mn-aHK" secondAttribute="trailing" id="SLc-oI-i6u"/>
+                            <constraint firstItem="LTc-jT-snW" firstAttribute="top" secondItem="cUu-yM-iH8" secondAttribute="top" id="VM8-8U-eG4"/>
+                            <constraint firstItem="LTc-jT-snW" firstAttribute="leading" secondItem="R9b-Mn-aHK" secondAttribute="leading" id="YqU-Fa-bZV"/>
                             <constraint firstAttribute="trailing" secondItem="R9b-Mn-aHK" secondAttribute="trailing" id="jg6-fa-B6e"/>
+                            <constraint firstItem="R9b-Mn-aHK" firstAttribute="top" secondItem="LTc-jT-snW" secondAttribute="bottom" id="kBs-As-zyI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cUu-yM-iH8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Payment Methods" leftItemsSupplementBackButton="YES" id="22D-H1-rlI"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tbleView" destination="R9b-Mn-aHK" id="ihh-Og-BjJ"/>
                     </connections>
@@ -444,7 +505,7 @@ If you wish to change your replenishment method, choose an option below and clic
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucF-Mc-xUW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" id="aAz-WU-E1x">
@@ -454,7 +515,7 @@ If you wish to change your replenishment method, choose an option below and clic
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add your banking information below in order to link it to your E-ZPass account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pe-Od-nqg" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your banking information below in order to link it to your E-ZPass account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pe-Od-nqg" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="0.0" width="327" height="42"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -465,7 +526,7 @@ If you wish to change your replenishment method, choose an option below and clic
                                                 <constraint firstItem="0Pe-Od-nqg" firstAttribute="top" secondItem="EWI-Au-P5z" secondAttribute="top" id="E0T-D1-K5P"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="0Pe-Od-nqg" secondAttribute="bottom" constant="-9" id="IW7-pi-6xU"/>
                                                 <constraint firstItem="0Pe-Od-nqg" firstAttribute="centerX" secondItem="EWI-Au-P5z" secondAttribute="centerX" id="dPm-hB-yUl"/>
-                                                <constraint firstItem="0Pe-Od-nqg" firstAttribute="leading" secondItem="EWI-Au-P5z" secondAttribute="leadingMargin" constant="8" id="jFs-c0-UuA"/>
+                                                <constraint firstItem="0Pe-Od-nqg" firstAttribute="leading" secondItem="EWI-Au-P5z" secondAttribute="leadingMargin" constant="9" id="jFs-c0-UuA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -476,17 +537,17 @@ If you wish to change your replenishment method, choose an option below and clic
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-ri-6OJ">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-ri-6OJ">
                                                     <rect key="frame" x="22" y="28" width="331" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDN-mF-vE8" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDN-mF-vE8" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
                                                     <rect key="frame" x="22" y="71" width="331" height="1"/>
                                                     <color key="backgroundColor" red="0.65891450643539429" green="0.670573890209198" blue="0.67058897018432617" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="MCg-JC-QcM"/>
+                                                        <constraint firstAttribute="height" constant="1" id="Xp7-bN-y1l"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -494,13 +555,13 @@ If you wish to change your replenishment method, choose an option below and clic
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="top" secondItem="nPe-xy-4hh" secondAttribute="topMargin" constant="17" id="JDG-xw-I1V"/>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="bottom" secondItem="CDN-mF-vE8" secondAttribute="bottom" id="QzT-Bj-KKT"/>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="leading" secondItem="nPe-xy-4hh" secondAttribute="leadingMargin" constant="6" id="Y8T-hh-sTl"/>
-                                                <constraint firstAttribute="bottom" secondItem="CDN-mF-vE8" secondAttribute="bottom" id="cza-EB-iJM"/>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="centerX" secondItem="nPe-xy-4hh" secondAttribute="centerX" id="mZA-WC-yZ7"/>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="trailing" secondItem="CDN-mF-vE8" secondAttribute="trailing" id="nkf-3t-tgd"/>
-                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="leading" secondItem="CDN-mF-vE8" secondAttribute="leading" id="pe9-XN-ELY"/>
+                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="centerX" secondItem="nPe-xy-4hh" secondAttribute="centerX" id="00M-yq-AL5"/>
+                                                <constraint firstAttribute="bottom" secondItem="CDN-mF-vE8" secondAttribute="bottom" id="DFA-Sg-ci7"/>
+                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="leading" secondItem="nPe-xy-4hh" secondAttribute="leadingMargin" constant="7" id="Gk3-lW-grN"/>
+                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="trailing" secondItem="CDN-mF-vE8" secondAttribute="trailing" id="OGh-k3-GEt"/>
+                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="top" secondItem="nPe-xy-4hh" secondAttribute="topMargin" constant="17" id="RQj-Va-eKy"/>
+                                                <constraint firstItem="CDN-mF-vE8" firstAttribute="bottom" secondItem="9ef-ri-6OJ" secondAttribute="bottom" id="laN-Lm-Uf7"/>
+                                                <constraint firstItem="9ef-ri-6OJ" firstAttribute="leading" secondItem="CDN-mF-vE8" secondAttribute="leading" id="sES-wm-J2s"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -512,8 +573,8 @@ If you wish to change your replenishment method, choose an option below and clic
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eah-l3-uBc" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
-                                                    <rect key="frame" x="22" y="71" width="331" height="1"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eah-l3-uBc" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
+                                                    <rect key="frame" x="21" y="71" width="333" height="1"/>
                                                     <color key="backgroundColor" red="0.65891450640000004" green="0.67057389020000002" blue="0.67058897019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="6JA-k2-rQR"/>
@@ -522,8 +583,8 @@ If you wish to change your replenishment method, choose an option below and clic
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H7-Io-dfB">
-                                                    <rect key="frame" x="22" y="28" width="331" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H7-Io-dfB">
+                                                    <rect key="frame" x="21" y="28" width="333" height="44"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="Account Type">
                                                         <color key="titleColor" red="0.65891450640000004" green="0.67057389020000002" blue="0.67058897019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -549,8 +610,8 @@ If you wish to change your replenishment method, choose an option below and clic
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiR-30-cZi" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                                    <rect key="frame" x="23" y="27" width="330" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiR-30-cZi" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
+                                                    <rect key="frame" x="22" y="27" width="331" height="44"/>
                                                     <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <state key="normal" title="SAVE">
@@ -573,10 +634,10 @@ If you wish to change your replenishment method, choose an option below and clic
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="yiR-30-cZi" secondAttribute="bottom" constant="-10" id="FWt-Tw-3HD"/>
-                                                <constraint firstItem="yiR-30-cZi" firstAttribute="top" secondItem="Iqz-wH-rAc" secondAttribute="topMargin" constant="16" id="JSV-6T-t0k"/>
-                                                <constraint firstItem="yiR-30-cZi" firstAttribute="centerX" secondItem="Iqz-wH-rAc" secondAttribute="centerX" id="l6Q-Fy-txZ"/>
-                                                <constraint firstItem="yiR-30-cZi" firstAttribute="leading" secondItem="Iqz-wH-rAc" secondAttribute="leadingMargin" constant="8" id="na4-lZ-4mi"/>
+                                                <constraint firstItem="yiR-30-cZi" firstAttribute="leading" secondItem="Iqz-wH-rAc" secondAttribute="leadingMargin" constant="7" id="7Xm-Go-KSt"/>
+                                                <constraint firstItem="yiR-30-cZi" firstAttribute="centerX" secondItem="Iqz-wH-rAc" secondAttribute="centerX" id="gAe-Kj-8jm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yiR-30-cZi" secondAttribute="bottom" constant="-10" id="h5j-fg-n7E"/>
+                                                <constraint firstItem="yiR-30-cZi" firstAttribute="top" secondItem="Iqz-wH-rAc" secondAttribute="topMargin" constant="16" id="nH2-vC-xSD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -587,13 +648,39 @@ If you wish to change your replenishment method, choose an option below and clic
                                     <outlet property="delegate" destination="xbv-BG-glu" id="XBH-VS-uV8"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" backIndicatorImage="purpleArrow" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-SZ-EAk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="an5-CQ-HQu"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Add Bank Card" id="ZH6-3J-p6a"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO0-OT-dN1">
+                                <rect key="frame" x="0.0" y="16.5" width="66" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="rA9-mD-b5I"/>
+                                    <constraint firstAttribute="width" constant="66" id="ugB-M9-LBN"/>
+                                </constraints>
+                                <state key="normal" image="purpleArrow"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="xbv-BG-glu" eventType="touchUpInside" id="zhm-fE-ac7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ucF-Mc-xUW" firstAttribute="top" secondItem="kIk-Nq-TFC" secondAttribute="top" id="1Qc-YW-1ar"/>
+                            <constraint firstItem="iiH-SZ-EAk" firstAttribute="top" secondItem="D9K-eg-fd8" secondAttribute="top" id="6zP-wO-3HS"/>
                             <constraint firstItem="ucF-Mc-xUW" firstAttribute="bottom" secondItem="D9K-eg-fd8" secondAttribute="bottom" id="G2S-ac-PaJ"/>
                             <constraint firstItem="ucF-Mc-xUW" firstAttribute="leading" secondItem="kIk-Nq-TFC" secondAttribute="leading" id="GG9-WY-DDN"/>
                             <constraint firstAttribute="trailing" secondItem="ucF-Mc-xUW" secondAttribute="trailing" id="IPT-Sk-rWK"/>
+                            <constraint firstItem="ucF-Mc-xUW" firstAttribute="top" secondItem="iiH-SZ-EAk" secondAttribute="bottom" id="UTi-KX-Sha"/>
+                            <constraint firstItem="uO0-OT-dN1" firstAttribute="leading" secondItem="iiH-SZ-EAk" secondAttribute="leading" id="YdL-7b-QRK"/>
+                            <constraint firstItem="iiH-SZ-EAk" firstAttribute="trailing" secondItem="ucF-Mc-xUW" secondAttribute="trailing" id="dH3-h1-4Kq"/>
+                            <constraint firstItem="iiH-SZ-EAk" firstAttribute="centerY" secondItem="uO0-OT-dN1" secondAttribute="centerY" id="ovQ-m3-lqS"/>
+                            <constraint firstItem="iiH-SZ-EAk" firstAttribute="leading" secondItem="ucF-Mc-xUW" secondAttribute="leading" id="t1J-JG-uOb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D9K-eg-fd8"/>
                     </view>
@@ -615,9 +702,6 @@ If you wish to change your replenishment method, choose an option below and clic
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.37647058820000001" green="0.1450980392" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="q0d-zx-JOQ" kind="relationship" relationship="rootViewController" id="Epn-VH-G2d"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qus-Nq-zGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -632,7 +716,7 @@ If you wish to change your replenishment method, choose an option below and clic
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-fy-7vT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionCell" id="EJY-zw-5bO">
@@ -642,8 +726,8 @@ If you wish to change your replenishment method, choose an option below and clic
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add your credit card information below in order to link it to your E-ZPass account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-Pe-LXy" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
-                                                    <rect key="frame" x="24" y="0.0" width="327" height="42"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your credit card information below in order to link it to your E-ZPass account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-Pe-LXy" customClass="CMLabel" customModule="NJEZPass" customModuleProvider="target">
+                                                    <rect key="frame" x="23" y="0.0" width="329" height="42"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -847,14 +931,39 @@ If you wish to change your replenishment method, choose an option below and clic
                                     <outlet property="delegate" destination="2Ya-kN-dct" id="YXN-mW-QRJ"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" backIndicatorImage="purpleArrow" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-OI-FsE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6DL-wa-aZa"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Add Credit Card" id="hiV-ny-cUa"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFL-xG-9B3">
+                                <rect key="frame" x="0.0" y="16.5" width="66" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Plh-65-1Vc"/>
+                                    <constraint firstAttribute="width" constant="66" id="R3k-Q8-4md"/>
+                                </constraints>
+                                <state key="normal" image="purpleArrow"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="2Ya-kN-dct" eventType="touchUpInside" id="6gG-TO-BR4"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.37732771040000002" green="0.14694586400000001" blue="0.47845697399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6vK-fy-7vT" firstAttribute="top" secondItem="gVY-ne-tTZ" secondAttribute="top" id="Esb-KK-vOp"/>
+                            <constraint firstItem="SFL-xG-9B3" firstAttribute="leading" secondItem="OKJ-OI-FsE" secondAttribute="leading" id="HsE-Yx-6OP"/>
                             <constraint firstItem="6vK-fy-7vT" firstAttribute="width" secondItem="gVY-ne-tTZ" secondAttribute="width" id="R6i-fN-YXl"/>
-                            <constraint firstItem="6vK-fy-7vT" firstAttribute="height" secondItem="gVY-ne-tTZ" secondAttribute="height" id="h9o-Q2-ChP"/>
+                            <constraint firstItem="OKJ-OI-FsE" firstAttribute="leading" secondItem="6vK-fy-7vT" secondAttribute="leading" id="Tyt-Nk-huh"/>
+                            <constraint firstItem="OKJ-OI-FsE" firstAttribute="centerY" secondItem="SFL-xG-9B3" secondAttribute="centerY" id="aaj-0S-9NC"/>
+                            <constraint firstItem="OKJ-OI-FsE" firstAttribute="trailing" secondItem="6vK-fy-7vT" secondAttribute="trailing" id="cJ6-mJ-viN"/>
+                            <constraint firstItem="6vK-fy-7vT" firstAttribute="height" secondItem="gVY-ne-tTZ" secondAttribute="height" constant="-64" id="h9o-Q2-ChP"/>
                             <constraint firstItem="6vK-fy-7vT" firstAttribute="leading" secondItem="BSv-5X-4bv" secondAttribute="leading" id="saa-G5-Rdt"/>
                             <constraint firstItem="6vK-fy-7vT" firstAttribute="bottom" secondItem="BSv-5X-4bv" secondAttribute="bottom" id="t2X-dO-n1E"/>
+                            <constraint firstItem="OKJ-OI-FsE" firstAttribute="top" secondItem="BSv-5X-4bv" secondAttribute="top" id="utZ-OI-Auf"/>
                             <constraint firstItem="6vK-fy-7vT" firstAttribute="trailing" secondItem="BSv-5X-4bv" secondAttribute="trailing" id="wju-8w-2ZK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BSv-5X-4bv"/>
@@ -877,7 +986,7 @@ If you wish to change your replenishment method, choose an option below and clic
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7F-Uj-0aa">
-                                <rect key="frame" x="22" y="86" width="331" height="197"/>
+                                <rect key="frame" x="22" y="42" width="331" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="197" id="FxU-zh-P6d"/>
@@ -898,7 +1007,7 @@ Note: You are required to have sufficient funds in your account as there will be
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5F-zs-NWL" customClass="CMButton" customModule="NJEZPass" customModuleProvider="target">
-                                <rect key="frame" x="22" y="291" width="331" height="44"/>
+                                <rect key="frame" x="22" y="247" width="331" height="44"/>
                                 <color key="backgroundColor" red="0.43214267490000002" green="0.2252777815" blue="0.5255156755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Xw6-rk-g2F"/>
@@ -940,5 +1049,6 @@ Note: You are required to have sufficient funds in your account as there will be
     </scenes>
     <resources>
         <image name="bankAccount" width="80" height="80"/>
+        <image name="purpleArrow" width="58" height="58"/>
     </resources>
 </document>

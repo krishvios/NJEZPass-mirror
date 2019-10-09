@@ -13,6 +13,9 @@ enum FlowKeys: String {
     case payNowFlow
     case forgotUsernameFlow
     case balanceIncreaseFlow
+    case requestLostFlow
+    case requestStolenFlow
+    case requestTag
 }
 
 class SignupAndSaveVC: UIViewController {
@@ -58,6 +61,27 @@ class SignupAndSaveVC: UIViewController {
             confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
             skipButton.isHidden = true
             backButton.isHidden = true
+        case FlowKeys.requestLostFlow.rawValue:
+            button.setTitle("OK", for: .normal)
+            confirmationDesc.text = "Your tag has been reported as Lost."
+            confirmationTitle.text = "Lost Tag"
+            confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
+            skipButton.isHidden = true
+            backButton.isHidden = true
+        case FlowKeys.requestStolenFlow.rawValue:
+            button.setTitle("OK", for: .normal)
+            confirmationDesc.text = "Your tag has been reported as stolen."
+            confirmationTitle.text = "Stolen Tag"
+            confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
+            skipButton.isHidden = true
+            backButton.isHidden = true
+        case FlowKeys.requestTag.rawValue:
+            button.setTitle("OK", for: .normal)
+            confirmationDesc.text = "Your request has been submitted and will be processed as soon as possible."
+            confirmationTitle.text = "Request Submitted"
+            confirmationImage.image = #imageLiteral(resourceName: "confirmCheck")
+            skipButton.isHidden = true
+            backButton.isHidden = true
         default:
             button.setTitle("SIGN UP", for: .normal)
             confirmationDesc.text = "Sign up with E-ZPass today, and save 20% on your bill."
@@ -90,6 +114,16 @@ class SignupAndSaveVC: UIViewController {
             let storyBoard = UIStoryboard(name: "UserFlow", bundle: nil)
             let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.navigationController?.pushViewController(loginVC, animated: true)
+        case FlowKeys.requestLostFlow.rawValue,FlowKeys.requestStolenFlow.rawValue,FlowKeys.requestTag.rawValue:
+//            let storyBoard = UIStoryboard(name: "MyAccount", bundle: nil)
+//            let myAccount = storyBoard.instantiateViewController(withIdentifier: "TagsViewController") as! TagsViewController
+//            self.navigationController?.pushViewController(myAccount, animated: false)
+            
+            if let disputeVC = navigationController!.viewControllers.filter({ $0 is TagsViewController }).first {
+                navigationController?.popToViewController(disputeVC, animated: false)
+            } else {
+                navigationController?.popViewController(animated: true)
+            }
         case FlowKeys.balanceIncreaseFlow.rawValue:
             navigationController?.viewControllers.removeAll(where :{
                 (vc) -> Bool in if  vc.isKind(of: PayNowVC.self) || vc.isKind(of: PaymentAmountVC.self){
