@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+public protocol IForgotPasswordUsecaseProvider {
+    
+    func provideForgotPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase
+}
