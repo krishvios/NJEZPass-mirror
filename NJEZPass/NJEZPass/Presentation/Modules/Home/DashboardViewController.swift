@@ -129,7 +129,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         case 6:
             return 264
         case 7:
-            return 85
+            return 100
         default:
              return 270
         }
