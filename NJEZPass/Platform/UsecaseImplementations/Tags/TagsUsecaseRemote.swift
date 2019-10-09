@@ -19,7 +19,7 @@ internal class TagsUsecaseRemote<T: Codable>: ITagsUsecase {
     
     func getTagsList(request: TagsModel.Request) {
         
-        let accessToken:String = PlatformUtility.serviceId!
+        let accessToken:String = PlatformUtility.serviceId ?? "SASA"
         
         var tagsRequest = request
         
