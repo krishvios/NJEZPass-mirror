@@ -20,7 +20,12 @@ internal class TagsUsecaseRemote<T: Codable>: ITagsUsecase {
     func getTagsList(request: TagsModel.Request) {
         
         let accessToken:String = PlatformUtility.serviceId!
-        let requestAPI = APIRequest<TagsModel.Request>(method: .post, url: APIConstants.ServiceNames.tagsService, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        
+        var tagsRequest = request
+        
+        tagsRequest.serviceId = accessToken
+        
+        let requestAPI = APIRequest<TagsModel.Request>(method: .post, url: APIConstants.ServiceNames.tagsService, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: tagsRequest, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
        
         APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
            switch response {

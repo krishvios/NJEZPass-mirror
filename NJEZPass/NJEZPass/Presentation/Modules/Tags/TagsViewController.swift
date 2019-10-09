@@ -8,6 +8,8 @@
 
 import UIKit
 import Entities
+import Domain
+import Platform
 import MBProgressHUD
 
 protocol ITagsViewable {
@@ -24,11 +26,30 @@ class TagsViewController: UIViewController {
     @IBOutlet weak var reportStolenBtnLbl: CMButton!
     @IBOutlet weak var reportLostBtnLbl: CMButton!
     
+    var interactor: ITagsInteractable?
+    var router: IRouter?
+    
     var buttontapped = 1
     var searchActive : Bool = false
     
     var data = ["02210005166","0221000514"]
     var filtered:[String] = []
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+           super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+           setup()
+       }
+       required init?(coder aDecoder: NSCoder) {
+           super.init(coder: aDecoder)
+           setup()
+       }
+       
+       private func setup() {
+           let configurator = TagsConfigurator()
+           configurator.build(viewController: self)
+           interactor = configurator.interactor
+           router = configurator.router
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +58,10 @@ class TagsViewController: UIViewController {
         searchBar.preferredTextColor = UIColor.gray
         searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
         searchBar.delegate = self
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        interactor?.getTagsList(action: APIConstants.ServiceNames.tagsService, requestType: .remote)
+               
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

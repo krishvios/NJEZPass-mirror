@@ -24,7 +24,7 @@ class TagsInteractor {
 extension TagsInteractor: ITagsInteractable {
     func getTagsList(action: String, requestType: Constants.RequestCategory) {
         
-        let tagsRequest = TagsModel.Request()
+        let tagsRequest = TagsModel.Request(action: action, serviceId: "", startIndex: "1", count: "10")
         
         if let responseHandler = presenter {
             let interfaceObj = tagsUsecaseProvider.provideTagsListUsecase(requestType: requestType, handler: responseHandler)
