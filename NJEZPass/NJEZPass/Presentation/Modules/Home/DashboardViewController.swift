@@ -43,7 +43,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if firstTimeUser == true {
+        if firstTimeUser == false {
             
             if let storyboard = self.storyboard {
                 let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
