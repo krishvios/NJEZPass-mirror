@@ -118,14 +118,16 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.row {
+        case 0:
+            return 384
         case 1:
-            return 208
+            return 247
         case 2:
-            return 58
+            return 64
         case 3,4,5:
             return 82
         case 6:
-            return 193
+            return 264
         case 7:
             return 85
         default:
@@ -168,7 +170,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
             transactionCell?.transactionAmount.text = transactionDic?.amount
             transactionCell?.transactionTime.text = transactionDic?.transactionTime
-            transactionCell?.amount.text = "-"
+            transactionCell?.amount.text = "--"
             return transactionCell!
             }
             
