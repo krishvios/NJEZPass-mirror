@@ -142,15 +142,13 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
             cell.moreButtonAction.isHidden = false
             cell.statusColor.isHidden = true
             cell.activityTime.isHidden = true
-            cell.accountDetailsorTagDetails.text = "Tag Type: Interior"
-            cell.accountDetailsorTagDetails.textColor = #colorLiteral(red: 0.3333333333, green: 0.3568627451, blue: 0.3529411765, alpha: 1)
-            cell.activityType.text = filtered[indexPath.row]
-            cell.Activity.text = "Active"
+            let trasponderListDic = tagData[0] as! Entities.TagsModel.Transponder
+                cell.accountDetailsorTagDetails.text = trasponderListDic.mountType
+                cell.accountDetailsorTagDetails.textColor = #colorLiteral(red: 0.3333333333, green: 0.3568627451, blue: 0.3529411765, alpha: 1)
+                cell.activityType.text =  trasponderListDic.transponderNo
+                cell.Activity.text = trasponderListDic.status
             cell.delegate = self
-            if indexPath.row == 1 {
-                cell.Activity.text = "Inactive"
-            }
-        
+            
             if cell.Activity.text == "Active" {
                 cell.StatusView.clipsToBounds = true
                 cell.StatusView.borderWidth = 1
