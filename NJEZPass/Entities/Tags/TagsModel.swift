@@ -56,6 +56,7 @@ public enum TagsModel {
     public struct PresentionModel {
         public var message: String?
         public var route: Route?
+        public var transponderList: TransponderList?
         public init() {
 
         }
