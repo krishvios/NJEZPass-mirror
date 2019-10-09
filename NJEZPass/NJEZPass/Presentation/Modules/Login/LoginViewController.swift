@@ -120,20 +120,20 @@ extension LoginViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 172
+            return 122
         }
         if indexPath.row == 1{
-            return 347
+            return 419
         }
         if indexPath.row == 2 {
             return 222
         }
         
         if indexPath.row == 3 {
-            return 198
+            return 260
         }
         if indexPath.row == 4 {
-            return 70
+            return 100
         }
         return 355
     }
