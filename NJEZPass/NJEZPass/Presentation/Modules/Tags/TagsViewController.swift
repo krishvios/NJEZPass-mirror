@@ -59,7 +59,7 @@ class TagsViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         searchBar.preferredFont = UIFont.systemFont(ofSize: 14)
-        searchBar.preferredTextColor = UIColor.gray
+        searchBar.preferredTextColor = UIColor.black
         searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
         searchBar.delegate = self
         
@@ -151,7 +151,7 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
             
             if cell.Activity.text == "Active" {
                 cell.StatusView.clipsToBounds = true
-                cell.StatusView.borderWidth = 1
+                cell.StatusView.borderWidth = 0.5
                 cell.StatusView.borderColor = #colorLiteral(red: 0, green: 0.7058823529, blue: 0.6274509804, alpha: 1)
                 cell.Activity.textColor = #colorLiteral(red: 0, green: 0.7058823529, blue: 0.6274509804, alpha: 1)
             }
@@ -173,7 +173,7 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
     
                 if trasponderListDic.status == "Active" {
                     cell.StatusView.clipsToBounds = true
-                    cell.StatusView.borderWidth = 1
+                    cell.StatusView.borderWidth = 0.5
                     cell.StatusView.borderColor = #colorLiteral(red: 0, green: 0.7058823529, blue: 0.6274509804, alpha: 1)
                     cell.Activity.textColor = #colorLiteral(red: 0, green: 0.7058823529, blue: 0.6274509804, alpha: 1)
                 }
