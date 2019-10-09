@@ -24,7 +24,7 @@ class ViolationsViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func setupTableView(){
+    func setupTableView() {
         //        let nib = UINib(nibName: String(describing: ButtonTableViewCell.self), bundle: nil)
         //        tbleView.register(nib, forCellReuseIdentifier: String(describing: ButtonTableViewCell.self))
         tbleView.estimatedRowHeight = 194

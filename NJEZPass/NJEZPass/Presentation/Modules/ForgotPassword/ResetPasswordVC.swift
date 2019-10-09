@@ -13,80 +13,75 @@ class ResetPasswordVC: UIViewController {
     
     @IBOutlet weak var resetPasswordLbl: UILabel!
     @IBOutlet weak var resetPasswordText: UILabel!
-    @IBOutlet weak var emailidInputField: ApolloTextInputField!
     @IBOutlet weak var continueButtonText: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var emailOption: UIImageView!
+    @IBOutlet weak var answerOption: UIImageView!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    var selectedOption: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailidInputField.delegate = self
         continueButtonText.isEnabled = false
         toggleLoginButtonColor()
-        setKeyBoardforText()
     }
-    @IBAction func backTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    func setKeyBoardforText() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.keyboardWillShow(notification:)),
-            name: UIResponder.keyboardDidShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.keyboardWillHide(notification:)),
-            name: UIResponder.keyboardDidHideNotification, object: nil)
+   
+    func handleEmailProtection(with email: String) {
+        var emailName = email.split(separator: "@")
+        var protectedEmail = ""
+        for (index, letter) in emailName[0].enumerated() {
+            if index == 0 || index == emailName[0].count - 1 {
+                protectedEmail.append(letter)
+            } else {
+                protectedEmail.append("*")
+            }
+        }
+        emailLabel.text = "Email \(protectedEmail + "@" + emailName[1])"
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        scrollView.isScrollEnabled = true
-        let info = notification.userInfo!
-        let rect: CGRect = info[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-        let kbSize = rect.size
+    @IBAction func emailTapped(_ sender: Any) {
         
-        let insets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
-        scrollView.contentInset = insets
-        scrollView.scrollIndicatorInsets = insets
-        
-        var aRect = self.view.frame;
-        aRect.size.height -= kbSize.height;
-        
-        let activeField: ApolloTextInputField? = [emailidInputField].first { $0.isFirstResponder }
-        if let activeField = activeField {
-            if aRect.contains(activeField.frame.origin) {
-                let scrollPoint = CGPoint(x: 0, y: activeField.frame.origin.y-kbSize.height+1)
-                scrollView.setContentOffset(scrollPoint, animated: true)
+        selectedOption = false
+         continueButtonText.isEnabled = true
+        if let button = sender as? UIButton {
+            if button.isSelected {
+                // set deselected
+                answerOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                
+            } else {
+                answerOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             }
         }
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-        scrollView.isScrollEnabled = false
+    @IBAction func answerTapped(_ sender: Any) {
+        
+        selectedOption = true
+        continueButtonText.isEnabled = true
+        if let button = sender as? UIButton {
+            if button.isSelected {
+                answerOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+            } else {
+                answerOption.image = #imageLiteral(resourceName: "selectedRadioButton")
+                emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
+            }
+        }
+    }
+    
+    
+    @IBAction func backTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func continueButtonClicked(_ sender: Any) {
-        if let emailID = emailidInputField.text, FieldValidator.shared.isValidEmail(emailID: emailID) {
-            self.performSegue(withIdentifier: "showEmailConfirmation", sender: nil)
-        } else {
-            DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidEmailDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
+        if let option = selectedOption {
+            self.performSegue(withIdentifier: option ? "showSecurityQuestions" : "showEmailConfirmation", sender: nil)
         }
-    }
-    
-    @IBAction func authenticationQuestionsButtonClicked(_ sender: Any) {
-        
-    }
-    
-    func validateInput() -> Void {
-        if let emailID = emailidInputField.text, FieldValidator.shared.isValidEmail(emailID: emailID) {
-            continueButtonText.isEnabled = true
-        } else {
-            continueButtonText.isEnabled = false
-        }
-        toggleLoginButtonColor()
     }
     
     func toggleLoginButtonColor() {
@@ -96,19 +91,5 @@ class ResetPasswordVC: UIViewController {
             continueButtonText.backgroundColor = #colorLiteral(red: 0.4489307404, green: 0.09403731674, blue: 0.5118483901, alpha: 0.5)
         }
     }
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-}
-
-extension ResetPasswordVC: ApolloTextInputFieldDelegate {
-    func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        validateInput()
-        return true
-    }
     
-    func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
 }

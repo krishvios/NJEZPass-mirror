@@ -17,7 +17,7 @@ class NotificationVC: UIViewController {
          setupTableView()
     }
     
-    func setupTableView(){
+    func setupTableView() {
         tbleView.estimatedRowHeight = 2
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
@@ -25,6 +25,7 @@ class NotificationVC: UIViewController {
         tbleView.isScrollEnabled = true
     }
 }
+
 extension NotificationVC: UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,11 +35,7 @@ extension NotificationVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 15
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return uitableviewau
-//    }
-    
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "notificationCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)

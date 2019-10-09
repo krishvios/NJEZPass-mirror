@@ -19,6 +19,10 @@ class AddCreditCardViewController: UIViewController, UITableViewDelegate, UITabl
         setupTableView()
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func saveAccount(_ sender: Any) {
         
     }

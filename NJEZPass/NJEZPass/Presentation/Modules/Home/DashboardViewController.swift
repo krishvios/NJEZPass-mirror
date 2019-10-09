@@ -43,14 +43,14 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if firstTimeUser == true {
-//            
-//            if let storyboard = self.storyboard {
-//                let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
-//                self.present(vc, animated: true, completion: nil)
-//            }
-//            
-//        }
+        if firstTimeUser == true {
+            
+            if let storyboard = self.storyboard {
+                let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,13 +67,13 @@ class DashboardViewController: UIViewController {
         transactionDetails = detailInfo!.tollTxList!
         tbleView.reloadData()
         
-//        if firstTimeUser == false {
-//            if nixieFlag == true {
-//                updateAddressAlert.addAction(updateAddressActionButton)
-//                self.present(updateAddressAlert, animated: true, completion: nil)
-//                nixieFlag = false
-//            }
-//        }
+        if firstTimeUser == false {
+            if nixieFlag == true {
+                updateAddressAlert.addAction(updateAddressActionButton)
+                self.present(updateAddressAlert, animated: true, completion: nil)
+                nixieFlag = false
+            }
+        }
         
         
     }
@@ -96,7 +96,7 @@ class DashboardViewController: UIViewController {
         setupTableView()
     }
         
-    func setupTableView(){
+    func setupTableView() {
         tbleView.estimatedRowHeight = 100
         tbleView.rowHeight = UITableView.automaticDimension
         tbleView.keyboardDismissMode = .onDrag
@@ -168,7 +168,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
             transactionCell?.transactionAmount.text = transactionDic?.amount
             transactionCell?.transactionTime.text = transactionDic?.transactionTime
-            transactionCell?.amount.text = ""
+            transactionCell?.amount.text = "-"
             return transactionCell!
             }
             
