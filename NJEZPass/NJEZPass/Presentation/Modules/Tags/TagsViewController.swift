@@ -33,7 +33,11 @@ class TagsViewController: UIViewController {
     var searchActive : Bool = false
     
     var data = ["02210005166","0221000514"]
+    var tagData : [Any] = []
     var filtered:[String] = []
+    var transponderList : TagsModel.TransponderList?
+    var transponderListCount = 0
+  
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
            super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -121,12 +125,12 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier = "ActivityCell"
         switch indexPath.row {
-        case data.count :
+        case transponderListCount :
             cellIdentifier = "RequestTagCell"
             let cell: RequestTagsorTagSuppliesCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSuppliesCell
             cell.delegate = self
             return cell
-        case data.count + 1 :
+        case transponderListCount + 1 :
             cellIdentifier = "RequestTagSupplies"
             let cell: RequestTagsorTagSuppliesCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTagsorTagSuppliesCell
             cell.delegate = self
@@ -162,17 +166,14 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
                 cell.moreButtonAction.isHidden = false
                 cell.statusColor.isHidden = true
                 cell.activityTime.isHidden = true
-                
-                cell.accountDetailsorTagDetails.text = "Tag Type: Interior"
+                let trasponderListDic = tagData[0] as! Entities.TagsModel.Transponder
+                cell.accountDetailsorTagDetails.text = trasponderListDic.mountType
                 cell.accountDetailsorTagDetails.textColor = #colorLiteral(red: 0.3333333333, green: 0.3568627451, blue: 0.3529411765, alpha: 1)
-                cell.activityType.text = data[indexPath.row]
-                cell.Activity.text = "Active"
+                cell.activityType.text =  trasponderListDic.transponderNo
+                cell.Activity.text = trasponderListDic.status
                 cell.delegate = self
-                if indexPath.row == 1 {
-                    cell.Activity.text = "Inactive"
-                }
-                
-                if cell.Activity.text == "Active" {
+    
+                if trasponderListDic.status == "Active" {
                     cell.StatusView.clipsToBounds = true
                     cell.StatusView.borderWidth = 1
                     cell.StatusView.borderColor = #colorLiteral(red: 0, green: 0.7058823529, blue: 0.6274509804, alpha: 1)
@@ -194,7 +195,11 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
         if(searchActive) {
             return filtered.count
         }
-        return data.count + 2
+        if transponderList != nil
+        {
+            return transponderListCount + 2
+        }
+        return transponderListCount
     }
 }
 
@@ -266,6 +271,10 @@ extension TagsViewController: ITagsViewable {
     
     func getTagsSuccess(viewModel: TagsModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
+        transponderList = viewModel.transponderList
+        transponderListCount = Int(transponderList!.count) ?? 0
+        tagData = transponderList?.transponder ?? []
+        tblView.reloadData()
     }
     
     func getTagsFailed(viewModel: TagsModel.PresentionModel) {

@@ -20,12 +20,14 @@ extension TagsPresenter: IResponseHandler {
         print("onSucess: ", response)
         if let responseModel = response as? TagsModel.Response {
             var viewModel = TagsModel.PresentionModel()
+            viewModel.transponderList = responseModel.transponderList
             if let msg = responseModel.message {
                 viewModel.message = msg
-                viewController?.getTagsFailed(viewModel: viewModel)
+                 viewController?.getTagsSuccess(viewModel: viewModel)
+               
             } else {
                 
-                viewController?.getTagsSuccess(viewModel: viewModel)
+                 viewController?.getTagsFailed(viewModel: viewModel)
             }
         }
     }
