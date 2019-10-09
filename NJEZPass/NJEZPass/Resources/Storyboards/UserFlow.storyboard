@@ -3347,7 +3347,7 @@
                                             </state>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedRadioButton" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-9t-UDy">
-                                            <rect key="frame" x="20" y="600" width="16" height="29"/>
+                                            <rect key="frame" x="20" y="600" width="24" height="29"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4979,7 +4979,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgf-Vg-ctX">
-                                                    <rect key="frame" x="284" y="0.0" width="16" height="71"/>
+                                                    <rect key="frame" x="288" y="0.0" width="12" height="71"/>
                                                     <state key="normal" image="dropDownBlack"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jes-Zz-Pol">
@@ -5235,7 +5235,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XE5-eh-l1G" customClass="ApolloTextInputField" customModule="Apollo_iOS">
-                                                    <rect key="frame" x="-39" y="0.0" width="347" height="71"/>
+                                                    <rect key="frame" x="16" y="0.0" width="292" height="71"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="separatorFilledColor">
@@ -5250,11 +5250,11 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkJ-Ma-V1h">
-                                                    <rect key="frame" x="343" y="0.0" width="12" height="71"/>
+                                                    <rect key="frame" x="288" y="0.0" width="12" height="71"/>
                                                     <state key="normal" image="dropDownBlack"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXe-WV-lyC">
-                                                    <rect key="frame" x="16" y="0.0" width="347" height="71"/>
+                                                    <rect key="frame" x="16" y="0.0" width="292" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="XAe-1t-7iZ"/>
                                                         <constraint firstAttribute="height" constant="71" id="sLx-J4-L5e"/>
