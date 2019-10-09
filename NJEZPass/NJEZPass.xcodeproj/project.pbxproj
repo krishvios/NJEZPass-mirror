@@ -20,7 +20,6 @@
 		2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */; };
 		2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */; };
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
-		2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */; };
 		2A987EB52345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB42345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift */; };
 		2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A987EB6234613E80057C37D /* SearchBarCustom.swift */; };
@@ -203,6 +202,10 @@
 		42F104AA234D133C00BF57C6 /* VehiclesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */; };
 		42F104AB234D133C00BF57C6 /* VehiclesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */; };
 		42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */; };
+		42F104AF234D742800BF57C6 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104AE234D742800BF57C6 /* ForgotPasswordModel.swift */; };
+		42F104B1234D76CA00BF57C6 /* ResetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B0234D76CA00BF57C6 /* ResetPasswordModel.swift */; };
+		42F104B4234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B3234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift */; };
+		42F104B6234D779500BF57C6 /* IForgotPasswordUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B5234D779500BF57C6 /* IForgotPasswordUsecase.swift */; };
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
@@ -224,6 +227,7 @@
 		5EE3E04322DEFD1E007EDCC7 /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; };
 		5EE3E04422DEFD1E007EDCC7 /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61C2F8C4FE280F097C7ABF4D /* Pods_NJEZPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0CB4424A13DB6BB912679 /* Pods_NJEZPass.framework */; };
+		6206B119234748B400465C02 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */; };
 		623535BE2345BFDB00B736E4 /* EZYPassNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */; };
 		623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */; };
@@ -596,6 +600,10 @@
 		42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesPresenter.swift; sourceTree = "<group>"; };
 		42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesConfigurator.swift; sourceTree = "<group>"; };
 		42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesInteractor.swift; sourceTree = "<group>"; };
+		42F104AE234D742800BF57C6 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
+		42F104B0234D76CA00BF57C6 /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
+		42F104B3234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordUsecaseProvider.swift; sourceTree = "<group>"; };
+		42F104B5234D779500BF57C6 /* IForgotPasswordUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordUsecase.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFC722DEFCAD007EDCC7 /* NJEZPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJEZPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1063,6 +1071,7 @@
 		429BAD3723016B950087DBAD /* UsecaseInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				42F104B2234D775D00BF57C6 /* ForgotPassword */,
 				4264BD97234D0B5300A88F0A /* Vehicles */,
 				42932FF223483C1C002CAC3E /* Tags */,
 				429C6A16230FDC830055CFBD /* Edit Profile */,
@@ -1199,14 +1208,14 @@
 			path = PaymentMethods;
 			sourceTree = "<group>";
 		};
-		429C6A07230E9FAF0055CFBD /* Payment Methods */ = {
+		429C6A07230E9FAF0055CFBD /* PaymentMethods */ = {
 			isa = PBXGroup;
 			children = (
 				429C6A08230E9FD30055CFBD /* BankAccountModel.swift */,
 				429C6A0A230E9FE50055CFBD /* CreditCardModel.swift */,
 				429C6A0C230EAB790055CFBD /* PaymentMethodsModel.swift */,
 			);
-			path = "Payment Methods";
+			path = PaymentMethods;
 			sourceTree = "<group>";
 		};
 		429C6A0E230EBA990055CFBD /* PaymentMethods */ = {
@@ -1431,6 +1440,24 @@
 			path = Tags;
 			sourceTree = "<group>";
 		};
+		42F104AD234D740A00BF57C6 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				42F104AE234D742800BF57C6 /* ForgotPasswordModel.swift */,
+				42F104B0234D76CA00BF57C6 /* ResetPasswordModel.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		42F104B2234D775D00BF57C6 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				42F104B3234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift */,
+				42F104B5234D779500BF57C6 /* IForgotPasswordUsecase.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		5EE3DFAA22DEFCAC007EDCC7 = {
 			isa = PBXGroup;
 			children = (
@@ -1496,11 +1523,12 @@
 		5EE3DFEA22DEFCE3007EDCC7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				42F104AD234D740A00BF57C6 /* ForgotPassword */,
 				4264BD90234D049E00A88F0A /* Vehicles */,
 				42932FEF234787E5002CAC3E /* Tags */,
 				9BAC0F23232A7F3500FD0ED5 /* FAQ */,
 				429C6A13230FCD060055CFBD /* EditProfile */,
-				429C6A07230E9FAF0055CFBD /* Payment Methods */,
+				429C6A07230E9FAF0055CFBD /* PaymentMethods */,
 				42BE35AD22FD7F0E00AAF8E3 /* UserProfile */,
 				42BE357922FBF94400AAF8E3 /* Common */,
 				42BE357422FBF94400AAF8E3 /* Home */,
@@ -2101,6 +2129,7 @@
 				62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */,
 				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
+				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				2AF7F0CC234CE4590038B923 /* UserFlow.storyboard in Resources */,
 				429BAD8E230C58B80087DBAD /* OpenSans-Italic.ttf in Resources */,
 				429BAD88230C58B80087DBAD /* Assets.xcassets in Resources */,
@@ -2357,6 +2386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
+				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
+				6206B119234748B400465C02 /* WebViewVC.swift in Sources */,
 				42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
@@ -2566,6 +2597,7 @@
 				42BE358322FBF94400AAF8E3 /* LoginModel.swift in Sources */,
 				42DA6FD4234CCA03007D5581 /* SearchTagsModel.swift in Sources */,
 				42BE358522FBF94400AAF8E3 /* APIError.swift in Sources */,
+				42F104AF234D742800BF57C6 /* ForgotPasswordModel.swift in Sources */,
 				4216D930233A35BA00B3488F /* SecurityQuestionsModel.swift in Sources */,
 				429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */,
 				4264BD92234D04B900A88F0A /* VehiclesListModel.swift in Sources */,
@@ -2579,6 +2611,7 @@
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
 				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,
 				429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */,
+				42F104B1234D76CA00BF57C6 /* ResetPasswordModel.swift in Sources */,
 				429C6A15230FCD240055CFBD /* EditProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2600,6 +2633,7 @@
 				429C6A1A230FDD6C0055CFBD /* IEditProfileUsecase.swift in Sources */,
 				429BAD4A23016B950087DBAD /* Extensions.swift in Sources */,
 				429C6A10230EBAC20055CFBD /* IPaymentMethodsUsecaseProvider.swift in Sources */,
+				42F104B6234D779500BF57C6 /* IForgotPasswordUsecase.swift in Sources */,
 				429BAD4823016B950087DBAD /* ILoginUsecaseProvider.swift in Sources */,
 				4264BD9B234D0B5300A88F0A /* IVehiclesUsecase.swift in Sources */,
 				429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */,
@@ -2609,6 +2643,7 @@
 				42932FF623483C52002CAC3E /* ITagsUsecase.swift in Sources */,
 				429C6A18230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift in Sources */,
 				429BAD4623016B950087DBAD /* IUserProfileUsecaseProvider.swift in Sources */,
+				42F104B4234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift in Sources */,
 				429BAD4C23016B950087DBAD /* IResponseHandler.swift in Sources */,
 				4264BD9A234D0B5300A88F0A /* IVehiclesUsecaseProvider.swift in Sources */,
 			);
