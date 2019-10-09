@@ -235,6 +235,7 @@
 		62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */; };
 		62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */; };
 		62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */; };
+		62F0A5DC234DA21F00287FB5 /* VehicleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F0A5DB234DA21F00287FB5 /* VehicleListTableViewCell.swift */; };
 		7BDDA510FB4D829E192A0FF0 /* Pods_NJEZPassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE51622DBC685C9AFF3432DE /* Pods_NJEZPassUITests.framework */; };
 		9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B008B3B22F320BE0098BCDC /* RequestTagVC.swift */; };
 		9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0436E523227BAD00418268 /* PaymentSummaryViewController.swift */; };
@@ -637,6 +638,7 @@
 		62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
 		62A7BDAE234336FC00FE66FB /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		62F0A5DB234DA21F00287FB5 /* VehicleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListTableViewCell.swift; sourceTree = "<group>"; };
 		6B1B4FF9766E16A7A1382D9D /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		85420B5C28E85F4364BEF843 /* Pods_NJEZPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NJEZPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94716BDE53C161C5DB9FE59B /* Pods-EntitiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntitiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EntitiesTests/Pods-EntitiesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1038,6 +1040,7 @@
 		429BAD2A23008EE60087DBAD /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
+				62F0A5DA234DA1E600287FB5 /* VehicleListCell */,
 				42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */,
 				42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */,
 				42F104A6234D133C00BF57C6 /* VehiclesPresenter.swift */,
@@ -1659,6 +1662,14 @@
 				62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		62F0A5DA234DA1E600287FB5 /* VehicleListCell */ = {
+			isa = PBXGroup;
+			children = (
+				62F0A5DB234DA21F00287FB5 /* VehicleListTableViewCell.swift */,
+			);
+			path = VehicleListCell;
 			sourceTree = "<group>";
 		};
 		9B008B3A22F320AD0098BCDC /* Tags */ = {
@@ -2386,7 +2397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
-				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
+				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				6206B119234748B400465C02 /* WebViewVC.swift in Sources */,
 				42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
@@ -2461,6 +2472,7 @@
 				4238950B23462D0A00F7A7DD /* MoreContentTableViewCell.swift in Sources */,
 				4216D942233B61F100B3488F /* QuestionsViewController.swift in Sources */,
 				F90829172339B82600C6C37E /* PayNowVC.swift in Sources */,
+				62F0A5DC234DA21F00287FB5 /* VehicleListTableViewCell.swift in Sources */,
 				429BAD1323008C610087DBAD /* EditProfileViewController.swift in Sources */,
 				2A02ABDD233A219C000D0B67 /* headerTableViewCell.swift in Sources */,
 				9B5C6D9122F2CF6700DA6151 /* HeaderCell.swift in Sources */,
@@ -2605,7 +2617,6 @@
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
 				4264BD96234D04DD00A88F0A /* AddVehicleModel.swift in Sources */,
 				42932FF1234787E5002CAC3E /* TagsModel.swift in Sources */,
-				2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
 				42E4999B2345C650009466F9 /* PushModel.swift in Sources */,
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
