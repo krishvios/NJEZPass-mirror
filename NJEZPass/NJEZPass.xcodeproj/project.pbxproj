@@ -20,7 +20,6 @@
 		2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DE2334ED9C00A31806 /* ResetPasswordVC.swift */; };
 		2A4F46E52334ED9C00A31806 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */; };
 		2A4F46F42334EFC000A31806 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F46F32334EFC000A31806 /* iCarousel.m */; };
-		2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55ED233CA6BB000CBED9 /* TransactionsDetailsVC.swift */; };
 		2A9084FB2343BFF0007BD1A5 /* searchTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A9084FA2343BFF0007BD1A5 /* searchTextField.xib */; };
 		2A9084FD2343C139007BD1A5 /* searchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9084FC2343C139007BD1A5 /* searchTextField.swift */; };
@@ -186,6 +185,7 @@
 		5EE3E04322DEFD1E007EDCC7 /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; };
 		5EE3E04422DEFD1E007EDCC7 /* Platform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3E02E22DEFD1E007EDCC7 /* Platform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61C2F8C4FE280F097C7ABF4D /* Pods_NJEZPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0CB4424A13DB6BB912679 /* Pods_NJEZPass.framework */; };
+		6206B119234748B400465C02 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A55EA233C995C000CBED9 /* WebViewVC.swift */; };
 		623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */; };
 		623535BE2345BFDB00B736E4 /* EZYPassNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */; };
 		623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */; };
@@ -1939,7 +1939,7 @@
 				9BED144E230D778300C59899 /* country_states.json in Resources */,
 				429BAD91230C58B80087DBAD /* OpenSans-LightItalic.ttf in Resources */,
 				62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */,
-				429BAD82230C58B80087DBAD /* TagsFlow.storyboard in Resources */,
+				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				429BAD82230C58B80087DBAD /* MyAccount.storyboard in Resources */,
 				429BAD8E230C58B80087DBAD /* OpenSans-Italic.ttf in Resources */,
 				429BAD7E230C58B80087DBAD /* VehiclesFlow.storyboard in Resources */,
@@ -2197,6 +2197,7 @@
 			files = (
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
+				6206B119234748B400465C02 /* WebViewVC.swift in Sources */,
 				2A299D7D233EF92E006A2DD8 /* NotificationVC.swift in Sources */,
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
 				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
@@ -2285,7 +2286,6 @@
 				62A7BDAF234336FC00FE66FB /* SettingTableViewController.swift in Sources */,
 				9BDB1F3B230ECB22006CE739 /* EditProfileConfigurator.swift in Sources */,
 				62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */,
-				2A56178E2335EEBE00B38C8E /* GradientViewTableViewCell.swift in Sources */,
 				42B493932317E0D200E9B1A0 /* InputFieldTableViewCell.swift in Sources */,
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
@@ -2382,7 +2382,6 @@
 				429C6A09230E9FD30055CFBD /* BankAccountModel.swift in Sources */,
 				42BE358822FBF94400AAF8E3 /* APIRequest.swift in Sources */,
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
-				2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
 				42E4999B2345C650009466F9 /* PushModel.swift in Sources */,
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
