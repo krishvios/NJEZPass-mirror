@@ -63,7 +63,6 @@ class VehicleMakeCell: UITableViewCell {
         modelInputField.clearButton.isHidden = true
         vehicleTypeInputField.clearButton.isHidden = true
         
-        
         makeLbl.isHidden = true
         yearLbl.isHidden = true
         vehicleTypeLbl.isHidden = true
