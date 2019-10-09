@@ -80,7 +80,8 @@ class MoreTableViewController: UITableViewController {
         }
         
         switch didSelectedIndex {
-        case .Statements: break
+        case .Statements:
+            self.navigateToStatement()
         case .Correspondence:
         performSegue(withIdentifier: "showCorrespondence", sender: nil)
         case .FAQ:
@@ -92,14 +93,27 @@ class MoreTableViewController: UITableViewController {
         case .Settings:
         performSegue(withIdentifier: "settings", sender: nil)
 
-        case .TermsConditions:break
+        case .TermsConditions:
+        self.navigateToTermsAndCondition()
         case .Logout:break
             
         }
     }
    
-
+    func navigateToStatement() {
+        let webViewVC = WebViewVC ()
+        webViewVC.navTitle = "Statements"
+        webViewVC.urlString = "https://www.google.com"
+        self.navigationController?.pushViewController(webViewVC, animated: true)
+    }
     
+    func navigateToTermsAndCondition() {
+        let webViewVC = WebViewVC ()
+        webViewVC.navTitle = "Terms & Conditions"
+        webViewVC.urlString = "https://www.google.com"
+        self.navigationController?.pushViewController(webViewVC, animated: true)
+
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
