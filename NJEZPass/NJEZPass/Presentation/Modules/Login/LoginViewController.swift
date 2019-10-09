@@ -72,11 +72,11 @@ class LoginViewController:  UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         fingerPrintOverlay.addGestureRecognizer(tap)
         
-        guard let _ = CMUtility.dynamicPageLoad else {
-            MBProgressHUD.showAdded(to: self.view, animated: true)
-            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
-            return
-        }
+//        guard let _ = CMUtility.dynamicPageLoad else {
+//            MBProgressHUD.showAdded(to: self.view, animated: true)
+//            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
+//            return
+//        }
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
