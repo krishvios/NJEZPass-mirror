@@ -72,17 +72,21 @@ class RequestTagVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
          setupTableView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         switch requestFlowStr {
         case RequestFlow.requestTagFlow.rawValue:
-            navBar.topItem?.title = "Request Tag"
+             //self.showNavBarWith(title: "Request Tags")
+            navBar.topItem?.title = "Request Tags"
         case RequestFlow.requestTagSuppliesFlow.rawValue:
-            navBar.topItem?.title = "Request Tag Supplies"
+           // self.showNavBarWith(title: "Request Supplies")
+            navBar.topItem?.title = "Request Supplies"
+
             requestTagTableView.isScrollEnabled = false
         default:
             navBar.topItem?.title = " "
         }
     }
-    
     func setupTableView() {
         requestTagTableView.estimatedRowHeight = 100
         requestTagTableView.rowHeight = UITableView.automaticDimension
