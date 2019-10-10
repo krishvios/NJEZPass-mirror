@@ -72,7 +72,7 @@ extension VehicleMakeVC: UITableViewDelegate, UITableViewDataSource {
         case 2:
             return 180
         default:
-            return 478
+            return 427
         }
         
     }
