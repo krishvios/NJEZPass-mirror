@@ -29,6 +29,8 @@ public struct APIConstants {
         public static let tagsService = "getTransponderList"
         public static let getVechiclesService = "getVehicleList"
         public static let addVechicleService = "addVehicleList"
+        public static let forgotPassword = "forgotPassword"
+        public static let forgotUsername = "forgotUsername"
         public static let profileUpdate = "api/account/holderinfo"
         public static let getPaymentMethods = "api/account/paymentmethods"
         public static let modifyBankAccount = "api/account/paymentmethod/primary"

@@ -8,6 +8,13 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+
+protocol IForgotPasswordViewable {
+    func forgotPasswordSuccess(viewModel: ForgotPasswordModel.PresentionModel)
+    func forgotPasswordFailed(viewModel: ForgotPasswordModel.PresentionModel)
+}
 
 class ForgotPasswordVC: UIViewController {
     
@@ -19,6 +26,26 @@ class ForgotPasswordVC: UIViewController {
     @IBOutlet weak var accountNumberInputField: ApolloTextInputField!
     @IBOutlet weak var zipCodeinputField: ApolloTextInputField!
     @IBOutlet weak var countinueButtonLbl: UIButton!
+    
+    
+    var interactor: IForgotPasswordInteractable?
+       var router: IRouter?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+              super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+              setup()
+          }
+          required init?(coder aDecoder: NSCoder) {
+              super.init(coder: aDecoder)
+              setup()
+          }
+
+          private func setup() {
+              let configurator = ForgotPasswordConfigurator()
+              configurator.build(viewController: self)
+              interactor = configurator.interactor
+              router = configurator.router
+          }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,14 +143,48 @@ class ForgotPasswordVC: UIViewController {
     }
 }
 
+
 extension ForgotPasswordVC: ApolloTextInputFieldDelegate {
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             validateInput()
+        
+        let text = textField.text
+        if  text!.count >= 0  {
+            // Move front to cursor position
+            switch textField {
+            case userNameInputField:
+                accountNumberInputField.text = ""
+            case accountNumberInputField:
+                userNameInputField.text = ""
+            default:
+                break
+            }
+        }
         return true
     }
     
     func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+}
+
+extension ForgotPasswordVC: IForgotPasswordViewable {
+    func forgotPasswordSuccess(viewModel: ForgotPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func forgotPasswordFailed(viewModel: ForgotPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension ForgotPasswordVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }

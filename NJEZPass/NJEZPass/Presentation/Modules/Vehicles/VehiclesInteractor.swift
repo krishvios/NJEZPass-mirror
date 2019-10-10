@@ -24,7 +24,7 @@ class VehiclesInteractor {
 extension VehiclesInteractor: IVehiclesInteractable {
     func getVechiclesList(action: String, requestType: Constants.RequestCategory) {
         
-        let request = VehiclesListModel.Request()
+        let request = VehiclesListModel.Request(action: action, serviceId: "", startIndex: "1", count: "10")
         
         if let responseHandler = presenter {
             let interfaceObj = vechiclesUsecaseProvider.provideVechiclesListUsecase(requestType: requestType, handler: responseHandler)

@@ -8,10 +8,18 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+import Platform
 
 enum RegisterYourAccountFLow: String {
     case registerAccount
     case forgotUsername
+}
+
+protocol IForgotUsernameViewable {
+    func forgotUsernameSuccess(viewModel: ForgotUsernameModel.PresentionModel)
+    func forgotUsernameFailed(viewModel: ForgotUsernameModel.PresentionModel)
 }
 
 class ForgotUserNameVC: UIViewController {
@@ -25,7 +33,26 @@ class ForgotUserNameVC: UIViewController {
     @IBOutlet weak var zipCodeInputField: ApolloTextInputField!
     @IBOutlet weak var countinueButtonLbl: UIButton!
     
+    var interactor: IForgotUsernameInteractable?
+       var router: IRouter?
+    
     var flowKey = ""
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+              super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+              setup()
+          }
+          required init?(coder aDecoder: NSCoder) {
+              super.init(coder: aDecoder)
+              setup()
+          }
+
+          private func setup() {
+              let configurator = ForgotUsernameConfigurator()
+              configurator.build(viewController: self)
+              interactor = configurator.interactor
+              router = configurator.router
+          }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,13 +136,23 @@ class ForgotUserNameVC: UIViewController {
             case RegisterYourAccountFLow.registerAccount.rawValue:
                 self.performSegue(withIdentifier: "showSecurityQuestions", sender: nil)
             default:
-                self.performSegue(withIdentifier: "forgotUserName", sender: self)
+                self.forgotUsername(accNo: accountNo, tagNo: tag, zipCode: zipcode)
+//                self.performSegue(withIdentifier: "forgotUserName", sender: self)
             }
             
         }
         else{
             DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
         }
+    }
+    
+    func forgotUsername(accNo: String, tagNo: String, zipCode: String) {
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        let request = ForgotUsernameModel.Request(action: APIConstants.ServiceNames.forgotUsername, accountNumber: accNo, tagNumber: tagNo, zipCode: zipCode)
+        interactor?.forgotUsername(request: request, requestType: .remote)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -164,5 +201,27 @@ extension ForgotUserNameVC: ApolloTextInputFieldDelegate {
     func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+}
+
+extension ForgotUserNameVC: IForgotUsernameViewable {
+    
+    func forgotUsernameSuccess(viewModel: ForgotUsernameModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        self.performSegue(withIdentifier: "forgotUserName", sender: self)
+    }
+    
+    func forgotUsernameFailed(viewModel: ForgotUsernameModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension ForgotUserNameVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }

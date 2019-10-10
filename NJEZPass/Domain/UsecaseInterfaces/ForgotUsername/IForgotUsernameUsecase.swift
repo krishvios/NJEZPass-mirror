@@ -1,5 +1,5 @@
 //
-//  IForgotPasswordUsecase.swift
+//  IForgotUsernameUsecase.swift
 //  Domain
 //
 //  Created by Gudavarthi, Pardhu on 09/10/19.
@@ -9,6 +9,6 @@
 import Foundation
 import Entities
 
-public protocol IForgotPasswordUsecase {
-    func forgotPassword(request: ForgotPasswordModel.Request)
+public protocol IForgotUsernameUsecase {
+    func forgotUsername(request: ForgotUsernameModel.Request)
 }
