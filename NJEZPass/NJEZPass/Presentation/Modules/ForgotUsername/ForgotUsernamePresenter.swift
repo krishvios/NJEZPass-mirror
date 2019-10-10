@@ -20,12 +20,10 @@ extension ForgotUsernamePresenter: IResponseHandler {
         print("onSucess: ", response)
         if let responseModel = response as? ForgotUsernameModel.Response {
             var viewModel = ForgotUsernameModel.PresentionModel()
-            if let msg = responseModel.message {
-                viewModel.message = msg
-                viewController?.forgotUsernameFailed(viewModel: viewModel)
-            } else {
-                
+            if responseModel.statusCode == "0" {
                 viewController?.forgotUsernameSuccess(viewModel: viewModel)
+            } else {
+                viewController?.forgotUsernameFailed(viewModel: viewModel)
             }
         }
     }

@@ -29,16 +29,17 @@ class TransactionsDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navBar.title = transactionDetails?.exitPlazaName ?? "-"
-        transactionAmount.text = transactionDetails?.amount ?? "-"
-        transactionDateLbl.text = transactionDetails?.transactionDate ?? "-"
-        plateNumberLbl.text = transactionDetails?.tagorplate ?? "-"
-        agencyLbl.text = transactionDetails?.agencyShortName ?? "-"
-        transactionDescriptionLbl.text = transactionDetails?.tollTxListDescription ?? "-"
-        entryTimeLbl.text = "-" 
-        exitTimeLbl.text = "-"
-        exitPlazaLbl.text = transactionDetails?.exitPlazaName ?? "-"
-        exitLaneLbl.text = transactionDetails?.exitLane ?? "-"
+        navBar.title = transactionDetails?.exitPlazaName
+        transactionAmount.text = transactionDetails?.amount
+        transactionDateLbl.text = transactionDetails?.transactionDate
+        if let tag = transactionDetails?.tagorplate {
+            let array = tag.split(separator: "/")
+            plateNumberLbl.text = array.count > 0 ? "\(array[0])" : ""
+        }
+        agencyLbl.text = transactionDetails?.agencyShortName
+        transactionDescriptionLbl.text = transactionDetails?.tollTxListDescription
+        exitPlazaLbl.text = transactionDetails?.exitPlazaName
+        exitLaneLbl.text = transactionDetails?.exitLane
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

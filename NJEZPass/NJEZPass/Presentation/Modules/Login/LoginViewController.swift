@@ -30,14 +30,14 @@ class LoginViewController:  UIViewController {
     @IBOutlet weak var touchIdDescriptionLbl: UILabel!
     @IBOutlet weak var fingerPrintSigninLbl: UILabel!
     @IBOutlet weak var tbleView: UITableView!
-    var interactor: ILoginInteractable?
-    var router: IRouter?
     @IBOutlet weak var fingerPrintOverlay: UIView!
     
     private var loginMethodcell:LoginMethodsTableViewCell?
     private var moreContentcell:MoreContentTableViewCell?
     private var tabWidgetCell:TabWidgetTableViewCell?
     private var gradientCell:GradientViewTableViewCell?
+    var interactor: ILoginInteractable?
+    var router: IRouter?
     
     lazy fileprivate var languageSelection: CMPickerView! = {
         let pickerView = CMPickerView(frame:CGRect(x: 0, y: self.view.frame.size.height-216-36, width: self.view.frame.size.width, height: 216+36))
@@ -72,11 +72,11 @@ class LoginViewController:  UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         fingerPrintOverlay.addGestureRecognizer(tap)
         
-//        guard let _ = CMUtility.dynamicPageLoad else {
+        guard let _ = CMUtility.dynamicPageLoad else {
 //            MBProgressHUD.showAdded(to: self.view, animated: true)
-//            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
-//            return
-//        }
+            interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
+            return
+        }
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {

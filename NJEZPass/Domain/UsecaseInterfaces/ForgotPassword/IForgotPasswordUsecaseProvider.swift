@@ -11,4 +11,11 @@ import Foundation
 public protocol IForgotPasswordUsecaseProvider {
     
     func provideForgotPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase
+    
+    func sendEmailLinkForResetPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase
+    
+    func answerSecurityQuestionsForResetPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase
+    
+    func providSetNewPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase
+
 }
