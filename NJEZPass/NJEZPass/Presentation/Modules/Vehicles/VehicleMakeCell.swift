@@ -78,7 +78,7 @@ class VehicleMakeCell: UITableViewCell {
         if saveBtnLbl.isEnabled {
             saveBtnLbl.backgroundColor = #colorLiteral(red: 0.4641762972, green: 0.2112366259, blue: 0.5424402356, alpha: 1)
         } else {
-            saveBtnLbl.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.1254901961, blue: 0.4941176471, alpha: 0.5)
+            saveBtnLbl.backgroundColor = #colorLiteral(red: 0.4489307404, green: 0.09403731674, blue: 0.5118483901, alpha: 0.5)
         }
     }
     

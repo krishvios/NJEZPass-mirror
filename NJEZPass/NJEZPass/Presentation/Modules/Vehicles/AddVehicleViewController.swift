@@ -11,9 +11,7 @@ import UIKit
 class AddVehicleViewController:  UIViewController {
     
     private lazy var takeCameraAlert:UIAlertController! = {
-        let alert = UIAlertController(title: "Take Photo", message: "Take a picture of the back of your vehicle, including the license plate.", preferredStyle:.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-     //   alert.addAction(UIAlertAction(title: "Continue", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Take Photo", message: "Take a picture of the back of your vehicle, including of license plate.", preferredStyle:.alert)
         return alert
     }()
 
@@ -106,7 +104,7 @@ extension AddVehicleViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 227
         }
-        return 92
+        return 55
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

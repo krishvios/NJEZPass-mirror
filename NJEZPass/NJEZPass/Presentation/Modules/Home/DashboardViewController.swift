@@ -170,15 +170,6 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
            {
             let transactionDic = transactionDetails[indexPath.row - 3] as? ProfileModel.TollTxList
             transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
-            
-            if let exitPlaza = transactionDic?.exitPlaza{
-                if exitPlaza != "Prepaid Payment" {
-                    transactionCell?.transactionAmount.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-                    transactionCell?.statusColorView.backgroundColor = #colorLiteral(red: 0.4117647059, green: 0.1254901961, blue: 0.4941176471, alpha: 1)
-                    transactionCell?.trasanctionImg.image = #imageLiteral(resourceName: "arrow")
-                }
-                
-            }
             transactionCell?.transactionAmount.text = transactionDic?.amount
             transactionCell?.transactionTime.text = transactionDic?.transactionTime
             transactionCell?.amount.text = "--"

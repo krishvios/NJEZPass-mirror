@@ -17,7 +17,6 @@ class RecentTransactionsCell: UITableViewCell {
     @IBOutlet weak var recentTrasanctionTxt: UILabel!
     @IBOutlet weak var viewAllBtnTxt: UIButton!
     
-    @IBOutlet weak var trasanctionImg: UIImageView!
     @IBOutlet weak var transactionExitPlaza: UILabel!
     @IBOutlet weak var transactionAmount: UILabel!
     @IBOutlet weak var transactionTime: UILabel!
