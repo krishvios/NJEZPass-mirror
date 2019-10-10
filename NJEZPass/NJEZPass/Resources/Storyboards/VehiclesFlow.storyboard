@@ -336,13 +336,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acura MDX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzV-Kx-7jg">
-                                                            <rect key="frame" x="77.5" y="14" width="222.5" height="22"/>
+                                                            <rect key="frame" x="77.5" y="11" width="222.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="58P6249" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-8O-tkq">
-                                                            <rect key="frame" x="77" y="34" width="214" height="15"/>
+                                                            <rect key="frame" x="77" y="36" width="214" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="Pe4-QR-QtD"/>
                                                             </constraints>
@@ -358,9 +358,9 @@
                                                     <constraints>
                                                         <constraint firstItem="dzV-Kx-7jg" firstAttribute="leading" secondItem="NMo-DC-CdQ" secondAttribute="trailing" constant="17" id="3xG-XK-NL6"/>
                                                         <constraint firstAttribute="trailing" secondItem="6Nb-QK-IkN" secondAttribute="trailing" id="FAx-mz-XFU"/>
-                                                        <constraint firstAttribute="bottom" secondItem="VVV-8O-tkq" secondAttribute="bottom" constant="18" id="GdX-gR-cep"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VVV-8O-tkq" secondAttribute="bottom" constant="16" id="GdX-gR-cep"/>
                                                         <constraint firstItem="6Nb-QK-IkN" firstAttribute="leading" secondItem="VVV-8O-tkq" secondAttribute="trailing" constant="8" id="IQq-xM-eH8"/>
-                                                        <constraint firstAttribute="bottom" secondItem="dzV-Kx-7jg" secondAttribute="bottom" constant="31" id="SWY-cH-zrj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dzV-Kx-7jg" secondAttribute="bottom" constant="34" id="SWY-cH-zrj"/>
                                                         <constraint firstItem="NMo-DC-CdQ" firstAttribute="top" secondItem="TE3-Nx-YfV" secondAttribute="top" constant="10" id="bWM-ZG-4M0"/>
                                                         <constraint firstItem="6Nb-QK-IkN" firstAttribute="top" secondItem="TE3-Nx-YfV" secondAttribute="top" constant="21" id="cLk-8D-akw"/>
                                                         <constraint firstItem="VVV-8O-tkq" firstAttribute="leading" secondItem="NMo-DC-CdQ" secondAttribute="trailing" constant="16.5" id="h9l-6t-ZSD"/>
@@ -424,7 +424,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vN-XD-8ze">
                                 <rect key="frame" x="0.0" y="71" width="375" height="83.5"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Lisence plate" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-ft-8fo" customClass="SearchBarCustom" customModule="NJEZPass" customModuleProvider="target">
+                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Licence Plate" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-ft-8fo" customClass="SearchBarCustom" customModule="NJEZPass" customModuleProvider="target">
                                         <rect key="frame" x="28" y="15" width="318" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -433,11 +433,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-QJ-j5j">
+                                <rect key="frame" x="317" y="12" width="53" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="WPg-1w-YFb"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button" image="AddVehicle"/>
+                                <connections>
+                                    <action selector="btnAddVehicleTapped:" destination="fg3-On-YLt" eventType="touchUpInside" id="djX-De-6gc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tct-YE-KMT" firstAttribute="centerY" secondItem="83F-sd-M6D" secondAttribute="centerY" id="1RN-Kw-J7n"/>
                             <constraint firstItem="fte-ac-joG" firstAttribute="top" secondItem="MD0-Fz-ek6" secondAttribute="bottom" constant="8" id="7uc-DO-I5d"/>
+                            <constraint firstItem="cnm-QJ-j5j" firstAttribute="centerY" secondItem="tct-YE-KMT" secondAttribute="centerY" constant="-8" id="B9h-Wi-wwJ"/>
                             <constraint firstItem="tct-YE-KMT" firstAttribute="leading" secondItem="eXF-P7-ZXv" secondAttribute="leading" id="BJe-vx-3fN"/>
                             <constraint firstItem="eXF-P7-ZXv" firstAttribute="top" secondItem="4vN-XD-8ze" secondAttribute="bottom" id="BpY-eQ-MhJ"/>
                             <constraint firstItem="eXF-P7-ZXv" firstAttribute="leading" secondItem="IAV-xJ-ggE" secondAttribute="leading" id="CW7-70-Qps"/>
@@ -449,16 +461,19 @@
                             <constraint firstItem="eXF-P7-ZXv" firstAttribute="top" secondItem="fte-ac-joG" secondAttribute="bottom" constant="8" id="RoX-Vm-YHm"/>
                             <constraint firstItem="tct-YE-KMT" firstAttribute="trailing" secondItem="eXF-P7-ZXv" secondAttribute="trailing" id="Wh7-kW-7jQ"/>
                             <constraint firstItem="IAV-xJ-ggE" firstAttribute="trailing" secondItem="fte-ac-joG" secondAttribute="trailing" constant="26" id="Ymy-MY-VAd"/>
+                            <constraint firstItem="4vN-XD-8ze" firstAttribute="top" secondItem="cnm-QJ-j5j" secondAttribute="bottom" constant="8" id="acJ-hU-BAx"/>
                             <constraint firstItem="MD0-Fz-ek6" firstAttribute="top" secondItem="83F-sd-M6D" secondAttribute="bottom" constant="26" id="atv-Vj-r2Q"/>
                             <constraint firstItem="83F-sd-M6D" firstAttribute="leading" secondItem="tct-YE-KMT" secondAttribute="leading" id="cfX-dK-rCY"/>
                             <constraint firstItem="4vN-XD-8ze" firstAttribute="top" secondItem="83F-sd-M6D" secondAttribute="bottom" id="f1e-dQ-Ygn"/>
                             <constraint firstItem="fte-ac-joG" firstAttribute="leading" secondItem="IAV-xJ-ggE" secondAttribute="leading" constant="37" id="iRl-kh-HUl"/>
                             <constraint firstItem="83F-sd-M6D" firstAttribute="top" secondItem="IAV-xJ-ggE" secondAttribute="top" id="kgx-et-Lf0"/>
                             <constraint firstItem="MD0-Fz-ek6" firstAttribute="leading" secondItem="IAV-xJ-ggE" secondAttribute="leading" constant="37" id="r5x-Hi-3IS"/>
+                            <constraint firstItem="IAV-xJ-ggE" firstAttribute="trailing" secondItem="cnm-QJ-j5j" secondAttribute="trailing" constant="5" id="tPR-N9-vri"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IAV-xJ-ggE"/>
                     </view>
                     <connections>
+                        <outlet property="btnAddVehicle" destination="cnm-QJ-j5j" id="9Dq-sV-Zwz"/>
                         <outlet property="searchBar" destination="QSd-ft-8fo" id="uPX-ZH-G8m"/>
                         <outlet property="tbleView" destination="eXF-P7-ZXv" id="84L-Cm-VV8"/>
                         <segue destination="n7B-zN-I75" kind="show" identifier="AddVehicle" id="oOK-n5-wpE"/>
@@ -1584,6 +1599,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddVehicle" width="236" height="208"/>
         <image name="arrow" width="26" height="48"/>
         <image name="camera" width="29" height="29"/>
         <image name="dropDownBlack" width="12" height="6"/>
