@@ -147,7 +147,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
             headerCell?.headerCellDelegate = self
             headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
-            headerCell?.amountLbl.text = "$\(detailInfo?.currentBalance ?? "")"
+            if let balance = detailInfo?.currentBalance {
+                let count = Decimal(string: balance)!.significantFractionalDecimalDigits
+                headerCell?.amountLbl.text = "$\(count == 1 ? "\(balance)0" : count == 0 ? "\(balance).00" : balance)"
+            }
             return headerCell!
         case 1:
             cellIdentifier = "paymentSummaryCell"
@@ -253,5 +256,11 @@ extension DashboardViewController: RecentTransactionsCellDelegate {
 extension DashboardViewController:headerCellDelegate {
     func increaseBalanceTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "showIncreaseBalance", sender: nil)
+    }
+}
+
+extension Decimal {
+    var significantFractionalDecimalDigits: Int {
+        return max(-exponent, 0)
     }
 }
