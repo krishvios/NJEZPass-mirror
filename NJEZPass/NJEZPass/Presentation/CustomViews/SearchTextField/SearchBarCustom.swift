@@ -28,7 +28,9 @@ class SearchBarCustom: UISearchBar {
             
             let shapeLayer = CAShapeLayer()
             shapeLayer.path = path.cgPath
-            shapeLayer.strokeColor = preferredTextColor.cgColor
+            if let strkColor = preferredTextColor {
+                shapeLayer.strokeColor = strkColor.cgColor
+            }
             shapeLayer.lineWidth = 1
             searchField.layer.addSublayer(shapeLayer)
         }

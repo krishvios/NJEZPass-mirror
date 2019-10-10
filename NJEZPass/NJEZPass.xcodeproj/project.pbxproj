@@ -231,6 +231,9 @@
 		623535BC2345BFCB00B736E4 /* EZYPassNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */; };
 		623535BE2345BFDB00B736E4 /* EZYPassNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */; };
 		623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */; };
+		62983EC6234F0CF1006A577B /* EditVehicleDeatilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62983EC5234F0CF1006A577B /* EditVehicleDeatilsViewController.swift */; };
+		62983EC9234F0D5D006A577B /* EditVehiclePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62983EC8234F0D5D006A577B /* EditVehiclePhotoTableViewCell.swift */; };
+		62983ECB234F1BA5006A577B /* LicensePlateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62983ECA234F1BA5006A577B /* LicensePlateTableViewCell.swift */; };
 		62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */; };
 		62A7BDAC23430F2200FE66FB /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */; };
 		62A7BDAD23430F2200FE66FB /* LabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */; };
@@ -634,6 +637,9 @@
 		623535BB2345BFCB00B736E4 /* EZYPassNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZYPassNavView.swift; sourceTree = "<group>"; };
 		623535BD2345BFDB00B736E4 /* EZYPassNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EZYPassNavView.xib; sourceTree = "<group>"; };
 		623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtention.swift; sourceTree = "<group>"; };
+		62983EC5234F0CF1006A577B /* EditVehicleDeatilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVehicleDeatilsViewController.swift; sourceTree = "<group>"; };
+		62983EC8234F0D5D006A577B /* EditVehiclePhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVehiclePhotoTableViewCell.swift; sourceTree = "<group>"; };
+		62983ECA234F1BA5006A577B /* LicensePlateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlateTableViewCell.swift; sourceTree = "<group>"; };
 		62A7BDA72342124B00FE66FB /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		62A7BDAA23430F2200FE66FB /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		62A7BDAB23430F2200FE66FB /* LabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelTableViewCell.xib; sourceTree = "<group>"; };
@@ -1040,6 +1046,7 @@
 		429BAD2A23008EE60087DBAD /* Vehicles */ = {
 			isa = PBXGroup;
 			children = (
+				62983EC4234F0CD5006A577B /* EditVehicle */,
 				62F0A5DA234DA1E600287FB5 /* VehicleListCell */,
 				42F104A7234D133C00BF57C6 /* VehiclesConfigurator.swift */,
 				42F104A8234D133C00BF57C6 /* VehiclesInteractor.swift */,
@@ -1640,6 +1647,24 @@
 				623535BF2345C92D00B736E4 /* UINavigationBarExtention.swift */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		62983EC4234F0CD5006A577B /* EditVehicle */ = {
+			isa = PBXGroup;
+			children = (
+				62983EC7234F0D18006A577B /* VehicleEditPhotoCell */,
+				62983EC5234F0CF1006A577B /* EditVehicleDeatilsViewController.swift */,
+				62983ECA234F1BA5006A577B /* LicensePlateTableViewCell.swift */,
+			);
+			path = EditVehicle;
+			sourceTree = "<group>";
+		};
+		62983EC7234F0D18006A577B /* VehicleEditPhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				62983EC8234F0D5D006A577B /* EditVehiclePhotoTableViewCell.swift */,
+			);
+			path = VehicleEditPhotoCell;
 			sourceTree = "<group>";
 		};
 		62A7BDA62342122F00FE66FB /* More */ = {
@@ -2405,6 +2430,7 @@
 				2A4F46E32334ED9C00A31806 /* ForgotUserNameVC.swift in Sources */,
 				2A4F46E42334ED9C00A31806 /* ResetPasswordVC.swift in Sources */,
 				4216D9232339F88A00B3488F /* CMDevice.swift in Sources */,
+				62983EC9234F0D5D006A577B /* EditVehiclePhotoTableViewCell.swift in Sources */,
 				9BCA992F22F44CAB00C3BB7D /* RequestTagSuppliesVC.swift in Sources */,
 				429BAD5C2306A0ED0087DBAD /* AccountPrepaidVC.swift in Sources */,
 				42BE356E22FBF7DE00AAF8E3 /* DropDownTblView.swift in Sources */,
@@ -2482,6 +2508,7 @@
 				62A7BDA82342124B00FE66FB /* MoreTableViewController.swift in Sources */,
 				9B54491C2327A25700DC8AAE /* SearchButtonCell.swift in Sources */,
 				623535C02345C92D00B736E4 /* UINavigationBarExtention.swift in Sources */,
+				62983EC6234F0CF1006A577B /* EditVehicleDeatilsViewController.swift in Sources */,
 				429BAD0423008BC60087DBAD /* LoginConfigurator.swift in Sources */,
 				2A987EB7234613E80057C37D /* SearchBarCustom.swift in Sources */,
 				2AEE8E1C23490577009C0686 /* TagSummaryCell.swift in Sources */,
@@ -2573,6 +2600,7 @@
 				429BAD1D23008DD20087DBAD /* DashboardViewController.swift in Sources */,
 				42F104AB234D133C00BF57C6 /* VehiclesConfigurator.swift in Sources */,
 				9BAC0F22232A7ECE00FD0ED5 /* FAQPresenter.swift in Sources */,
+				62983ECB234F1BA5006A577B /* LicensePlateTableViewCell.swift in Sources */,
 				9BD4845022F1B5D900F94DE2 /* AddCreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

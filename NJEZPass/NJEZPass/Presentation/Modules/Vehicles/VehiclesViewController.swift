@@ -8,6 +8,8 @@
 
 import UIKit
 import Entities
+import Domain
+import Platform
 import MBProgressHUD
 
 protocol IVehiclesViewable {
@@ -20,10 +22,14 @@ protocol IVehiclesViewable {
 class VehiclesViewController: UIViewController {
     
     @IBOutlet weak var tbleView: UITableView!
+    @IBOutlet weak var searchBar: SearchBarCustom!
+    var searchActive : Bool = false
 
+    let isVehicleAvaible =  true
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Vehicles"
+        self.setupSearchBarUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +41,14 @@ class VehiclesViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func setupSearchBarUI(){
+        searchBar.preferredFont = UIFont.systemFont(ofSize: 14)
+        searchBar.preferredTextColor = UIColor.gray
+        searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
+        searchBar.delegate = self
+    }
+    
     
 }
 
@@ -63,8 +77,17 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       // let cell = tableView.dequeueReusableCell(withIdentifier: "\(VehicleCell.self)", for: indexPath) as! VehicleCell
-        let cell : VehicleListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "\(VehicleListTableViewCell.self)", for: indexPath) as! VehicleListTableViewCell
+        
+        var cell:UITableViewCell!
+        
+        if !isVehicleAvaible{
+            cell = tableView.dequeueReusableCell(withIdentifier: "\(VehicleCell.self)", for: indexPath) as! VehicleCell
+
+        } else{
+            cell  = tableView.dequeueReusableCell(withIdentifier: "\(VehicleListTableViewCell.self)", for: indexPath) as! VehicleListTableViewCell
+            //cell.configureVehicleDetails
+
+        }
 
         
        // VehicleListTableViewCell
@@ -78,8 +101,13 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isVehicleAvaible{
+            self.performSegue(withIdentifier: "EditVehicle", sender: nil)
+            
+        }else{
+            self.performSegue(withIdentifier: "AddVehicle", sender: nil)
+        }
         
-        self.performSegue(withIdentifier: "AddVehicle", sender: nil)
     }
     
 }
@@ -110,5 +138,39 @@ extension VehiclesViewController: IRoutable {
     
     func popCurrent() {
         // dismiss current viewcontroller like back action
+    }
+}
+
+
+extension VehiclesViewController : UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+//        filtered = data.filter({ (text) -> Bool in
+//            let tmp: String = text
+//            return tmp.contains(searchText)
+//        })
+//        if(filtered.count == 0){
+//            searchActive = false;
+//        } else {
+//            searchActive = true;
+//        }
+        self.tbleView.reloadData()
     }
 }
