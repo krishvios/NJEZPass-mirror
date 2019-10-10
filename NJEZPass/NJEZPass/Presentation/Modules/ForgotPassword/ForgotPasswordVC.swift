@@ -22,10 +22,22 @@ class ForgotPasswordVC: UIViewController {
     @IBOutlet weak var forgotPasswordLbl: UILabel!
     @IBOutlet weak var forgotPasswordText: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var userNameInputField: ApolloTextInputField!
+    @IBOutlet weak var userNameInputField: ApolloTextInputField! {
+        didSet {
+            userNameInputField.configureTheme(type: .none, forView: self, placeholderText: "Username")
+        }
+    }
     @IBOutlet weak var orLbl: UILabel!
-    @IBOutlet weak var accountNumberInputField: ApolloTextInputField!
-    @IBOutlet weak var zipCodeinputField: ApolloTextInputField!
+    @IBOutlet weak var accountNumberInputField: ApolloTextInputField! {
+        didSet {
+            accountNumberInputField.configureTheme(type: .none, forView: self, placeholderText: "Account Number")
+        }
+    }
+    @IBOutlet weak var zipCodeinputField: ApolloTextInputField! {
+        didSet {
+            zipCodeinputField.configureTheme(type: .none, forView: self, placeholderText: "Zip Code")
+        }
+    }
     @IBOutlet weak var countinueButtonLbl: UIButton!
     
     var username:String?

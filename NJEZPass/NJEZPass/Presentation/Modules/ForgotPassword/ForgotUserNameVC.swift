@@ -27,11 +27,24 @@ class ForgotUserNameVC: UIViewController {
     @IBOutlet weak var forgotUsernameLbl: UILabel!
     @IBOutlet weak var forgotUsernameText: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var tagInputField: ApolloTextInputField!
+    @IBOutlet weak var tagInputField: ApolloTextInputField!{
+        didSet {
+            tagInputField.configureTheme(type: .none, forView: self, placeholderText: "Tag Number")
+        }
+    }
     @IBOutlet weak var orLbl: UILabel!
-    @IBOutlet weak var accountNumberInputField: ApolloTextInputField!
-    @IBOutlet weak var zipCodeInputField: ApolloTextInputField!
+    @IBOutlet weak var accountNumberInputField: ApolloTextInputField!{
+        didSet {
+            accountNumberInputField.configureTheme(type: .none, forView: self, placeholderText: "Account Number")
+        }
+    }
+    @IBOutlet weak var zipCodeInputField: ApolloTextInputField!{
+        didSet {
+            zipCodeInputField.configureTheme(type: .none, forView: self, placeholderText: "Zip Code")
+        }
+    }
     @IBOutlet weak var countinueButtonLbl: UIButton!
+    
     
     var interactor: IForgotUsernameInteractable?
        var router: IRouter?

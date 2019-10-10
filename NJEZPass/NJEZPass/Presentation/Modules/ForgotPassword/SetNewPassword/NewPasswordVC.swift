@@ -23,15 +23,15 @@ class NewPasswordVC: UIViewController {
     @IBOutlet weak var newPasswordLbl: UILabel!
     @IBOutlet weak var newpasswordTxt: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var newPasswordInputField: ApolloTextInputField!{
+    @IBOutlet weak var newPasswordInputField: ApolloTextInputField! {
         didSet {
-            newPasswordInputField.validationType = .password
+            newPasswordInputField.configureTheme(type: .none, forView: self, placeholderText: "New Password")
         }
     }
     
     @IBOutlet weak var confirmPasswordInputField: ApolloTextInputField! {
         didSet {
-            confirmPasswordInputField.validationType = .password
+            confirmPasswordInputField.configureTheme(type: .none, forView: self, placeholderText: "Confirm New Password")
         }
     }
     

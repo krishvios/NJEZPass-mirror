@@ -85,10 +85,14 @@ class ResetPasswordVC: UIViewController {
         if let button = sender as? UIButton {
             if button.isSelected {
                 // set deselected
+                continueButtonText.isEnabled = false
+                toggleLoginButtonColor()
                 answerOption.image = #imageLiteral(resourceName: "selectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
                 
             } else {
+                continueButtonText.isEnabled = true
+                toggleLoginButtonColor()
                 answerOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             }
@@ -101,9 +105,13 @@ class ResetPasswordVC: UIViewController {
         continueButtonText.isEnabled = true
         if let button = sender as? UIButton {
             if button.isSelected {
+                continueButtonText.isEnabled = false
+                toggleLoginButtonColor()
                 answerOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "selectedRadioButton")
             } else {
+                continueButtonText.isEnabled = true
+                toggleLoginButtonColor()
                 answerOption.image = #imageLiteral(resourceName: "selectedRadioButton")
                 emailOption.image = #imageLiteral(resourceName: "unselectedRadioButton")
             }

@@ -24,10 +24,17 @@ class SecurityQuestionsVC: UIViewController {
     @IBOutlet weak var securityQuestionTextDisplayLbl: UILabel!
     @IBOutlet weak var securityQuestionNo: UILabel!
     @IBOutlet weak var firstSecurityQuestionlnl: UILabel!
-    @IBOutlet weak var firstSecurityQuestionAnswerInputField: ApolloTextInputField!
+    @IBOutlet weak var firstSecurityQuestionAnswerInputField: ApolloTextInputField! {
+        didSet {
+            firstSecurityQuestionAnswerInputField.configureTheme(type: .password, forView: self, placeholderText: "Security Answer")
+        }
+    }
+    
     @IBOutlet weak var continueBtnLbl: UIButton!
     
     var flowKey = ""
+    var securityAnswer = ""
+    var securityQuestion = ""
     
     var interactor: ISecurityQuestionsInteractable?
              var router: IRouter?
@@ -59,8 +66,9 @@ class SecurityQuestionsVC: UIViewController {
         
         if let response = CMUtility.forgotPasswordRes {
                    
-                   let secQues = response.securityQuestion
-            firstSecurityQuestionlnl.text = secQues
+            securityQuestion = response.securityQuestion!
+            firstSecurityQuestionlnl.text = securityQuestion
+            securityAnswer = response.securityAnswer!
 
         }
     }
@@ -111,11 +119,26 @@ class SecurityQuestionsVC: UIViewController {
     }
     
     @IBAction func continueClicked(_ sender: Any) {
+        
         switch flowKey {
         case RegisterYourAccountFLow.registerAccount.rawValue:
             break
         default:
-            self.performSegue(withIdentifier: "showNewPassword", sender: nil)
+            if firstSecurityQuestionAnswerInputField.text == securityAnswer {
+                
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+                           
+               let username = CMUtility.userName
+               let accountNO = CMUtility.accountNumber
+               let zipcode = CMUtility.zipCode
+                                 
+               let request = ResetPasswordModel.Request(action: APIConstants.ServiceNames.forgotPassword, userName: username!, accountNumber: accountNO!, zipCode: zipcode!, securityQuestion: securityQuestion, securityAnswer: securityAnswer, newPassword: "", retypePassword: "", emailFlag: "")
+                   interactor?.answerSecurityQuestions(request:request, requestType: .remote)
+                
+            } else {
+                DialogUtils.shared.displayDialog(title: "", message: "Please Enter correct Answer", btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: "Please Enter correct Answer")
+            }
+            
         }
     }
     
@@ -161,6 +184,7 @@ extension SecurityQuestionsVC: ApolloTextInputFieldDelegate {
 extension SecurityQuestionsVC: ISecurityQuestionsViewable {
     func answerSecurityQuestionsSuccess(viewModel: ResetPasswordModel.PresentionModel) {
         MBProgressHUD.hide(for: self.view, animated: true)
+        self.performSegue(withIdentifier: "showNewPassword", sender: nil)
     }
     
     func answerSecurityQuestionsFailed(viewModel: ResetPasswordModel.PresentionModel) {
