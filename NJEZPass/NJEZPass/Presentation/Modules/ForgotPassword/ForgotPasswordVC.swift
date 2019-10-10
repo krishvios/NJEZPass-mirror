@@ -10,6 +10,7 @@ import UIKit
 import Apollo_iOS
 import Entities
 import MBProgressHUD
+import Platform
 
 protocol IForgotPasswordViewable {
     func forgotPasswordSuccess(viewModel: ForgotPasswordModel.PresentionModel)
@@ -27,6 +28,9 @@ class ForgotPasswordVC: UIViewController {
     @IBOutlet weak var zipCodeinputField: ApolloTextInputField!
     @IBOutlet weak var countinueButtonLbl: UIButton!
     
+    var username:String?
+    var accountNO:String?
+    var zipcode:String?
     
     var interactor: IForgotPasswordInteractable?
        var router: IRouter?
@@ -109,7 +113,15 @@ class ForgotPasswordVC: UIViewController {
             let accountNO = accountNumberInputField.text,
             let zipcode = zipCodeinputField.text,
             (FieldValidator.shared.isValidUserID(userIDString: username) || FieldValidator.shared.isValidString(stringToBeChecked: accountNO, expression: AppRegExKeys.accountNo)),FieldValidator.shared.isValidZipCode(value: zipcode) {
-            self.performSegue(withIdentifier: "showResetPassword", sender: nil)
+            
+            self.username = username
+            self.accountNO = accountNO
+            self.zipcode = zipcode
+            
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+                   
+            let request = ForgotPasswordModel.Request(action: APIConstants.ServiceNames.forgotPassword, userName: username, accountNumber: accountNO, zipCode: zipcode, securityQuestion: "", securityAnswer: "", newPassword: "", retypePassword: "", emailFlag: "")
+            interactor?.forgotPassword(request:request, requestType: .remote)
         } else  {
             DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.invalidUserDetails), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: AppStringKeys.invalidUserDetails)
         }
@@ -171,7 +183,12 @@ extension ForgotPasswordVC: ApolloTextInputFieldDelegate {
 
 extension ForgotPasswordVC: IForgotPasswordViewable {
     func forgotPasswordSuccess(viewModel: ForgotPasswordModel.PresentionModel) {
+        CMUtility.accountNumber = accountNO
+        CMUtility.userName = username
+        CMUtility.zipCode = zipcode
+        CMUtility.forgotPasswordRes = viewModel
         MBProgressHUD.hide(for: self.view, animated: true)
+        self.performSegue(withIdentifier: "showResetPassword", sender: nil)
     }
     
     func forgotPasswordFailed(viewModel: ForgotPasswordModel.PresentionModel) {
