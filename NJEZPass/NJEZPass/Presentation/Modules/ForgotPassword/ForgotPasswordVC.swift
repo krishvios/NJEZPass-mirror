@@ -143,9 +143,23 @@ class ForgotPasswordVC: UIViewController {
     }
 }
 
+
 extension ForgotPasswordVC: ApolloTextInputFieldDelegate {
     func lawShouldChangeCharactersIn(_ textField: ApolloTextInputField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             validateInput()
+        
+        let text = textField.text
+        if  text!.count >= 0  {
+            // Move front to cursor position
+            switch textField {
+            case userNameInputField:
+                accountNumberInputField.text = ""
+            case accountNumberInputField:
+                userNameInputField.text = ""
+            default:
+                break
+            }
+        }
         return true
     }
     
