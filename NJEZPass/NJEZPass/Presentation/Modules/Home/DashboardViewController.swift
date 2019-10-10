@@ -148,7 +148,8 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             headerCell?.headerCellDelegate = self
             headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
             if let balance = detailInfo?.currentBalance {
-                headerCell?.amountLbl.text = "$\(Decimal(string: balance)!.significantFractionalDecimalDigits == 1 ?    "\(balance)0" : balance)"
+                let count = Decimal(string: balance)!.significantFractionalDecimalDigits
+                headerCell?.amountLbl.text = "$\(count == 1 ? "\(balance)0" : count == 0 ? "\(balance).00" : balance)"
             }
             return headerCell!
         case 1:
