@@ -30,16 +30,16 @@ class TransactionsDetailsVC: UIViewController {
         super.viewDidLoad()
         
         navBar.title = transactionDetails?.exitPlazaName
-        transactionAmount.text = transactionDetails?.amount
-        transactionDateLbl.text = transactionDetails?.transactionDate
+        transactionAmount.text = transactionDetails?.amount ?? "$0.00"
+        transactionDateLbl.text = transactionDetails?.transactionDate ?? "-"
         if let tag = transactionDetails?.tagorplate {
             let array = tag.split(separator: "/")
-            plateNumberLbl.text = array.count > 0 ? "\(array[0])" : ""
+            plateNumberLbl.text = array.count > 0 ? "\(array[0])" : "-"
         }
-        agencyLbl.text = transactionDetails?.agencyShortName
-        transactionDescriptionLbl.text = transactionDetails?.tollTxListDescription
-        exitPlazaLbl.text = transactionDetails?.exitPlazaName
-        exitLaneLbl.text = transactionDetails?.exitLane
+        agencyLbl.text = transactionDetails?.agencyShortName ?? "-"
+        transactionDescriptionLbl.text = transactionDetails?.tollTxListDescription ?? "-"
+        exitPlazaLbl.text = transactionDetails?.exitPlazaName ?? "-"
+        exitLaneLbl.text = transactionDetails?.exitLane ?? "-"
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
