@@ -625,11 +625,11 @@ We’ve successfully processed your tag request! Confirmation details have been 
             </objects>
             <point key="canvasLocation" x="2091" y="-1905"/>
         </scene>
-        <!--MyAccount-->
+        <!--My Account-->
         <scene sceneID="WoM-3k-iPw">
             <objects>
                 <navigationController storyboardIdentifier="MyAccount" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="opm-jS-VUH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MyAccount" image="tabMyAccount" id="mk0-sc-Brw"/>
+                    <tabBarItem key="tabBarItem" title="My Account" image="tabMyAccount" id="mk0-sc-Brw"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fhu-m0-TYI">

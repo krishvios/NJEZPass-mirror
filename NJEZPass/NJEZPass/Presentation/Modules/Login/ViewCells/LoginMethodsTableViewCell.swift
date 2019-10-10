@@ -47,6 +47,10 @@ class LoginMethodsTableViewCell: UITableViewCell {
         signUPButton.backgroundColor = .clear
         signUPButton.layer.borderWidth = 1
         signUPButton.layer.borderColor = #colorLiteral(red: 0.4117647059, green: 0.1254901961, blue: 0.4941176471, alpha: 1)
+        signUPButton.clipsToBounds = true
+        loginButton.clipsToBounds = true
+        signUPButton.layer.cornerRadius = 2
+        loginButton.layer.cornerRadius = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

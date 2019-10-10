@@ -22,6 +22,7 @@ class RecentTransactionsCell: UITableViewCell {
     @IBOutlet weak var transactionTime: UILabel!
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var statusColorView: UIView!
+    @IBOutlet weak var transactionImg: UIImageView!
     
     weak var recentTransactionDelegate:RecentTransactionsCellDelegate?
     
