@@ -20,7 +20,10 @@ internal class VehiclesUsecaseRemote<T: Codable>: IVehiclesUsecase {
     func getVehiclesList(request: VehiclesListModel.Request) {
         
         let accessToken:String = PlatformUtility.serviceId!
-               let requestAPI = APIRequest<VehiclesListModel.Request>(method: .post, url: APIConstants.ServiceNames.getVechiclesService, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON, APIConstants.HTTPStrings.authorizationHeader: accessToken], params: nil, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
+        var listRequest = request
+        listRequest.serviceId = accessToken
+        
+               let requestAPI = APIRequest<VehiclesListModel.Request>(method: .post, url: APIConstants.ServiceNames.getVechiclesService, headers: [APIConstants.HTTPStrings.contentTypeHeader: APIConstants.HTTPStrings.contentTypeJSON], params: listRequest, paramsEncoding: .json, multiPartImageDict: nil, mutliParamsDict: nil)
               
                APIService.shared.requestAPI(request: requestAPI, decodingType: T.self, completion: { response in
                   switch response {
