@@ -32,6 +32,7 @@ class VehiclesViewController: UIViewController {
     var buttontapped = 1
     var data = ["02210005166","0221000514"]
     var vehicleData : [Any] = []
+//    var filtered:[String] = []
     var filtered:[String] = []
     var vehicleList : VehiclesListModel.VehicleList?
     var vehicleListCount = 0
@@ -209,18 +210,13 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource {
 
         } else{
             cell  = tableView.dequeueReusableCell(withIdentifier: "\(VehicleListTableViewCell.self)", for: indexPath) as! VehicleListTableViewCell
-            //cell.configureVehicleDetails
-
+            
+            var vehicleListCell = cell as? VehicleListTableViewCell
+            
+            let vehicleInfo = vehicleList?.vehicle![indexPath.row]
+            vehicleListCell?.configureVehicleDetails(name: "\(vehicleInfo!.make!) \(vehicleInfo!.model!)" , number: vehicleInfo!.plateNumber!)
         }
 
-        
-       // VehicleListTableViewCell
-        //set the cell display properties
-       // cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-       // cell.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-      //  cell.layer.shadowRadius = 3.0
-      //  cell.layer.shadowOpacity = 1.0
-       // cell.layer.masksToBounds = false
         return cell
     }
     
@@ -291,6 +287,7 @@ extension VehiclesViewController : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+//        filtered
 //        filtered = data.filter({ (text) -> Bool in
 //            let tmp: String = text
 //            return tmp.contains(searchText)
