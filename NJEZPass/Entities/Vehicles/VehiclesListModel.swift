@@ -52,6 +52,7 @@ public enum VehiclesListModel {
     public struct PresentionModel {
         public var message: String?
         public var route: Route?
+        public var vehicleList: VehicleList?
         public init() {
 
         }
