@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "arrow@3x.png",
+      "filename" : "arrow.png",
       "scale" : "1x"
     },
     {
@@ -12,6 +12,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Group 5220@3x.png",
       "scale" : "3x"
     }
   ],
