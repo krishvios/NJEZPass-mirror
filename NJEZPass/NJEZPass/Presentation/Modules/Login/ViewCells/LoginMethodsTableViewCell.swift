@@ -21,10 +21,14 @@ protocol LoginMethodsCellDelegate:class {
 class LoginMethodsTableViewCell: UITableViewCell {
 
 
-    @IBOutlet weak var txtUserID: ApolloTextInputField!
+    @IBOutlet weak var txtUserID: ApolloTextInputField! {
+        didSet {
+            txtUserID.configureTheme(type: .none, forView: self, placeholderText: "Username")
+        }
+    }
     @IBOutlet weak var txtPassword: ApolloTextInputField! {
         didSet {
-            txtPassword.validationType = .password
+            txtPassword.configureTheme(type: .password, forView: self, placeholderText: "Password")
         }
     }
     @IBOutlet weak var signUPButton: UIButton!
@@ -37,7 +41,7 @@ class LoginMethodsTableViewCell: UITableViewCell {
         super.awakeFromNib()
       
         txtUserID.delegate = self
-        txtUserID.text = "WHESS4"
+        txtUserID.setText(text: "WHESS4")
         txtPassword.delegate = self
         loginButton.isEnabled = false
         signUPButton.backgroundColor = .clear

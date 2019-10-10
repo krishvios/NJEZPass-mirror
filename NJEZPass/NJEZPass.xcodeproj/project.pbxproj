@@ -305,6 +305,8 @@
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
+		F991C484234F0E98006273A0 /* ApolloTextInputField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */; };
+		F991C486234F0F45006273A0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991C485234F0F45006273A0 /* Theme.swift */; };
 		F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */; };
 		F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */; };
 		F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */; };
@@ -738,6 +740,8 @@
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
+		F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApolloTextInputField+Extension.swift"; sourceTree = "<group>"; };
+		F991C485234F0F45006273A0 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceCell.swift; sourceTree = "<group>"; };
 		F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReplenishAccountVC.swift; path = "NJEZPass/Presentation/Modules/Account Balance/ReplenishAccountVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -1097,6 +1101,8 @@
 		429BAD302300907B0087DBAD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F991C485234F0F45006273A0 /* Theme.swift */,
+				F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */,
 				429BAD312300907B0087DBAD /* UITextField+Extension.swift */,
 				429BAD322300907B0087DBAD /* UINavigationItem+Extension.swift */,
 				F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */,
@@ -2507,6 +2513,7 @@
 				2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */,
 				9BAC0F1E232A7E2800FD0ED5 /* FAQConfigurator.swift in Sources */,
 				4238950C23462D0A00F7A7DD /* LoginMethodsTableViewCell.swift in Sources */,
+				F991C484234F0E98006273A0 /* ApolloTextInputField+Extension.swift in Sources */,
 				42DA6FDB234CD684007D5581 /* TagsInteractor.swift in Sources */,
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				42B4938B2317DBAC00E9B1A0 /* CMButton.swift in Sources */,
@@ -2646,6 +2653,7 @@
 				42B493962317E13A00E9B1A0 /* TabBarViewController.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
 				2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */,
+				F991C486234F0F45006273A0 /* Theme.swift in Sources */,
 				2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
 				42B4938C2317DBAC00E9B1A0 /* CMPickerView.swift in Sources */,
