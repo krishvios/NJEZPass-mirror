@@ -11,4 +11,7 @@ import Entities
 
 public protocol IForgotPasswordUsecase {
     func forgotPassword(request: ForgotPasswordModel.Request)
+    func sendEmailLinkToResetPassword(request: ResetPasswordModel.Request)
+    func answerSecurityQuestionsToResetPassword(request: ResetPasswordModel.Request)
+    func setNewPassword(request: ResetPasswordModel.Request)
 }

@@ -17,6 +17,12 @@ public struct CMUtility {
     public static var suggestedAmount: String?
     public static var firstTimeLogin: String?
     
+    public static var accountNumber: String?
+    public static var zipCode: String?
+    public static var userName: String?
+    
+    public static var forgotPasswordRes: ForgotPasswordModel.PresentionModel?
+    
     public static func getDropdownData() ->DynamicCacheModel.DynamicPageLoad?{
         return dynamicPageLoad
     }

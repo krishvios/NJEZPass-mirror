@@ -20,12 +20,17 @@ extension ForgotPasswordPresenter: IResponseHandler {
         print("onSucess: ", response)
         if let responseModel = response as? ForgotPasswordModel.Response {
             var viewModel = ForgotPasswordModel.PresentionModel()
-            if let msg = responseModel.message {
-                viewModel.message = msg
-                viewController?.forgotPasswordFailed(viewModel: viewModel)
-            } else {
-                
+            viewModel.emailMessage = responseModel.emailMessage
+            viewModel.emailId = responseModel.emailId
+            viewModel.securityQuestion = responseModel.securityQuestion
+            viewModel.securityAnswer = responseModel.securityAnswer
+            viewModel.message = responseModel.message
+            
+            if responseModel.statusCode == "0" {
                 viewController?.forgotPasswordSuccess(viewModel: viewModel)
+            } else {
+                viewModel.message = responseModel.message
+                viewController?.forgotPasswordFailed(viewModel: viewModel)
             }
         }
     }

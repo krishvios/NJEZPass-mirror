@@ -73,7 +73,7 @@ class LoginViewController:  UIViewController {
         fingerPrintOverlay.addGestureRecognizer(tap)
         
         guard let _ = CMUtility.dynamicPageLoad else {
-            MBProgressHUD.showAdded(to: self.view, animated: true)
+//            MBProgressHUD.showAdded(to: self.view, animated: true)
             interactor?.loadDynamicData(action:APIConstants.ServiceNames.loadDynamicCache, requestType: .remote)
             return
         }
