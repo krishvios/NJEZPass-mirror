@@ -300,6 +300,8 @@
 		F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */; };
 		F90829142338DBE200C6C37E /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829132338DBE200C6C37E /* ContactInfoCell.swift */; };
 		F90829172339B82600C6C37E /* PayNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829162339B82600C6C37E /* PayNowVC.swift */; };
+		F942EB97234EFE3B00819F09 /* PayBill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F942EB96234EFE3B00819F09 /* PayBill.storyboard */; };
+		F942EB99234F028300819F09 /* ForgotPassAndUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
@@ -731,6 +733,8 @@
 		F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputeSelectedCell.swift; sourceTree = "<group>"; };
 		F90829132338DBE200C6C37E /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
 		F90829162339B82600C6C37E /* PayNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowVC.swift; sourceTree = "<group>"; };
+		F942EB96234EFE3B00819F09 /* PayBill.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayBill.storyboard; sourceTree = "<group>"; };
+		F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassAndUser.storyboard; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
@@ -1204,6 +1208,8 @@
 				429BAD65230C58B80087DBAD /* Violations.storyboard */,
 				429BAD67230C58B80087DBAD /* TransactionsFlow.storyboard */,
 				429BAD68230C58B80087DBAD /* ContactUs.storyboard */,
+				F942EB96234EFE3B00819F09 /* PayBill.storyboard */,
+				F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -2201,6 +2207,8 @@
 				429BAD85230C58B80087DBAD /* TransactionsFlow.storyboard in Resources */,
 				429BAD86230C58B80087DBAD /* ContactUs.storyboard in Resources */,
 				429BAD92230C58B80087DBAD /* OpenSans-Bold.ttf in Resources */,
+				F942EB99234F028300819F09 /* ForgotPassAndUser.storyboard in Resources */,
+				F942EB97234EFE3B00819F09 /* PayBill.storyboard in Resources */,
 				429BAD8A230C58B80087DBAD /* Main.storyboard in Resources */,
 				429BAD94230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				429BAD93230C58B80087DBAD /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -2471,7 +2479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C40C8F233B4C41006B609F /* ExpyAbstractions.swift in Sources */,
-				9B008B3C22F320BE0098BCDC /* TagsTableViewController.swift in Sources */,
+				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
 				6206B119234748B400465C02 /* WebViewVC.swift in Sources */,
 				42F104AC234D133C00BF57C6 /* VehiclesInteractor.swift in Sources */,
 				9B008B3C22F320BE0098BCDC /* RequestTagVC.swift in Sources */,
@@ -2698,7 +2706,6 @@
 				42BE358122FBF94400AAF8E3 /* AccountsModel.swift in Sources */,
 				4264BD96234D04DD00A88F0A /* AddVehicleModel.swift in Sources */,
 				42932FF1234787E5002CAC3E /* TagsModel.swift in Sources */,
-				2A6A55EB233C995C000CBED9 /* WebViewVC.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
 				42E4999B2345C650009466F9 /* PushModel.swift in Sources */,
 				42F104C6234DBCCF00BF57C6 /* ForgotUsernameModel.swift in Sources */,
