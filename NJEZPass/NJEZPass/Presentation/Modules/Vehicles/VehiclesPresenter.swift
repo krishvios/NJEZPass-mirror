@@ -20,12 +20,12 @@ extension VehiclesPresenter: IResponseHandler {
         print("onSucess: ", response)
         if let responseModel = response as? VehiclesListModel.Response {
             var viewModel = VehiclesListModel.PresentionModel()
-            if let msg = responseModel.message {
-                viewModel.message = msg
-                viewController?.getVehiclesFailed(viewModel: viewModel)
-            } else {
-                
+            viewModel.vehicleList = responseModel.vehicleList
+            if responseModel.statusCode == "0" {
                 viewController?.getVehiclesSuccess(viewModel: viewModel)
+            } else {
+                viewModel.message = responseModel.message
+                viewController?.getVehiclesFailed(viewModel: viewModel)
             }
         }
     }

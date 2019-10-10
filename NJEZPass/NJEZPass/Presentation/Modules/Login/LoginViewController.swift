@@ -120,20 +120,20 @@ extension LoginViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 172
+            return 122
         }
         if indexPath.row == 1{
-            return 347
+            return 419
         }
         if indexPath.row == 2 {
             return 222
         }
         
         if indexPath.row == 3 {
-            return 198
+            return 264
         }
         if indexPath.row == 4 {
-            return 70
+            return 100
         }
         return 355
     }
@@ -185,13 +185,13 @@ extension LoginViewController: LoginMethodsCellDelegate {
         self.resignFirstResponder()
         
         //online login flow
-        //        MBProgressHUD.showAdded(to: self.view, animated: true)
-        //        interactor?.login(username: username!, password: password!, requestType: .remote)
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+                interactor?.login(username: username!, password: password!, requestType: .remote)
         //
         //        direct login flow in case of api error
-        var viewModel = ProfileModel.PresentionModel()
-        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
-        router?.perform(viewModel: viewModel)
+//        var viewModel = ProfileModel.PresentionModel()
+//        viewModel.route = Route(id: AppStringKeys.loginSuccess, path: AppUIElementKeys.home, nextURL: "", navigation: NavigationInfo.push)
+//        router?.perform(viewModel: viewModel)
     }
     
     @IBAction func languageSelectionClick(_ sender: Any) {

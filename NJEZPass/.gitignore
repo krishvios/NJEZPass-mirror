@@ -1,1 +1,7 @@
+# Ignore Pod Files
 Pods/
+
+../.DS_Store
+
+./NJEZPass.xcworkspace/xcuserdata/52109594.xcuserdatad/UserInterfaceState.xcuserstate
+

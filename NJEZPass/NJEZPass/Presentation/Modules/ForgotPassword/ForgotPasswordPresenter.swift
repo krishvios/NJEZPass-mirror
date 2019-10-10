@@ -1,5 +1,5 @@
 //
-//  TagsPresenter.swift
+//  ForgotPasswordPresenter.swift
 //  NJEZPass
 //
 //  Created by Gudavarthi, Pardhu on 08/10/19.
@@ -10,32 +10,30 @@ import UIKit
 import Entities
 import Domain
 
-class TagsPresenter {
-    var viewController: ITagsViewable?
+class ForgotPasswordPresenter {
+    var viewController: IForgotPasswordViewable?
 }
 
-extension TagsPresenter: IResponseHandler {
+extension ForgotPasswordPresenter: IResponseHandler {
     
     func onSuccess<T>(response: T) {
         print("onSucess: ", response)
-        if let responseModel = response as? TagsModel.Response {
-            var viewModel = TagsModel.PresentionModel()
-            viewModel.transponderList = responseModel.transponderList
+        if let responseModel = response as? ForgotPasswordModel.Response {
+            var viewModel = ForgotPasswordModel.PresentionModel()
             if let msg = responseModel.message {
                 viewModel.message = msg
-                 viewController?.getTagsSuccess(viewModel: viewModel)
-               
+                viewController?.forgotPasswordFailed(viewModel: viewModel)
             } else {
                 
-                 viewController?.getTagsFailed(viewModel: viewModel)
+                viewController?.forgotPasswordSuccess(viewModel: viewModel)
             }
         }
     }
     
     func onError(err: APIError) {
         print("onError: ", err)
-        var viewModel = TagsModel.PresentionModel()
+        var viewModel = ForgotPasswordModel.PresentionModel()
         viewModel.message = Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.updateFailure)
-        viewController?.getTagsFailed(viewModel: viewModel)
+        viewController?.forgotPasswordFailed(viewModel: viewModel)
     }
 }

@@ -43,7 +43,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if firstTimeUser == true {
+        if firstTimeUser == false {
             
             if let storyboard = self.storyboard {
                 let vc = storyboard.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
@@ -118,16 +118,18 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.row {
+        case 0:
+            return 384
         case 1:
-            return 208
+            return 247
         case 2:
-            return 58
+            return 64
         case 3,4,5:
             return 82
         case 6:
-            return 193
+            return 264
         case 7:
-            return 85
+            return 100
         default:
              return 270
         }
@@ -145,7 +147,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             headerCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? headerTableViewCell
             headerCell?.headerCellDelegate = self
             headerCell?.welocmeMsg.text = "Welcome \(detailInfo?.username ?? "")"
-            headerCell?.amountLbl.text = "$\(detailInfo?.currentBalance ?? "")"
+            if let balance = detailInfo?.currentBalance {
+                let count = Decimal(string: balance)!.significantFractionalDecimalDigits
+                headerCell?.amountLbl.text = "$\(count == 1 ? "\(balance)0" : count == 0 ? "\(balance).00" : balance)"
+            }
             return headerCell!
         case 1:
             cellIdentifier = "paymentSummaryCell"
@@ -168,7 +173,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             transactionCell?.transactionExitPlaza.text = transactionDic?.exitPlaza
             transactionCell?.transactionAmount.text = transactionDic?.amount
             transactionCell?.transactionTime.text = transactionDic?.transactionTime
-            transactionCell?.amount.text = "-"
+            transactionCell?.amount.text = "--"
             return transactionCell!
             }
             
@@ -251,5 +256,11 @@ extension DashboardViewController: RecentTransactionsCellDelegate {
 extension DashboardViewController:headerCellDelegate {
     func increaseBalanceTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "showIncreaseBalance", sender: nil)
+    }
+}
+
+extension Decimal {
+    var significantFractionalDecimalDigits: Int {
+        return max(-exponent, 0)
     }
 }

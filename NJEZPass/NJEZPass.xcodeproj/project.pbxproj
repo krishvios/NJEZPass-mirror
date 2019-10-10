@@ -206,6 +206,21 @@
 		42F104B1234D76CA00BF57C6 /* ResetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B0234D76CA00BF57C6 /* ResetPasswordModel.swift */; };
 		42F104B4234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B3234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift */; };
 		42F104B6234D779500BF57C6 /* IForgotPasswordUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B5234D779500BF57C6 /* IForgotPasswordUsecase.swift */; };
+		42F104B9234D9A6D00BF57C6 /* ForgotPasswordUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104B8234D9A6D00BF57C6 /* ForgotPasswordUsecaseProvider.swift */; };
+		42F104BB234D9A7D00BF57C6 /* ForgotPasswordUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104BA234D9A7D00BF57C6 /* ForgotPasswordUsecaseRemote.swift */; };
+		42F104C0234D9D5F00BF57C6 /* ForgotPasswordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104BC234D9D5F00BF57C6 /* ForgotPasswordConfigurator.swift */; };
+		42F104C1234D9D5F00BF57C6 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104BD234D9D5F00BF57C6 /* ForgotPasswordRouter.swift */; };
+		42F104C2234D9D5F00BF57C6 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104BE234D9D5F00BF57C6 /* ForgotPasswordInteractor.swift */; };
+		42F104C3234D9D5F00BF57C6 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104BF234D9D5F00BF57C6 /* ForgotPasswordPresenter.swift */; };
+		42F104C6234DBCCF00BF57C6 /* ForgotUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104C5234DBCCF00BF57C6 /* ForgotUsernameModel.swift */; };
+		42F104C9234DBE4B00BF57C6 /* IForgotUsernameUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104C8234DBE4B00BF57C6 /* IForgotUsernameUsecase.swift */; };
+		42F104CB234DBE6900BF57C6 /* IForgotUsernameUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104CA234DBE6900BF57C6 /* IForgotUsernameUsecaseProvider.swift */; };
+		42F104CE234DC05500BF57C6 /* ForgotUsernameUsecaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104CD234DC05500BF57C6 /* ForgotUsernameUsecaseProvider.swift */; };
+		42F104D0234DC07500BF57C6 /* ForgotUsernameUsecaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104CF234DC07500BF57C6 /* ForgotUsernameUsecaseRemote.swift */; };
+		42F104D6234DC39800BF57C6 /* ForgotUsernameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104D2234DC39800BF57C6 /* ForgotUsernameInteractor.swift */; };
+		42F104D7234DC39800BF57C6 /* ForgotUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104D3234DC39800BF57C6 /* ForgotUsernamePresenter.swift */; };
+		42F104D8234DC39800BF57C6 /* ForgotUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104D4234DC39800BF57C6 /* ForgotUsernameRouter.swift */; };
+		42F104D9234DC39800BF57C6 /* ForgotUsernameConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F104D5234DC39800BF57C6 /* ForgotUsernameConfigurator.swift */; };
 		52BDE5A282C18B41870867F6 /* Pods_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8FE01ED7C7CCD1671F4DC3 /* Pods_Platform.framework */; };
 		549CD3839314D85A27494B8D /* Pods_Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73218C84906851A219D2046 /* Pods_Entities.framework */; };
 		561999C01858A06BDBC04A68 /* Pods_EntitiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25A3A9105C8A98B285F7961 /* Pods_EntitiesTests.framework */; };
@@ -289,9 +304,13 @@
 		F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */; };
 		F90829142338DBE200C6C37E /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829132338DBE200C6C37E /* ContactInfoCell.swift */; };
 		F90829172339B82600C6C37E /* PayNowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90829162339B82600C6C37E /* PayNowVC.swift */; };
+		F942EB97234EFE3B00819F09 /* PayBill.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F942EB96234EFE3B00819F09 /* PayBill.storyboard */; };
+		F942EB99234F028300819F09 /* ForgotPassAndUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */; };
 		F98EAB61230D437800F55A40 /* PaymentAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */; };
 		F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */; };
 		F98EABB023100C5300F55A40 /* AccountSegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */; };
+		F991C484234F0E98006273A0 /* ApolloTextInputField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */; };
+		F991C486234F0F45006273A0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991C485234F0F45006273A0 /* Theme.swift */; };
 		F9BECCE3230A8717002D2845 /* AccountBalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */; };
 		F9BECCE8230BC4CE002D2845 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */; };
 		F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */; };
@@ -608,6 +627,21 @@
 		42F104B0234D76CA00BF57C6 /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
 		42F104B3234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordUsecaseProvider.swift; sourceTree = "<group>"; };
 		42F104B5234D779500BF57C6 /* IForgotPasswordUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotPasswordUsecase.swift; sourceTree = "<group>"; };
+		42F104B8234D9A6D00BF57C6 /* ForgotPasswordUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUsecaseProvider.swift; sourceTree = "<group>"; };
+		42F104BA234D9A7D00BF57C6 /* ForgotPasswordUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUsecaseRemote.swift; sourceTree = "<group>"; };
+		42F104BC234D9D5F00BF57C6 /* ForgotPasswordConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordConfigurator.swift; sourceTree = "<group>"; };
+		42F104BD234D9D5F00BF57C6 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		42F104BE234D9D5F00BF57C6 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		42F104BF234D9D5F00BF57C6 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		42F104C5234DBCCF00BF57C6 /* ForgotUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameModel.swift; sourceTree = "<group>"; };
+		42F104C8234DBE4B00BF57C6 /* IForgotUsernameUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotUsernameUsecase.swift; sourceTree = "<group>"; };
+		42F104CA234DBE6900BF57C6 /* IForgotUsernameUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IForgotUsernameUsecaseProvider.swift; sourceTree = "<group>"; };
+		42F104CD234DC05500BF57C6 /* ForgotUsernameUsecaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameUsecaseProvider.swift; sourceTree = "<group>"; };
+		42F104CF234DC07500BF57C6 /* ForgotUsernameUsecaseRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameUsecaseRemote.swift; sourceTree = "<group>"; };
+		42F104D2234DC39800BF57C6 /* ForgotUsernameInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUsernameInteractor.swift; sourceTree = "<group>"; };
+		42F104D3234DC39800BF57C6 /* ForgotUsernamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUsernamePresenter.swift; sourceTree = "<group>"; };
+		42F104D4234DC39800BF57C6 /* ForgotUsernameRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUsernameRouter.swift; sourceTree = "<group>"; };
+		42F104D5234DC39800BF57C6 /* ForgotUsernameConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUsernameConfigurator.swift; sourceTree = "<group>"; };
 		458207A6C8E7CB1AC3417CA2 /* Pods-Entities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Entities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Entities/Pods-Entities.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE3DFB322DEFCAC007EDCC7 /* NJEZPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJEZPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE3DFC722DEFCAD007EDCC7 /* NJEZPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJEZPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -709,9 +743,13 @@
 		F90829112338D53B00C6C37E /* DisputeSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputeSelectedCell.swift; sourceTree = "<group>"; };
 		F90829132338DBE200C6C37E /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
 		F90829162339B82600C6C37E /* PayNowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowVC.swift; sourceTree = "<group>"; };
+		F942EB96234EFE3B00819F09 /* PayBill.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayBill.storyboard; sourceTree = "<group>"; };
+		F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassAndUser.storyboard; sourceTree = "<group>"; };
 		F98EAB60230D437800F55A40 /* PaymentAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountVC.swift; sourceTree = "<group>"; };
 		F98EAB62230D43FE00F55A40 /* NumberPadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadCell.swift; sourceTree = "<group>"; };
 		F98EABAF23100C5300F55A40 /* AccountSegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSegmentController.swift; sourceTree = "<group>"; };
+		F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApolloTextInputField+Extension.swift"; sourceTree = "<group>"; };
+		F991C485234F0F45006273A0 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F9BECCE2230A8717002D2845 /* AccountBalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceCell.swift; sourceTree = "<group>"; };
 		F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F9BECCED230BF0B6002D2845 /* ReplenishAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReplenishAccountVC.swift; path = "NJEZPass/Presentation/Modules/Account Balance/ReplenishAccountVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -816,6 +854,10 @@
 		2A4F46D92334ED7900A31806 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				42F104BC234D9D5F00BF57C6 /* ForgotPasswordConfigurator.swift */,
+				42F104BE234D9D5F00BF57C6 /* ForgotPasswordInteractor.swift */,
+				42F104BF234D9D5F00BF57C6 /* ForgotPasswordPresenter.swift */,
+				42F104BD234D9D5F00BF57C6 /* ForgotPasswordRouter.swift */,
 				2A4F46DB2334ED9C00A31806 /* EmailConfirmationVC.swift */,
 				2A4F46DF2334ED9C00A31806 /* ForgotPasswordVC.swift */,
 				2A4F46DD2334ED9C00A31806 /* ForgotUserNameVC.swift */,
@@ -1069,6 +1111,8 @@
 		429BAD302300907B0087DBAD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F991C485234F0F45006273A0 /* Theme.swift */,
+				F991C483234F0E98006273A0 /* ApolloTextInputField+Extension.swift */,
 				429BAD312300907B0087DBAD /* UITextField+Extension.swift */,
 				429BAD322300907B0087DBAD /* UINavigationItem+Extension.swift */,
 				F9BECCE7230BC4CE002D2845 /* UIView+Extensions.swift */,
@@ -1081,6 +1125,7 @@
 		429BAD3723016B950087DBAD /* UsecaseInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				42F104C7234DBE2F00BF57C6 /* ForgotUsername */,
 				42F104B2234D775D00BF57C6 /* ForgotPassword */,
 				4264BD97234D0B5300A88F0A /* Vehicles */,
 				42932FF223483C1C002CAC3E /* Tags */,
@@ -1179,6 +1224,8 @@
 				429BAD65230C58B80087DBAD /* Violations.storyboard */,
 				429BAD67230C58B80087DBAD /* TransactionsFlow.storyboard */,
 				429BAD68230C58B80087DBAD /* ContactUs.storyboard */,
+				F942EB96234EFE3B00819F09 /* PayBill.storyboard */,
+				F942EB98234F028300819F09 /* ForgotPassAndUser.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1401,6 +1448,8 @@
 		42BE358F22FBF96B00AAF8E3 /* UsecaseImplementations */ = {
 			isa = PBXGroup;
 			children = (
+				42F104CC234DC02F00BF57C6 /* ForgotUsername */,
+				42F104B7234D9A4300BF57C6 /* ForgotPassword */,
 				4264BD9C234D0C7A00A88F0A /* Vehicles */,
 				42DA6FD5234CCC44007D5581 /* Tags */,
 				429C6A1B230FDF360055CFBD /* EditProfile */,
@@ -1468,6 +1517,52 @@
 			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
+		42F104B7234D9A4300BF57C6 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				42F104B8234D9A6D00BF57C6 /* ForgotPasswordUsecaseProvider.swift */,
+				42F104BA234D9A7D00BF57C6 /* ForgotPasswordUsecaseRemote.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		42F104C4234DBC8000BF57C6 /* ForgotUsername */ = {
+			isa = PBXGroup;
+			children = (
+				42F104C5234DBCCF00BF57C6 /* ForgotUsernameModel.swift */,
+			);
+			path = ForgotUsername;
+			sourceTree = "<group>";
+		};
+		42F104C7234DBE2F00BF57C6 /* ForgotUsername */ = {
+			isa = PBXGroup;
+			children = (
+				42F104C8234DBE4B00BF57C6 /* IForgotUsernameUsecase.swift */,
+				42F104CA234DBE6900BF57C6 /* IForgotUsernameUsecaseProvider.swift */,
+			);
+			path = ForgotUsername;
+			sourceTree = "<group>";
+		};
+		42F104CC234DC02F00BF57C6 /* ForgotUsername */ = {
+			isa = PBXGroup;
+			children = (
+				42F104CD234DC05500BF57C6 /* ForgotUsernameUsecaseProvider.swift */,
+				42F104CF234DC07500BF57C6 /* ForgotUsernameUsecaseRemote.swift */,
+			);
+			path = ForgotUsername;
+			sourceTree = "<group>";
+		};
+		42F104D1234DC30800BF57C6 /* ForgotUsername */ = {
+			isa = PBXGroup;
+			children = (
+				42F104D5234DC39800BF57C6 /* ForgotUsernameConfigurator.swift */,
+				42F104D2234DC39800BF57C6 /* ForgotUsernameInteractor.swift */,
+				42F104D3234DC39800BF57C6 /* ForgotUsernamePresenter.swift */,
+				42F104D4234DC39800BF57C6 /* ForgotUsernameRouter.swift */,
+			);
+			path = ForgotUsername;
+			sourceTree = "<group>";
+		};
 		5EE3DFAA22DEFCAC007EDCC7 = {
 			isa = PBXGroup;
 			children = (
@@ -1533,6 +1628,7 @@
 		5EE3DFEA22DEFCE3007EDCC7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				42F104C4234DBC8000BF57C6 /* ForgotUsername */,
 				42F104AD234D740A00BF57C6 /* ForgotPassword */,
 				4264BD90234D049E00A88F0A /* Vehicles */,
 				42932FEF234787E5002CAC3E /* Tags */,
@@ -1613,6 +1709,7 @@
 		5EE3E06122E72DF2007EDCC7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				42F104D1234DC30800BF57C6 /* ForgotUsername */,
 				62A7BDA62342122F00FE66FB /* More */,
 				2AEFECC223407AC400133EA3 /* AccountActivity */,
 				2A299D7B233EF89D006A2DD8 /* NotificationsTab */,
@@ -2152,6 +2249,8 @@
 				429BAD85230C58B80087DBAD /* TransactionsFlow.storyboard in Resources */,
 				429BAD86230C58B80087DBAD /* ContactUs.storyboard in Resources */,
 				429BAD92230C58B80087DBAD /* OpenSans-Bold.ttf in Resources */,
+				F942EB99234F028300819F09 /* ForgotPassAndUser.storyboard in Resources */,
+				F942EB97234EFE3B00819F09 /* PayBill.storyboard in Resources */,
 				429BAD8A230C58B80087DBAD /* Main.storyboard in Resources */,
 				429BAD94230C58B80087DBAD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				429BAD93230C58B80087DBAD /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -2445,11 +2544,13 @@
 				42F1049D234D11CD00BF57C6 /* AddVehicleViewController.swift in Sources */,
 				9BAA563C22F2EACF0037036F /* ViolentsPaymentSummaryViewController.swift in Sources */,
 				9BCA993122F44CDA00C3BB7D /* TagsSubmissionStatusViewController.swift in Sources */,
+				42F104D8234DC39800BF57C6 /* ForgotUsernameRouter.swift in Sources */,
 				F908290F2338AEC400C6C37E /* DisputedSelectedVC.swift in Sources */,
 				2AEFECC623407B7F00133EA3 /* AccountActivityCell.swift in Sources */,
 				2A4F46E02334ED9C00A31806 /* SecurityQuestionsVC.swift in Sources */,
 				9BAC0F1E232A7E2800FD0ED5 /* FAQConfigurator.swift in Sources */,
 				4238950C23462D0A00F7A7DD /* LoginMethodsTableViewCell.swift in Sources */,
+				F991C484234F0E98006273A0 /* ApolloTextInputField+Extension.swift in Sources */,
 				42DA6FDB234CD684007D5581 /* TagsInteractor.swift in Sources */,
 				F98EAB63230D43FE00F55A40 /* NumberPadCell.swift in Sources */,
 				42B4938B2317DBAC00E9B1A0 /* CMButton.swift in Sources */,
@@ -2460,6 +2561,7 @@
 				42F1049C234D11CD00BF57C6 /* VehicleMakeCell.swift in Sources */,
 				9BAA51F323222A4F00D2E56E /* TransactionsPaymentViewController.swift in Sources */,
 				42B493892317DBAC00E9B1A0 /* CMTextField.swift in Sources */,
+				42F104C0234D9D5F00BF57C6 /* ForgotPasswordConfigurator.swift in Sources */,
 				42B4938A2317DBAC00E9B1A0 /* CMView.swift in Sources */,
 				F9BECCEE230BF0B6002D2845 /* ReplenishAccountVC.swift in Sources */,
 				42B493922317E0D200E9B1A0 /* CountryZipcodeTableViewCell.swift in Sources */,
@@ -2480,8 +2582,10 @@
 				F90829122338D53B00C6C37E /* DisputeSelectedCell.swift in Sources */,
 				4216D93D233B61E500B3488F /* UpdateAddressViewController.swift in Sources */,
 				42B493942317E0D200E9B1A0 /* CityStateTableViewCell.swift in Sources */,
+				42F104D7234DC39800BF57C6 /* ForgotUsernamePresenter.swift in Sources */,
 				2AD24688233BC444009F64D1 /* RecentTransactionsCell.swift in Sources */,
 				F904559822FC15950070257E /* DeviceVerificationVC.swift in Sources */,
+				42F104D9234DC39800BF57C6 /* ForgotUsernameConfigurator.swift in Sources */,
 				9BD4844E22F1A52700F94DE2 /* AddBankAccountViewController.swift in Sources */,
 				9BDB1F3D230ECB22006CE739 /* EditProfileRouter.swift in Sources */,
 				42BE356C22FBF7DE00AAF8E3 /* CustomButton.swift in Sources */,
@@ -2495,6 +2599,7 @@
 				9B67913B22EEF88D00522E63 /* PaymentInformationViewController.swift in Sources */,
 				2A987EB52345C16B0057C37D /* RequestTagsorTagSuppliesCell.swift in Sources */,
 				9BDB1F3E230ECB22006CE739 /* EditProfileInteractor.swift in Sources */,
+				42F104C2234D9D5F00BF57C6 /* ForgotPasswordInteractor.swift in Sources */,
 				4238950B23462D0A00F7A7DD /* MoreContentTableViewCell.swift in Sources */,
 				4216D942233B61F100B3488F /* QuestionsViewController.swift in Sources */,
 				F90829172339B82600C6C37E /* PayNowVC.swift in Sources */,
@@ -2521,6 +2626,7 @@
 				9BB0889B232116AA004F06A6 /* TransactionsHeaderCell.swift in Sources */,
 				9BAA563A22F2E2F10037036F /* ViolationPaymentMethodViewController.swift in Sources */,
 				42DA6FDF234CD753007D5581 /* TagsPresenter.swift in Sources */,
+				42F104C3234D9D5F00BF57C6 /* ForgotPasswordPresenter.swift in Sources */,
 				42DA6FDD234CD71C007D5581 /* TagsConfigurator.swift in Sources */,
 				F9C40C90233B4C41006B609F /* ExpyTableView.swift in Sources */,
 				9BCA993622F450BB00C3BB7D /* ContactUsViewController.swift in Sources */,
@@ -2536,6 +2642,7 @@
 				9BAA564022F2FFC10037036F /* ViolationPaymentStatusViewController.swift in Sources */,
 				9B0436E623227BAD00418268 /* PaymentSummaryViewController.swift in Sources */,
 				4216D952233B6CA100B3488F /* UpdateAddressConfigurator.swift in Sources */,
+				42F104D6234DC39800BF57C6 /* ForgotUsernameInteractor.swift in Sources */,
 				42F1049E234D11CD00BF57C6 /* LicensePlateCell.swift in Sources */,
 				9BD368D123042A4000144B87 /* ProfileNavigationCell.swift in Sources */,
 				2AEFECCA234098FF00133EA3 /* ActivityDateTableViewCell.swift in Sources */,
@@ -2585,10 +2692,12 @@
 				42B493962317E13A00E9B1A0 /* TabBarViewController.swift in Sources */,
 				42BE357322FBF7DE00AAF8E3 /* UIExtensions.swift in Sources */,
 				2A6A55EE233CA6BB000CBED9 /* TransactionsDetailsVC.swift in Sources */,
+				F991C486234F0F45006273A0 /* Theme.swift in Sources */,
 				2A299D7A233E187C006A2DD8 /* SaveTableViewCell.swift in Sources */,
 				42BE357022FBF7DE00AAF8E3 /* UICustomizations.swift in Sources */,
 				42B4938C2317DBAC00E9B1A0 /* CMPickerView.swift in Sources */,
 				2AF92FA5234A0B29002AEA73 /* CorrespondenceCell.swift in Sources */,
+				42F104C1234D9D5F00BF57C6 /* ForgotPasswordRouter.swift in Sources */,
 				429BAD0223008BC60087DBAD /* IRoutable.swift in Sources */,
 				9B5C6D8F22F2BC1900DA6151 /* ViolationsViewController.swift in Sources */,
 				9B54491623266A4C00DC8AAE /* FilterViewController.swift in Sources */,
@@ -2647,6 +2756,7 @@
 				42932FF1234787E5002CAC3E /* TagsModel.swift in Sources */,
 				4216D933233B476700B3488F /* UpdateAddressModel.swift in Sources */,
 				42E4999B2345C650009466F9 /* PushModel.swift in Sources */,
+				42F104C6234DBCCF00BF57C6 /* ForgotUsernameModel.swift in Sources */,
 				4216D929233A007C00B3488F /* DynamicCacheModel.swift in Sources */,
 				429C6A0B230E9FE50055CFBD /* CreditCardModel.swift in Sources */,
 				429C6A0D230EAB790055CFBD /* PaymentMethodsModel.swift in Sources */,
@@ -2676,10 +2786,12 @@
 				429BAD4823016B950087DBAD /* ILoginUsecaseProvider.swift in Sources */,
 				4264BD9B234D0B5300A88F0A /* IVehiclesUsecase.swift in Sources */,
 				429BAD4B23016B950087DBAD /* IAPIServicable.swift in Sources */,
+				42F104CB234DBE6900BF57C6 /* IForgotUsernameUsecaseProvider.swift in Sources */,
 				429C6A12230EBAD50055CFBD /* IPaymentMethodsUsecase.swift in Sources */,
 				429BAD4723016B950087DBAD /* ILoginUsecase.swift in Sources */,
 				429BAD4523016B950087DBAD /* IUserProfileUsecase.swift in Sources */,
 				42932FF623483C52002CAC3E /* ITagsUsecase.swift in Sources */,
+				42F104C9234DBE4B00BF57C6 /* IForgotUsernameUsecase.swift in Sources */,
 				429C6A18230FDD5B0055CFBD /* IEditProfileUsecaseProvider.swift in Sources */,
 				429BAD4623016B950087DBAD /* IUserProfileUsecaseProvider.swift in Sources */,
 				42F104B4234D778800BF57C6 /* IForgotPasswordUsecaseProvider.swift in Sources */,
@@ -2714,11 +2826,15 @@
 				42BE359622FBF96B00AAF8E3 /* APIConstants.swift in Sources */,
 				42BE35B522FDA09A00AAF8E3 /* UserProfileUsecaseLocal.swift in Sources */,
 				4264BDA0234D0D7E00A88F0A /* VehiclesUsecaseRemote.swift in Sources */,
+				42F104B9234D9A6D00BF57C6 /* ForgotPasswordUsecaseProvider.swift in Sources */,
 				42BE359922FBF96B00AAF8E3 /* LoginUsecaseProvider.swift in Sources */,
 				42BE359822FBF96B00AAF8E3 /* LoginUsecaseLocal.swift in Sources */,
+				42F104CE234DC05500BF57C6 /* ForgotUsernameUsecaseProvider.swift in Sources */,
+				42F104BB234D9A7D00BF57C6 /* ForgotPasswordUsecaseRemote.swift in Sources */,
 				42BE35B722FDA0B000AAF8E3 /* UserProfileUsecaseProvider.swift in Sources */,
 				42BE35B322FDA08B00AAF8E3 /* UserProfileUsecaseRemote.swift in Sources */,
 				429C6A05230D51DA0055CFBD /* PlatformUtility.swift in Sources */,
+				42F104D0234DC07500BF57C6 /* ForgotUsernameUsecaseRemote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
