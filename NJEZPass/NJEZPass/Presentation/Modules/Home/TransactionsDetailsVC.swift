@@ -30,7 +30,8 @@ class TransactionsDetailsVC: UIViewController {
         super.viewDidLoad()
         
         navBar.title = transactionDetails?.exitPlazaName ?? "-"
-        transactionAmount.text = transactionDetails?.amount ?? "-"
+        transactionAmount.text = transactionDetails?.amount ?? "--"
+        transactionLblTxt.text = "Amount Due"
         transactionDateLbl.text = transactionDetails?.transactionDate ?? "-"
         plateNumberLbl.text = transactionDetails?.tagorplate ?? "-"
         agencyLbl.text = transactionDetails?.agencyShortName ?? "-"
