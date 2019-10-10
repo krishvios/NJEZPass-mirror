@@ -25,6 +25,7 @@ class VehiclesViewController: UIViewController {
     @IBOutlet weak var searchBar: SearchBarCustom!
     var searchActive : Bool = false
 
+    @IBOutlet weak var btnAddVehicle: UIButton!
     let isVehicleAvaible =  true
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,10 @@ class VehiclesViewController: UIViewController {
         searchBar.delegate = self
     }
     
+    @IBAction func btnAddVehicleTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "AddVehicle", sender: nil)
+
+    }
     
 }
 
