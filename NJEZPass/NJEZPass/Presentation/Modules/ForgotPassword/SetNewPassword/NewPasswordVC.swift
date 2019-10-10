@@ -8,6 +8,15 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+import Platform
+
+protocol INewsPasswordViewable {
+    func setNewPasswordSuccess(viewModel: ResetPasswordModel.PresentionModel)
+    func setNewPasswordFailed(viewModel: ResetPasswordModel.PresentionModel)
+}
+
 
 class NewPasswordVC: UIViewController {
 
@@ -34,6 +43,26 @@ class NewPasswordVC: UIViewController {
     @IBOutlet weak var dot1: UILabel!
     @IBOutlet weak var dot2: UILabel!
     @IBOutlet weak var dot3: UILabel!
+    
+    var interactor: INewPasswordInteractable?
+                var router: IRouter?
+          
+          
+          override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+              super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+              setup()
+          }
+          required init?(coder aDecoder: NSCoder) {
+              super.init(coder: aDecoder)
+              setup()
+          }
+
+          private func setup() {
+              let configurator = NewPasswordConfigurator()
+              configurator.build(viewController: self)
+              interactor = configurator.interactor
+              router = configurator.router
+          }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,5 +166,25 @@ extension NewPasswordVC: ApolloTextInputFieldDelegate {
     func lawTextFieldShouldReturn(_ textField: ApolloTextInputField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+}
+
+extension NewPasswordVC: INewsPasswordViewable {
+    func setNewPasswordSuccess(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func setNewPasswordFailed(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension NewPasswordVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
     }
 }

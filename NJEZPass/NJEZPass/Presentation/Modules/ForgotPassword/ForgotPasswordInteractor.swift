@@ -12,7 +12,7 @@ import Domain
 import Platform
 
 protocol IForgotPasswordInteractable {
-    func forgotPassword(action:String, requestType: Constants.RequestCategory)
+    func forgotPassword(request:ForgotPasswordModel.Request, requestType: Constants.RequestCategory)
 }
 
 class ForgotPasswordInteractor {
@@ -21,10 +21,8 @@ class ForgotPasswordInteractor {
 }
 
 extension ForgotPasswordInteractor: IForgotPasswordInteractable {
-    func forgotPassword(action: String, requestType: Constants.RequestCategory) {
-        
-        let request = ForgotPasswordModel.Request()
-               
+    func forgotPassword(request:ForgotPasswordModel.Request, requestType: Constants.RequestCategory) {
+                       
                if let responseHandler = presenter {
                 let interfaceObj = forgotPasswordUsecaseProvider.provideForgotPasswordUsecase(requestType: requestType, handler: responseHandler)
                    interfaceObj.forgotPassword(request: request)

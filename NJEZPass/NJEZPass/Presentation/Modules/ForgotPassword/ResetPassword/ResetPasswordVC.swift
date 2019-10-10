@@ -8,6 +8,14 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+import Platform
+
+protocol IResetPasswordViewable {
+    func sendEmailLinkSuccess(viewModel: ResetPasswordModel.PresentionModel)
+    func sendEmailLinkFailed(viewModel: ResetPasswordModel.PresentionModel)
+}
 
 class ResetPasswordVC: UIViewController {
     
@@ -22,10 +30,39 @@ class ResetPasswordVC: UIViewController {
     
     var selectedOption: Bool?
     
+    var interactor: IResetPasswordInteractable?
+          var router: IRouter?
+    
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    private func setup() {
+        let configurator = ResetPasswordConfigurator()
+        configurator.build(viewController: self)
+        interactor = configurator.interactor
+        router = configurator.router
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         continueButtonText.isEnabled = false
         toggleLoginButtonColor()
+        
+        if let response = CMUtility.forgotPasswordRes {
+            
+            let email = response.emailMessage
+            if email == "Y" {
+                self.handleEmailProtection(with: response.emailId!)
+            }
+
+        }
     }
    
     func handleEmailProtection(with email: String) {
@@ -79,9 +116,25 @@ class ResetPasswordVC: UIViewController {
     }
     
     @IBAction func continueButtonClicked(_ sender: Any) {
-        if let option = selectedOption {
-            self.performSegue(withIdentifier: option ? "showSecurityQuestions" : "showEmailConfirmation", sender: nil)
+        
+        if selectedOption == false {
+            
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            
+            let username = CMUtility.userName
+            let accountNO = CMUtility.accountNumber
+            let zipcode = CMUtility.zipCode
+                              
+            let request = ResetPasswordModel.Request(action: APIConstants.ServiceNames.forgotPassword, userName: username!, accountNumber: accountNO!, zipCode: zipcode!, securityQuestion: "", securityAnswer: "", newPassword: "", retypePassword: "", emailFlag: "Y")
+                interactor?.sendEmailLinkToResetPassword(request:request, requestType: .remote)
+            
         }
+        else {
+            self.performSegue(withIdentifier: "showSecurityQuestions", sender: nil)
+        }
+//        if let option = selectedOption {
+//            self.performSegue(withIdentifier: option ? "showSecurityQuestions" : "showEmailConfirmation", sender: nil)
+//        }
     }
     
     func toggleLoginButtonColor() {
@@ -92,4 +145,26 @@ class ResetPasswordVC: UIViewController {
         }
     }
     
+}
+
+extension ResetPasswordVC: IResetPasswordViewable {
+    
+    func sendEmailLinkSuccess(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        self.performSegue(withIdentifier:"showEmailConfirmation", sender: nil)
+    }
+    
+    func sendEmailLinkFailed(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension ResetPasswordVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
+    }
 }
