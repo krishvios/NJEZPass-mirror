@@ -23,4 +23,30 @@ open class ForgotPasswordUsecaseProvider: IForgotPasswordUsecaseProvider {
             return ForgotPasswordUsecaseRemote<ForgotPasswordModel.Response>(handler: handler)
         }
        }
+    
+    public func sendEmailLinkForResetPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase {
+              
+           switch requestType {
+           case .remote:
+               return ForgotPasswordUsecaseRemote<ResetPasswordModel.Response>(handler: handler)
+           }
+        }
+    
+    public func answerSecurityQuestionsForResetPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase {
+        
+        switch requestType {
+        case .remote:
+            return ForgotPasswordUsecaseRemote<ResetPasswordModel.Response>(handler: handler)
+        }
+    }
+    
+    public func providSetNewPasswordUsecase(requestType: Constants.RequestCategory, handler: IResponseHandler) -> IForgotPasswordUsecase {
+        
+        switch requestType {
+               case .remote:
+                   return ForgotPasswordUsecaseRemote<ResetPasswordModel.Response>(handler: handler)
+               }
+    }
+
+
 }

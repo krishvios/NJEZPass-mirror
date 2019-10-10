@@ -8,7 +8,14 @@
 
 import UIKit
 import Apollo_iOS
+import Entities
+import MBProgressHUD
+import Platform
 
+protocol ISecurityQuestionsViewable {
+    func answerSecurityQuestionsSuccess(viewModel: ResetPasswordModel.PresentionModel)
+    func answerSecurityQuestionsFailed(viewModel: ResetPasswordModel.PresentionModel)
+}
 
 class SecurityQuestionsVC: UIViewController {
     
@@ -22,6 +29,26 @@ class SecurityQuestionsVC: UIViewController {
     
     var flowKey = ""
     
+    var interactor: ISecurityQuestionsInteractable?
+             var router: IRouter?
+       
+       
+       override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+           super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+           setup()
+       }
+       required init?(coder aDecoder: NSCoder) {
+           super.init(coder: aDecoder)
+           setup()
+       }
+
+       private func setup() {
+           let configurator = SecurityQuestionsConfigurator()
+           configurator.build(viewController: self)
+           interactor = configurator.interactor
+           router = configurator.router
+       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +56,13 @@ class SecurityQuestionsVC: UIViewController {
         continueBtnLbl.isEnabled = false
         setKeyBoardforText()
         toggleLoginButtonColor()
+        
+        if let response = CMUtility.forgotPasswordRes {
+                   
+                   let secQues = response.securityQuestion
+            firstSecurityQuestionlnl.text = secQues
+
+        }
     }
     
     func setKeyBoardforText() {
@@ -123,3 +157,24 @@ extension SecurityQuestionsVC: ApolloTextInputFieldDelegate {
         return true
     }
 }
+
+extension SecurityQuestionsVC: ISecurityQuestionsViewable {
+    func answerSecurityQuestionsSuccess(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
+    func answerSecurityQuestionsFailed(viewModel: ResetPasswordModel.PresentionModel) {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+}
+
+extension SecurityQuestionsVC: IRoutable {
+    func showMessage(message: String) {
+        DialogUtils.shared.displayDialog(title: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.appName), message: Localizer.sharedInstance.localizedStringForKey(key: message), btnTitle: Localizer.sharedInstance.localizedStringForKey(key: AppStringKeys.ok), vc: self, accessibilityIdentifier: message)
+    }
+    
+    func popCurrent() {
+        // dismiss current viewcontroller like back action
+    }
+}
+

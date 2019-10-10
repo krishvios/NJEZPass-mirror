@@ -39,6 +39,8 @@ public enum ForgotPasswordModel {
     public struct PresentionModel {
         public var message: String?
         public var route: Route?
+        public var emailMessage,securityQuestion: String?
+        public var securityAnswer, emailId: String?
         public init() {
 
         }

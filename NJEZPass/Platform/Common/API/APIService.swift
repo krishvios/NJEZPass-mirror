@@ -162,6 +162,11 @@ class APIService: IAPIServicable {
                             print("statusCode: ", statusCode)
                             let error = NSError(domain: "\(APIConstants.ServiceNames.loginUser)", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error from server"])
                             completion?(APIResponse.onFailure(error: APIError.general(error: error)))
+                            
+                        case 1001...1250:
+                            print("statusCode: ", statusCode)
+                            let error = NSError(domain: "\(APIConstants.ServiceNames.loginUser)", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error from server"])
+                                    completion?(APIResponse.onFailure(error: APIError.general(error: error)))
                         default:
                             print("response not handled in block")
                         }
