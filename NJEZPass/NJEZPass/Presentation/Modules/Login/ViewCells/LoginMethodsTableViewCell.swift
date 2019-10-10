@@ -31,8 +31,8 @@ class LoginMethodsTableViewCell: UITableViewCell {
             txtPassword.configureTheme(type: .password, forView: self, placeholderText: "Password")
         }
     }
-    @IBOutlet weak var signUPButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUPButton: CMButton!
+    @IBOutlet weak var loginButton: CMButton!
     @IBOutlet weak var rememberMe: UISwitch!
 
      weak var loginDelegate: LoginMethodsCellDelegate?
@@ -47,6 +47,10 @@ class LoginMethodsTableViewCell: UITableViewCell {
         signUPButton.backgroundColor = .clear
         signUPButton.layer.borderWidth = 1
         signUPButton.layer.borderColor = #colorLiteral(red: 0.4117647059, green: 0.1254901961, blue: 0.4941176471, alpha: 1)
+        signUPButton.clipsToBounds = true
+        signUPButton.layer.cornerRadius = 2
+        
+       rememberMe.setOn(false, animated: false)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
