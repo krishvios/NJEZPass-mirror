@@ -197,7 +197,7 @@ extension TagsViewController :UITableViewDelegate,UITableViewDataSource {
         {
             return transponderListCount + 2
         }
-        return transponderListCount
+        return data.count
     }
 }
 
