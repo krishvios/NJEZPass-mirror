@@ -8,17 +8,20 @@
 
 import UIKit
 
-class PaymentAmountVC: UIViewController {
 
-    @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var numberPadCollectionView: UICollectionView!
-    var enteredText = String()
+class PaymentAmountVC: UIViewController {
     
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var continueButton: CMButton!
+    @IBOutlet weak var numberPadCollectionView: UICollectionView!
+    
+    var enteredText = String()
     var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.setGradientBackground(colors: [
             UIColor(red: 105/255, green: 32/255, blue: 126/255, alpha: 1.0).cgColor,
@@ -26,17 +29,9 @@ class PaymentAmountVC: UIViewController {
             ])
         self.navigationController?.navigationBar.tintColor = .white
         
-        
-        // iPhone SE Alignments
-        if self.view.frame.size.width==320 {
-            let flow = UICollectionViewFlowLayout()
-            flow.itemSize = CGSize(width: 84, height: 66)
-            flow.scrollDirection = .vertical
-            flow.minimumInteritemSpacing = 8;
-            flow.minimumLineSpacing = 8;
-            
-            self.numberPadCollectionView.setCollectionViewLayout(flow, animated: true)
-        }
+        continueButton.borderWidth = 1.0
+        continueButton.borderColor = UIColor.white
+        continueButton.cornerRadius = 4.0
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -56,6 +51,7 @@ class PaymentAmountVC: UIViewController {
     }
 }
 
+
 extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,7 +61,7 @@ extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(NumberPadCell.self)", for: indexPath as IndexPath) as! NumberPadCell
         if indexPath.row == self.items.count - 1 {
-            cell.numberButton.setImage(#imageLiteral(resourceName: "whiteArrow"), for: .normal)
+            cell.numberButton.setImage( imageLiteral(resourceName: "whiteArrow"), for: .normal)
         } else {
             cell.numberButton.setTitle(self.items[indexPath.item], for: .normal)
         }
@@ -88,6 +84,7 @@ extension PaymentAmountVC: UICollectionViewDataSource, UICollectionViewDelegate 
         return cell
     }
 }
+
 
 extension Int {
     func withCommas() -> String {
